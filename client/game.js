@@ -6,7 +6,8 @@ if (!runtimeScene.__logicWorld) {
     objects:new Map(), remotes:new Map(), inventory:{}, selected:'interact',
     revision:0, lastSend:0, message:'Connecting to the workshop…', cameraX:480,
   };
-  window.__logicWorld=s;  s.scene=runtimeScene;
+  window.__logicWorld=s;
+  s.scene=runtimeScene;
   const player=runtimeScene.getObjects('Player')[0];
   const hud=document.createElement('div'); hud.id='logicworld-hud';
   hud.style.cssText='position:fixed;inset:0;pointer-events:none;z-index:100;font:14px monospace;color:#f2e6cb';
