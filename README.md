@@ -4,7 +4,7 @@ Shared educational platformer prototype built with GDevelop and a Node.js WebSoc
 
 ## Open and run
 
-Requires Node.js 22+ and GDevelop 5.6.283+. Run `npm ci`, `npm run build:client`, then `npm start`. Open `LogicGate.json` in GDevelop and launch Preview. Keep `layouts/` beside the project. Open two separate preview tabs for two players.
+Requires Node.js 22+ and GDevelop 5.6.283+. Run `npm ci`, `npm run db:configure`, `npm run db:up`, `npm run db:migrate`, `npm run build:client`, then `npm start`. PostgreSQL runs through Docker inside WSL Ubuntu. Open `LogicGate.json` in GDevelop and launch Preview. Keep `layouts/` beside the project. Open two separate preview tabs for two players.
 
 After editing `client/game.js`, save editor changes, run `npm run build:client` and reload the GDevelop project. This regenerates the Sandbox JavaScript event from the source file.
 
@@ -30,14 +30,16 @@ Copy `.env.example` to `.env` for server overrides. `?server=ws://HOST:PORT` ove
 
 ## Current scaffold
 
-Shared workshop, movement/camera, placement/removal/inventory, switch/wire/AND/OR/NOT/lamp/door/block objects and saved world edits. Server controls circuit results and edits. Positions use client physics with server speed/bounds checks. Persistence uses atomic local JSON saves, not PostgreSQL yet.
+Shared workshop, movement/camera, placement/removal/inventory, switch/wire/AND/OR/NOT/lamp/door/block objects and saved world edits. Server controls circuit results and edits. Positions use client physics with server speed/bounds checks. PostgreSQL transactions persist worlds, devices and inventories; a legacy JSON save is imported once into a new database world. [Database setup and backups](docs/postgresql.md).
 
 ## Verify
 
 `npm test` covers gate truth tables through wire networks, feedback rejection, protected cells, matching two-client circuit states, invalid edits and restart persistence.
 
+`npm run test:postgres` checks the real WSL PostgreSQL database using isolated test worlds. `npm run test:browser:postgres` runs the two-tab GDevelop browser test against it. Tests clean up their own worlds and never overwrite the playable workshop.
+
 After exporting into `exports/web`, run `npx puppeteer browsers install chrome`, then `npm run test:browser`. Set `CHROME_PATH` to use an existing Chrome executable. Browser tests use two real GDevelop tabs and an isolated temporary save; screenshots go in `.cache/`.
 
-Generated exports, local saves, backups, dependencies and secrets are excluded from Git. `data/world.json` contains reconnect tokens: never publish it. Back it up with the server stopped; restore it to the same path before restart. To reset the workshop, stop the server and move that save out of `data/`.
+Generated exports, local saves, backups, dependencies and secrets are excluded from Git. The database and legacy `data/world.json` contain reconnect tokens: never publish them. PostgreSQL uses the `logicworld_postgres_data` Docker volume on WSL's Linux filesystem. Stopping the container preserves it. See the database guide for backup and recovery. Moving the legacy JSON file no longer resets an imported PostgreSQL world.
 
-Three finished regions, quests, PostgreSQL, final art, staging deployment and eight-player soak testing remain on Trello. See [implementation notes](docs/implementation.md). Use feature branches and run tests before merging.
+Three finished regions, quests, final art, staging deployment and eight-player soak testing remain on Trello. See [implementation notes](docs/implementation.md). Use feature branches and run tests before merging.

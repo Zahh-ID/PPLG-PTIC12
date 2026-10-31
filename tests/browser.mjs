@@ -3,9 +3,12 @@ import puppeteer from 'puppeteer';
 import assert from 'node:assert/strict';
 import {mkdtemp,rm,mkdir} from 'node:fs/promises';
 import os from 'node:os';import path from 'node:path';
+import {randomUUID} from 'node:crypto';
+import pg from 'pg';
 import {createServer} from '../server/index.js';
 const dataDir=await mkdtemp(path.join(os.tmpdir(),'logicworld-browser-'));
-const app=await createServer({port:0,dataDir});let browser;
+const databaseUrl=process.env.TEST_DATABASE_URL||null,worldId='test-browser-'+randomUUID();
+const app=await createServer({port:0,dataDir,databaseUrl,worldId});let browser;
 try {
   browser=await puppeteer.launch({headless:true,executablePath:process.env.CHROME_PATH||undefined,args:['--disable-background-timer-throttling','--disable-renderer-backgrounding','--disable-backgrounding-occluded-windows']});
   const a=await browser.newPage(),b=await browser.newPage(),errors=[];
@@ -45,4 +48,4 @@ try {
   await mkdir('.cache',{recursive:true});await a.screenshot({path:'.cache/two-player-workshop.png'});
   assert.deepEqual(errors,[],'no browser runtime errors');
   console.log('PASS: two GDevelop tabs, collision, jump, camera, closed/open door, switches, shared signals, remote avatar and rejoin.');
-} finally {await browser?.close();await app.close();await rm(dataDir,{recursive:true,force:true});}
+} finally {await browser?.close();await app.close();if(databaseUrl){const c=new pg.Client({connectionString:databaseUrl});try{await c.connect();await c.query('DELETE FROM worlds WHERE id=$1',[worldId]);}finally{await c.end();}}await rm(dataDir,{recursive:true,force:true});}

@@ -1,20 +1,19 @@
 import http from 'node:http';
 import { WebSocketServer, WebSocket } from 'ws';
 import { randomUUID, randomBytes } from 'node:crypto';
-import { mkdir, readFile, writeFile, rename } from 'node:fs/promises';
+import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { VERSION, STOCK, SPAWN, WIDTH, TILE, cells, editable, evaluate, example } from '../shared/world.js';
+import {openStore} from './storage.js';
 
-export async function createServer({ port=Number(process.env.PORT||8787), host=process.env.HOST||'127.0.0.1', dataDir=process.env.DATA_DIR||'data', clientDir='exports/web' }={}) {
-  const file=path.resolve(dataDir,'world.json'); await mkdir(path.dirname(file),{recursive:true});
-  let state={version:VERSION,revision:0,devices:[],players:{}};
-  try { state=JSON.parse(await readFile(file,'utf8')); if(state.version!==VERSION||!Array.isArray(state.devices)||!state.players) throw new Error('Unsupported save format'); evaluate(state.devices); }
-  catch(e) { if(e.code!=='ENOENT') throw e; }
-  async function persist(next) { const temp=file+'.tmp'; await writeFile(temp,JSON.stringify(next,null,2)); await rename(temp,file); }
+export async function createServer({ port=Number(process.env.PORT||8787), host=process.env.HOST||'127.0.0.1', dataDir=process.env.DATA_DIR||'data', clientDir='exports/web', databaseUrl=process.env.DATABASE_URL, worldId=process.env.WORLD_ID||'workshop' }={}) {
+  const opened=await openStore({databaseUrl,dataDir,worldId}),store=opened.store;
+  let state=opened.state;
+  const persist=next=>store.save(next);
   const sessions=new Map(); let queue=Promise.resolve();
   const server=http.createServer(async(req,res)=>{
-    if(req.url==='/health'){res.setHeader('Content-Type','application/json');res.end(JSON.stringify({ok:true,version:VERSION,players:sessions.size,revision:state.revision}));return;}
+    if(req.url==='/health'){res.setHeader('Content-Type','application/json');res.end(JSON.stringify({ok:true,version:VERSION,storage:store.kind,players:sessions.size,revision:state.revision}));return;}
     try {
       const url=new URL(req.url,'http://localhost'), base=path.resolve(clientDir);
       const target=path.resolve(base,'.'+decodeURIComponent(url.pathname==='/'?'/index.html':url.pathname));
@@ -93,8 +92,9 @@ export async function createServer({ port=Number(process.env.PORT||8787), host=p
     ws.on('close',()=>{queue=queue.then(()=>{if(sessions.get(ws.playerId)?.ws===ws)sessions.delete(ws.playerId);presence();});});
   });
   const heartbeat=setInterval(()=>{for(const ws of wss.clients){if(!ws.alive){ws.terminate();continue;}ws.alive=false;ws.ping();}},10000);heartbeat.unref();
-  await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(port,host,resolve);});
-  return {server,wss,port:server.address().port,async close(){clearInterval(heartbeat);for(const ws of wss.clients)ws.terminate();await queue;await new Promise(r=>wss.close(r));await new Promise(r=>server.close(r));}};
+  try {await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(port,host,resolve);});}
+  catch(e){clearInterval(heartbeat);wss.close();await store.close();throw e;}
+  return {server,wss,port:server.address().port,async close(){clearInterval(heartbeat);for(const ws of wss.clients)ws.terminate();await queue;await new Promise(r=>wss.close(r));await new Promise(r=>server.close(r));await store.close();}};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)) {
   const app=await createServer();console.log(`LogicWorld listening at http://${process.env.HOST||'127.0.0.1'}:${app.port}`);

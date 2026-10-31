@@ -10,9 +10,18 @@
     "start": "node --env-file-if-exists=.env server/index.js",
     "build:client": "node scripts/build-client.js",
     "test": "node --test --test-timeout=15000 tests/*.test.js",
-    "test:browser": "node tests/browser.mjs"
+    "test:browser": "node tests/browser.mjs",
+    "db:configure": "node scripts/configure-db.js",
+    "db:up": "node scripts/db.js up",
+    "db:status": "node scripts/db.js status",
+    "db:stop": "node scripts/db.js stop",
+    "db:restart": "node scripts/db.js restart",
+    "db:migrate": "node --env-file=.env scripts/migrate-db.js",
+    "test:postgres": "node --env-file=.env --test --test-timeout=30000 tests/postgres.test.js",
+    "test:browser:postgres": "node --env-file=.env scripts/test-browser-postgres.js"
   },
   "dependencies": {
+    "pg": "^8.23.1",
     "ws": "^8.18.3"
   },
   "devDependencies": {

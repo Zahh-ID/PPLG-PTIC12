@@ -20,9 +20,9 @@ Server messages: `welcome` (identity, token, inventory, spawn), `world` (revisio
 ## Decisions and limits
 
 - Custom `ws` transport follows Trello card 06's custom-adapter option. Colyseus matchmaking/schema replication is deferred.
-- Atomic versioned JSON saves test restart/rejoin without a database dependency. Use one server process per save directory. Malformed saves fail startup rather than being silently discarded. PostgreSQL, migrations and personal quest progress remain card 08 work.
+- PostgreSQL now runs in Docker inside WSL Ubuntu with a persistent Linux volume. Versioned SQL migrations create worlds, devices, players, inventory and quest-progress storage. Commands commit before broadcasting. A session advisory lock allows only one active server per world. A legacy JSON save imports only when that database world is absent; database state takes precedence thereafter. Explicitly omitting DATABASE_URL retains JSON mode for isolated tests. Personal quest gameplay remains unfinished.
 - Four-way wire tiles form undirected nets; device ports are directional. Multiple sources on a net combine with OR. Feedback loops are rejected. Gates temporarily occupy 32x48 to separate inputs with an empty row. Final 32x16 art needs wire orientation or insulation rules before reducing the footprint.
 - Movement uses local GDevelop physics and interpolated remote sprites. Speed and bounds checks do not provide authoritative collision/anti-cheat simulation. Edits and circuit state are authoritative.
 - Original code-authored sprites are development placeholders. Card 05's animation, metadata and accessible state-cue requirements remain incomplete.
 
-Remaining: full tilemap and three regions (01/02), richer inventory UX and exploit tests (03), final art (05), eight-player testing/subscriptions (07), PostgreSQL (08), quests and assessments (09–12), staging deployment/database operations (13). Trello cards stay open until their full acceptance criteria pass.
+Remaining: full tilemap and three regions (01/02), richer inventory UX and exploit tests (03), final art (05), eight-player testing/subscriptions (07), personal quest progress gameplay (08/09), assessments (11), staging deployment and production database operations (13). Trello cards stay open until their full acceptance criteria pass.
