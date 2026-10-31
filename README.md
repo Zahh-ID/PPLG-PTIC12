@@ -2,6 +2,8 @@
 
 Shared educational platformer prototype built with GDevelop and a Node.js WebSocket server.
 
+Current campaign design: [Protocol Zero](docs/campaign-scenario.md), an untimed tutorial plus six solo-first logic/combat missions. Level 05 obtains a giant robot; Level 06 pilots it against an independent giant boss. These missions are planned; the playable workshop is still a technical prototype.
+
 ## Open and run
 
 Requires Node.js 22+ and GDevelop 5.6.283+. Run `npm ci`, `npm run db:configure`, `npm run db:up`, `npm run db:migrate`, `npm run build:client`, then `npm start`. PostgreSQL runs through Docker inside WSL Ubuntu. Open `LogicGate.json` in GDevelop and launch Preview. Keep `layouts/` beside the project. Open two separate preview tabs for two players.

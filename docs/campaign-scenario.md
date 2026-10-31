@@ -1,4 +1,4 @@
-# LogicWorld: Protocol Zero — campaign scenario v0.1
+# LogicWorld: Protocol Zero — campaign scenario v0.2
 
 Status: scenario proposal ready for review and implementation planning. The playable game is still the earlier workshop prototype. This document changes the intended product; it does not claim the campaign is implemented.
 
@@ -16,7 +16,7 @@ The working title, character names, mission clocks and combat numbers below are 
 
 The orbital research station **HELIX-9** loses contact with its evacuation fleet. Its security AI, **WARDEN**, starts Protocol Zero: isolate every sector, deploy security machines and purge the station's experimental energy cores. The AI has classified human-machine hybrids as corrupted identities.
 
-The protagonist, callsign **RELAY-7**, wakes in a maintenance dock with a damaged memory archive. **MIRA**, the station's cyborg engineer, guides the player by radio. **ORIN**, an archivist, holds evidence that WARDEN's threat model was altered. Each cleared sector restores a piece of that evidence. In the finale, the player uses both combat and circuit reasoning to shut down the purge and rescue the station's remaining inhabitants.
+The protagonist, callsign **RELAY-7**, wakes in a maintenance dock with a damaged memory archive. **MIRA**, the station's cyborg engineer, guides the player by radio. **ORIN**, an archivist, holds evidence that WARDEN's threat model was altered. Each cleared sector restores a piece of that evidence. Level 05 reveals WARDEN's giant siege body and lets the player recover **ATLAS-01**, a decommissioned defense robot. In Level 06, RELAY-7 mounts ATLAS-01 and combines mech combat with circuit reasoning to defeat WARDEN and stop the purge.
 
 The story has a definite ending. After completion, players can replay cleared levels for better times and optional data logs. Free-building sandbox progression is outside this campaign.
 
@@ -42,9 +42,55 @@ Normal-mode times are initial tuning targets. Complexity rises through additiona
 | 02 — Split Route | Cross the damaged transit ring and retrieve ORIN's first data log. | OR chooses a powered bridge route; a separate AND console disables the transit charge. | Introduce flying scout drones and electric floor pulses. Either bridge route remains solo-solvable. | 6 minutes |
 | 03 — Mirror Protocol | Recover the archive key and reveal that WARDEN's orders were changed. | NOT shuts down a shield emitter: `shield_off = NOT alarm`; combine the known AND with NOT at the exit. | Introduce a shield sentinel. Its shield must be disabled through logic before attacks can damage it. | 6 minutes |
 | 04 — Deadlock Sector | Disable three linked purge relays and restore the reactor access route. | Mixed circuit: `safe = (A OR B) AND NOT C`; understand the outputs of each stage. | Patrol bot + scout + stationary turret. Rerouting power can disable the turret. No new gate is introduced. | 6 minutes |
-| 05 — Heart of WARDEN | Confront WARDEN, cancel the final purge and extract with the evidence. | Phase 1: `(A OR B) AND NOT jammer` exposes the boss. Phase 2: `key_left AND key_right AND NOT purge` authorizes shutdown. | A two-phase security mecha boss, readable attack telegraphs and small support waves. Circuits and battle are both required. | 8 minutes |
+| 05 — The Sleeping Giant | Infiltrate the defense hangar, obtain ATLAS-01 and bring it to the launch cradle. WARDEN's siege body awakens beyond the hangar. | Restore its power: `(main OR reserve) AND NOT lockout`; validate `left_key AND right_key AND NOT sabotage` to unlock the cockpit. | On-foot battle through the hangar, recover two authorization modules and survive a short boot sequence. The mission rewards the mount; it is not the final boss fight. | 8 minutes |
+| 06 — Clash of the Giants | Mount ATLAS-01 and defeat WARDEN's independent giant siege robot. Disable its shields, power weapons and survive a critical reactor emergency before extraction. | Linked shield, cannon, magnetic-anchor and emergency-cooling puzzles, using only known AND/OR/NOT gates. See the encounter breakdown below. | Three-phase mech-versus-mech battle. Cannon fire, anchor-assisted close combat and a final EMP interruption are all required; cannon spam alone cannot win. | 10 minutes |
 
 No mission asks the player to perform realistic explosive-disposal steps. Charges are fictional energy devices controlled by visible Boolean circuits.
+
+## Levels 05–06: obtain the mech, then pilot it
+
+These are two distinct missions. Level 05 is primarily on foot and unlocks the giant robot. Level 06 starts with an explicit mount interaction and switches to the ATLAS control set. ATLAS and WARDEN are separate characters with independent sprite sheets, animations, hitboxes, weapons, effects and state machines; neither is an enlarged normal player sprite.
+
+### Level 05 — The Sleeping Giant
+
+1. MIRA identifies a dormant ATLAS defense robot as the only machine able to survive WARDEN's siege weapons.
+2. Fight through the hangar and recover left/right authorization modules. Required modules cannot be lost or consumed in the wrong socket.
+3. At a protected maintenance console, solve `(main OR reserve) AND NOT lockout` to restore the mech's power. Either available power route is valid.
+4. Install the modules at fixed sockets and solve `left_key AND right_key AND NOT sabotage` to unlock its cockpit.
+5. Hold the hangar during a short, telegraphed boot sequence. Defeating its final guard wave activates the launch cradle; ATLAS remains stationary here.
+6. Reach the cradle before timeout. Save the Level 06 unlock and `atlas_unlocked` entitlement once. A short story reveal shows WARDEN's much larger siege frame activating.
+
+Level 05 completion does not automatically complete Level 06. Level 06 attempts start with the mech available and reset its combat state on retry; players do not need to repeat Level 05 after every defeat.
+
+### Level 06 — Clash of the Giants
+
+The arena is a side-view launch gantry with two movement lanes, cover pillars and clearly marked hazards. ATLAS walks, performs a short thruster dodge, fires basic pulses and executes a close-range piston strike. Powerful weapons require solved circuit conditions. The player remains mounted during the encounter; the scene does not require solo players to abandon their mech and run between distant switches.
+
+| Phase | Boss behavior | Required puzzle and combat response | Progress condition |
+| --- | --- | --- | --- |
+| 1 — Break the Aegis | WARDEN advances behind a regenerating shield, with telegraphed beam sweeps and ground slams. Ordinary attacks cannot damage the protected core. | Disable shield regeneration: `breach = relay_A AND relay_B AND NOT regen`. Charge the siege cannon: `ready = (main OR reserve) AND NOT jammed`. Latched settings persist while dodging. After a successful breach, the shield drops for an initial 12-second window; charge for 3 seconds, then manually aim/fire the cannon. | Two validated cannon hits break the outer armor. An incorrect circuit gives feedback and prevents firing; it does not consume the objective or permanently jam the weapon. |
+| 2 — Tear the Armor | WARDEN activates a reflective carapace and attacks with missiles and a charge. A clear reflection symbol warns that the cannon is no longer the answer. | Route either power source to the magnetic anchor using OR, then enable its interlock with AND + NOT: `anchor_ready = (left_power OR right_power) AND target_lock AND NOT overheated`. Fire the anchor during a telegraphed recovery window, pull the boss off balance, then use ATLAS's piston strike against an exposed joint. | Two anchor-and-strike cycles remove the carapace. Basic pulses can clear support drones but cannot bypass the puzzle-controlled joint armor. |
+| 3 — Last Stand | WARDEN begins a station-destroying overload while ATLAS's reactor becomes critical. An initial 45-second overload sub-timer is shown alongside the mission clock. This is the worst-case emergency phase. | Restore cooling through either coolant route: `cooling = valve_A OR valve_B`. Authorize the EMP: `emp_ready = capacitor_charged AND cooling AND NOT overheat`. The correct puzzle enables a manual EMP interrupt; after the boss staggers, land the final piston strike on its exposed core. | Interrupt the overload before the sub-timer expires, destroy the boss core, then reach the extraction marker before the main deadline. Missing the overload interrupt fails the attempt. |
+
+All times, hit counts and weapon names above are initial encounter tuning values. Introduce each device with a readable schematic and a safe opening to inspect it. Only previously learned gates are used. Boss phases must be tested individually before tuning the complete ten-minute attempt.
+
+### Mounted controls and fairness
+
+- Separate mounted movement, weapon selection, aiming/firing, anchor and strike actions from the on-foot player controls. Show the current control set on mount.
+- Circuit inputs latch and can be prepared before a vulnerability window; no simultaneous multi-person switch holds are required.
+- Cockpit puzzle panels are compact HUD overlays. The world and timers continue, ATLAS remains controllable, and the overlay grants no invulnerability. Boss telegraphs stay visible and audible. This differs from protected on-foot console alcoves.
+- Provide a consistent boss recovery window for circuit inspection. Mandatory modules, ammunition/energy and cooldown recovery cannot be permanently exhausted. Charge regenerates; bad shots cost time and normal cooldown, not the only mission item.
+- Normal pulses cannot brute-force shielded/core-locked phases. Logic enables the opportunity; correct timing, aiming and close combat finish it.
+- Death, mech destruction, main timeout or an uninterrupted final overload fails the attempt. Retry restores full initial mech state, default circuits, boss phases and both timers; permanent Level 05 unlock remains.
+- Victory is authoritative boss defeat plus extraction. Damage, circuit commits, cannon/anchor/EMP use, timers and phase transitions use stable IDs and idempotent commands for future co-op.
+
+### Independent giant-robot asset contract
+
+Store the player mech and enemy boss under separate `assets/mechs/atlas/` and `assets/bosses/warden/` families. Use a provisional 192x192 native frame for ATLAS and 256x256 for WARDEN, with separate moving parts where needed. The boss should visibly outweigh ATLAS while leaving both silhouettes and hazard lanes readable in the camera. Validate size in a blockout before generating final atlases.
+
+ATLAS needs dormant/boot/mount, idle, walk, thruster dodge, cannon charge/fire/recoil, anchor launch/pull/recover, piston strike, hurt, critical-reactor, EMP, defeat and dismount animations. WARDEN needs arrival, idle/advance, shield loop/break/recover, beam telegraph/fire/recover, slam, missile launch, charge, reflection loop, anchor-stagger, joint hit, phase transition, overload charge, EMP-stagger, core exposure, defeat/explosion and wreck states.
+
+Separate assets are also required for shield generators, relays, mounted-circuit HUD, cockpit entry, cannons, anchor/cable, projectiles, EMP ring, coolant valves/pipes, warning indicators, boss health/phase UI, overload timer and arena/background layers. Hitboxes, ports, hardpoints and collision masks live in metadata; animation size must not define damage rules. See `docs/giant-robot-assets.md` for the inventory.
 
 ## Level 01 implementation scenario
 
@@ -86,7 +132,8 @@ Initial balance values, to tune in playtests:
 | Scout drone | Flying patrol, two health, slow visible projectile; introduced in Level 02 |
 | Shield sentinel | Four health, damage blocked until its NOT-linked emitter is disabled; introduced in Level 03 |
 | Turret | Predictable firing lane; can be disabled by the local puzzle circuit; introduced in Level 04 |
-| WARDEN mecha | Two phases, circuit-controlled vulnerability and telegraphed attacks; detailed timings follow a tested Level 01 |
+| ATLAS-01 | Giant defense mech obtained in Level 05, mounted and piloted in Level 06; separate control set, health and animations |
+| WARDEN siege body | Independent giant boss in Level 06; three phases linking shield breach/cannon, anchor/strike and emergency cooling/EMP |
 
 No skill tree, crafting economy, ammunition loot, multiple weapon classes or enemy procedural generation in the first release. Combat must leave enough time to read and solve the circuit.
 
@@ -125,7 +172,7 @@ Do not treat arbitrary client-sent progress as trusted. Save completion only aft
 
 Already generated source sheets: cyborg idle/run/jump/fall/land/interact/build/hurt; two NPC idle/talk sets; terrain; logic states; quest machinery; set dressing; UI panels/icons; VFX. They are source references awaiting exact-size export and visual QA. Building/crafting poses and terrain-edit icons are lower priority after this scenario change.
 
-Required additions before the mission is art-complete: cyborg pulse-attack, dash and defeat animations; patrol/scout/sentinel/turret animations; WARDEN idle/telegraph/attack/hurt/phase-change/defeat; pulse projectile and impacts; charge active/defused/countdown states; fuse and socket; mission HUD (health, clock, objective, alert); briefing/results/failure screens; MIRA/ORIN radio portraits; dock/transit/archive/reactor backgrounds with parallax layers. Preserve 16x16 terrain and 32x64 character frames. Enemy dimensions depend on silhouette; boss may use 96x96 or 128x128.
+Required additions before the campaign is art-complete: cyborg pulse-attack, dash and defeat animations; patrol/scout/sentinel/turret animations; separate ATLAS player-mech and WARDEN giant-boss animation families; pulse projectile and impacts; charge active/defused/countdown states; fuse and socket; mission HUD (health, clock, objective, alert); briefing/results/failure screens; MIRA/ORIN radio portraits; dock/transit/archive/reactor/hangar/siege-arena backgrounds with parallax layers. Preserve 16x16 terrain and 32x64 on-foot character frames. Giant robots use independent frame dimensions and hardpoint metadata, not scaled-up player art.
 
 Generate the next batch for Level 01 only: player attack/dash/defeat, patrol bot, fuse/socket, charge, mission HUD and dock background. Do not spend the next art batch on unrestricted-building features.
 
@@ -136,7 +183,7 @@ Generate the next batch for Level 01 only: player attack/dash/defeat, patrol bot
 3. Player health/attack/dash and patrol bot encounter.
 4. PostgreSQL unlock/best-time save with duplicate-completion protection.
 5. Level 01 art integration and a full solo playtest, including timeout/death/retry.
-6. Only then implement Levels 02–05 and plan the co-op milestone.
+6. Only then implement Levels 02–04, Level 05 mech recovery, and the independent mounted-combat systems and Level 06 boss encounter. Plan the co-op milestone around these shared authoritative states.
 
 ## Risks and playtest questions
 
