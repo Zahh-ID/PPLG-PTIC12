@@ -8,8 +8,8 @@
   },
   "initialGDVersion": "5.6.283",
   "properties": {
-    "adaptGameResolutionAtRuntime": true,
-    "antialiasingMode": "MSAA",
+    "adaptGameResolutionAtRuntime": false,
+    "antialiasingMode": "None",
     "antialisingEnabledOnMobile": false,
     "folderProject": true,
     "orientation": "landscape",
@@ -17,11 +17,11 @@
     "pixelsRounding": true,
     "projectUuid": "5a949eb4-d2ea-4f18-9859-9a186b6fe6f5",
     "scaleMode": "nearest",
-    "sizeOnStartupMode": "adaptWidth",
+    "sizeOnStartupMode": "",
     "templateSlug": "",
     "version": "1.0.0",
     "name": "LogicGate",
-    "description": "LogicWorld educational logic-gate sandbox \u2014 initial platformer scaffold.",
+    "description": "LogicWorld two-player logic workshop prototype.",
     "author": "",
     "windowWidth": 960,
     "windowHeight": 540,
@@ -102,6 +102,102 @@
         "kind": "image",
         "name": "assets/placeholders/ground.png",
         "file": "assets/placeholders/ground.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/placeholders/switch_0.png",
+        "file": "assets/placeholders/switch_0.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/placeholders/switch_1.png",
+        "file": "assets/placeholders/switch_1.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/placeholders/wire_0.png",
+        "file": "assets/placeholders/wire_0.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/placeholders/wire_1.png",
+        "file": "assets/placeholders/wire_1.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/placeholders/and_0.png",
+        "file": "assets/placeholders/and_0.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/placeholders/and_1.png",
+        "file": "assets/placeholders/and_1.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/placeholders/or_0.png",
+        "file": "assets/placeholders/or_0.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/placeholders/or_1.png",
+        "file": "assets/placeholders/or_1.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/placeholders/not_0.png",
+        "file": "assets/placeholders/not_0.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/placeholders/not_1.png",
+        "file": "assets/placeholders/not_1.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/placeholders/lamp_0.png",
+        "file": "assets/placeholders/lamp_0.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/placeholders/lamp_1.png",
+        "file": "assets/placeholders/lamp_1.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/placeholders/door_0.png",
+        "file": "assets/placeholders/door_0.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/placeholders/door_1.png",
+        "file": "assets/placeholders/door_1.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/placeholders/block_0.png",
+        "file": "assets/placeholders/block_0.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/placeholders/block_1.png",
+        "file": "assets/placeholders/block_1.png",
         "userAdded": true
       }
     ]

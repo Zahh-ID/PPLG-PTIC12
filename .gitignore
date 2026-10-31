@@ -11,3 +11,6 @@ build/
 .cache/
 *.bak
 *.bak-*
+
+# Local saved worlds (contain reconnect tokens)
+data/
