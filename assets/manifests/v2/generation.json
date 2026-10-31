@@ -1,0 +1,124 @@
+{
+  "tool": "built-in image_gen",
+  "records": [
+    {
+      "id": "player_idle_armed",
+      "file": "assets/sources/v2/characters/player_idle_armed.png",
+      "prompt": "Original production side-view pixel art for Protocol Zero. Crisp deliberately placed square pixel clusters, limited navy #172537 graphite #314457 teal #398f94 pale cyan #83e6e5 cream #e9dfc8 copper #ad7649 warm skin palette. No painterly rendering, gradients, antialiasing, soft glow, labels, text, watermark, grid lines or cell borders. Stable character scale, flat orthographic side view. ONE animation sprite atlas with exactly 12 distinct full-character frames in a precise regular 4-column 3-row grid, row-major order. Native canvas 64x80 per frame, entire canvas 256x240 logically, enlarged exactly 6x to 1536x1440. Real alpha transparent background. The SAME compact human cyborg explorer in every frame, short black hair, visible young adult human face, teal chest armor, navy undersuit, silver robotic forearm and lower legs, copper joints. Facing RIGHT. The SAME compact teal graphite pulse rifle is firmly gripped in BOTH hands at chest height in EVERY frame, rifle drawn as part of each complete character; stock, grip, trigger hand and support hand coherent. Character body logical x=20..44, head top y=10, soles at y=72, center foot anchor x=32. Rifle extends to x=60 y=35, muzzle level. Leave 4px transparent safety margin. This is IdleArmed: 12-phase smooth subtle breathing/shoulder settling cycle with small deliberate arm/torso/visor charge variations, legs planted, no large pose change, gun never floats or detaches. Same proportions, outfit, silhouette and feet baseline in all cells. No other objects.",
+      "reference": null,
+      "status": "reference draft; cleaned derivative used for runtime"
+    },
+    {
+      "id": "dock_far",
+      "file": "assets/sources/v2/environments/dock/dock_far.png",
+      "prompt": "Original production side-view pixel art for Protocol Zero. Crisp deliberately placed square pixel clusters, limited navy #172537 graphite #314457 teal #398f94 pale cyan #83e6e5 cream #e9dfc8 copper #ad7649 warm skin palette. No painterly rendering, gradients, antialiasing, soft glow, labels, text, watermark, grid lines or cell borders. Stable character scale, flat orthographic side view. ONE horizontally seamless looping parallax layer for a side-scrolling orbital sci-fi maintenance dock. Very distant station silhouettes, tiny far docking lights, distant spires, long horizontal composition 1536x768. Low contrast blue-grey silhouettes only, simple large shapes. Real alpha transparency above and between structures. Structures occupy lower two thirds. Left and right edge silhouettes must meet seamlessly with same height and illumination. No foreground, no floor, no actors, no props, no UI, no baked sky. Restrained detail. This is the FAR layer, intended to scroll at 0.15 of camera speed.",
+      "reference": null,
+      "status": "proof candidate"
+    },
+    {
+      "id": "dock_mid",
+      "file": "assets/sources/v2/environments/dock/dock_mid.png",
+      "prompt": "Original production side-view pixel art for Protocol Zero. Crisp deliberately placed square pixel clusters, limited navy #172537 graphite #314457 teal #398f94 pale cyan #83e6e5 cream #e9dfc8 copper #ad7649 warm skin palette. No painterly rendering, gradients, antialiasing, soft glow, labels, text, watermark, grid lines or cell borders. Stable character scale, flat orthographic side view. ONE horizontally seamless looping transparent parallax layer for a side-scrolling orbital sci-fi dock. Middle distance hangar ribs, separated docking-bay silhouettes, large support beams and a few muted copper pipe runs. Long horizontal 1536x768 composition, sparse readable architecture with open transparent windows and gaps; structures mostly lower two thirds. Blue-grey lower contrast than foreground actors. Seamless matching left/right boundaries. No sky, no floor strip, no small gameplay consoles, pickups, actors, signage text or UI. This is a MID layer intended to scroll at 0.35 of camera speed.",
+      "reference": null,
+      "status": "proof candidate"
+    },
+    {
+      "id": "dock_near",
+      "file": "assets/sources/v2/environments/dock/dock_near.png",
+      "prompt": "Original production side-view pixel art for Protocol Zero. Crisp deliberately placed square pixel clusters, limited navy #172537 graphite #314457 teal #398f94 pale cyan #83e6e5 cream #e9dfc8 copper #ad7649 warm skin palette. No painterly rendering, gradients, antialiasing, soft glow, labels, text, watermark, grid lines or cell borders. Stable character scale, flat orthographic side view. ONE horizontally seamless looping transparent NEAR BACKGROUND layer for a side-scrolling sci-fi maintenance dock. Sparse industrial wall ribs, upper pipes, rectangular observation-window frames, occasional dim cyan utility lights. Long horizontal 1536x768, large calm dark navy shapes, clear gaps of true alpha transparency, restrained low contrast so characters and controls read clearly. Upper hanging architecture and a few vertical supports, no floor, no usable terminals, no buttons, no pickups or characters, no foreground occlusion, no UI. Left/right edges align seamlessly. Intended scroll 0.65 of camera speed.",
+      "reference": null,
+      "status": "proof candidate"
+    },
+    {
+      "id": "power_switch",
+      "file": "assets/sources/v2/interactables/power_switch.png",
+      "prompt": "Original production side-view pixel art for Protocol Zero. Crisp deliberately placed square pixel clusters, limited navy #172537 graphite #314457 teal #398f94 pale cyan #83e6e5 cream #e9dfc8 copper #ad7649 warm skin palette. No painterly rendering, gradients, antialiasing, soft glow, labels, text, watermark, grid lines or cell borders. Stable character scale, flat orthographic side view. Exactly 12 distinct frames in a regular 4-column 3-row atlas, row-major, identical cells with generous transparent gutters and NO borders/labels. One complete object per cell. Real alpha background. Native 64x64 each cell, sheet1536x1152 at6x. Stable object size and anchor bottom-center throughout. One large industrial POWER SWITCH floor pedestal, not a decorative monitor: sturdy cream-edged teal cabinet with a BIG copper lever, circular power socket and a prominent status lamp. 12-frame single toggle animation: lever travels smoothly from left OFF to right ON, mechanical interlock slides, lamp warms from dark amber to cyan. First frame clearly locked/off, last clearly latched/on. All12 lever positions must be visibly different; casing and feet never move. No glyph text. Silhouette instantly recognizable at64px. Cabinet occupies logical x12..52,y10..62. Pulse only within hardware, no outside glow.",
+      "reference": null,
+      "status": "proof candidate"
+    },
+    {
+      "id": "fuse_socket",
+      "file": "assets/sources/v2/interactables/fuse_socket.png",
+      "prompt": "Original production side-view pixel art for Protocol Zero. Crisp deliberately placed square pixel clusters, limited navy #172537 graphite #314457 teal #398f94 pale cyan #83e6e5 cream #e9dfc8 copper #ad7649 warm skin palette. No painterly rendering, gradients, antialiasing, soft glow, labels, text, watermark, grid lines or cell borders. Stable character scale, flat orthographic side view. Exactly 12 distinct frames in a regular 4-column 3-row atlas, row-major, identical cells with generous transparent gutters and NO borders/labels. One complete object per cell. Real alpha background. Native 64x64 each cell, sheet1536x1152 at6x. Stable object size and anchor bottom-center throughout. One floor-standing industrial FUSE SOCKET pedestal with a large empty cylindrical receptacle and protective hinged cover. 12-frame insertion animation: first empty socket, copper/cream cylindrical energy fuse approaches attached insertion rails, lowers smoothly into socket, protective clamp closes, cyan window activates by final frame. Same cabinet, root and scale; each phase distinct. Empty and fitted states clearly different in shape. Floor pedestal x10..54,y8..62. No floating spare objects outside the cell, hands, text or labels.",
+      "reference": null,
+      "status": "proof candidate"
+    },
+    {
+      "id": "logic_console",
+      "file": "assets/sources/v2/interactables/logic_console.png",
+      "prompt": "Original production side-view pixel art for Protocol Zero. Crisp deliberately placed square pixel clusters, limited navy #172537 graphite #314457 teal #398f94 pale cyan #83e6e5 cream #e9dfc8 copper #ad7649 warm skin palette. No painterly rendering, gradients, antialiasing, soft glow, labels, text, watermark, grid lines or cell borders. Stable character scale, flat orthographic side view. Exactly12 frames in a regular4-column3-row atlas, native64x80 each at6x, canvas1536x1440. Alpha transparent, stable base atlogicaly72. One large sloped waist-height CONTROL CONSOLE with cream steel pedestal, copper trim and broad teal screen, clearly different silhouette from the vertical switch and fuse cabinet. 12-frame activation sequence: screen dark with TWO separate square input lamps, lamps illuminate in sequence, mechanical side shutters open slightly, then central circular output activates cyan in final frame. Simple symbolic shapes only, no words/numbers/letters. Screen x14..52,y20..42, grounded pedestal y42..72. At least12 different mechanical/display phases, same scale and position.",
+      "reference": null,
+      "status": "proof candidate"
+    },
+    {
+      "id": "fuse_available",
+      "file": "assets/sources/v2/interactables/fuse_available.png",
+      "prompt": "Original production side-view pixel art for Protocol Zero. Crisp deliberately placed square pixel clusters, limited navy #172537 graphite #314457 teal #398f94 pale cyan #83e6e5 cream #e9dfc8 copper #ad7649 warm skin palette. No painterly rendering, gradients, antialiasing, soft glow, labels, text, watermark, grid lines or cell borders. Stable character scale, flat orthographic side view. Exactly12 distinct animation frames, regular4-column3-row grid, native32x32 cells at12x, sheet1536x1152. Actual alpha transparency. One chunky copper-and-cream cylindrical POWER FUSE pickup with a broad cyan energy window, black end caps and a visible lightning-shaped core. Readable silhouette, side profile slightlyupright. 12-frame smooth slow hover/energy cycle, 1-2 logicalpixel hover and traveling cyan internal charge, never spin into an unrecognizable thin edge. No pedestal, ground, hands, text, labels or surrounding scenery. One fuse per cell, same scale, contained transparent margin.",
+      "reference": null,
+      "status": "proof candidate"
+    },
+    {
+      "id": "patrol_walk",
+      "file": "assets/sources/v2/enemies/patrol_walk.png",
+      "prompt": "Original production side-view pixel art for Protocol Zero. Crisp deliberately placed square pixel clusters, limited navy #172537 graphite #314457 teal #398f94 pale cyan #83e6e5 cream #e9dfc8 copper #ad7649 warm skin palette. No painterly rendering, gradients, antialiasing, soft glow, labels, text, watermark, grid lines or cell borders. Stable character scale, flat orthographic side view. Exactly12 full-body frames of the SAME original security patrol robot in a precise4-column3-row grid. Native64x64 cell, sheet1536x1152 at6x. Alpha transparent. Chunky two-legged graphite/steel security robot with copper shoulder plates, one amber horizontal rectangular optic, short claw forearms, wide boots, different silhouette from the human cyborg. Faces RIGHT, stable body proportions, feet baseline logical60. One 12-phase clear walking gait from planted right foot through passing and planted left foot back to beginning. Distinct foot positions, consistent armor panels, no weapon discharge or extra particles, no labels/ground/shadows. Robot body is roughly32x48 logicalpixels in center, fit within64x64canvas.",
+      "reference": null,
+      "status": "proof candidate"
+    },
+    {
+      "id": "interact_beacon",
+      "file": "assets/sources/v2/vfx/interact_beacon.png",
+      "prompt": "Original production side-view pixel art for Protocol Zero. Crisp deliberately placed square pixel clusters, limited navy #172537 graphite #314457 teal #398f94 pale cyan #83e6e5 cream #e9dfc8 copper #ad7649 warm skin palette. No painterly rendering, gradients, antialiasing, soft glow, labels, text, watermark, grid lines or cell borders. Stable character scale, flat orthographic side view. A subtle animated INTERACTION BEACON atlas, exactly12 distinct frames regular4-column3-row grid, native32x32 cell enlarged12x, sheet1536x1152. Actual transparent alpha background. Each frame has ONE small cream and cyan downward chevron above a small incomplete ring, centered, stable silhouette. 12-phase gentle 2pixel vertical breathing bob plus an orderly clockwise traveling highlight on the ring; logical hard pixel shapes, restrained light, no blur or external glow. Every frame has a different highlight position. Marker never fills the screen or masks the underlying item. No letters, button prompts, text or borders.",
+      "reference": null,
+      "status": "proof candidate"
+    },
+    {
+      "id": "dock_floor",
+      "file": "assets/sources/v2/environments/dock/dock_floor.png",
+      "prompt": "Original production side-view pixel art for Protocol Zero. Crisp deliberately placed square pixel clusters, limited navy #172537 graphite #314457 teal #398f94 pale cyan #83e6e5 cream #e9dfc8 copper #ad7649 warm skin palette. No painterly rendering, gradients, antialiasing, soft glow, labels, text, watermark, grid lines or cell borders. Stable character scale, flat orthographic side view. ONE seamless horizontal sci-fi steel platform TILE texture, wide low 1536x512, a thin cream/copper safety edge at the top, clean navy/steel vertical side panels below. Low-noise pixel art, readable flat walkable top edge. Left/right edges tile perfectly with consistent motifs, no perspective or shadows beyond the rectangular tile. Entire rectangular image opaque. No background scenery, actors, props, text, arrows or UI. Intended native96x32 platform strip repeated horizontally.",
+      "reference": null,
+      "status": "proof candidate"
+    },
+    {
+      "id": "hud_panel",
+      "file": "assets/sources/v2/ui/hud_panel.png",
+      "prompt": "Original production side-view pixel art for Protocol Zero. Crisp deliberately placed square pixel clusters, limited navy #172537 graphite #314457 teal #398f94 pale cyan #83e6e5 cream #e9dfc8 copper #ad7649 warm skin palette. No painterly rendering, gradients, antialiasing, soft glow, labels, text, watermark, grid lines or cell borders. Stable character scale, flat orthographic side view. ONE blank reusable sci-fi nine-patch HUD PANEL on actual alpha transparent background. Horizontal rectangular160x64 logicalpixel panel enlarged8x to1280x512, flat dark navy solid interior, a simple restrained steel/teal/copper rim 6logicalpixels thick, clipped mechanical corners, small pale cyan corner insets. All four edges straight and corners consistent. Interior completely empty for native GDevelop text, no slots, no lines through center, no lettering or symbols, no buttons or additional objects. Crisp chunky pixels, not highly textured or glossy.",
+      "reference": null,
+      "status": "proof candidate"
+    },
+    {
+      "id": "player_idle_clean",
+      "file": "assets/sources/v2/characters/player_idle_clean.png",
+      "prompt": "Remove ONLY the dark gradient background behind these12 sprites and its halo. Preserve exactly all12 character/rifle sprites, their size, pixel details, grid positions, and poses. Keep every gun barrel and limb intact. Output real alpha transparency behind/between sprites, no replacement background, checkerboard or shadow. This is a transparent sprite-sheet cutout.",
+      "reference": "assets/sources/v2/characters/player_idle_armed.png",
+      "status": "proof candidate"
+    },
+    {
+      "id": "player_run_armed",
+      "file": "assets/sources/v2/characters/player_run_armed.png",
+      "prompt": "Original production side-view pixel art for Protocol Zero. Crisp deliberately placed square pixel clusters, limited navy #172537 graphite #314457 teal #398f94 pale cyan #83e6e5 cream #e9dfc8 copper #ad7649 warm skin palette. No painterly rendering, gradients, antialiasing, soft glow, labels, text, watermark, grid lines or cell borders. Stable character scale, flat orthographic side view. Use the attached character sheet as the exact identity reference. Preserve the visible human face, short black hair, teal chest armor, silver mechanical forearms/lower legs, copper joints, navy undersuit, and SAME two-handed teal pulse rifle. Create a SINGLE full-body animation atlas, exactly4columns by3rows,12 distinct poses in row-major order, uniform64x80 logical canvases. Transparent background is mandatory: clean real RGBA alpha with NO opaque gradient, no grey or navy backdrop, no glow, no floor/shadow, no labels or borders. Feet baseline logical72, bodycenterx32, bodyheadtop8, rifle tipx60,y36. Uniform body scale, clear margins, crisp pixel clusters, not painterly. RunArmed: twelve genuinely different phases of a side-view RUNNING gait, facing RIGHT. Contact→down→passing→up→flight, alternating legs across12phases, one full stride loop. The rifle remains held in both hands, waist/chest stable, shoulders lightly moving with the stride; arms do NOT swing away from the gun. Readable wide steps, stable head and identity. Last frame flows into first. No shooting flashes. Each pose's gun remains part of the character drawing.",
+      "reference": "assets/sources/v2/characters/player_idle_armed.png",
+      "status": "proof candidate"
+    },
+    {
+      "id": "player_fire_idle",
+      "file": "assets/sources/v2/characters/player_fire_idle.png",
+      "prompt": "Original production side-view pixel art for Protocol Zero. Crisp deliberately placed square pixel clusters, limited navy #172537 graphite #314457 teal #398f94 pale cyan #83e6e5 cream #e9dfc8 copper #ad7649 warm skin palette. No painterly rendering, gradients, antialiasing, soft glow, labels, text, watermark, grid lines or cell borders. Stable character scale, flat orthographic side view. Use the attached character sheet as the exact identity reference. Preserve the visible human face, short black hair, teal chest armor, silver mechanical forearms/lower legs, copper joints, navy undersuit, and SAME two-handed teal pulse rifle. Create a SINGLE full-body animation atlas, exactly4columns by3rows,12 distinct poses in row-major order, uniform64x80 logical canvases. Transparent background is mandatory: clean real RGBA alpha with NO opaque gradient, no grey or navy backdrop, no glow, no floor/shadow, no labels or borders. Feet baseline logical72, bodycenterx32, bodyheadtop8, rifle tipx60,y36. Uniform body scale, clear margins, crisp pixel clusters, not painterly. FireIdle: twelve distinct sequential phases of a stationary rifle firing cycle, facing RIGHT. First phase ready with immediate small cyan discharge; then shoulder/rifle recoil2logicalpixels left, bent elbows absorb recoil, rifle returns level and cyan chamber cycles, ending in the same ready stance. Legs stay planted and head stays stable. Both hands remain attached to the rifle. Recoil and chamber/shoulder details change across12frames, no duplicated pose padding. Any muzzle spark tiny and entirely inside the canvas, no long effects. Gun is part of every full-body frame, never separate.",
+      "reference": "assets/sources/v2/characters/player_idle_armed.png",
+      "status": "proof candidate"
+    },
+    {
+      "id": "player_run_fire",
+      "file": "assets/sources/v2/characters/player_run_fire.png",
+      "prompt": "Original production side-view pixel art for Protocol Zero. Crisp deliberately placed square pixel clusters, limited navy #172537 graphite #314457 teal #398f94 pale cyan #83e6e5 cream #e9dfc8 copper #ad7649 warm skin palette. No painterly rendering, gradients, antialiasing, soft glow, labels, text, watermark, grid lines or cell borders. Stable character scale, flat orthographic side view. Use the attached character sheet as the exact identity reference. Preserve the visible human face, short black hair, teal chest armor, silver mechanical forearms/lower legs, copper joints, navy undersuit, and SAME two-handed teal pulse rifle. Create a SINGLE full-body animation atlas, exactly4columns by3rows,12 distinct poses in row-major order, uniform64x80 logical canvases. Transparent background is mandatory: clean real RGBA alpha with NO opaque gradient, no grey or navy backdrop, no glow, no floor/shadow, no labels or borders. Feet baseline logical72, bodycenterx32, bodyheadtop8, rifle tipx60,y36. Uniform body scale, clear margins, crisp pixel clusters, not painterly. RunFire: twelve distinct phases of a RUNNING gait while holding and FIRING the integrated rifle, facing RIGHT. Match RunArmed's stride phase order: planted forward foot, down, passing, up/flight, opposing planted foot, repeat. Keep both hands connected, rifle aimed level, small shoulder/recoil changes and cyan chamber changes through the stride. Legs visibly progress acrossall12frames; no standing shooting poses. Preserve common feetbaseline and bodyroot. Tiny contained discharge cue only; no large effect outside cell. Last frame flows into first. Complete character plus rifle in every cell.",
+      "reference": "assets/sources/v2/characters/player_idle_armed.png",
+      "status": "proof candidate"
+    },
+    {
+      "id": "patrol_telegraph",
+      "file": "assets/sources/v2/enemies/patrol_telegraph.png",
+      "prompt": "Original production side-view pixel art for Protocol Zero. Crisp deliberately placed square pixel clusters, limited navy #172537 graphite #314457 teal #398f94 pale cyan #83e6e5 cream #e9dfc8 copper #ad7649 warm skin palette. No painterly rendering, gradients, antialiasing, soft glow, labels, text, watermark, grid lines or cell borders. Stable character scale, flat orthographic side view. Using the attached robot sheet as exact identity reference, create ONE12-frame attack-TELEGRAPH animation atlas of the SAME graphite security robot, copper shoulders, rectangular amber optic, same body proportions and armor. EXACT4columns3rows uniform native64x64 cells. Real alpha transparency, no floor, backdrop, glow, labels or borders. Faces RIGHT. Feet anchored atlogicaly60, centeredx32, frame scale matches reference. Twelve sequential DISTINCT preparation poses: stop walking into braced stance, gradually bend knees and lean back, claw arm lifts and opens, second arm braces, amber optic intensifies, final tense ready-to-strike stance. NO actual forward attack; end on clear warning pose. One full robot per cell, safe transparent margins, no clipping. All12 frames must depict meaningful sequential pose changes, not copied idle frames.",
+      "reference": "assets/sources/v2/enemies/patrol_walk.png",
+      "status": "proof candidate"
+    }
+  ]
+}

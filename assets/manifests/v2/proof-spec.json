@@ -1,0 +1,225 @@
+{
+  "version": 2,
+  "status": "connected proof; campaign migration pending visual review",
+  "grid": [
+    4,
+    3
+  ],
+  "animations": [
+    {
+      "id": "player_idle",
+      "source": "characters/player_idle_clean.png",
+      "size": [
+        96,
+        80
+      ],
+      "family": "player",
+      "fps": 8,
+      "loop": true,
+      "root": [
+        48,
+        72
+      ]
+    },
+    {
+      "id": "player_run",
+      "source": "characters/player_run_armed.png",
+      "size": [
+        96,
+        80
+      ],
+      "family": "player",
+      "fps": 14,
+      "loop": true,
+      "root": [
+        48,
+        72
+      ]
+    },
+    {
+      "id": "player_fire",
+      "source": "characters/player_fire_idle.png",
+      "size": [
+        96,
+        80
+      ],
+      "family": "player",
+      "fps": 34.285714,
+      "loop": false,
+      "root": [
+        48,
+        72
+      ]
+    },
+    {
+      "id": "player_run_fire",
+      "source": "characters/player_run_fire.png",
+      "size": [
+        96,
+        80
+      ],
+      "family": "player",
+      "fps": 14,
+      "loop": true,
+      "root": [
+        48,
+        72
+      ]
+    },
+    {
+      "id": "power_switch",
+      "source": "interactables/power_switch.png",
+      "size": [
+        64,
+        64
+      ],
+      "family": "switch",
+      "fps": 24,
+      "loop": false,
+      "root": [
+        32,
+        64
+      ]
+    },
+    {
+      "id": "fuse_socket",
+      "source": "interactables/fuse_socket.png",
+      "size": [
+        64,
+        64
+      ],
+      "family": "socket",
+      "fps": 20,
+      "loop": false,
+      "root": [
+        32,
+        64
+      ]
+    },
+    {
+      "id": "logic_console",
+      "source": "interactables/logic_console.png",
+      "size": [
+        64,
+        80
+      ],
+      "family": "console",
+      "fps": 20,
+      "loop": false,
+      "root": [
+        32,
+        80
+      ]
+    },
+    {
+      "id": "fuse_available",
+      "source": "interactables/fuse_available.png",
+      "size": [
+        32,
+        32
+      ],
+      "family": "fuse",
+      "fps": 10,
+      "loop": true,
+      "root": [
+        16,
+        32
+      ]
+    },
+    {
+      "id": "patrol_walk",
+      "source": "enemies/patrol_walk.png",
+      "size": [
+        64,
+        64
+      ],
+      "family": "patrol",
+      "fps": 12,
+      "loop": true,
+      "root": [
+        32,
+        60
+      ]
+    },
+    {
+      "id": "patrol_telegraph",
+      "source": "enemies/patrol_telegraph.png",
+      "size": [
+        64,
+        64
+      ],
+      "family": "patrol",
+      "fps": 20,
+      "loop": false,
+      "root": [
+        32,
+        60
+      ]
+    },
+    {
+      "id": "interact_beacon",
+      "source": "vfx/interact_beacon.png",
+      "size": [
+        32,
+        32
+      ],
+      "family": "beacon",
+      "fps": 10,
+      "loop": true,
+      "root": [
+        16,
+        24
+      ]
+    }
+  ],
+  "images": [
+    {
+      "id": "dock_far",
+      "source": "environments/dock/dock_far.png",
+      "size": [
+        768,
+        384
+      ],
+      "family": "environments/dock",
+      "ratio": 0.15
+    },
+    {
+      "id": "dock_mid",
+      "source": "environments/dock/dock_mid.png",
+      "size": [
+        768,
+        384
+      ],
+      "family": "environments/dock",
+      "ratio": 0.35
+    },
+    {
+      "id": "dock_near",
+      "source": "environments/dock/dock_near.png",
+      "size": [
+        768,
+        384
+      ],
+      "family": "environments/dock",
+      "ratio": 0.65
+    },
+    {
+      "id": "dock_floor",
+      "source": "environments/dock/dock_floor.png",
+      "size": [
+        96,
+        32
+      ],
+      "family": "environments/dock"
+    },
+    {
+      "id": "hud_panel",
+      "source": "ui/hud_panel.png",
+      "size": [
+        160,
+        64
+      ],
+      "family": "ui"
+    }
+  ]
+}

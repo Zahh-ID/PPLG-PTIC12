@@ -7,6 +7,12 @@ try{
   browser=await puppeteer.launch({headless:true,executablePath:process.env.CHROME_PATH||undefined,args:['--disable-background-timer-throttling','--disable-renderer-backgrounding']});
   const page=await browser.newPage(),errors=[];await page.setViewport({width:960,height:540});await page.bringToFront();page.on('pageerror',e=>{errors.push(e.message);console.error('PAGE ERROR',e.message);});
   const wait=ms=>new Promise(r=>setTimeout(r,ms));
+  const tapInteract=async()=>{
+    await page.keyboard.press('e',{delay:60});
+    // Native input is sampled per render frame. Separate distinct taps with a
+    // release frame instead of injecting two complete presses inside one frame.
+    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+  };
   const clickNative=async name=>{
     await page.waitForFunction(n=>window.__missionClient?.scene.getObjects(n)[0]?.isVisible(),{},name);
     const point=await page.evaluate(n=>{const o=window.__missionClient.scene.getObjects(n)[0],r=document.querySelector('canvas').getBoundingClientRect();return{x:r.left+(o.getX()+o.getWidth()/2)*r.width/960,y:r.top+(o.getY()+o.getHeight()/2)*r.height/540};},name);
@@ -37,10 +43,15 @@ try{
   await page.keyboard.down('Space');await page.keyboard.down('ArrowRight');await page.waitForFunction(()=>window.__missionClient.mission.player.y<390,{timeout:3000});await page.keyboard.up('Space');
   await page.keyboard.down('j');await wait(80);assert.ok(['jump','fall'].includes(await page.evaluate(()=>window.__missionClient.objects.get('hero').getAnimationName())),'shooting preserves airborne pose');await page.keyboard.up('j');
   await page.waitForFunction(()=>window.__missionClient.mission.player.x>=530);await page.keyboard.up('ArrowRight');await wait(150);
-  await page.keyboard.press('e');await page.waitForFunction(()=>window.__missionClient.mission.feedA);
-  await page.keyboard.down('j');await page.keyboard.down('ArrowRight');await page.waitForFunction(()=>window.__missionClient.mission.player.x>=1240);await page.keyboard.up('ArrowRight');await page.keyboard.up('j');await wait(200);
+  await tapInteract();await page.waitForFunction(()=>window.__missionClient.mission.feedA);
+  // Fight from each approach rather than assuming every shot lands while
+  // sprinting through both patrols; input delivery can vary with renderer load.
+  await page.keyboard.down('j');await page.waitForFunction(()=>window.__missionClient.mission.enemies[0].hp===0);
+  await page.keyboard.down('ArrowRight');await page.waitForFunction(()=>window.__missionClient.mission.player.x>=1020);await page.keyboard.up('ArrowRight');
+  await page.waitForFunction(()=>window.__missionClient.mission.enemies[1].hp===0);
+  await page.keyboard.down('ArrowRight');await page.waitForFunction(()=>window.__missionClient.mission.player.x>=1240);await page.keyboard.up('ArrowRight');await page.keyboard.up('j');await wait(200);
   const mid=await page.evaluate(()=>window.__missionClient.mission);assert.equal(mid.status,'running');assert.equal(mid.fuseCollected,true);assert.ok(mid.enemies.every(e=>e.hp===0),'both patrol bots defeated by pulse shots');
-  await page.keyboard.press('e');await page.waitForFunction(()=>window.__missionClient.mission.fuseInstalled);await page.keyboard.press('e');await page.waitForFunction(()=>window.__missionClient.mission.output);
+  await tapInteract();await page.waitForFunction(()=>window.__missionClient.mission.fuseInstalled);await tapInteract();await page.waitForFunction(()=>window.__missionClient.mission.output);
   await page.keyboard.down('ArrowRight');await page.waitForFunction(()=>window.__missionClient.mission.player.x>=1480);await page.keyboard.up('ArrowRight');await wait(100);
   await page.keyboard.down('e');await page.waitForFunction(()=>window.__missionClient.mission.defused);await page.keyboard.up('e');
   await page.screenshot({path:'.cache/level-one-defused.png'});

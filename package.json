@@ -20,7 +20,10 @@
     "test:postgres": "node --env-file=.env --test --test-timeout=30000 tests/postgres.test.js",
     "test:browser:postgres": "node --env-file=.env scripts/test-browser-postgres.js",
     "test:mission:browser": "node tests/mission-browser.mjs",
-    "test:mission:postgres": "node --env-file=.env scripts/test-mission-postgres.js"
+    "test:mission:postgres": "node --env-file=.env scripts/test-mission-postgres.js",
+    "art:proof": "python scripts/export-proof-art.py",
+    "check:art:proof": "python scripts/check-proof-art.py",
+    "test:art:browser": "node tests/asset-proof-browser.mjs"
   },
   "dependencies": {
     "pg": "^8.23.1",

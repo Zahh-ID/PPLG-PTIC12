@@ -1,8 +1,10 @@
 # Protocol Zero: reusable asset replacement plan
 
-Status: planning only, 2026-10-31. No replacement art has been generated or installed by this plan. Existing runtime art is a prototype, not the production template. This plan supersedes the separate equipped-gun approach in PR #3 and the earlier low-frame-count targets. The existing game remains playable while a new pack is developed alongside it.
+Status: production plan with its first connected proof implemented, 2026-10-31. Existing campaign art remains a prototype. This plan supersedes the separate equipped-gun approach in PR #3 and the earlier low-frame-count targets. The existing game remains playable while the new pack is reviewed alongside it.
 
-Production tracking: [Trello asset V2 plan](https://trello.com/c/MhzOKQgN). Planning notes are on `docs/reusable-asset-plan`; no runtime files are changed in this planning pass.
+Execution update: the first [connected proof](asset-proof.md) now contains 11 twelve-frame sequences and five static assets. Proof export review enlarged the proposed art canvas to 96×80 with root (48,72), while keeping the 32×64 gameplay body. The original canvas below records the planning proposal; remaining production waits for the visual gate.
+
+Production tracking: [Trello asset V2 plan](https://trello.com/c/MhzOKQgN). Original planning notes are on `docs/reusable-asset-plan`; the connected proof is on `feat/asset-v2-proof` and keeps campaign migration separate.
 
 ## Confirmed direction
 
