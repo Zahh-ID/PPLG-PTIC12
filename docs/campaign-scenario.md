@@ -1,6 +1,6 @@
 # LogicWorld: Protocol Zero — campaign scenario v0.2
 
-Status: scenario proposal ready for review and implementation planning. The playable game is still the earlier workshop prototype. This document changes the intended product; it does not claim the campaign is implemented.
+Status: Level 01 now has a playable mission prototype on `feat/level-one-mission`; tutorial and Levels 02–06 remain design targets. Combat/timing values are still subject to playtesting. See `level-one-implementation.md` for the implemented subset.
 
 [Trello scenario overview](https://trello.com/c/ZkcIuJZo) · [Level 01 first-playable card](https://trello.com/c/tvQfhja7)
 
@@ -170,7 +170,7 @@ Do not treat arbitrary client-sent progress as trusted. Save completion only aft
 
 ## Asset impact
 
-Already generated source sheets: cyborg idle/run/jump/fall/land/interact/build/hurt; two NPC idle/talk sets; terrain; logic states; quest machinery; set dressing; UI panels/icons; VFX. They are source references awaiting exact-size export and visual QA. Building/crafting poses and terrain-edit icons are lower priority after this scenario change.
+Generated source sheets include cyborg idle/run/jump/fall/land/interact/build/hurt and new shoot/dash/defeat; patrol idle/walk/windup/attack/hurt/defeat; two NPC idle/talk sets; terrain; logic states; quest machinery; set dressing; UI panels/icons; VFX. Selected exact-size runtime exports are integrated into Level 01. Other source references still await export/QA. Building/crafting poses and terrain-edit icons remain lower priority.
 
 Required additions before the campaign is art-complete: cyborg pulse-attack, dash and defeat animations; patrol/scout/sentinel/turret animations; separate ATLAS player-mech and WARDEN giant-boss animation families; pulse projectile and impacts; charge active/defused/countdown states; fuse and socket; mission HUD (health, clock, objective, alert); briefing/results/failure screens; MIRA/ORIN radio portraits; dock/transit/archive/reactor/hangar/siege-arena backgrounds with parallax layers. Preserve 16x16 terrain and 32x64 on-foot character frames. Giant robots use independent frame dimensions and hardpoint metadata, not scaled-up player art.
 

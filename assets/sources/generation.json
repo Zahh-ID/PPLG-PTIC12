@@ -1,7 +1,7 @@
 {
   "tool": "built-in image_gen",
   "mode": "generation",
-  "status": "source_art_only; technical cleanup paused pending new combat-campaign scenario",
+  "status": "source art preserved; selected assets exported to assets/runtime and integrated into Level01 with prototype QA",
   "records": [
     {
       "id": "player_cyborg",

@@ -1,47 +1,48 @@
 # LogicWorld / LogicGate
 
-Shared educational platformer prototype built with GDevelop and a Node.js WebSocket server.
+Protocol Zero: a solo-first sci-fi action/puzzle game built with GDevelop, Node.js and PostgreSQL in WSL Docker. Level 01 is now playable.
 
-Current campaign design: [Protocol Zero](docs/campaign-scenario.md), an untimed tutorial plus six solo-first logic/combat missions. Level 05 obtains a giant robot; Level 06 pilots it against an independent giant boss. These missions are planned; the playable workshop is still a technical prototype.
+Current campaign design: [Protocol Zero](docs/campaign-scenario.md), an untimed tutorial plus six logic/combat missions. Level 01 has a complete prototype loop; the tutorial and Levels 02–06 remain planned. Level 05 obtains a giant robot; Level 06 pilots it against an independent giant boss.
 
 ## Open and run
 
-Requires Node.js 22+ and GDevelop 5.6.283+. Run `npm ci`, `npm run db:configure`, `npm run db:up`, `npm run db:migrate`, `npm run build:client`, then `npm start`. PostgreSQL runs through Docker inside WSL Ubuntu. Open `LogicGate.json` in GDevelop and launch Preview. Keep `layouts/` beside the project. Open two separate preview tabs for two players.
+Requires Node.js 22+ and GDevelop 5.6.283+. Run `npm ci`, `npm run db:configure`, `npm run db:up`, `npm run db:migrate`, `npm run build:client`, then `npm start`. PostgreSQL runs through Docker inside WSL Ubuntu. Open `LogicGate.json` in GDevelop and launch Preview. Keep `layouts/` beside the project. `Mission01` is the initial scene; `Sandbox` preserves the earlier shared-workshop prototype.
 
-After editing `client/game.js`, save editor changes, run `npm run build:client` and reload the GDevelop project. This regenerates the Sandbox JavaScript event from the source file.
+After editing `client/mission.js` or `client/game.js`, save editor changes, run `npm run build:client` and reload the GDevelop project. The build generates Mission01 layout/art placements and both scenes' JavaScript events. Edit authored geometry in `shared/mission.js`, not the generated mission layout. Art exports can be reproduced with `python scripts/export-mission-art.py` (Pillow required).
 
-For standalone browser play, export GDevelop as an HTML5 folder into `exports/web` (containing `index.html`). With the server running, open <http://127.0.0.1:8787> in two tabs. Each tab has a separate identity; refreshing restores its inventory.
+For standalone browser play, export GDevelop as an HTML5 folder into `exports/web` (containing `index.html`). With the server running, open <http://127.0.0.1:8787>. Campaign attempts are solo and isolated per profile. Reconnecting pauses the current in-memory attempt; restarting the server offers a fresh briefing while keeping saved campaign progress.
 
 Copy `.env.example` to `.env` for server overrides. `?server=ws://HOST:PORT` overrides the browser's endpoint. Default server binding is local-only. LAN testing requires `HOST=0.0.0.0` and the server's reachable address in the browser URL. This prototype is for trusted peers; HTTPS hosting needs a secure WebSocket endpoint.
 
 ## Play
 
-- Arrows move, Space jumps, R reconnects at spawn.
-- Click **Build AND example** once in a fresh world. Click its switches: both ON opens the door.
-- Toolbar or keys 1–9 select interaction or an item. Click to place; right-click to remove and reclaim it.
-- Build on the 16px workshop grid, columns 12–109 and rows 17–28, within reach. Terrain is protected.
-- Wires connect in four directions. Gate inputs are left/top and left/bottom with an empty row between; output is right/top. NOT uses its upper input only. Keep input networks separated.
+- Start Mission begins the six-minute clock. Escape/Pause freezes the solo simulation; losing focus pauses too.
+- Arrows or A/D move, Space jumps, J fires a pulse, K dashes, E interacts. R retries a finished, saved attempt.
+- Jump the broken loading bridge. At feed A, press E. Recover the guarded fuse and install it at feed B with E, then press E again to toggle B.
+- Both feeds must be ON. Hold E at the protected AND console for three uninterrupted seconds, then reach the lift before timeout.
+- Patrols take three pulse hits and telegraph attacks. Health, damage, movement, time and outcomes are simulated by the server.
+- Optional raised gantries lead to an archive log. Death or timeout fails the attempt; retry resets its clock, enemies and items. Completion unlocks Level 02 in PostgreSQL, but Level 02 is not implemented yet.
 
 ## Layout
 
 - `LogicGate.json`: project entry point, settings and resources.
-- `layouts/`: split scene files; `Sandbox` is the initial scene.
-- `assets/placeholders/`: original development sprites.
+- `layouts/`: split scenes; generated `Mission01` plus the legacy `Sandbox`.
+- `assets/sources/`: preserved image_gen source sheets and prompts; `assets/runtime/`: exact-size derived sprites and map props; `assets/placeholders/`: legacy workshop art.
 - `client/`, `server/`, `shared/`: scene code, authoritative commands, circuit evaluator and world rules.
 - `scripts/`, `tests/`, `docs/`: build tooling, verification and implementation notes.
 
-## Current scaffold
+## Current implementation
 
-Shared workshop, movement/camera, placement/removal/inventory, switch/wire/AND/OR/NOT/lamp/door/block objects and saved world edits. Server controls circuit results and edits. Positions use client physics with server speed/bounds checks. PostgreSQL transactions persist worlds, devices and inventories; a legacy JSON save is imported once into a new database world. [Database setup and backups](docs/postgresql.md).
+Level 01 includes briefing/start, authoritative movement/combat/clock, fixed feeds and fuse, AND defusal, extraction, pause, failure/retry and idempotent campaign saves. Its four map zones use generated terrain, architecture and props with a raised optional route and parallax background. See [map design](docs/map-design.md) and [mission implementation](docs/level-one-implementation.md). The legacy workshop remains a separate scene. [Database setup and backups](docs/postgresql.md).
 
 ## Verify
 
-`npm test` covers gate truth tables through wire networks, feedback rejection, protected cells, matching two-client circuit states, invalid edits and restart persistence.
+`npm test` covers mission transitions, deadlines, pause, defusal interruption, combat, jumps, the optional route, idempotent progress, invalid socket commands, and legacy circuit/network behavior. `python scripts/check-mission-art.py` verifies exported sprite dimensions, alpha, palettes and nonempty frames.
 
-`npm run test:postgres` checks the real WSL PostgreSQL database using isolated test worlds. `npm run test:browser:postgres` runs the two-tab GDevelop browser test against it. Tests clean up their own worlds and never overwrite the playable workshop.
+`npm run test:postgres` checks PostgreSQL storage in isolated worlds. `npm run test:mission:postgres` plays the complete exported Level 01 using real keyboard input, verifies saved unlock after a server restart, then tests failure/retry. Tests remove only their own worlds.
 
-After exporting into `exports/web`, run `npx puppeteer browsers install chrome`, then `npm run test:browser`. Set `CHROME_PATH` to use an existing Chrome executable. Browser tests use two real GDevelop tabs and an isolated temporary save; screenshots go in `.cache/`.
+After exporting Mission01 into `exports/web`, run `npx puppeteer browsers install chrome`, then `npm run test:mission:browser` for JSON-mode browser testing. Set `CHROME_PATH` to use an existing Chrome executable. For legacy two-tab workshop tests, export Sandbox as the initial scene into `exports/workshop`, then run `npm run test:browser` or `npm run test:browser:postgres`. Screenshots go in `.cache/`.
 
 Generated exports, local saves, backups, dependencies and secrets are excluded from Git. The database and legacy `data/world.json` contain reconnect tokens: never publish them. PostgreSQL uses the `logicworld_postgres_data` Docker volume on WSL's Linux filesystem. Stopping the container preserves it. See the database guide for backup and recovery. Moving the legacy JSON file no longer resets an imported PostgreSQL world.
 
-Three finished regions, quests, final art, staging deployment and eight-player soak testing remain on Trello. See [implementation notes](docs/implementation.md). Use feature branches and run tests before merging.
+Later missions, tutorial, final animation/seam polish, audio, staging deployment and future co-op remain on Trello. Use feature branches and PR review; never push directly to main.

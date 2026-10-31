@@ -1,0 +1,1585 @@
+{
+  "status": "prototype exports; manual animation polish still required",
+  "assets": [
+    {
+      "id": "cyborg_idle",
+      "source": "player_cyborg_v1.png",
+      "sourceCrops": [
+        [
+          0,
+          0,
+          111,
+          222
+        ],
+        [
+          111,
+          0,
+          222,
+          222
+        ],
+        [
+          222,
+          0,
+          333,
+          222
+        ],
+        [
+          333,
+          0,
+          444,
+          222
+        ],
+        [
+          444,
+          0,
+          554,
+          222
+        ],
+        [
+          554,
+          0,
+          665,
+          222
+        ],
+        [
+          665,
+          0,
+          776,
+          222
+        ],
+        [
+          776,
+          0,
+          887,
+          222
+        ]
+      ],
+      "frameSize": [
+        32,
+        64
+      ],
+      "frames": 8,
+      "fps": 6,
+      "loop": true,
+      "pivot": [
+        16,
+        63
+      ],
+      "paletteColors": 32,
+      "alpha": "binary"
+    },
+    {
+      "id": "cyborg_run",
+      "source": "player_cyborg_v1.png",
+      "sourceCrops": [
+        [
+          0,
+          222,
+          111,
+          444
+        ],
+        [
+          111,
+          222,
+          222,
+          444
+        ],
+        [
+          222,
+          222,
+          333,
+          444
+        ],
+        [
+          333,
+          222,
+          444,
+          444
+        ],
+        [
+          444,
+          222,
+          554,
+          444
+        ],
+        [
+          554,
+          222,
+          665,
+          444
+        ],
+        [
+          665,
+          222,
+          776,
+          444
+        ],
+        [
+          776,
+          222,
+          887,
+          444
+        ]
+      ],
+      "frameSize": [
+        32,
+        64
+      ],
+      "frames": 8,
+      "fps": 10,
+      "loop": true,
+      "pivot": [
+        16,
+        63
+      ],
+      "paletteColors": 32,
+      "alpha": "binary"
+    },
+    {
+      "id": "cyborg_jump",
+      "source": "player_cyborg_v1.png",
+      "sourceCrops": [
+        [
+          0,
+          444,
+          111,
+          665
+        ],
+        [
+          111,
+          444,
+          222,
+          665
+        ],
+        [
+          222,
+          444,
+          333,
+          665
+        ],
+        [
+          333,
+          444,
+          444,
+          665
+        ],
+        [
+          444,
+          444,
+          554,
+          665
+        ],
+        [
+          554,
+          444,
+          665,
+          665
+        ],
+        [
+          665,
+          444,
+          776,
+          665
+        ],
+        [
+          776,
+          444,
+          887,
+          665
+        ]
+      ],
+      "frameSize": [
+        32,
+        64
+      ],
+      "frames": 8,
+      "fps": 10,
+      "loop": false,
+      "pivot": [
+        16,
+        63
+      ],
+      "paletteColors": 32,
+      "alpha": "binary"
+    },
+    {
+      "id": "cyborg_fall",
+      "source": "player_cyborg_v1.png",
+      "sourceCrops": [
+        [
+          0,
+          665,
+          111,
+          887
+        ],
+        [
+          111,
+          665,
+          222,
+          887
+        ],
+        [
+          222,
+          665,
+          333,
+          887
+        ],
+        [
+          333,
+          665,
+          444,
+          887
+        ],
+        [
+          444,
+          665,
+          554,
+          887
+        ],
+        [
+          554,
+          665,
+          665,
+          887
+        ],
+        [
+          665,
+          665,
+          776,
+          887
+        ],
+        [
+          776,
+          665,
+          887,
+          887
+        ]
+      ],
+      "frameSize": [
+        32,
+        64
+      ],
+      "frames": 8,
+      "fps": 8,
+      "loop": true,
+      "pivot": [
+        16,
+        63
+      ],
+      "paletteColors": 32,
+      "alpha": "binary"
+    },
+    {
+      "id": "cyborg_land",
+      "source": "player_cyborg_v1.png",
+      "sourceCrops": [
+        [
+          0,
+          887,
+          111,
+          1109
+        ],
+        [
+          111,
+          887,
+          222,
+          1109
+        ],
+        [
+          222,
+          887,
+          333,
+          1109
+        ],
+        [
+          333,
+          887,
+          444,
+          1109
+        ],
+        [
+          444,
+          887,
+          554,
+          1109
+        ],
+        [
+          554,
+          887,
+          665,
+          1109
+        ],
+        [
+          665,
+          887,
+          776,
+          1109
+        ],
+        [
+          776,
+          887,
+          887,
+          1109
+        ]
+      ],
+      "frameSize": [
+        32,
+        64
+      ],
+      "frames": 8,
+      "fps": 12,
+      "loop": false,
+      "pivot": [
+        16,
+        63
+      ],
+      "paletteColors": 32,
+      "alpha": "binary"
+    },
+    {
+      "id": "cyborg_interact",
+      "source": "player_cyborg_v1.png",
+      "sourceCrops": [
+        [
+          0,
+          1109,
+          111,
+          1330
+        ],
+        [
+          111,
+          1109,
+          222,
+          1330
+        ],
+        [
+          222,
+          1109,
+          333,
+          1330
+        ],
+        [
+          333,
+          1109,
+          444,
+          1330
+        ],
+        [
+          444,
+          1109,
+          554,
+          1330
+        ],
+        [
+          554,
+          1109,
+          665,
+          1330
+        ],
+        [
+          665,
+          1109,
+          776,
+          1330
+        ],
+        [
+          776,
+          1109,
+          887,
+          1330
+        ]
+      ],
+      "frameSize": [
+        32,
+        64
+      ],
+      "frames": 8,
+      "fps": 10,
+      "loop": false,
+      "pivot": [
+        16,
+        63
+      ],
+      "paletteColors": 32,
+      "alpha": "binary"
+    },
+    {
+      "id": "cyborg_build",
+      "source": "player_cyborg_v1.png",
+      "sourceCrops": [
+        [
+          0,
+          1330,
+          111,
+          1552
+        ],
+        [
+          111,
+          1330,
+          222,
+          1552
+        ],
+        [
+          222,
+          1330,
+          333,
+          1552
+        ],
+        [
+          333,
+          1330,
+          444,
+          1552
+        ],
+        [
+          444,
+          1330,
+          554,
+          1552
+        ],
+        [
+          554,
+          1330,
+          665,
+          1552
+        ],
+        [
+          665,
+          1330,
+          776,
+          1552
+        ],
+        [
+          776,
+          1330,
+          887,
+          1552
+        ]
+      ],
+      "frameSize": [
+        32,
+        64
+      ],
+      "frames": 8,
+      "fps": 10,
+      "loop": false,
+      "pivot": [
+        16,
+        63
+      ],
+      "paletteColors": 32,
+      "alpha": "binary"
+    },
+    {
+      "id": "cyborg_hurt",
+      "source": "player_cyborg_v1.png",
+      "sourceCrops": [
+        [
+          0,
+          1552,
+          111,
+          1774
+        ],
+        [
+          111,
+          1552,
+          222,
+          1774
+        ],
+        [
+          222,
+          1552,
+          333,
+          1774
+        ],
+        [
+          333,
+          1552,
+          444,
+          1774
+        ],
+        [
+          444,
+          1552,
+          554,
+          1774
+        ],
+        [
+          554,
+          1552,
+          665,
+          1774
+        ],
+        [
+          665,
+          1552,
+          776,
+          1774
+        ],
+        [
+          776,
+          1552,
+          887,
+          1774
+        ]
+      ],
+      "frameSize": [
+        32,
+        64
+      ],
+      "frames": 8,
+      "fps": 12,
+      "loop": false,
+      "pivot": [
+        16,
+        63
+      ],
+      "paletteColors": 32,
+      "alpha": "binary"
+    },
+    {
+      "id": "patrol",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        637,
+        1134,
+        742,
+        1236
+      ],
+      "size": [
+        32,
+        48
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "lab_floor",
+      "source": "terrain_v1.png",
+      "sourceCrop": [
+        157,
+        784,
+        314,
+        940
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "switch_off",
+      "source": "logic_devices_v1.png",
+      "sourceCrop": [
+        0,
+        0,
+        157,
+        157
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "switch_on",
+      "source": "logic_devices_v1.png",
+      "sourceCrop": [
+        157,
+        0,
+        314,
+        157
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "door_closed",
+      "source": "logic_devices_v1.png",
+      "sourceCrop": [
+        314,
+        157,
+        470,
+        314
+      ],
+      "size": [
+        16,
+        64
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "door_open",
+      "source": "logic_devices_v1.png",
+      "sourceCrop": [
+        470,
+        157,
+        627,
+        314
+      ],
+      "size": [
+        16,
+        64
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "charge_on",
+      "source": "quest_props_v1.png",
+      "sourceCrop": [
+        1097,
+        0,
+        1254,
+        157
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "charge_off",
+      "source": "quest_props_v1.png",
+      "sourceCrop": [
+        0,
+        0,
+        157,
+        157
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "console",
+      "source": "quest_props_v1.png",
+      "sourceCrop": [
+        0,
+        314,
+        157,
+        470
+      ],
+      "size": [
+        32,
+        48
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "fuse",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        998,
+        270,
+        1051,
+        354
+      ],
+      "size": [
+        16,
+        24
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "lift",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        365,
+        1126,
+        448,
+        1237
+      ],
+      "size": [
+        48,
+        64
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "log",
+      "source": "ui_icons_v1.png",
+      "sourceCrop": [
+        627,
+        940,
+        940,
+        1254
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "pulse",
+      "source": "vfx_v1.png",
+      "sourceCrop": [
+        157,
+        0,
+        314,
+        157
+      ],
+      "size": [
+        10,
+        4
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "dock_habitat",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        20,
+        28,
+        179,
+        176
+      ],
+      "size": [
+        128,
+        128
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "dock_roof",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        200,
+        112,
+        331,
+        176
+      ],
+      "size": [
+        64,
+        32
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "dock_sign",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        525,
+        50,
+        604,
+        176
+      ],
+      "size": [
+        32,
+        64
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "tech_lantern",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        676,
+        70,
+        736,
+        176
+      ],
+      "size": [
+        16,
+        32
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "dock_fence",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        32,
+        281,
+        276,
+        352
+      ],
+      "size": [
+        64,
+        32
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "spawn_beacon",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        360,
+        208,
+        457,
+        352
+      ],
+      "size": [
+        32,
+        64
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "cargo_crate",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        506,
+        269,
+        614,
+        353
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "antenna",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        672,
+        211,
+        745,
+        353
+      ],
+      "size": [
+        32,
+        64
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "solar_panel",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        823,
+        257,
+        937,
+        353
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "lab_pillar",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        50,
+        859,
+        116,
+        984
+      ],
+      "size": [
+        16,
+        64
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "pipe_straight",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        304,
+        929,
+        451,
+        976
+      ],
+      "size": [
+        32,
+        16
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "pipe_elbow",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        505,
+        892,
+        568,
+        984
+      ],
+      "size": [
+        16,
+        32
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "wall_console",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        941,
+        874,
+        1066,
+        983
+      ],
+      "size": [
+        32,
+        48
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "ruined_gear",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        1092,
+        907,
+        1235,
+        983
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "hazard_sign",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        191,
+        1046,
+        328,
+        1098
+      ],
+      "size": [
+        32,
+        16
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "lab_vent",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        496,
+        1030,
+        585,
+        1097
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "broken_monitor",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        619,
+        1019,
+        764,
+        1099
+      ],
+      "size": [
+        48,
+        32
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "server_rack",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        794,
+        1000,
+        894,
+        1102
+      ],
+      "size": [
+        32,
+        64
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "lab_desk",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        928,
+        1039,
+        1091,
+        1100
+      ],
+      "size": [
+        48,
+        32
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "pipe_valve",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        943,
+        1156,
+        1098,
+        1228
+      ],
+      "size": [
+        32,
+        24
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "lab_canister",
+      "source": "world_decor_v1.png",
+      "sourceCrop": [
+        1138,
+        1127,
+        1208,
+        1237
+      ],
+      "size": [
+        24,
+        48
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "wall_panel",
+      "source": "terrain_v1.png",
+      "sourceCrop": [
+        0,
+        940,
+        157,
+        1097
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "copper_panel",
+      "source": "terrain_v1.png",
+      "sourceCrop": [
+        157,
+        627,
+        314,
+        784
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "glass_panel",
+      "source": "terrain_v1.png",
+      "sourceCrop": [
+        627,
+        940,
+        784,
+        1097
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "hazard_tile",
+      "source": "terrain_v1.png",
+      "sourceCrop": [
+        940,
+        940,
+        1097,
+        1097
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "gantry_tile",
+      "source": "terrain_v1.png",
+      "sourceCrop": [
+        627,
+        627,
+        784,
+        784
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "alpha": "binary"
+    },
+    {
+      "id": "patrol_idle",
+      "source": "patrol_combat_v1.png",
+      "sourceCrops": [
+        [
+          0,
+          0,
+          241,
+          272
+        ],
+        [
+          241,
+          0,
+          482,
+          272
+        ],
+        [
+          482,
+          0,
+          724,
+          272
+        ],
+        [
+          724,
+          0,
+          965,
+          272
+        ]
+      ],
+      "frameSize": [
+        32,
+        48
+      ],
+      "frames": 4,
+      "fps": 6,
+      "loop": true,
+      "pivot": [
+        16,
+        47
+      ],
+      "paletteColors": 32,
+      "alpha": "binary"
+    },
+    {
+      "id": "patrol_walk",
+      "source": "patrol_combat_v1.png",
+      "sourceCrops": [
+        [
+          0,
+          272,
+          241,
+          543
+        ],
+        [
+          241,
+          272,
+          482,
+          543
+        ],
+        [
+          482,
+          272,
+          724,
+          543
+        ],
+        [
+          724,
+          272,
+          965,
+          543
+        ]
+      ],
+      "frameSize": [
+        32,
+        48
+      ],
+      "frames": 4,
+      "fps": 8,
+      "loop": true,
+      "pivot": [
+        16,
+        47
+      ],
+      "paletteColors": 32,
+      "alpha": "binary"
+    },
+    {
+      "id": "patrol_windup",
+      "source": "patrol_combat_v1.png",
+      "sourceCrops": [
+        [
+          0,
+          543,
+          241,
+          814
+        ],
+        [
+          241,
+          543,
+          482,
+          814
+        ],
+        [
+          482,
+          543,
+          724,
+          814
+        ],
+        [
+          724,
+          543,
+          965,
+          814
+        ]
+      ],
+      "frameSize": [
+        32,
+        48
+      ],
+      "frames": 4,
+      "fps": 7,
+      "loop": false,
+      "pivot": [
+        16,
+        47
+      ],
+      "paletteColors": 32,
+      "alpha": "binary"
+    },
+    {
+      "id": "patrol_attack",
+      "source": "patrol_combat_v1.png",
+      "sourceCrops": [
+        [
+          0,
+          814,
+          241,
+          1086
+        ],
+        [
+          241,
+          814,
+          482,
+          1086
+        ],
+        [
+          482,
+          814,
+          724,
+          1086
+        ],
+        [
+          724,
+          814,
+          965,
+          1086
+        ]
+      ],
+      "frameSize": [
+        32,
+        48
+      ],
+      "frames": 4,
+      "fps": 16,
+      "loop": false,
+      "pivot": [
+        16,
+        47
+      ],
+      "paletteColors": 32,
+      "alpha": "binary"
+    },
+    {
+      "id": "patrol_hurt",
+      "source": "patrol_combat_v1.png",
+      "sourceCrops": [
+        [
+          0,
+          1086,
+          241,
+          1358
+        ],
+        [
+          241,
+          1086,
+          482,
+          1358
+        ],
+        [
+          482,
+          1086,
+          724,
+          1358
+        ],
+        [
+          724,
+          1086,
+          965,
+          1358
+        ]
+      ],
+      "frameSize": [
+        32,
+        48
+      ],
+      "frames": 4,
+      "fps": 18,
+      "loop": false,
+      "pivot": [
+        16,
+        47
+      ],
+      "paletteColors": 32,
+      "alpha": "binary"
+    },
+    {
+      "id": "patrol_defeat",
+      "source": "patrol_combat_v1.png",
+      "sourceCrops": [
+        [
+          0,
+          1358,
+          241,
+          1629
+        ],
+        [
+          241,
+          1358,
+          482,
+          1629
+        ],
+        [
+          482,
+          1358,
+          724,
+          1629
+        ],
+        [
+          724,
+          1358,
+          965,
+          1629
+        ]
+      ],
+      "frameSize": [
+        32,
+        48
+      ],
+      "frames": 4,
+      "fps": 8,
+      "loop": false,
+      "pivot": [
+        16,
+        47
+      ],
+      "paletteColors": 32,
+      "alpha": "binary"
+    },
+    {
+      "id": "cyborg_shoot",
+      "source": "cyborg_combat_v1.png",
+      "sourceCrops": [
+        [
+          0,
+          0,
+          181,
+          362
+        ],
+        [
+          181,
+          0,
+          362,
+          362
+        ],
+        [
+          362,
+          0,
+          543,
+          362
+        ],
+        [
+          543,
+          0,
+          724,
+          362
+        ],
+        [
+          724,
+          0,
+          905,
+          362
+        ],
+        [
+          905,
+          0,
+          1086,
+          362
+        ],
+        [
+          1086,
+          0,
+          1267,
+          362
+        ],
+        [
+          1267,
+          0,
+          1448,
+          362
+        ]
+      ],
+      "frameSize": [
+        32,
+        64
+      ],
+      "frames": 8,
+      "fps": 24,
+      "loop": true,
+      "pivot": [
+        16,
+        63
+      ],
+      "paletteColors": 32,
+      "alpha": "binary"
+    },
+    {
+      "id": "cyborg_dash",
+      "source": "cyborg_combat_v1.png",
+      "sourceCrops": [
+        [
+          0,
+          362,
+          181,
+          724
+        ],
+        [
+          181,
+          362,
+          362,
+          724
+        ],
+        [
+          362,
+          362,
+          543,
+          724
+        ],
+        [
+          543,
+          362,
+          724,
+          724
+        ],
+        [
+          724,
+          362,
+          905,
+          724
+        ],
+        [
+          905,
+          362,
+          1086,
+          724
+        ],
+        [
+          1086,
+          362,
+          1267,
+          724
+        ],
+        [
+          1267,
+          362,
+          1448,
+          724
+        ]
+      ],
+      "frameSize": [
+        32,
+        64
+      ],
+      "frames": 8,
+      "fps": 30,
+      "loop": false,
+      "pivot": [
+        16,
+        63
+      ],
+      "paletteColors": 32,
+      "alpha": "binary"
+    },
+    {
+      "id": "cyborg_defeat",
+      "source": "cyborg_combat_v1.png",
+      "sourceCrops": [
+        [
+          0,
+          724,
+          181,
+          1086
+        ],
+        [
+          181,
+          724,
+          362,
+          1086
+        ],
+        [
+          362,
+          724,
+          543,
+          1086
+        ],
+        [
+          543,
+          724,
+          724,
+          1086
+        ],
+        [
+          724,
+          724,
+          905,
+          1086
+        ],
+        [
+          905,
+          724,
+          1086,
+          1086
+        ],
+        [
+          1086,
+          724,
+          1448,
+          1086
+        ],
+        [
+          1086,
+          724,
+          1448,
+          1086
+        ]
+      ],
+      "frameSize": [
+        32,
+        64
+      ],
+      "frames": 8,
+      "fps": 10,
+      "loop": false,
+      "pivot": [
+        16,
+        63
+      ],
+      "paletteColors": 32,
+      "alpha": "binary"
+    }
+  ]
+}
