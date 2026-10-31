@@ -2,6 +2,8 @@
 
 Status: planned assets for the Level 05 recovery / Level 06 mounted boss scenario. None of these giant-robot sheets have been generated or implemented yet. Existing cyborg/NPC sheets are on-foot references only.
 
+Updated production contract: [reusable asset replacement plan](reusable-asset-plan.md). Every animated sequence now requires at least 12 purposeful frames. Static dormant/wreck poses may remain single images; any animated beacon or reactor state has its own 12-frame sequence. Validate the independent giant families in an arena blockout before bulk generation.
+
 ## Families and scale
 
 | Family | Proposed native frame | Role |
@@ -22,41 +24,41 @@ Suggested frame counts are production targets, not generated outputs or final pl
 | ATLAS animation | Frames | Loop |
 | --- | --- | --- |
 | Dormant | 1 | No |
-| Boot | 8 | No |
-| Mount / cockpit close | 8 | No |
-| Idle | 6 | Yes |
-| Walk | 8 | Yes |
-| Thruster dodge | 6 | No |
-| Cannon charge | 8 | Yes while readying |
-| Cannon fire / recoil | 6 | No |
-| Anchor launch | 6 | No |
-| Anchor pull / recovery | 8 | No |
-| Piston strike | 8 | No |
-| Hurt | 4 | No |
-| Critical reactor | 6 | Yes |
-| EMP release | 8 | No |
-| Defeat | 10 | No |
-| Dismount / cockpit open | 8 | No |
+| Boot | 12 | No |
+| Mount / cockpit close | 12 | No |
+| Idle | 12 | Yes |
+| Walk | 12 | Yes |
+| Thruster dodge | 12 | No |
+| Cannon charge | 12 | Yes while readying |
+| Cannon fire / recoil | 12 | No |
+| Anchor launch | 12 | No |
+| Anchor pull / recovery | 12 | No |
+| Piston strike | 12 | No |
+| Hurt | 12 | No |
+| Critical reactor | 12 | Yes |
+| EMP release | 12 | No |
+| Defeat | 24 | No |
+| Dismount / cockpit open | 12 | No |
 
 | WARDEN animation | Frames | Loop |
 | --- | --- | --- |
-| Arrival / deployment | 10 | No |
-| Idle | 6 | Yes |
-| Advance | 8 | Yes |
-| Shield active | 6 | Yes, separate overlay |
-| Shield break / recovery | 8 each | No |
-| Beam telegraph / fire / recovery | 6 / 8 / 6 | Fire can loop |
-| Ground slam | 10 | No |
-| Missile launch | 6 | No |
-| Charge attack | 8 | No |
-| Reflective carapace | 6 | Yes, separate overlay |
-| Anchor stagger | 8 | No |
-| Joint damage | 4 | No |
-| Phase transition | 10 | No |
-| Overload charge | 8 | Yes, separate effect |
-| EMP stagger | 8 | No |
-| Core exposed | 6 | Yes |
-| Defeat | 12 | No |
+| Arrival / deployment | 18 | No |
+| Idle | 12 | Yes |
+| Advance | 12 | Yes |
+| Shield active | 12 | Yes, separate overlay |
+| Shield break / recovery | 12 each | No |
+| Beam telegraph / fire / recovery | 12 / 12 / 12 | Fire can loop |
+| Ground slam | 12 | No |
+| Missile launch | 12 | No |
+| Charge attack | 12 | No |
+| Reflective carapace | 12 | Yes, separate overlay |
+| Anchor stagger | 12 | No |
+| Joint damage | 12 | No |
+| Phase transition | 18 | No |
+| Overload charge | 12 | Yes, separate effect |
+| EMP stagger | 12 | No |
+| Core exposed | 12 | Yes |
+| Defeat | 24 | No |
 | Wreck | 1 | No |
 
 ## Metadata and acceptance
