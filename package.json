@@ -18,7 +18,9 @@
     "db:restart": "node scripts/db.js restart",
     "db:migrate": "node --env-file=.env scripts/migrate-db.js",
     "test:postgres": "node --env-file=.env --test --test-timeout=30000 tests/postgres.test.js",
-    "test:browser:postgres": "node --env-file=.env scripts/test-browser-postgres.js"
+    "test:browser:postgres": "node --env-file=.env scripts/test-browser-postgres.js",
+    "test:mission:browser": "node tests/mission-browser.mjs",
+    "test:mission:postgres": "node --env-file=.env scripts/test-mission-postgres.js"
   },
   "dependencies": {
     "pg": "^8.23.1",

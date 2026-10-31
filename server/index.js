@@ -6,12 +6,13 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { VERSION, STOCK, SPAWN, WIDTH, TILE, cells, editable, evaluate, example } from '../shared/world.js';
 import {openStore} from './storage.js';
+import {LEVEL_ONE,createMission,missionCommand,advanceMission,missionProgress,missionSnapshot} from '../shared/mission.js';
 
-export async function createServer({ port=Number(process.env.PORT||8787), host=process.env.HOST||'127.0.0.1', dataDir=process.env.DATA_DIR||'data', clientDir='exports/web', databaseUrl=process.env.DATABASE_URL, worldId=process.env.WORLD_ID||'workshop' }={}) {
+export async function createServer({ port=Number(process.env.PORT||8787), host=process.env.HOST||'127.0.0.1', dataDir=process.env.DATA_DIR||'data', clientDir='exports/web', databaseUrl=process.env.DATABASE_URL, worldId=process.env.WORLD_ID||'workshop',missionOptions={} }={}) {
   const opened=await openStore({databaseUrl,dataDir,worldId}),store=opened.store;
   let state=opened.state;
   const persist=next=>store.save(next);
-  const sessions=new Map(); let queue=Promise.resolve();
+  const sessions=new Map(),missions=new Map(); let queue=Promise.resolve();
   const server=http.createServer(async(req,res)=>{
     if(req.url==='/health'){res.setHeader('Content-Type','application/json');res.end(JSON.stringify({ok:true,version:VERSION,storage:store.kind,players:sessions.size,revision:state.revision}));return;}
     try {
@@ -38,12 +39,28 @@ export async function createServer({ port=Number(process.env.PORT||8787), host=p
       let player=typeof m.token==='string'?Object.values(next.players).find(p=>p.token===m.token):null;
       if(!player){player={id:randomUUID(),token:randomBytes(24).toString('hex'),inventory:{...STOCK}};next.players[player.id]=player;await persist(next);state=next;}
       if(sessions.has(player.id))throw new Error('This player is already connected. Open a second tab for a second player.');
-      ws.playerId=player.id;sessions.set(player.id,{ws,position:{...SPAWN},lastMove:Date.now()});
-      send(ws,{type:'welcome',id:player.id,token:player.token,inventory:player.inventory,spawn:SPAWN});send(ws,snapshot());presence();return;
+      const mode=m.mode==='mission'?'mission':'workshop';
+      ws.playerId=player.id;sessions.set(player.id,{ws,mode,position:{...SPAWN},lastMove:Date.now()});
+      send(ws,{type:'welcome',id:player.id,token:player.token,inventory:player.inventory,spawn:mode==='mission'?LEVEL_ONE.spawn:SPAWN,mode,progress:player.questProgress||{},...(mode==='mission'?{level:LEVEL_ONE}:{})});
+      if(mode==='mission'){
+        if(!missions.has(player.id))missions.set(player.id,createMission(randomUUID(),player.questProgress,missionOptions));
+        const mission=missions.get(player.id);if(mission.status==='running')mission.paused=true;
+        send(ws,{type:'mission',mission:missionSnapshot(mission),progress:player.questProgress||{}});
+      }else{send(ws,snapshot());presence();}return;
     }
     if(!ws.playerId)throw new Error('Join the world first.');
     const session=sessions.get(ws.playerId);
     if(m.type==='ping'){send(ws,{type:'pong'});return;}
+    if(m.type==='mission'){
+      if(session.mode!=='mission')throw new Error('Join mission mode first.');
+      let mission=missions.get(ws.playerId);
+      if(m.action==='retry'){
+        if(!['failed','success'].includes(mission.status)||!mission.resultSaved)throw new Error('Wait for the finished attempt to save before retrying.');
+        mission=createMission(randomUUID(),state.players[ws.playerId].questProgress,missionOptions);missions.set(ws.playerId,mission);
+      }else missionCommand(mission,{type:m.action,input:m.input,paused:m.paused});
+      send(ws,{type:'mission',mission:missionSnapshot(mission),progress:state.players[ws.playerId].questProgress||{}});return;
+    }
+    if(session.mode==='mission')throw new Error('Workshop commands are unavailable in a campaign mission.');
     if(m.type==='move') {
       if(!Number.isFinite(m.x)||!Number.isFinite(m.y))throw new Error('Invalid position.');
       const elapsed=Math.min((Date.now()-session.lastMove)/1000,2), limit=400*elapsed+48;
@@ -89,12 +106,27 @@ export async function createServer({ port=Number(process.env.PORT||8787), host=p
       queue=queue.then(()=>command(ws,m)).catch(e=>reject(ws,e));
     });
     ws.on('error',()=>{});
-    ws.on('close',()=>{queue=queue.then(()=>{if(sessions.get(ws.playerId)?.ws===ws)sessions.delete(ws.playerId);presence();});});
+    ws.on('close',()=>{queue=queue.then(()=>{if(sessions.get(ws.playerId)?.ws===ws){sessions.delete(ws.playerId);const m=missions.get(ws.playerId);if(m&&m.status==='running')missionCommand(m,{type:'pause',paused:true});}presence();});});
   });
+  let lastTick=performance.now();let tickPending=false;
+  const missionTick=setInterval(()=>{
+    if(tickPending)return;tickPending=true;
+    queue=queue.then(async()=>{
+      const now=performance.now(),elapsed=now-lastTick;lastTick=now;
+      for(const [id,session]of sessions){
+        if(session.mode!=='mission')continue;const m=missions.get(id);advanceMission(m,elapsed);
+        if(['failed','success'].includes(m.status)&&!m.resultSaved){
+          try{const next=structuredClone(state);next.players[id].questProgress=missionProgress(next.players[id].questProgress,m);await persist(next);state=next;m.resultSaved=true;m.saveError=null;if(m.status==='success')m.message='Dock secured! Level 02 unlocked. Campaign progress saved.';}
+          catch{m.saveError='Progress could not be saved. Retrying…';}
+        }
+        send(session.ws,{type:'mission',mission:missionSnapshot(m),progress:state.players[id].questProgress||{}});
+      }
+    }).catch(e=>console.error('Mission tick failed:',e.message)).finally(()=>{tickPending=false;});
+  },50);missionTick.unref();
   const heartbeat=setInterval(()=>{for(const ws of wss.clients){if(!ws.alive){ws.terminate();continue;}ws.alive=false;ws.ping();}},10000);heartbeat.unref();
   try {await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(port,host,resolve);});}
-  catch(e){clearInterval(heartbeat);wss.close();await store.close();throw e;}
-  return {server,wss,port:server.address().port,async close(){clearInterval(heartbeat);for(const ws of wss.clients)ws.terminate();await queue;await new Promise(r=>wss.close(r));await new Promise(r=>server.close(r));await store.close();}};
+  catch(e){clearInterval(heartbeat);clearInterval(missionTick);wss.close();await store.close();throw e;}
+  return {server,wss,port:server.address().port,async close(){clearInterval(heartbeat);clearInterval(missionTick);for(const ws of wss.clients)ws.terminate();await queue;await new Promise(r=>wss.close(r));await new Promise(r=>server.close(r));await store.close();}};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)) {
   const app=await createServer();console.log(`LogicWorld listening at http://${process.env.HOST||'127.0.0.1'}:${app.port}`);

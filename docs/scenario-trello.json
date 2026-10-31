@@ -1,7 +1,7 @@
 {
   "overview": "https://trello.com/c/ZkcIuJZo",
   "list": "Campaign Scenario",
-  "status": "scenario proposal; gameplay not yet implemented",
+  "status": "Level01 playable prototype; tutorial and Levels02-06 planned",
   "cards": [
     {
       "name": "CURRENT | Protocol Zero — story, rules & scope",
@@ -34,8 +34,13 @@
       "error": false
     },
     {
-      "name": "L05 | Heart of WARDEN — logic + mecha boss finale",
-      "url": "https://trello.com/c/Vu5MjlrD/24-l05-heart-of-warden-logic-mecha-boss-finale",
+      "name": "L05 | The Sleeping Giant — obtain ATLAS-01",
+      "url": "https://trello.com/c/Vu5MjlrD",
+      "error": false
+    },
+    {
+      "name": "L06 | Clash of the Giants — mounted ATLAS vs WARDEN",
+      "url": "https://trello.com/c/RB13by4Q",
       "error": false
     }
   ]
