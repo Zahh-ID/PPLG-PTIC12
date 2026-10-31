@@ -1,0 +1,13 @@
+# Local tools and secrets
+.env
+.env.*
+!.env.example
+node_modules/
+.DS_Store
+Thumbs.db
+# Generated previews, exports and backups
+exports/
+build/
+.cache/
+*.bak
+*.bak-*
