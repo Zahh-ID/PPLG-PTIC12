@@ -2,6 +2,8 @@
 
 Status: scenario proposal ready for review and implementation planning. The playable game is still the earlier workshop prototype. This document changes the intended product; it does not claim the campaign is implemented.
 
+[Trello scenario overview](https://trello.com/c/ZkcIuJZo) · [Level 01 first-playable card](https://trello.com/c/tvQfhja7)
+
 ## Agreed direction
 
 A 2D side-view sci-fi action-puzzle game with a story, battles, timed challenges and increasingly difficult levels. Solo is the first release. Shared mission state should support two-player co-op later. The player is a compact cyborg with a visible human face, robotic limbs and teal armor, drawn in 32x64 frames.
