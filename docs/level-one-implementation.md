@@ -10,6 +10,8 @@ States: briefing → running → success/failed; pause is explicit during runnin
 
 Player: 32x64 physics body, 5 health, 200px/s walk, jump, pulse shot with 350ms cooldown and 2-second dash cooldown. Patrols have 3 health, a 600ms windup, strike/recovery and a damage cooldown. Hurt invulnerability and a protected-console interaction prevent unavoidable repeated damage. Physics/hitboxes are independent of animation frame count.
 
+The interface now uses native GDevelop HUD sprites, nine-patch panels, Text objects and native icon click events. Shooting uses an independent generated rifle and muzzle flash; it keeps the locomotion animation. See [native UI and animation](native-ui-and-animation.md) for controls, shared barrel hardpoints, input handling and the source-folder guide.
+
 ## Protocol additions
 
 - `join` with `mode: "mission"` returns profile progress and the level definition; ordinary joins retain workshop mode.

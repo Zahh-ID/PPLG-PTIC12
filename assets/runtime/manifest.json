@@ -1,9 +1,9 @@
 {
-  "status": "prototype exports; manual animation polish still required",
+  "status": "validated runtime sizes and provenance; generated art subject to visual review",
   "assets": [
     {
       "id": "cyborg_idle",
-      "source": "player_cyborg_v1.png",
+      "source": "characters/player_cyborg_v1.png",
       "sourceCrops": [
         [
           0,
@@ -66,11 +66,12 @@
         63
       ],
       "paletteColors": 32,
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "characters/cyborg"
     },
     {
       "id": "cyborg_run",
-      "source": "player_cyborg_v1.png",
+      "source": "characters/player_cyborg_v1.png",
       "sourceCrops": [
         [
           0,
@@ -133,11 +134,12 @@
         63
       ],
       "paletteColors": 32,
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "characters/cyborg"
     },
     {
       "id": "cyborg_jump",
-      "source": "player_cyborg_v1.png",
+      "source": "characters/player_cyborg_v1.png",
       "sourceCrops": [
         [
           0,
@@ -200,11 +202,12 @@
         63
       ],
       "paletteColors": 32,
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "characters/cyborg"
     },
     {
       "id": "cyborg_fall",
-      "source": "player_cyborg_v1.png",
+      "source": "characters/player_cyborg_v1.png",
       "sourceCrops": [
         [
           0,
@@ -267,11 +270,12 @@
         63
       ],
       "paletteColors": 32,
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "characters/cyborg"
     },
     {
       "id": "cyborg_land",
-      "source": "player_cyborg_v1.png",
+      "source": "characters/player_cyborg_v1.png",
       "sourceCrops": [
         [
           0,
@@ -334,11 +338,12 @@
         63
       ],
       "paletteColors": 32,
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "characters/cyborg"
     },
     {
       "id": "cyborg_interact",
-      "source": "player_cyborg_v1.png",
+      "source": "characters/player_cyborg_v1.png",
       "sourceCrops": [
         [
           0,
@@ -401,11 +406,12 @@
         63
       ],
       "paletteColors": 32,
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "characters/cyborg"
     },
     {
       "id": "cyborg_build",
-      "source": "player_cyborg_v1.png",
+      "source": "characters/player_cyborg_v1.png",
       "sourceCrops": [
         [
           0,
@@ -468,11 +474,12 @@
         63
       ],
       "paletteColors": 32,
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "characters/cyborg"
     },
     {
       "id": "cyborg_hurt",
-      "source": "player_cyborg_v1.png",
+      "source": "characters/player_cyborg_v1.png",
       "sourceCrops": [
         [
           0,
@@ -535,11 +542,12 @@
         63
       ],
       "paletteColors": 32,
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "characters/cyborg"
     },
     {
       "id": "patrol",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         637,
         1134,
@@ -550,11 +558,12 @@
         32,
         48
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "characters/patrol"
     },
     {
       "id": "lab_floor",
-      "source": "terrain_v1.png",
+      "source": "environment/terrain_v1.png",
       "sourceCrop": [
         157,
         784,
@@ -565,11 +574,12 @@
         16,
         16
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/tiles"
     },
     {
       "id": "switch_off",
-      "source": "logic_devices_v1.png",
+      "source": "props/logic_devices_v1.png",
       "sourceCrop": [
         0,
         0,
@@ -580,11 +590,12 @@
         32,
         32
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "switch_on",
-      "source": "logic_devices_v1.png",
+      "source": "props/logic_devices_v1.png",
       "sourceCrop": [
         157,
         0,
@@ -595,11 +606,12 @@
         32,
         32
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "door_closed",
-      "source": "logic_devices_v1.png",
+      "source": "props/logic_devices_v1.png",
       "sourceCrop": [
         314,
         157,
@@ -610,11 +622,12 @@
         16,
         64
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "door_open",
-      "source": "logic_devices_v1.png",
+      "source": "props/logic_devices_v1.png",
       "sourceCrop": [
         470,
         157,
@@ -625,11 +638,12 @@
         16,
         64
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "charge_on",
-      "source": "quest_props_v1.png",
+      "source": "props/quest_props_v1.png",
       "sourceCrop": [
         1097,
         0,
@@ -640,11 +654,12 @@
         48,
         48
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "charge_off",
-      "source": "quest_props_v1.png",
+      "source": "props/quest_props_v1.png",
       "sourceCrop": [
         0,
         0,
@@ -655,11 +670,12 @@
         48,
         48
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "console",
-      "source": "quest_props_v1.png",
+      "source": "props/quest_props_v1.png",
       "sourceCrop": [
         0,
         314,
@@ -670,11 +686,12 @@
         32,
         48
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "fuse",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         998,
         270,
@@ -685,11 +702,12 @@
         16,
         24
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "lift",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         365,
         1126,
@@ -700,11 +718,12 @@
         48,
         64
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "log",
-      "source": "ui_icons_v1.png",
+      "source": "ui/ui_icons_v1.png",
       "sourceCrop": [
         627,
         940,
@@ -715,11 +734,12 @@
         16,
         16
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "pulse",
-      "source": "vfx_v1.png",
+      "source": "effects/vfx_v1.png",
       "sourceCrop": [
         157,
         0,
@@ -730,11 +750,12 @@
         10,
         4
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "effects"
     },
     {
       "id": "dock_habitat",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         20,
         28,
@@ -745,11 +766,12 @@
         128,
         128
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "dock_roof",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         200,
         112,
@@ -760,11 +782,12 @@
         64,
         32
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "dock_sign",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         525,
         50,
@@ -775,11 +798,12 @@
         32,
         64
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "tech_lantern",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         676,
         70,
@@ -790,11 +814,12 @@
         16,
         32
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "dock_fence",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         32,
         281,
@@ -805,11 +830,12 @@
         64,
         32
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "spawn_beacon",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         360,
         208,
@@ -820,11 +846,12 @@
         32,
         64
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "cargo_crate",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         506,
         269,
@@ -835,11 +862,12 @@
         32,
         32
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "antenna",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         672,
         211,
@@ -850,11 +878,12 @@
         32,
         64
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "solar_panel",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         823,
         257,
@@ -865,11 +894,12 @@
         48,
         48
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "lab_pillar",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         50,
         859,
@@ -880,11 +910,12 @@
         16,
         64
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "pipe_straight",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         304,
         929,
@@ -895,11 +926,12 @@
         32,
         16
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "pipe_elbow",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         505,
         892,
@@ -910,11 +942,12 @@
         16,
         32
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "wall_console",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         941,
         874,
@@ -925,11 +958,12 @@
         32,
         48
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "ruined_gear",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         1092,
         907,
@@ -940,11 +974,12 @@
         32,
         32
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "hazard_sign",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         191,
         1046,
@@ -955,11 +990,12 @@
         32,
         16
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "lab_vent",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         496,
         1030,
@@ -970,11 +1006,12 @@
         32,
         32
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "broken_monitor",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         619,
         1019,
@@ -985,11 +1022,12 @@
         48,
         32
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "server_rack",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         794,
         1000,
@@ -1000,11 +1038,12 @@
         32,
         64
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "lab_desk",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         928,
         1039,
@@ -1015,11 +1054,12 @@
         48,
         32
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "pipe_valve",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         943,
         1156,
@@ -1030,11 +1070,12 @@
         32,
         24
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "lab_canister",
-      "source": "world_decor_v1.png",
+      "source": "environment/world_decor_v1.png",
       "sourceCrop": [
         1138,
         1127,
@@ -1045,11 +1086,12 @@
         24,
         48
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/props"
     },
     {
       "id": "wall_panel",
-      "source": "terrain_v1.png",
+      "source": "environment/terrain_v1.png",
       "sourceCrop": [
         0,
         940,
@@ -1060,11 +1102,12 @@
         16,
         16
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/tiles"
     },
     {
       "id": "copper_panel",
-      "source": "terrain_v1.png",
+      "source": "environment/terrain_v1.png",
       "sourceCrop": [
         157,
         627,
@@ -1075,11 +1118,12 @@
         16,
         16
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/tiles"
     },
     {
       "id": "glass_panel",
-      "source": "terrain_v1.png",
+      "source": "environment/terrain_v1.png",
       "sourceCrop": [
         627,
         940,
@@ -1090,11 +1134,12 @@
         16,
         16
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/tiles"
     },
     {
       "id": "hazard_tile",
-      "source": "terrain_v1.png",
+      "source": "environment/terrain_v1.png",
       "sourceCrop": [
         940,
         940,
@@ -1105,11 +1150,12 @@
         16,
         16
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/tiles"
     },
     {
       "id": "gantry_tile",
-      "source": "terrain_v1.png",
+      "source": "environment/terrain_v1.png",
       "sourceCrop": [
         627,
         627,
@@ -1120,11 +1166,12 @@
         16,
         16
       ],
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "environment/tiles"
     },
     {
       "id": "patrol_idle",
-      "source": "patrol_combat_v1.png",
+      "source": "characters/patrol_combat_v1.png",
       "sourceCrops": [
         [
           0,
@@ -1163,11 +1210,12 @@
         47
       ],
       "paletteColors": 32,
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "characters/patrol"
     },
     {
       "id": "patrol_walk",
-      "source": "patrol_combat_v1.png",
+      "source": "characters/patrol_combat_v1.png",
       "sourceCrops": [
         [
           0,
@@ -1206,11 +1254,12 @@
         47
       ],
       "paletteColors": 32,
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "characters/patrol"
     },
     {
       "id": "patrol_windup",
-      "source": "patrol_combat_v1.png",
+      "source": "characters/patrol_combat_v1.png",
       "sourceCrops": [
         [
           0,
@@ -1249,11 +1298,12 @@
         47
       ],
       "paletteColors": 32,
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "characters/patrol"
     },
     {
       "id": "patrol_attack",
-      "source": "patrol_combat_v1.png",
+      "source": "characters/patrol_combat_v1.png",
       "sourceCrops": [
         [
           0,
@@ -1292,11 +1342,12 @@
         47
       ],
       "paletteColors": 32,
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "characters/patrol"
     },
     {
       "id": "patrol_hurt",
-      "source": "patrol_combat_v1.png",
+      "source": "characters/patrol_combat_v1.png",
       "sourceCrops": [
         [
           0,
@@ -1335,11 +1386,12 @@
         47
       ],
       "paletteColors": 32,
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "characters/patrol"
     },
     {
       "id": "patrol_defeat",
-      "source": "patrol_combat_v1.png",
+      "source": "characters/patrol_combat_v1.png",
       "sourceCrops": [
         [
           0,
@@ -1378,11 +1430,12 @@
         47
       ],
       "paletteColors": 32,
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "characters/patrol"
     },
     {
       "id": "cyborg_shoot",
-      "source": "cyborg_combat_v1.png",
+      "source": "characters/cyborg_combat_v1.png",
       "sourceCrops": [
         [
           0,
@@ -1445,11 +1498,12 @@
         63
       ],
       "paletteColors": 32,
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "characters/cyborg"
     },
     {
       "id": "cyborg_dash",
-      "source": "cyborg_combat_v1.png",
+      "source": "characters/cyborg_combat_v1.png",
       "sourceCrops": [
         [
           0,
@@ -1512,11 +1566,12 @@
         63
       ],
       "paletteColors": 32,
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "characters/cyborg"
     },
     {
       "id": "cyborg_defeat",
-      "source": "cyborg_combat_v1.png",
+      "source": "characters/cyborg_combat_v1.png",
       "sourceCrops": [
         [
           0,
@@ -1579,7 +1634,378 @@
         63
       ],
       "paletteColors": 32,
-      "alpha": "binary"
+      "alpha": "binary",
+      "directory": "characters/cyborg"
+    },
+    {
+      "id": "ui_panel",
+      "source": "ui/ui_panels_v1.png",
+      "sourceCrop": [
+        24,
+        84,
+        476,
+        226
+      ],
+      "size": [
+        160,
+        50
+      ],
+      "alpha": "binary",
+      "directory": "ui"
+    },
+    {
+      "id": "ui_shade",
+      "source": "ui/ui_panels_v1.png",
+      "sourceCrop": [
+        160,
+        140,
+        161,
+        141
+      ],
+      "size": [
+        1,
+        1
+      ],
+      "alpha": "binary",
+      "directory": "ui"
+    },
+    {
+      "id": "ui_fill",
+      "source": "ui/ui_panels_v1.png",
+      "sourceCrop": [
+        110,
+        620,
+        111,
+        621
+      ],
+      "size": [
+        1,
+        1
+      ],
+      "alpha": "binary",
+      "directory": "ui"
+    },
+    {
+      "id": "ui_play",
+      "source": "ui/ui_icons_v2.png",
+      "sourceCrop": [
+        0,
+        0,
+        362,
+        362
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "alpha": "binary",
+      "directory": "ui"
+    },
+    {
+      "id": "ui_pause",
+      "source": "ui/ui_icons_v2.png",
+      "sourceCrop": [
+        362,
+        0,
+        724,
+        362
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "alpha": "binary",
+      "directory": "ui"
+    },
+    {
+      "id": "ui_resume",
+      "source": "ui/ui_icons_v2.png",
+      "sourceCrop": [
+        724,
+        0,
+        1086,
+        362
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "alpha": "binary",
+      "directory": "ui"
+    },
+    {
+      "id": "ui_retry",
+      "source": "ui/ui_icons_v2.png",
+      "sourceCrop": [
+        1086,
+        0,
+        1448,
+        362
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "alpha": "binary",
+      "directory": "ui"
+    },
+    {
+      "id": "ui_help",
+      "source": "ui/ui_icons_v2.png",
+      "sourceCrop": [
+        0,
+        362,
+        362,
+        724
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "alpha": "binary",
+      "directory": "ui"
+    },
+    {
+      "id": "ui_close",
+      "source": "ui/ui_icons_v2.png",
+      "sourceCrop": [
+        362,
+        362,
+        724,
+        724
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "alpha": "binary",
+      "directory": "ui"
+    },
+    {
+      "id": "ui_gun",
+      "source": "ui/ui_icons_v2.png",
+      "sourceCrop": [
+        724,
+        362,
+        1086,
+        724
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "alpha": "binary",
+      "directory": "ui"
+    },
+    {
+      "id": "ui_timer",
+      "source": "ui/ui_icons_v2.png",
+      "sourceCrop": [
+        1086,
+        362,
+        1448,
+        724
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "alpha": "binary",
+      "directory": "ui"
+    },
+    {
+      "id": "ui_shield_full",
+      "source": "ui/ui_icons_v2.png",
+      "sourceCrop": [
+        0,
+        724,
+        362,
+        1086
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "alpha": "binary",
+      "directory": "ui"
+    },
+    {
+      "id": "ui_shield_empty",
+      "source": "ui/ui_icons_v2.png",
+      "sourceCrop": [
+        362,
+        724,
+        724,
+        1086
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "alpha": "binary",
+      "directory": "ui"
+    },
+    {
+      "id": "ui_fuse",
+      "source": "ui/ui_icons_v2.png",
+      "sourceCrop": [
+        724,
+        724,
+        1086,
+        1086
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "alpha": "binary",
+      "directory": "ui"
+    },
+    {
+      "id": "ui_check",
+      "source": "ui/ui_icons_v2.png",
+      "sourceCrop": [
+        1086,
+        724,
+        1448,
+        1086
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "alpha": "binary",
+      "directory": "ui"
+    },
+    {
+      "id": "rifle_ready",
+      "source": "weapons/pulse_rifle_v1.png",
+      "sourceCrops": [
+        [
+          0,
+          0,
+          248,
+          396
+        ],
+        [
+          248,
+          0,
+          496,
+          396
+        ],
+        [
+          496,
+          0,
+          744,
+          396
+        ],
+        [
+          744,
+          0,
+          992,
+          396
+        ],
+        [
+          992,
+          0,
+          1239,
+          396
+        ],
+        [
+          1239,
+          0,
+          1487,
+          396
+        ],
+        [
+          1487,
+          0,
+          1735,
+          396
+        ],
+        [
+          1735,
+          0,
+          1983,
+          396
+        ]
+      ],
+      "frameSize": [
+        40,
+        24
+      ],
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "alpha": "binary",
+      "emptyFrames": [],
+      "directory": "weapons/pulse-rifle"
+    },
+    {
+      "id": "muzzle_flash",
+      "source": "weapons/pulse_rifle_v1.png",
+      "sourceCrops": [
+        [
+          0,
+          396,
+          248,
+          793
+        ],
+        [
+          248,
+          396,
+          496,
+          793
+        ],
+        [
+          496,
+          396,
+          744,
+          793
+        ],
+        [
+          744,
+          396,
+          992,
+          793
+        ],
+        [
+          992,
+          396,
+          1239,
+          793
+        ],
+        [
+          1239,
+          396,
+          1487,
+          793
+        ],
+        [
+          1487,
+          396,
+          1735,
+          793
+        ],
+        [
+          1735,
+          396,
+          1983,
+          793
+        ]
+      ],
+      "frameSize": [
+        40,
+        24
+      ],
+      "frames": 8,
+      "fps": 70,
+      "loop": false,
+      "alpha": "binary",
+      "emptyFrames": [
+        7
+      ],
+      "directory": "weapons/pulse-rifle"
     }
   ]
 }
