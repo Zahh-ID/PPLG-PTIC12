@@ -1,7 +1,19 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';
-import {createMission,missionCommand,advanceMission,missionProgress,output,LEVEL_ONE} from '../shared/mission.js';
+import {createMission,missionCommand,advanceMission,missionProgress,output,LEVEL_ONE,rifleMuzzle,PULSE_RIFLE} from '../shared/mission.js';
 const make=()=>createMission('attempt-1');
 const input=(m,next)=>missionCommand(m,{type:'input',input:next});
+test('rifle fires from shared right/left hardpoints, on ground or airborne, with a server cooldown',()=>{
+  for(const facing of [-1,1])for(const airborne of [false,true]){
+    const m=make();missionCommand(m,{type:'start'});m.enemies=[];m.player.x=200;m.player.y=airborne?280:400;m.player.facing=facing;
+    input(m,{shoot:true});advanceMission(m,20);
+    const shot=m.projectiles[0],muzzle=rifleMuzzle(m.player);
+    assert.equal(shot.vx,facing*PULSE_RIFLE.speed);assert.equal(shot.y+2,muzzle.y);
+    assert.equal(shot.x,muzzle.x-(facing<0?10:0)+shot.vx*0.02);
+    assert.equal(m.player.lastShotAt,m.elapsedMs);assert.equal(m.nextProjectile,1);
+    advanceMission(m,300);assert.equal(m.nextProjectile,1,'holding fire cannot bypass cooldown');
+    advanceMission(m,60);assert.equal(m.nextProjectile,2);
+  }
+});
 function at(m,point){m.player.x=point.x-16;m.player.y=400;m.player.vx=0;m.player.vy=0;}
 function tap(m){input(m,{interact:true});input(m,{interact:false});}
 test('briefing and pause freeze clock, combat and physics; only start begins time',()=>{

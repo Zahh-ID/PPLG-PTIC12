@@ -1,8 +1,14 @@
 import {evaluate,example} from './world.js';
 
+// Shared hardpoints keep the rendered rifle and authoritative projectile aligned.
+export const PULSE_RIFLE = {
+  cooldownMs:350,gunWidth:40,gunHeight:24,gunY:17,gunRight:9,gunLeft:-17,
+  muzzleRight:43,muzzleLeft:-11,muzzleY:27,speed:600,lifetimeMs:650,
+};
+export function rifleMuzzle(p){return {x:p.x+(p.facing>0?PULSE_RIFLE.muzzleRight:PULSE_RIFLE.muzzleLeft),y:p.y+PULSE_RIFLE.muzzleY};}
 export const LEVEL_ONE = {
   id:'L01',name:'Twin Power',durationMs:360000,width:1920,height:540,
-  spawn:{x:64,y:400},playerSize:{w:32,h:64},
+  spawn:{x:64,y:400},playerSize:{w:32,h:64},weapon:PULSE_RIFLE,
   platforms:[{x:0,y:464,w:400,h:76},{x:480,y:464,w:1440,h:76},
     {x:656,y:384,w:112,h:16},{x:848,y:336,w:112,h:16},{x:1008,y:384,w:80,h:16},{x:1456,y:352,w:144,h:16}],
   zones:[{id:'loading-dock',name:'BROKEN LOADING DOCK',from:0,to:608},
@@ -25,7 +31,7 @@ const blankInput=()=>({left:false,right:false,jump:false,shoot:false,dash:false,
 export function createMission(attemptId,progress={},options={}){
   const durationMs=options.durationMs??LEVEL_ONE.durationMs;
   return {levelId:'L01',attemptId,status:'briefing',paused:false,reason:null,durationMs,remainingMs:durationMs,elapsedMs:0,
-    player:{...LEVEL_ONE.spawn,w:32,h:64,vx:0,vy:0,facing:1,hp:5,grounded:false,invulnerableMs:0,shotCooldown:0,dashCooldown:0,dashMs:0,knockbackMs:0,knockbackVx:0},
+    player:{...LEVEL_ONE.spawn,w:32,h:64,vx:0,vy:0,facing:1,hp:5,grounded:false,invulnerableMs:0,hurtMs:0,lastShotAt:-1000,shotCooldown:0,dashCooldown:0,dashMs:0,knockbackMs:0,knockbackVx:0},
     feedA:false,feedB:false,fuseCollected:false,fuseInstalled:false,defused:false,defuseMs:0,
     logCollected:(progress.logs||[]).includes('dock-record'),input:blankInput(),jumpQueued:false,dashQueued:false,
     enemies:[{id:'patrol-a',x:736,y:416,w:32,h:48,min:672,max:864,hp:3,dir:-1,mode:'patrol',windupMs:0,cooldown:0,attackMs:0,hurtMs:0,defeatMs:0},
@@ -60,7 +66,7 @@ export function missionCommand(m,command){
 function fail(m,reason){m.status='failed';m.reason=reason;m.input=blankInput();m.defuseMs=0;m.message=reason==='timeout'?'Mission failed: the purge clock expired.':reason==='fall'?'Mission failed: lost in the dock breach.':'Mission failed: RELAY-7 was disabled.';}
 function damage(m,enemy){
   const p=m.player;if(p.invulnerableMs>0||m.input.interact&&near(p,LEVEL_ONE.console))return;
-  p.hp=Math.max(0,p.hp-1);p.invulnerableMs=1000;p.knockbackMs=120;p.knockbackVx=p.x<enemy.x?-160:160;p.vx=p.knockbackVx;
+  p.hp=Math.max(0,p.hp-1);p.invulnerableMs=1000;p.hurtMs=120;p.knockbackMs=120;p.knockbackVx=p.x<enemy.x?-160:160;p.vx=p.knockbackVx;
   if(!p.hp)fail(m,'death');
 }
 function moveBody(p,dt,solids){
@@ -76,7 +82,7 @@ function step(m,ms){
   m.remainingMs=Math.max(0,m.remainingMs-ms);m.elapsedMs+=ms;
   if(m.remainingMs===0){fail(m,'timeout');return;}
   const p=m.player,dt=ms/1000;
-  for(const k of ['invulnerableMs','shotCooldown','dashCooldown','dashMs','knockbackMs'])p[k]=Math.max(0,p[k]-ms);
+  for(const k of ['invulnerableMs','hurtMs','shotCooldown','dashCooldown','dashMs','knockbackMs'])p[k]=Math.max(0,p[k]-ms);
   const direction=Number(m.input.right)-Number(m.input.left);
   if(direction)p.facing=direction;
   if(m.dashQueued&&p.dashCooldown===0){p.dashMs=160;p.dashCooldown=2000;p.invulnerableMs=Math.max(p.invulnerableMs,160);}
@@ -89,7 +95,9 @@ function step(m,ms){
   if(near(p,LEVEL_ONE.fuse,48)&&!m.fuseCollected){m.fuseCollected=true;m.message='Fuse recovered. Install it at feed B.';}
   if(near(p,LEVEL_ONE.log,40)&&!m.logCollected){m.logCollected=true;m.message='Archive log recovered: WARDEN changed the evacuation orders.';}
   if(m.input.shoot&&p.shotCooldown===0){
-    m.projectiles.push({id:`pulse-${m.nextProjectile++}`,x:p.x+(p.facing>0?28:-8),y:p.y+28,w:10,h:4,vx:p.facing*600,lifeMs:650});p.shotCooldown=350;
+    const muzzle=rifleMuzzle(p);
+    m.projectiles.push({id:`pulse-${m.nextProjectile++}`,x:muzzle.x-(p.facing<0?10:0),y:muzzle.y-2,w:10,h:4,vx:p.facing*PULSE_RIFLE.speed,lifeMs:PULSE_RIFLE.lifetimeMs});
+    p.shotCooldown=PULSE_RIFLE.cooldownMs;p.lastShotAt=m.elapsedMs;
   }
   for(const shot of m.projectiles){
     shot.x+=shot.vx*dt;shot.lifeMs-=ms;

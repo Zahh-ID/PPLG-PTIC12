@@ -1,0 +1,15 @@
+{
+  "tool": "built-in image_gen",
+  "records": [
+    {
+      "id": "ui_icons_v2",
+      "file": "ui/ui_icons_v2.png",
+      "prompt": "Use case: stylized-concept. Asset type: production 2D pixel-art sci-fi game UI icon atlas, actual transparent background. A precisely regular 4-column by 3-row grid, all 12 cells identical size, equal transparent margins, no grid lines, no labels, no letters or numbers. Each icon has chunky crisp low-resolution pixels, dark navy outline, desaturated teal steel body and pale cyan light with restrained copper accents. Intended final size 32x32 pixels per cell, keep silhouettes very readable. Row 1 left to right: play triangle inside square mechanical button, pause two bars inside same mechanical button, resume forward triangle inside same mechanical button, replay circular arrow inside same mechanical button. Row 2: help question-mark symbol inside same mechanical button, close X inside same mechanical button, a small sci-fi pulse rifle inventory icon, timer/stopwatch icon. Row 3: fully charged cyan shield pip, empty dark shield outline pip, copper cylindrical electrical fuse, cyan check mark status icon. UI controls must have exactly the same outer square frame, centered and fully inside their own cells. Flat side view, nearest-neighbor retro pixel art, hard edges, no soft glow, no shadows outside cells, no gradients, no text or labels. Export landscape 4:3 atlas with real alpha transparency."
+    },
+    {
+      "id": "pulse_rifle_v1",
+      "file": "weapons/pulse_rifle_v1.png",
+      "prompt": "Use case: stylized-concept. Asset type: 2D side-scrolling pixel-art sci-fi pulse rifle and muzzle-flash animation atlas, actual transparent background. Precisely regular 8-column by 2-row grid with 16 equally sized cells and transparent margins. Every frame intended as a 40x24 pixel canvas. Row 1: eight frames of the SAME compact teal and graphite pulse rifle pointing strictly RIGHT, same size, stable grip anchor in all eight frames; cyan barrel charge light cycles very subtly. Long barrel at the right, short stock at left, grip pointing down near left center. No hands, no character. Row 2: eight frames of a cyan-white muzzle flash progressing from tiny point to a small sharp burst to sparks to disappearing, centered in same-sized cell, entirely separate from gun. Uniform chunky crisp retro pixels, dark navy outlines, pale cyan energy, copper details, flat profile. For equipping a 32x64 compact teal cyborg explorer. Rifle silhouette should occupy x=6..34 and y=8..18 of each logical canvas; grip at x=14 y=17; barrel tip x=34 y=10. No perspective, text, labels, cell borders, soft glow, gradients, large blast clouds, or extra objects. Transparent alpha."
+    }
+  ]
+}

@@ -202,908 +202,1076 @@
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_idle_0.png",
-        "file": "assets/runtime/cyborg_idle_0.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_idle_0.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_idle_0.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_idle_1.png",
-        "file": "assets/runtime/cyborg_idle_1.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_idle_1.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_idle_1.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_idle_2.png",
-        "file": "assets/runtime/cyborg_idle_2.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_idle_2.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_idle_2.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_idle_3.png",
-        "file": "assets/runtime/cyborg_idle_3.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_idle_3.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_idle_3.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_idle_4.png",
-        "file": "assets/runtime/cyborg_idle_4.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_idle_4.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_idle_4.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_idle_5.png",
-        "file": "assets/runtime/cyborg_idle_5.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_idle_5.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_idle_5.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_idle_6.png",
-        "file": "assets/runtime/cyborg_idle_6.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_idle_6.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_idle_6.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_idle_7.png",
-        "file": "assets/runtime/cyborg_idle_7.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_idle_7.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_idle_7.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_run_0.png",
-        "file": "assets/runtime/cyborg_run_0.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_run_0.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_run_0.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_run_1.png",
-        "file": "assets/runtime/cyborg_run_1.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_run_1.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_run_1.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_run_2.png",
-        "file": "assets/runtime/cyborg_run_2.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_run_2.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_run_2.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_run_3.png",
-        "file": "assets/runtime/cyborg_run_3.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_run_3.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_run_3.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_run_4.png",
-        "file": "assets/runtime/cyborg_run_4.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_run_4.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_run_4.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_run_5.png",
-        "file": "assets/runtime/cyborg_run_5.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_run_5.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_run_5.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_run_6.png",
-        "file": "assets/runtime/cyborg_run_6.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_run_6.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_run_6.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_run_7.png",
-        "file": "assets/runtime/cyborg_run_7.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_run_7.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_run_7.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_jump_0.png",
-        "file": "assets/runtime/cyborg_jump_0.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_jump_0.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_jump_0.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_jump_1.png",
-        "file": "assets/runtime/cyborg_jump_1.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_jump_1.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_jump_1.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_jump_2.png",
-        "file": "assets/runtime/cyborg_jump_2.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_jump_2.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_jump_2.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_jump_3.png",
-        "file": "assets/runtime/cyborg_jump_3.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_jump_3.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_jump_3.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_jump_4.png",
-        "file": "assets/runtime/cyborg_jump_4.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_jump_4.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_jump_4.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_jump_5.png",
-        "file": "assets/runtime/cyborg_jump_5.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_jump_5.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_jump_5.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_jump_6.png",
-        "file": "assets/runtime/cyborg_jump_6.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_jump_6.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_jump_6.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_jump_7.png",
-        "file": "assets/runtime/cyborg_jump_7.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_jump_7.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_jump_7.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_fall_0.png",
-        "file": "assets/runtime/cyborg_fall_0.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_fall_0.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_fall_0.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_fall_1.png",
-        "file": "assets/runtime/cyborg_fall_1.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_fall_1.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_fall_1.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_fall_2.png",
-        "file": "assets/runtime/cyborg_fall_2.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_fall_2.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_fall_2.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_fall_3.png",
-        "file": "assets/runtime/cyborg_fall_3.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_fall_3.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_fall_3.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_fall_4.png",
-        "file": "assets/runtime/cyborg_fall_4.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_fall_4.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_fall_4.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_fall_5.png",
-        "file": "assets/runtime/cyborg_fall_5.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_fall_5.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_fall_5.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_fall_6.png",
-        "file": "assets/runtime/cyborg_fall_6.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_fall_6.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_fall_6.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_fall_7.png",
-        "file": "assets/runtime/cyborg_fall_7.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_fall_7.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_fall_7.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_land_0.png",
-        "file": "assets/runtime/cyborg_land_0.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_land_0.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_land_0.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_land_1.png",
-        "file": "assets/runtime/cyborg_land_1.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_land_1.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_land_1.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_land_2.png",
-        "file": "assets/runtime/cyborg_land_2.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_land_2.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_land_2.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_land_3.png",
-        "file": "assets/runtime/cyborg_land_3.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_land_3.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_land_3.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_land_4.png",
-        "file": "assets/runtime/cyborg_land_4.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_land_4.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_land_4.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_land_5.png",
-        "file": "assets/runtime/cyborg_land_5.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_land_5.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_land_5.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_land_6.png",
-        "file": "assets/runtime/cyborg_land_6.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_land_6.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_land_6.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_land_7.png",
-        "file": "assets/runtime/cyborg_land_7.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_land_7.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_land_7.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_interact_0.png",
-        "file": "assets/runtime/cyborg_interact_0.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_interact_0.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_interact_0.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_interact_1.png",
-        "file": "assets/runtime/cyborg_interact_1.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_interact_1.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_interact_1.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_interact_2.png",
-        "file": "assets/runtime/cyborg_interact_2.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_interact_2.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_interact_2.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_interact_3.png",
-        "file": "assets/runtime/cyborg_interact_3.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_interact_3.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_interact_3.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_interact_4.png",
-        "file": "assets/runtime/cyborg_interact_4.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_interact_4.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_interact_4.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_interact_5.png",
-        "file": "assets/runtime/cyborg_interact_5.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_interact_5.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_interact_5.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_interact_6.png",
-        "file": "assets/runtime/cyborg_interact_6.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_interact_6.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_interact_6.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_interact_7.png",
-        "file": "assets/runtime/cyborg_interact_7.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_interact_7.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_interact_7.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_build_0.png",
-        "file": "assets/runtime/cyborg_build_0.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_build_0.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_build_0.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_build_1.png",
-        "file": "assets/runtime/cyborg_build_1.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_build_1.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_build_1.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_build_2.png",
-        "file": "assets/runtime/cyborg_build_2.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_build_2.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_build_2.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_build_3.png",
-        "file": "assets/runtime/cyborg_build_3.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_build_3.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_build_3.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_build_4.png",
-        "file": "assets/runtime/cyborg_build_4.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_build_4.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_build_4.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_build_5.png",
-        "file": "assets/runtime/cyborg_build_5.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_build_5.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_build_5.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_build_6.png",
-        "file": "assets/runtime/cyborg_build_6.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_build_6.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_build_6.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_build_7.png",
-        "file": "assets/runtime/cyborg_build_7.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_build_7.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_build_7.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_hurt_0.png",
-        "file": "assets/runtime/cyborg_hurt_0.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_hurt_0.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_hurt_0.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_hurt_1.png",
-        "file": "assets/runtime/cyborg_hurt_1.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_hurt_1.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_hurt_1.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_hurt_2.png",
-        "file": "assets/runtime/cyborg_hurt_2.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_hurt_2.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_hurt_2.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_hurt_3.png",
-        "file": "assets/runtime/cyborg_hurt_3.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_hurt_3.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_hurt_3.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_hurt_4.png",
-        "file": "assets/runtime/cyborg_hurt_4.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_hurt_4.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_hurt_4.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_hurt_5.png",
-        "file": "assets/runtime/cyborg_hurt_5.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_hurt_5.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_hurt_5.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_hurt_6.png",
-        "file": "assets/runtime/cyborg_hurt_6.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_hurt_6.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_hurt_6.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_hurt_7.png",
-        "file": "assets/runtime/cyborg_hurt_7.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_hurt_7.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_hurt_7.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/lab_floor.png",
-        "file": "assets/runtime/lab_floor.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_shoot_0.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_shoot_0.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol.png",
-        "file": "assets/runtime/patrol.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_shoot_1.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_shoot_1.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/switch_off.png",
-        "file": "assets/runtime/switch_off.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_shoot_2.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_shoot_2.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/switch_on.png",
-        "file": "assets/runtime/switch_on.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_shoot_3.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_shoot_3.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/fuse.png",
-        "file": "assets/runtime/fuse.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_shoot_4.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_shoot_4.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/console.png",
-        "file": "assets/runtime/console.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_shoot_5.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_shoot_5.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/charge_on.png",
-        "file": "assets/runtime/charge_on.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_shoot_6.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_shoot_6.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/charge_off.png",
-        "file": "assets/runtime/charge_off.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_shoot_7.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_shoot_7.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/door_closed.png",
-        "file": "assets/runtime/door_closed.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_dash_0.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_dash_0.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/door_open.png",
-        "file": "assets/runtime/door_open.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_dash_1.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_dash_1.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/lift.png",
-        "file": "assets/runtime/lift.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_dash_2.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_dash_2.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/log.png",
-        "file": "assets/runtime/log.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_dash_3.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_dash_3.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/pulse.png",
-        "file": "assets/runtime/pulse.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_dash_4.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_dash_4.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_shoot_0.png",
-        "file": "assets/runtime/cyborg_shoot_0.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_dash_5.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_dash_5.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_shoot_1.png",
-        "file": "assets/runtime/cyborg_shoot_1.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_dash_6.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_dash_6.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_shoot_2.png",
-        "file": "assets/runtime/cyborg_shoot_2.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_dash_7.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_dash_7.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_shoot_3.png",
-        "file": "assets/runtime/cyborg_shoot_3.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_defeat_0.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_defeat_0.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_shoot_4.png",
-        "file": "assets/runtime/cyborg_shoot_4.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_defeat_1.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_defeat_1.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_shoot_5.png",
-        "file": "assets/runtime/cyborg_shoot_5.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_defeat_2.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_defeat_2.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_shoot_6.png",
-        "file": "assets/runtime/cyborg_shoot_6.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_defeat_3.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_defeat_3.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_shoot_7.png",
-        "file": "assets/runtime/cyborg_shoot_7.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_defeat_4.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_defeat_4.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_dash_0.png",
-        "file": "assets/runtime/cyborg_dash_0.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_defeat_5.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_defeat_5.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_dash_1.png",
-        "file": "assets/runtime/cyborg_dash_1.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_defeat_6.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_defeat_6.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_dash_2.png",
-        "file": "assets/runtime/cyborg_dash_2.png",
+        "name": "assets/runtime/characters/cyborg/cyborg_defeat_7.png",
+        "file": "assets/runtime/characters/cyborg/cyborg_defeat_7.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_dash_3.png",
-        "file": "assets/runtime/cyborg_dash_3.png",
+        "name": "assets/runtime/characters/patrol/patrol_idle_0.png",
+        "file": "assets/runtime/characters/patrol/patrol_idle_0.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_dash_4.png",
-        "file": "assets/runtime/cyborg_dash_4.png",
+        "name": "assets/runtime/characters/patrol/patrol_idle_1.png",
+        "file": "assets/runtime/characters/patrol/patrol_idle_1.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_dash_5.png",
-        "file": "assets/runtime/cyborg_dash_5.png",
+        "name": "assets/runtime/characters/patrol/patrol_idle_2.png",
+        "file": "assets/runtime/characters/patrol/patrol_idle_2.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_dash_6.png",
-        "file": "assets/runtime/cyborg_dash_6.png",
+        "name": "assets/runtime/characters/patrol/patrol_idle_3.png",
+        "file": "assets/runtime/characters/patrol/patrol_idle_3.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_dash_7.png",
-        "file": "assets/runtime/cyborg_dash_7.png",
+        "name": "assets/runtime/characters/patrol/patrol_walk_0.png",
+        "file": "assets/runtime/characters/patrol/patrol_walk_0.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_defeat_0.png",
-        "file": "assets/runtime/cyborg_defeat_0.png",
+        "name": "assets/runtime/characters/patrol/patrol_walk_1.png",
+        "file": "assets/runtime/characters/patrol/patrol_walk_1.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_defeat_1.png",
-        "file": "assets/runtime/cyborg_defeat_1.png",
+        "name": "assets/runtime/characters/patrol/patrol_walk_2.png",
+        "file": "assets/runtime/characters/patrol/patrol_walk_2.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_defeat_2.png",
-        "file": "assets/runtime/cyborg_defeat_2.png",
+        "name": "assets/runtime/characters/patrol/patrol_walk_3.png",
+        "file": "assets/runtime/characters/patrol/patrol_walk_3.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_defeat_3.png",
-        "file": "assets/runtime/cyborg_defeat_3.png",
+        "name": "assets/runtime/characters/patrol/patrol_windup_0.png",
+        "file": "assets/runtime/characters/patrol/patrol_windup_0.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_defeat_4.png",
-        "file": "assets/runtime/cyborg_defeat_4.png",
+        "name": "assets/runtime/characters/patrol/patrol_windup_1.png",
+        "file": "assets/runtime/characters/patrol/patrol_windup_1.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_defeat_5.png",
-        "file": "assets/runtime/cyborg_defeat_5.png",
+        "name": "assets/runtime/characters/patrol/patrol_windup_2.png",
+        "file": "assets/runtime/characters/patrol/patrol_windup_2.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_defeat_6.png",
-        "file": "assets/runtime/cyborg_defeat_6.png",
+        "name": "assets/runtime/characters/patrol/patrol_windup_3.png",
+        "file": "assets/runtime/characters/patrol/patrol_windup_3.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cyborg_defeat_7.png",
-        "file": "assets/runtime/cyborg_defeat_7.png",
+        "name": "assets/runtime/characters/patrol/patrol_attack_0.png",
+        "file": "assets/runtime/characters/patrol/patrol_attack_0.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_idle_0.png",
-        "file": "assets/runtime/patrol_idle_0.png",
+        "name": "assets/runtime/characters/patrol/patrol_attack_1.png",
+        "file": "assets/runtime/characters/patrol/patrol_attack_1.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_idle_1.png",
-        "file": "assets/runtime/patrol_idle_1.png",
+        "name": "assets/runtime/characters/patrol/patrol_attack_2.png",
+        "file": "assets/runtime/characters/patrol/patrol_attack_2.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_idle_2.png",
-        "file": "assets/runtime/patrol_idle_2.png",
+        "name": "assets/runtime/characters/patrol/patrol_attack_3.png",
+        "file": "assets/runtime/characters/patrol/patrol_attack_3.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_idle_3.png",
-        "file": "assets/runtime/patrol_idle_3.png",
+        "name": "assets/runtime/characters/patrol/patrol_hurt_0.png",
+        "file": "assets/runtime/characters/patrol/patrol_hurt_0.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_walk_0.png",
-        "file": "assets/runtime/patrol_walk_0.png",
+        "name": "assets/runtime/characters/patrol/patrol_hurt_1.png",
+        "file": "assets/runtime/characters/patrol/patrol_hurt_1.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_walk_1.png",
-        "file": "assets/runtime/patrol_walk_1.png",
+        "name": "assets/runtime/characters/patrol/patrol_hurt_2.png",
+        "file": "assets/runtime/characters/patrol/patrol_hurt_2.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_walk_2.png",
-        "file": "assets/runtime/patrol_walk_2.png",
+        "name": "assets/runtime/characters/patrol/patrol_hurt_3.png",
+        "file": "assets/runtime/characters/patrol/patrol_hurt_3.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_walk_3.png",
-        "file": "assets/runtime/patrol_walk_3.png",
+        "name": "assets/runtime/characters/patrol/patrol_defeat_0.png",
+        "file": "assets/runtime/characters/patrol/patrol_defeat_0.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_windup_0.png",
-        "file": "assets/runtime/patrol_windup_0.png",
+        "name": "assets/runtime/characters/patrol/patrol_defeat_1.png",
+        "file": "assets/runtime/characters/patrol/patrol_defeat_1.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_windup_1.png",
-        "file": "assets/runtime/patrol_windup_1.png",
+        "name": "assets/runtime/characters/patrol/patrol_defeat_2.png",
+        "file": "assets/runtime/characters/patrol/patrol_defeat_2.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_windup_2.png",
-        "file": "assets/runtime/patrol_windup_2.png",
+        "name": "assets/runtime/characters/patrol/patrol_defeat_3.png",
+        "file": "assets/runtime/characters/patrol/patrol_defeat_3.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_windup_3.png",
-        "file": "assets/runtime/patrol_windup_3.png",
+        "name": "assets/runtime/environment/tiles/lab_floor.png",
+        "file": "assets/runtime/environment/tiles/lab_floor.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_attack_0.png",
-        "file": "assets/runtime/patrol_attack_0.png",
+        "name": "assets/runtime/environment/props/switch_off.png",
+        "file": "assets/runtime/environment/props/switch_off.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_attack_1.png",
-        "file": "assets/runtime/patrol_attack_1.png",
+        "name": "assets/runtime/environment/props/switch_on.png",
+        "file": "assets/runtime/environment/props/switch_on.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_attack_2.png",
-        "file": "assets/runtime/patrol_attack_2.png",
+        "name": "assets/runtime/environment/props/fuse.png",
+        "file": "assets/runtime/environment/props/fuse.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_attack_3.png",
-        "file": "assets/runtime/patrol_attack_3.png",
+        "name": "assets/runtime/environment/props/console.png",
+        "file": "assets/runtime/environment/props/console.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_hurt_0.png",
-        "file": "assets/runtime/patrol_hurt_0.png",
+        "name": "assets/runtime/environment/props/charge_on.png",
+        "file": "assets/runtime/environment/props/charge_on.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_hurt_1.png",
-        "file": "assets/runtime/patrol_hurt_1.png",
+        "name": "assets/runtime/environment/props/charge_off.png",
+        "file": "assets/runtime/environment/props/charge_off.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_hurt_2.png",
-        "file": "assets/runtime/patrol_hurt_2.png",
+        "name": "assets/runtime/environment/props/door_closed.png",
+        "file": "assets/runtime/environment/props/door_closed.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_hurt_3.png",
-        "file": "assets/runtime/patrol_hurt_3.png",
+        "name": "assets/runtime/environment/props/door_open.png",
+        "file": "assets/runtime/environment/props/door_open.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_defeat_0.png",
-        "file": "assets/runtime/patrol_defeat_0.png",
+        "name": "assets/runtime/environment/props/lift.png",
+        "file": "assets/runtime/environment/props/lift.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_defeat_1.png",
-        "file": "assets/runtime/patrol_defeat_1.png",
+        "name": "assets/runtime/environment/props/log.png",
+        "file": "assets/runtime/environment/props/log.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_defeat_2.png",
-        "file": "assets/runtime/patrol_defeat_2.png",
+        "name": "assets/runtime/effects/pulse.png",
+        "file": "assets/runtime/effects/pulse.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/patrol_defeat_3.png",
-        "file": "assets/runtime/patrol_defeat_3.png",
+        "name": "assets/runtime/weapons/pulse-rifle/rifle_ready_0.png",
+        "file": "assets/runtime/weapons/pulse-rifle/rifle_ready_0.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/wall_panel.png",
-        "file": "assets/runtime/wall_panel.png",
+        "name": "assets/runtime/weapons/pulse-rifle/rifle_ready_1.png",
+        "file": "assets/runtime/weapons/pulse-rifle/rifle_ready_1.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/copper_panel.png",
-        "file": "assets/runtime/copper_panel.png",
+        "name": "assets/runtime/weapons/pulse-rifle/rifle_ready_2.png",
+        "file": "assets/runtime/weapons/pulse-rifle/rifle_ready_2.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/glass_panel.png",
-        "file": "assets/runtime/glass_panel.png",
+        "name": "assets/runtime/weapons/pulse-rifle/rifle_ready_3.png",
+        "file": "assets/runtime/weapons/pulse-rifle/rifle_ready_3.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/gantry_tile.png",
-        "file": "assets/runtime/gantry_tile.png",
+        "name": "assets/runtime/weapons/pulse-rifle/rifle_ready_4.png",
+        "file": "assets/runtime/weapons/pulse-rifle/rifle_ready_4.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/hazard_tile.png",
-        "file": "assets/runtime/hazard_tile.png",
+        "name": "assets/runtime/weapons/pulse-rifle/rifle_ready_5.png",
+        "file": "assets/runtime/weapons/pulse-rifle/rifle_ready_5.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/dock_habitat.png",
-        "file": "assets/runtime/dock_habitat.png",
+        "name": "assets/runtime/weapons/pulse-rifle/rifle_ready_6.png",
+        "file": "assets/runtime/weapons/pulse-rifle/rifle_ready_6.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/dock_roof.png",
-        "file": "assets/runtime/dock_roof.png",
+        "name": "assets/runtime/weapons/pulse-rifle/rifle_ready_7.png",
+        "file": "assets/runtime/weapons/pulse-rifle/rifle_ready_7.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/dock_sign.png",
-        "file": "assets/runtime/dock_sign.png",
+        "name": "assets/runtime/weapons/pulse-rifle/muzzle_flash_0.png",
+        "file": "assets/runtime/weapons/pulse-rifle/muzzle_flash_0.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/tech_lantern.png",
-        "file": "assets/runtime/tech_lantern.png",
+        "name": "assets/runtime/weapons/pulse-rifle/muzzle_flash_1.png",
+        "file": "assets/runtime/weapons/pulse-rifle/muzzle_flash_1.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/dock_fence.png",
-        "file": "assets/runtime/dock_fence.png",
+        "name": "assets/runtime/weapons/pulse-rifle/muzzle_flash_2.png",
+        "file": "assets/runtime/weapons/pulse-rifle/muzzle_flash_2.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/spawn_beacon.png",
-        "file": "assets/runtime/spawn_beacon.png",
+        "name": "assets/runtime/weapons/pulse-rifle/muzzle_flash_3.png",
+        "file": "assets/runtime/weapons/pulse-rifle/muzzle_flash_3.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/cargo_crate.png",
-        "file": "assets/runtime/cargo_crate.png",
+        "name": "assets/runtime/weapons/pulse-rifle/muzzle_flash_4.png",
+        "file": "assets/runtime/weapons/pulse-rifle/muzzle_flash_4.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/antenna.png",
-        "file": "assets/runtime/antenna.png",
+        "name": "assets/runtime/weapons/pulse-rifle/muzzle_flash_5.png",
+        "file": "assets/runtime/weapons/pulse-rifle/muzzle_flash_5.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/solar_panel.png",
-        "file": "assets/runtime/solar_panel.png",
+        "name": "assets/runtime/weapons/pulse-rifle/muzzle_flash_6.png",
+        "file": "assets/runtime/weapons/pulse-rifle/muzzle_flash_6.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/lab_pillar.png",
-        "file": "assets/runtime/lab_pillar.png",
+        "name": "assets/runtime/weapons/pulse-rifle/muzzle_flash_7.png",
+        "file": "assets/runtime/weapons/pulse-rifle/muzzle_flash_7.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/pipe_straight.png",
-        "file": "assets/runtime/pipe_straight.png",
+        "name": "assets/runtime/environment/tiles/wall_panel.png",
+        "file": "assets/runtime/environment/tiles/wall_panel.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/pipe_elbow.png",
-        "file": "assets/runtime/pipe_elbow.png",
+        "name": "assets/runtime/environment/tiles/copper_panel.png",
+        "file": "assets/runtime/environment/tiles/copper_panel.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/wall_console.png",
-        "file": "assets/runtime/wall_console.png",
+        "name": "assets/runtime/environment/tiles/glass_panel.png",
+        "file": "assets/runtime/environment/tiles/glass_panel.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/ruined_gear.png",
-        "file": "assets/runtime/ruined_gear.png",
+        "name": "assets/runtime/environment/tiles/gantry_tile.png",
+        "file": "assets/runtime/environment/tiles/gantry_tile.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/hazard_sign.png",
-        "file": "assets/runtime/hazard_sign.png",
+        "name": "assets/runtime/environment/tiles/hazard_tile.png",
+        "file": "assets/runtime/environment/tiles/hazard_tile.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/lab_vent.png",
-        "file": "assets/runtime/lab_vent.png",
+        "name": "assets/runtime/environment/props/dock_habitat.png",
+        "file": "assets/runtime/environment/props/dock_habitat.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/broken_monitor.png",
-        "file": "assets/runtime/broken_monitor.png",
+        "name": "assets/runtime/environment/props/dock_roof.png",
+        "file": "assets/runtime/environment/props/dock_roof.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/server_rack.png",
-        "file": "assets/runtime/server_rack.png",
+        "name": "assets/runtime/environment/props/dock_sign.png",
+        "file": "assets/runtime/environment/props/dock_sign.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/lab_desk.png",
-        "file": "assets/runtime/lab_desk.png",
+        "name": "assets/runtime/environment/props/tech_lantern.png",
+        "file": "assets/runtime/environment/props/tech_lantern.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/pipe_valve.png",
-        "file": "assets/runtime/pipe_valve.png",
+        "name": "assets/runtime/environment/props/dock_fence.png",
+        "file": "assets/runtime/environment/props/dock_fence.png",
         "userAdded": true
       },
       {
         "kind": "image",
-        "name": "assets/runtime/lab_canister.png",
-        "file": "assets/runtime/lab_canister.png",
+        "name": "assets/runtime/environment/props/spawn_beacon.png",
+        "file": "assets/runtime/environment/props/spawn_beacon.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/environment/props/cargo_crate.png",
+        "file": "assets/runtime/environment/props/cargo_crate.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/environment/props/antenna.png",
+        "file": "assets/runtime/environment/props/antenna.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/environment/props/solar_panel.png",
+        "file": "assets/runtime/environment/props/solar_panel.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/environment/props/lab_pillar.png",
+        "file": "assets/runtime/environment/props/lab_pillar.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/environment/props/pipe_straight.png",
+        "file": "assets/runtime/environment/props/pipe_straight.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/environment/props/pipe_elbow.png",
+        "file": "assets/runtime/environment/props/pipe_elbow.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/environment/props/wall_console.png",
+        "file": "assets/runtime/environment/props/wall_console.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/environment/props/ruined_gear.png",
+        "file": "assets/runtime/environment/props/ruined_gear.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/environment/props/hazard_sign.png",
+        "file": "assets/runtime/environment/props/hazard_sign.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/environment/props/lab_vent.png",
+        "file": "assets/runtime/environment/props/lab_vent.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/environment/props/broken_monitor.png",
+        "file": "assets/runtime/environment/props/broken_monitor.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/environment/props/server_rack.png",
+        "file": "assets/runtime/environment/props/server_rack.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/environment/props/lab_desk.png",
+        "file": "assets/runtime/environment/props/lab_desk.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/environment/props/pipe_valve.png",
+        "file": "assets/runtime/environment/props/pipe_valve.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/environment/props/lab_canister.png",
+        "file": "assets/runtime/environment/props/lab_canister.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/ui/ui_pause.png",
+        "file": "assets/runtime/ui/ui_pause.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/ui/ui_help.png",
+        "file": "assets/runtime/ui/ui_help.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/ui/ui_play.png",
+        "file": "assets/runtime/ui/ui_play.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/ui/ui_resume.png",
+        "file": "assets/runtime/ui/ui_resume.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/ui/ui_retry.png",
+        "file": "assets/runtime/ui/ui_retry.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/ui/ui_close.png",
+        "file": "assets/runtime/ui/ui_close.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/ui/ui_panel.png",
+        "file": "assets/runtime/ui/ui_panel.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/ui/ui_shield_full.png",
+        "file": "assets/runtime/ui/ui_shield_full.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/ui/ui_shield_empty.png",
+        "file": "assets/runtime/ui/ui_shield_empty.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/ui/ui_timer.png",
+        "file": "assets/runtime/ui/ui_timer.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/ui/ui_fuse.png",
+        "file": "assets/runtime/ui/ui_fuse.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/ui/ui_fill.png",
+        "file": "assets/runtime/ui/ui_fill.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/ui/ui_shade.png",
+        "file": "assets/runtime/ui/ui_shade.png",
         "userAdded": true
       }
     ]
