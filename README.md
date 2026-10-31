@@ -4,6 +4,8 @@ Protocol Zero: a solo-first sci-fi action/puzzle game built with GDevelop, Node.
 
 Current campaign design: [Protocol Zero](docs/campaign-scenario.md), an untimed tutorial plus six logic/combat missions. Level 01 has a complete prototype loop; the tutorial and Levels 02–06 remain planned. Level 05 obtains a giant robot; Level 06 pilots it against an independent giant boss.
 
+Current art direction: [reusable asset replacement plan](docs/reusable-asset-plan.md). The first [connected V2 art proof](docs/asset-proof.md) is now available as **AssetProof** in GDevelop: integrated-rifle 12-frame player animations, readable interactions and three parallax layers. Its art canvas is 96×80 around the unchanged 32×64 body. The rest of the replacement pack and campaign migration follow visual review; Mission01 still uses the existing prototype pack.
+
 ## Open and run
 
 Requires Node.js 22+ and GDevelop 5.6.283+. Run `npm ci`, `npm run db:configure`, `npm run db:up`, `npm run db:migrate`, `npm run build:client`, then `npm start`. PostgreSQL runs through Docker inside WSL Ubuntu. Open `LogicGate.json` in GDevelop and launch Preview. Keep `layouts/` beside the project. `Mission01` is the initial scene; `Sandbox` preserves the earlier shared-workshop prototype.

@@ -1,6 +1,7 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import {addNativeUI} from './native-ui.js';
+import {buildAssetProof} from './build-asset-proof.js';
 const root=path.resolve(import.meta.dirname,'..');
 const project=JSON.parse(await readFile(path.join(root,'LogicGate.json'),'utf8'));
 const scene=JSON.parse(await readFile(path.join(root,'layouts/sandbox.json'),'utf8'));
@@ -51,12 +52,15 @@ addNativeUI(mission,{object,instance,addResource,asset});
 await writeFile(path.join(root,'layouts/mission01.json'),JSON.stringify(mission,null,2)+'\n');
 project.firstLayout='Mission01';project.properties.description='Protocol Zero — Level 01 solo mission prototype';
 project.layouts=[{__REFERENCE_TO_SPLIT_OBJECT:true,referenceTo:'/layouts/mission01'},{__REFERENCE_TO_SPLIT_OBJECT:true,referenceTo:'/layouts/sandbox'}];
+const proof=await buildAssetProof(project,scene,root);
+if(proof)project.layouts.push({__REFERENCE_TO_SPLIT_OBJECT:true,referenceTo:'/layouts/asset-proof'});
 await writeFile(path.join(root,'LogicGate.json'),JSON.stringify(project,null,2)+'\n');
 // The MCP exporter/validator expects a single-file project. The editor keeps
 // its native split layout; generated files and exports never enter source control.
-project.layouts=[mission,scene];project.properties.folderProject=false;
+project.layouts=[mission,scene,...(proof?[proof]:[])];project.properties.folderProject=false;
 for(const r of project.resources.resources)r.file=path.resolve(root,r.file);
 await mkdir(path.join(root,'.cache'),{recursive:true});
 await writeFile(path.join(root,'.cache/preview.json'),JSON.stringify(project,null,2));
 project.firstLayout='Sandbox';await writeFile(path.join(root,'.cache/workshop-preview.json'),JSON.stringify(project,null,2));
+if(proof){project.firstLayout='AssetProof';await writeFile(path.join(root,'.cache/asset-proof-preview.json'),JSON.stringify(project,null,2));}
 console.log('Updated mission/workshop scene events and resolved preview projects.');

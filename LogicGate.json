@@ -1273,6 +1273,828 @@
         "name": "assets/runtime/ui/ui_shade.png",
         "file": "assets/runtime/ui/ui_shade.png",
         "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_idle_00.png",
+        "file": "assets/runtime/v2/player/player_idle_00.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_idle_01.png",
+        "file": "assets/runtime/v2/player/player_idle_01.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_idle_02.png",
+        "file": "assets/runtime/v2/player/player_idle_02.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_idle_03.png",
+        "file": "assets/runtime/v2/player/player_idle_03.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_idle_04.png",
+        "file": "assets/runtime/v2/player/player_idle_04.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_idle_05.png",
+        "file": "assets/runtime/v2/player/player_idle_05.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_idle_06.png",
+        "file": "assets/runtime/v2/player/player_idle_06.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_idle_07.png",
+        "file": "assets/runtime/v2/player/player_idle_07.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_idle_08.png",
+        "file": "assets/runtime/v2/player/player_idle_08.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_idle_09.png",
+        "file": "assets/runtime/v2/player/player_idle_09.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_idle_10.png",
+        "file": "assets/runtime/v2/player/player_idle_10.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_idle_11.png",
+        "file": "assets/runtime/v2/player/player_idle_11.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_00.png",
+        "file": "assets/runtime/v2/player/player_run_00.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_01.png",
+        "file": "assets/runtime/v2/player/player_run_01.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_02.png",
+        "file": "assets/runtime/v2/player/player_run_02.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_03.png",
+        "file": "assets/runtime/v2/player/player_run_03.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_04.png",
+        "file": "assets/runtime/v2/player/player_run_04.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_05.png",
+        "file": "assets/runtime/v2/player/player_run_05.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_06.png",
+        "file": "assets/runtime/v2/player/player_run_06.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_07.png",
+        "file": "assets/runtime/v2/player/player_run_07.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_08.png",
+        "file": "assets/runtime/v2/player/player_run_08.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_09.png",
+        "file": "assets/runtime/v2/player/player_run_09.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_10.png",
+        "file": "assets/runtime/v2/player/player_run_10.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_11.png",
+        "file": "assets/runtime/v2/player/player_run_11.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_fire_00.png",
+        "file": "assets/runtime/v2/player/player_fire_00.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_fire_01.png",
+        "file": "assets/runtime/v2/player/player_fire_01.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_fire_02.png",
+        "file": "assets/runtime/v2/player/player_fire_02.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_fire_03.png",
+        "file": "assets/runtime/v2/player/player_fire_03.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_fire_04.png",
+        "file": "assets/runtime/v2/player/player_fire_04.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_fire_05.png",
+        "file": "assets/runtime/v2/player/player_fire_05.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_fire_06.png",
+        "file": "assets/runtime/v2/player/player_fire_06.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_fire_07.png",
+        "file": "assets/runtime/v2/player/player_fire_07.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_fire_08.png",
+        "file": "assets/runtime/v2/player/player_fire_08.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_fire_09.png",
+        "file": "assets/runtime/v2/player/player_fire_09.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_fire_10.png",
+        "file": "assets/runtime/v2/player/player_fire_10.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_fire_11.png",
+        "file": "assets/runtime/v2/player/player_fire_11.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_fire_00.png",
+        "file": "assets/runtime/v2/player/player_run_fire_00.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_fire_01.png",
+        "file": "assets/runtime/v2/player/player_run_fire_01.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_fire_02.png",
+        "file": "assets/runtime/v2/player/player_run_fire_02.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_fire_03.png",
+        "file": "assets/runtime/v2/player/player_run_fire_03.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_fire_04.png",
+        "file": "assets/runtime/v2/player/player_run_fire_04.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_fire_05.png",
+        "file": "assets/runtime/v2/player/player_run_fire_05.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_fire_06.png",
+        "file": "assets/runtime/v2/player/player_run_fire_06.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_fire_07.png",
+        "file": "assets/runtime/v2/player/player_run_fire_07.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_fire_08.png",
+        "file": "assets/runtime/v2/player/player_run_fire_08.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_fire_09.png",
+        "file": "assets/runtime/v2/player/player_run_fire_09.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_fire_10.png",
+        "file": "assets/runtime/v2/player/player_run_fire_10.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/player/player_run_fire_11.png",
+        "file": "assets/runtime/v2/player/player_run_fire_11.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/switch/power_switch_00.png",
+        "file": "assets/runtime/v2/switch/power_switch_00.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/switch/power_switch_01.png",
+        "file": "assets/runtime/v2/switch/power_switch_01.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/switch/power_switch_02.png",
+        "file": "assets/runtime/v2/switch/power_switch_02.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/switch/power_switch_03.png",
+        "file": "assets/runtime/v2/switch/power_switch_03.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/switch/power_switch_04.png",
+        "file": "assets/runtime/v2/switch/power_switch_04.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/switch/power_switch_05.png",
+        "file": "assets/runtime/v2/switch/power_switch_05.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/switch/power_switch_06.png",
+        "file": "assets/runtime/v2/switch/power_switch_06.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/switch/power_switch_07.png",
+        "file": "assets/runtime/v2/switch/power_switch_07.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/switch/power_switch_08.png",
+        "file": "assets/runtime/v2/switch/power_switch_08.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/switch/power_switch_09.png",
+        "file": "assets/runtime/v2/switch/power_switch_09.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/switch/power_switch_10.png",
+        "file": "assets/runtime/v2/switch/power_switch_10.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/switch/power_switch_11.png",
+        "file": "assets/runtime/v2/switch/power_switch_11.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/socket/fuse_socket_00.png",
+        "file": "assets/runtime/v2/socket/fuse_socket_00.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/socket/fuse_socket_01.png",
+        "file": "assets/runtime/v2/socket/fuse_socket_01.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/socket/fuse_socket_02.png",
+        "file": "assets/runtime/v2/socket/fuse_socket_02.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/socket/fuse_socket_03.png",
+        "file": "assets/runtime/v2/socket/fuse_socket_03.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/socket/fuse_socket_04.png",
+        "file": "assets/runtime/v2/socket/fuse_socket_04.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/socket/fuse_socket_05.png",
+        "file": "assets/runtime/v2/socket/fuse_socket_05.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/socket/fuse_socket_06.png",
+        "file": "assets/runtime/v2/socket/fuse_socket_06.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/socket/fuse_socket_07.png",
+        "file": "assets/runtime/v2/socket/fuse_socket_07.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/socket/fuse_socket_08.png",
+        "file": "assets/runtime/v2/socket/fuse_socket_08.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/socket/fuse_socket_09.png",
+        "file": "assets/runtime/v2/socket/fuse_socket_09.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/socket/fuse_socket_10.png",
+        "file": "assets/runtime/v2/socket/fuse_socket_10.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/socket/fuse_socket_11.png",
+        "file": "assets/runtime/v2/socket/fuse_socket_11.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/console/logic_console_00.png",
+        "file": "assets/runtime/v2/console/logic_console_00.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/console/logic_console_01.png",
+        "file": "assets/runtime/v2/console/logic_console_01.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/console/logic_console_02.png",
+        "file": "assets/runtime/v2/console/logic_console_02.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/console/logic_console_03.png",
+        "file": "assets/runtime/v2/console/logic_console_03.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/console/logic_console_04.png",
+        "file": "assets/runtime/v2/console/logic_console_04.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/console/logic_console_05.png",
+        "file": "assets/runtime/v2/console/logic_console_05.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/console/logic_console_06.png",
+        "file": "assets/runtime/v2/console/logic_console_06.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/console/logic_console_07.png",
+        "file": "assets/runtime/v2/console/logic_console_07.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/console/logic_console_08.png",
+        "file": "assets/runtime/v2/console/logic_console_08.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/console/logic_console_09.png",
+        "file": "assets/runtime/v2/console/logic_console_09.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/console/logic_console_10.png",
+        "file": "assets/runtime/v2/console/logic_console_10.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/console/logic_console_11.png",
+        "file": "assets/runtime/v2/console/logic_console_11.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/fuse/fuse_available_00.png",
+        "file": "assets/runtime/v2/fuse/fuse_available_00.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/fuse/fuse_available_01.png",
+        "file": "assets/runtime/v2/fuse/fuse_available_01.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/fuse/fuse_available_02.png",
+        "file": "assets/runtime/v2/fuse/fuse_available_02.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/fuse/fuse_available_03.png",
+        "file": "assets/runtime/v2/fuse/fuse_available_03.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/fuse/fuse_available_04.png",
+        "file": "assets/runtime/v2/fuse/fuse_available_04.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/fuse/fuse_available_05.png",
+        "file": "assets/runtime/v2/fuse/fuse_available_05.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/fuse/fuse_available_06.png",
+        "file": "assets/runtime/v2/fuse/fuse_available_06.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/fuse/fuse_available_07.png",
+        "file": "assets/runtime/v2/fuse/fuse_available_07.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/fuse/fuse_available_08.png",
+        "file": "assets/runtime/v2/fuse/fuse_available_08.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/fuse/fuse_available_09.png",
+        "file": "assets/runtime/v2/fuse/fuse_available_09.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/fuse/fuse_available_10.png",
+        "file": "assets/runtime/v2/fuse/fuse_available_10.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/fuse/fuse_available_11.png",
+        "file": "assets/runtime/v2/fuse/fuse_available_11.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/beacon/interact_beacon_00.png",
+        "file": "assets/runtime/v2/beacon/interact_beacon_00.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/beacon/interact_beacon_01.png",
+        "file": "assets/runtime/v2/beacon/interact_beacon_01.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/beacon/interact_beacon_02.png",
+        "file": "assets/runtime/v2/beacon/interact_beacon_02.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/beacon/interact_beacon_03.png",
+        "file": "assets/runtime/v2/beacon/interact_beacon_03.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/beacon/interact_beacon_04.png",
+        "file": "assets/runtime/v2/beacon/interact_beacon_04.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/beacon/interact_beacon_05.png",
+        "file": "assets/runtime/v2/beacon/interact_beacon_05.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/beacon/interact_beacon_06.png",
+        "file": "assets/runtime/v2/beacon/interact_beacon_06.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/beacon/interact_beacon_07.png",
+        "file": "assets/runtime/v2/beacon/interact_beacon_07.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/beacon/interact_beacon_08.png",
+        "file": "assets/runtime/v2/beacon/interact_beacon_08.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/beacon/interact_beacon_09.png",
+        "file": "assets/runtime/v2/beacon/interact_beacon_09.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/beacon/interact_beacon_10.png",
+        "file": "assets/runtime/v2/beacon/interact_beacon_10.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/beacon/interact_beacon_11.png",
+        "file": "assets/runtime/v2/beacon/interact_beacon_11.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_walk_00.png",
+        "file": "assets/runtime/v2/patrol/patrol_walk_00.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_walk_01.png",
+        "file": "assets/runtime/v2/patrol/patrol_walk_01.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_walk_02.png",
+        "file": "assets/runtime/v2/patrol/patrol_walk_02.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_walk_03.png",
+        "file": "assets/runtime/v2/patrol/patrol_walk_03.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_walk_04.png",
+        "file": "assets/runtime/v2/patrol/patrol_walk_04.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_walk_05.png",
+        "file": "assets/runtime/v2/patrol/patrol_walk_05.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_walk_06.png",
+        "file": "assets/runtime/v2/patrol/patrol_walk_06.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_walk_07.png",
+        "file": "assets/runtime/v2/patrol/patrol_walk_07.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_walk_08.png",
+        "file": "assets/runtime/v2/patrol/patrol_walk_08.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_walk_09.png",
+        "file": "assets/runtime/v2/patrol/patrol_walk_09.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_walk_10.png",
+        "file": "assets/runtime/v2/patrol/patrol_walk_10.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_walk_11.png",
+        "file": "assets/runtime/v2/patrol/patrol_walk_11.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_telegraph_00.png",
+        "file": "assets/runtime/v2/patrol/patrol_telegraph_00.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_telegraph_01.png",
+        "file": "assets/runtime/v2/patrol/patrol_telegraph_01.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_telegraph_02.png",
+        "file": "assets/runtime/v2/patrol/patrol_telegraph_02.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_telegraph_03.png",
+        "file": "assets/runtime/v2/patrol/patrol_telegraph_03.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_telegraph_04.png",
+        "file": "assets/runtime/v2/patrol/patrol_telegraph_04.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_telegraph_05.png",
+        "file": "assets/runtime/v2/patrol/patrol_telegraph_05.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_telegraph_06.png",
+        "file": "assets/runtime/v2/patrol/patrol_telegraph_06.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_telegraph_07.png",
+        "file": "assets/runtime/v2/patrol/patrol_telegraph_07.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_telegraph_08.png",
+        "file": "assets/runtime/v2/patrol/patrol_telegraph_08.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_telegraph_09.png",
+        "file": "assets/runtime/v2/patrol/patrol_telegraph_09.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_telegraph_10.png",
+        "file": "assets/runtime/v2/patrol/patrol_telegraph_10.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/patrol/patrol_telegraph_11.png",
+        "file": "assets/runtime/v2/patrol/patrol_telegraph_11.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/environments/dock/dock_far.png",
+        "file": "assets/runtime/v2/environments/dock/dock_far.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/environments/dock/dock_mid.png",
+        "file": "assets/runtime/v2/environments/dock/dock_mid.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/environments/dock/dock_near.png",
+        "file": "assets/runtime/v2/environments/dock/dock_near.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/environments/dock/dock_floor.png",
+        "file": "assets/runtime/v2/environments/dock/dock_floor.png",
+        "userAdded": true
+      },
+      {
+        "kind": "image",
+        "name": "assets/runtime/v2/ui/hud_panel.png",
+        "file": "assets/runtime/v2/ui/hud_panel.png",
+        "userAdded": true
       }
     ]
   },
@@ -1290,6 +2112,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/sandbox"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/asset-proof"
     }
   ],
   "externalEvents": [],
