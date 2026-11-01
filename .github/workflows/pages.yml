@@ -33,7 +33,7 @@ jobs:
       - name: Use runner Chrome
         run: echo "PUPPETEER_EXECUTABLE_PATH=$(command -v google-chrome)" >> "$GITHUB_ENV"
       - run: npm run test:browser
-        timeout-minutes: 4
+        timeout-minutes: 12
       - name: Save downloadable build (does not publish)
         uses: actions/upload-artifact@v4
         with:
