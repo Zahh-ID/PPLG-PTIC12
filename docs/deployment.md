@@ -22,7 +22,7 @@ npm run test:browser
 
 The browser test repositions the player, grants temporary invulnerability and shortens guardian health to keep regression checks fast. It checks real UI interactions, physics samples and campaign progression, rather than a complete manual traversal or combat balance. Mobile/touch and audio remain outside this coverage. GDevelop's external analytics requests are not treated as missing local assets.
 
-Install Puppeteer's matching browser with `npx puppeteer browsers install chrome`; the download is cached. On Linux, use `npx puppeteer browsers install chrome --install-deps` to include required system libraries; both workflows include this step explicitly, including when npm skips dependency install scripts.
+Install Puppeteer's matching browser locally with `npx puppeteer browsers install chrome`; the download is cached. GitHub workflows use the Chrome already installed on the Ubuntu runner through `PUPPETEER_EXECUTABLE_PATH`, avoiding a separate browser download. You can also set this variable to a locally installed Chrome executable. On other Linux machines, `npx puppeteer browsers install chrome --install-deps` includes the required system libraries.
 
 ## GitHub Actions
 
