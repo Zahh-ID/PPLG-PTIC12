@@ -1,6 +1,6 @@
 # Tests and GitHub Pages setup
 
-Deployment is prepared but has not been run. No repository Pages settings have been changed. Pushes and pull requests only run checks; they cannot publish the game.
+The game is deployed at [Circuit Rescue](https://zahh-id.github.io/PPLG-PTIC12/). Pushes and pull requests only run checks; publishing updates requires the manual Pages workflow with `publish=true` on `main`.
 
 ## Local verification
 
@@ -12,6 +12,7 @@ npm test
 npm run build:web
 npx puppeteer browsers install chrome
 npm run test:browser
+npm run test:mobile
 ```
 
 `npm test` checks project references and JavaScript syntax, 102 truth-table cases across 24 challenges, invalid circuit networks, actor masks/animation definitions, 144 giant-robot frames, map reachability and workflow safeguards. Checks do not rewrite the game project.
@@ -20,7 +21,7 @@ npm run test:browser
 
 `test:browser` serves the export locally under `/circuit-rescue/` to check relative resource paths used by project Pages sites. It starts from the opening menu and exercises all 24 challenge dialogs, blank-answer rejection, token drag/drop, faulty-circuit repair, NAND-only construction, individual terminal progress, barriers, native platform jumping, a moving lift, mecha boarding, guardian phases and the winner scene. It fails for JavaScript exceptions or missing local resources. Screenshots/results go to ignored `.local/reports/`.
 
-The browser test repositions the player, grants temporary invulnerability and shortens guardian health to keep regression checks fast. It checks real UI interactions, physics samples and campaign progression, rather than a complete manual traversal or combat balance. Mobile/touch and audio remain outside this coverage. GDevelop's external analytics requests are not treated as missing local assets.
+The browser test repositions the player, grants temporary invulnerability and shortens guardian health to keep regression checks fast. It checks real UI interactions, physics samples and campaign progression, rather than a complete manual traversal or combat balance. `test:mobile` adds fourteen touch/device checks: multi-finger movement/fire/jump, cancellation, slide-away release, pause/continue, interaction/dialog suppression, portrait fit, mecha shield, focus loss, hidden controls on desktop/narrow desktop/touch laptops, and large-tablet landscape detection. Physical-device/browser testing and audio remain outside this coverage. GDevelop's external analytics requests are not treated as missing local assets.
 
 Install Puppeteer's matching browser locally with `npx puppeteer browsers install chrome`; the download is cached. GitHub workflows use the Chrome already installed on the Ubuntu runner through `PUPPETEER_EXECUTABLE_PATH`, avoiding a separate browser download. You can also set this variable to a locally installed Chrome executable. On other Linux machines, `npx puppeteer browsers install chrome --install-deps` includes the required system libraries.
 
@@ -31,10 +32,10 @@ Install Puppeteer's matching browser locally with `npx puppeteer browsers instal
 
 No personal access token or repository secret is needed. Only the deployment job requests `pages: write` and `id-token: write`; it uses the `github-pages` environment. Consider environment reviewer protection before the first release.
 
-## When you decide to publish later
+## Publishing updates
 
 1. Commit and push the setup. The manual workflow must exist on the default branch before GitHub shows its Run Workflow control.
-2. In repository **Settings → Pages → Build and deployment**, select **GitHub Actions**. Do this only when ready; this setup has not changed it.
+2. In repository **Settings → Pages → Build and deployment**, use **GitHub Actions**; this is already configured for PPLG-PTIC12.
 3. Open **Actions → GitHub Pages (manual) → Run workflow**, select `main`, and leave `publish` unchecked for a build-only trial.
 4. After reviewing the build and test results, run it again from `main` with `publish` checked. That future action publishes the tested export.
 

@@ -15,10 +15,40 @@ if(!ui||runtimeScene.getTimeManager().isFirstFrame()||ui.sceneName!==sceneName){
 }
 const game=runtimeScene.__islandGame;
 const isGame=runtimeScene.getVariables().get('CampaignLevel').getAsNumber()>0;
+// Touch controls use native Platformer simulation plus shared action state, never synthetic keyboard events.
+const owner=runtimeScene.getGame();let touch=owner.__crTouch;
+if(touch&&touch.scene!==runtimeScene){touch.dispose();delete owner.__crTouch;touch=null;}
+if(isGame&&!touch&&typeof document!=='undefined'){
+ const root=document.createElement('div');root.id='cr-touch-controls';root.setAttribute('aria-label','Touch game controls');
+ root.innerHTML='<style>#cr-touch-controls{position:fixed;inset:0;z-index:9000;pointer-events:none;user-select:none;-webkit-user-select:none}#cr-touch-controls [hidden]{display:none!important}#cr-touch-controls button{pointer-events:auto;touch-action:none;-webkit-tap-highlight-color:transparent;border:0;padding:0;background:transparent;width:clamp(56px,9vmin,76px);height:clamp(56px,9vmin,76px);opacity:.8;cursor:pointer}#cr-touch-controls button img{width:100%;height:100%;object-fit:contain;image-rendering:pixelated;pointer-events:none}#cr-touch-controls button[aria-pressed=true]{opacity:1;filter:brightness(1.35);transform:translateY(3px) scale(.96)}#cr-touch-controls button:focus-visible{outline:2px solid #ffda7b;outline-offset:2px}#cr-touch-controls .cr-move{position:absolute;display:flex;gap:8px;left:max(12px,env(safe-area-inset-left));bottom:max(12px,env(safe-area-inset-bottom))}#cr-touch-controls .cr-actions{position:absolute;display:grid;grid-template-columns:repeat(2,auto);gap:6px;right:max(12px,env(safe-area-inset-right));bottom:max(12px,env(safe-area-inset-bottom))}#cr-touch-controls .cr-system{position:absolute;right:max(12px,env(safe-area-inset-right));top:max(12px,env(safe-area-inset-top))}#cr-touch-controls .cr-system button{width:52px;height:52px}@media(max-height:420px){#cr-touch-controls .cr-actions{gap:2px}#cr-touch-controls .cr-move{gap:4px}#cr-touch-controls button{width:56px;height:56px}}</style><div class="cr-move"></div><div class="cr-actions"></div><div class="cr-system"></div>';
+ const held={left:false,right:false,jump:false,fire:false,interact:false,shield:false},pointers=new Map(),buttons=new Map();
+ const resource=file=>owner.getGameData().resources.resources.find(r=>r.name==='CR_'+file.replace(/[^a-zA-Z0-9]/g,'_'))?.file??'';
+ touch=owner.__crTouch={scene:runtimeScene,root,held,enabled:false,active:false,pauseRequested:false};
+ function refresh(){for(const action of Object.keys(held))held[action]=[...pointers.values()].includes(action);for(const[action,button]of buttons)button.setAttribute('aria-pressed',String(!!held[action]));}
+ function clear(){const ids=[...pointers.keys()];pointers.clear();touch.jumpRequested=false;touch.fireRequested=false;touch.interactRequested=false;refresh();for(const button of buttons.values())for(const id of ids)if(button.hasPointerCapture(id))button.releasePointerCapture(id);}
+ touch.clear=clear;
+ const definitions=[['left','Move left','ui/back.png','cr-move'],['right','Move right','ui/next.png','cr-move'],['interact','Use terminal or board mecha','mobile/interact.png','cr-actions'],['shield','Hold mecha shield','ui/shield.png','cr-actions'],['fire','Hold to fire','mobile/fire.png','cr-actions'],['jump','Jump','mobile/jump.png','cr-actions'],['pause','Pause or continue','ui/pause.png','cr-system']];
+ for(const[action,label,file,group]of definitions){const button=document.createElement('button');button.type='button';button.dataset.touchAction=action;button.setAttribute('aria-label',label);button.setAttribute('aria-pressed','false');const image=document.createElement('img');image.src=resource(file);image.alt='';image.draggable=false;button.append(image);root.querySelector('.'+group).append(button);buttons.set(action,button);
+  button.onpointerdown=e=>{e.preventDefault();e.stopPropagation();if(!touch.enabled)return;if(action==='pause'){touch.pauseRequested=true;return;}if(!touch.active)return;if(['jump','fire','interact'].includes(action))touch[action+'Requested']=true;pointers.set(e.pointerId,action);button.setPointerCapture(e.pointerId);refresh();};
+  button.onpointermove=e=>{if(!pointers.has(e.pointerId))return;e.preventDefault();const target=document.elementFromPoint(e.clientX,e.clientY)?.closest('[data-touch-action]'),next=target&&root.contains(target)?target.dataset.touchAction:null;pointers.set(e.pointerId,next&&next!=='pause'&&!buttons.get(next).hidden?next:null);refresh();};
+  const release=e=>{pointers.delete(e.pointerId);refresh();if(button.hasPointerCapture(e.pointerId))button.releasePointerCapture(e.pointerId);};button.onpointerup=release;button.onpointercancel=release;button.onlostpointercapture=release;button.oncontextmenu=e=>e.preventDefault();
+ }
+ const fixedSlots=document.createElement('style');fixedSlots.textContent='#cr-touch-controls [data-touch-action=interact]{grid-area:1/1}#cr-touch-controls [data-touch-action=shield]{grid-area:1/2}#cr-touch-controls [data-touch-action=fire]{grid-area:2/1}#cr-touch-controls [data-touch-action=jump]{grid-area:2/2}';root.append(fixedSlots);
+ document.body.append(root);const blur=()=>clear(),visibility=()=>{if(document.hidden)clear();};window.addEventListener('blur',blur);window.addEventListener('pagehide',blur);window.addEventListener('orientationchange',blur);document.addEventListener('visibilitychange',visibility);
+ touch.dispose=()=>{clear();root.remove();window.removeEventListener('blur',blur);window.removeEventListener('pagehide',blur);window.removeEventListener('orientationchange',blur);document.removeEventListener('visibilitychange',visibility);};
+ touch.buttons=buttons;
+}
+if(touch){
+ // Screen width alone misclassifies narrow desktop windows; touch capability alone misclassifies touch laptops.
+ const touchCapable=navigator.maxTouchPoints>0,coarse=window.matchMedia('(pointer: coarse)').matches,hover=window.matchMedia('(hover: hover)').matches;
+ const mobileDevice=navigator.userAgentData?.mobile===true||/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+ touch.enabled=touchCapable&&(mobileDevice||coarse&&!hover);touch.root.dataset.device=touch.enabled?'mobile':'desktop';touch.root.dataset.orientation=window.matchMedia('(orientation: portrait)').matches?'portrait':'landscape';touch.active=touch.enabled&&!ui.modal&&!ui.transitioning&&(!game||game.state==='playing');if(!touch.active)touch.clear();touch.root.hidden=!touch.enabled||ui.transitioning||!!ui.modal&&ui.modal!=='pause';touch.root.querySelector('.cr-move').hidden=!touch.active;touch.root.querySelector('.cr-actions').hidden=!touch.active;touch.buttons.get('shield').hidden=!runtimeScene.__campaign?.mecha;const pause=touch.buttons.get('pause');pause.querySelector('img').src=owner.getGameData().resources.resources.find(r=>r.name===(ui.modal==='pause'?'CR_ui_resume_png':'CR_ui_pause_png'))?.file??'';pause.setAttribute('aria-label',ui.modal==='pause'?'Continue adventure':'Pause adventure');
+ if(touch.active){const move=first('Player')?.getBehavior('Platformer');if(move){if(touch.held.left&&!touch.held.right)move.simulateLeftKey();if(touch.held.right&&!touch.held.left)move.simulateRightKey();if(touch.held.jump||touch.jumpRequested)move.simulateJumpKey();}touch.jumpRequested=false;}
+}
 if(ui.modal==='mission')return;
 const isResult=sceneName==='winner'||sceneName==='game over';
 const keyEdge=code=>{const now=input.isKeyPressed(code),edge=now&&!ui.keys[code];ui.keys[code]=now;return edge;};
-const enter=keyEdge(13),escape=keyEdge(27),helpKey=keyEdge(72),pauseKey=keyEdge(80),replayKey=keyEdge(82);
+const enter=keyEdge(13),escape=keyEdge(27),helpKey=keyEdge(72),pauseKey=keyEdge(80)||!!touch?.pauseRequested,replayKey=keyEdge(82);if(touch)touch.pauseRequested=false;
 function navigate(name){
  if(name==='permainan'){
    if(isGame)name=sceneName;
@@ -48,7 +78,7 @@ if(ui.modal==='treasure'&&Date.now()-ui.treasureShownAt>=2100)showCredits();
 
 const creditsReady=globals.get('AHCreditsReady').getAsBoolean();
 const normalButtons=isGame?['HUDPause','HUDReplay','HUDHelp']:sceneName==='opening'?['BtnPlay','BtnNew','BtnHelp','BtnExit',...(creditsReady?['BtnCredits']:[])]:['BtnReplay','BtnHome',...(creditsReady?['BtnCredits']:[])];
-for(const name of ['HUDPause','HUDReplay','HUDHelp','BtnPlay','BtnNew','BtnHelp','BtnExit','BtnCredits','BtnReplay','BtnHome'])visible(name,!ui.modal&&normalButtons.includes(name));
+for(const name of ['HUDPause','HUDReplay','HUDHelp','BtnPlay','BtnNew','BtnHelp','BtnExit','BtnCredits','BtnReplay','BtnHome'])visible(name,!ui.modal&&normalButtons.includes(name)&&!(name==='HUDPause'&&touch?.enabled));
 visible('ModalContinue',!!ui.modal);visible('ModalReplay',ui.modal==='pause');visible('ModalHome',ui.modal==='pause');visible('ModalCredits',ui.modal==='pause'&&creditsReady);visible('ModalBadge',!!ui.modal&&ui.modal!=='treasure');visible('HelpText',ui.modal==='help');visible('CreditsText',false);
 const cont=first('ModalContinue');if(cont){const size=ui.modal==='pause'?80:96;cont.setWidth(size);cont.setHeight(size);cont.setPosition(ui.modal==='pause'?408:592,ui.modal==='pause'?390:ui.modal==='credits'||ui.modal==='treasure'?588:520);}
 for(const [name,x]of [['ModalReplay',536],['ModalCredits',664],['ModalHome',792]]){const o=first(name);if(o){o.setPosition(x,390);o.setWidth(80);o.setHeight(80);}}
