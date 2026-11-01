@@ -1,0 +1,2834 @@
+{
+  "name": "Circuit Rescue Pixel Pack v1",
+  "assets": [
+    {
+      "file": "terrain/floor-left.png",
+      "width": 64,
+      "height": 64,
+      "source": "world",
+      "sourceRect": [
+        25,
+        91,
+        159,
+        165
+      ]
+    },
+    {
+      "file": "terrain/floor-center.png",
+      "width": 64,
+      "height": 64,
+      "source": "world",
+      "sourceRect": [
+        177,
+        90,
+        312,
+        165
+      ]
+    },
+    {
+      "file": "terrain/floor-right.png",
+      "width": 64,
+      "height": 64,
+      "source": "world",
+      "sourceRect": [
+        329,
+        91,
+        463,
+        165
+      ]
+    },
+    {
+      "file": "terrain/hull.png",
+      "width": 64,
+      "height": 64,
+      "source": "world",
+      "sourceRect": [
+        486,
+        65,
+        613,
+        167
+      ]
+    },
+    {
+      "file": "terrain/wall.png",
+      "width": 64,
+      "height": 64,
+      "source": "world",
+      "sourceRect": [
+        642,
+        65,
+        800,
+        168
+      ]
+    },
+    {
+      "file": "terrain/caution-floor.png",
+      "width": 64,
+      "height": 64,
+      "source": "world",
+      "sourceRect": [
+        800,
+        90,
+        960,
+        165
+      ]
+    },
+    {
+      "file": "terrain/glass-floor.png",
+      "width": 64,
+      "height": 64,
+      "source": "world",
+      "sourceRect": [
+        960,
+        65,
+        1120,
+        165
+      ]
+    },
+    {
+      "file": "terrain/ceiling.png",
+      "width": 64,
+      "height": 64,
+      "source": "world",
+      "sourceRect": [
+        1120,
+        65,
+        1280,
+        151
+      ]
+    },
+    {
+      "file": "terrain/platform-left.png",
+      "width": 64,
+      "height": 64,
+      "source": "world",
+      "sourceRect": [
+        29,
+        232,
+        159,
+        322
+      ]
+    },
+    {
+      "file": "terrain/platform-center.png",
+      "width": 64,
+      "height": 64,
+      "source": "world",
+      "sourceRect": [
+        177,
+        231,
+        311,
+        288
+      ]
+    },
+    {
+      "file": "terrain/platform-right.png",
+      "width": 64,
+      "height": 64,
+      "source": "world",
+      "sourceRect": [
+        331,
+        231,
+        462,
+        322
+      ]
+    },
+    {
+      "file": "terrain/ladder.png",
+      "width": 64,
+      "height": 64,
+      "source": "world",
+      "sourceRect": [
+        513,
+        202,
+        586,
+        329
+      ]
+    },
+    {
+      "file": "terrain/pipe-vertical.png",
+      "width": 64,
+      "height": 64,
+      "source": "world",
+      "sourceRect": [
+        677,
+        193,
+        800,
+        340
+      ]
+    },
+    {
+      "file": "terrain/pipe-horizontal.png",
+      "width": 64,
+      "height": 64,
+      "source": "world",
+      "sourceRect": [
+        800,
+        241,
+        938,
+        300
+      ]
+    },
+    {
+      "file": "terrain/vent.png",
+      "width": 64,
+      "height": 64,
+      "source": "world",
+      "sourceRect": [
+        960,
+        214,
+        1120,
+        320
+      ]
+    },
+    {
+      "file": "terrain/bridge.png",
+      "width": 64,
+      "height": 64,
+      "source": "world",
+      "sourceRect": [
+        1120,
+        224,
+        1234,
+        318
+      ]
+    },
+    {
+      "file": "props/airlock-closed.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        26,
+        356,
+        153,
+        490
+      ]
+    },
+    {
+      "file": "props/airlock-open.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        175,
+        356,
+        312,
+        490
+      ]
+    },
+    {
+      "file": "props/terminal-off.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        337,
+        379,
+        455,
+        494
+      ]
+    },
+    {
+      "file": "props/terminal-on.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        484,
+        377,
+        609,
+        494
+      ]
+    },
+    {
+      "file": "props/lever-off.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        656,
+        403,
+        750,
+        484
+      ]
+    },
+    {
+      "file": "props/lever-on.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        810,
+        374,
+        896,
+        484
+      ]
+    },
+    {
+      "file": "props/checkpoint-off.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        965,
+        387,
+        1120,
+        487
+      ]
+    },
+    {
+      "file": "props/checkpoint-on.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        1120,
+        369,
+        1211,
+        487
+      ]
+    },
+    {
+      "file": "pickups/battery.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        59,
+        530,
+        116,
+        646
+      ]
+    },
+    {
+      "file": "pickups/wire-coil.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        179,
+        539,
+        301,
+        643
+      ]
+    },
+    {
+      "file": "pickups/scrap-gear.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        336,
+        533,
+        442,
+        646
+      ]
+    },
+    {
+      "file": "pickups/fuse.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        483,
+        578,
+        604,
+        621
+      ]
+    },
+    {
+      "file": "pickups/processor.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        649,
+        541,
+        800,
+        643
+      ]
+    },
+    {
+      "file": "pickups/keycard.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        800,
+        552,
+        960,
+        643
+      ]
+    },
+    {
+      "file": "pickups/medkit.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        960,
+        538,
+        1120,
+        644
+      ]
+    },
+    {
+      "file": "pickups/energy-orb.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        1120,
+        539,
+        1219,
+        642
+      ]
+    },
+    {
+      "file": "props/chest-closed.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        23,
+        708,
+        157,
+        794
+      ]
+    },
+    {
+      "file": "props/chest-open.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        174,
+        679,
+        310,
+        801
+      ]
+    },
+    {
+      "file": "props/crate.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        336,
+        684,
+        461,
+        802
+      ]
+    },
+    {
+      "file": "props/barrel.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        503,
+        677,
+        640,
+        807
+      ]
+    },
+    {
+      "file": "props/generator-off.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        640,
+        695,
+        800,
+        805
+      ]
+    },
+    {
+      "file": "props/generator-on.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        800,
+        696,
+        960,
+        807
+      ]
+    },
+    {
+      "file": "props/elevator.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        960,
+        689,
+        1120,
+        807
+      ]
+    },
+    {
+      "file": "props/teleporter.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        1120,
+        674,
+        1280,
+        809
+      ]
+    },
+    {
+      "file": "enemies/drone-1.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        45,
+        831,
+        133,
+        947
+      ]
+    },
+    {
+      "file": "enemies/drone-2.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        196,
+        830,
+        289,
+        947
+      ]
+    },
+    {
+      "file": "enemies/drone-3.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        349,
+        831,
+        447,
+        947
+      ]
+    },
+    {
+      "file": "enemies/drone-4.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        508,
+        831,
+        600,
+        947
+      ]
+    },
+    {
+      "file": "enemies/drone-5.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        666,
+        829,
+        756,
+        946
+      ]
+    },
+    {
+      "file": "enemies/drone-6.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        815,
+        828,
+        903,
+        947
+      ]
+    },
+    {
+      "file": "enemies/drone-7.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        964,
+        831,
+        1063,
+        955
+      ]
+    },
+    {
+      "file": "enemies/drone-8.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        1121,
+        831,
+        1218,
+        941
+      ]
+    },
+    {
+      "file": "effects/bolt.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        28,
+        999,
+        142,
+        1047
+      ]
+    },
+    {
+      "file": "effects/muzzle.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        176,
+        986,
+        286,
+        1064
+      ]
+    },
+    {
+      "file": "effects/hit.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        356,
+        983,
+        480,
+        1090
+      ]
+    },
+    {
+      "file": "effects/arc.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        480,
+        1003,
+        617,
+        1075
+      ]
+    },
+    {
+      "file": "effects/smoke.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        649,
+        982,
+        765,
+        1070
+      ]
+    },
+    {
+      "file": "effects/explosion-small.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        802,
+        963,
+        960,
+        1087
+      ]
+    },
+    {
+      "file": "effects/explosion-large.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        960,
+        955,
+        1104,
+        1090
+      ]
+    },
+    {
+      "file": "effects/repair.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        1132,
+        972,
+        1220,
+        1090
+      ]
+    },
+    {
+      "file": "decor/monitor.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        26,
+        1110,
+        152,
+        1222
+      ]
+    },
+    {
+      "file": "decor/cable.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        179,
+        1099,
+        311,
+        1229
+      ]
+    },
+    {
+      "file": "decor/plant-pod.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        346,
+        1090,
+        443,
+        1231
+      ]
+    },
+    {
+      "file": "decor/beacon.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        498,
+        1109,
+        602,
+        1232
+      ]
+    },
+    {
+      "file": "decor/dish.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        646,
+        1099,
+        800,
+        1230
+      ]
+    },
+    {
+      "file": "decor/tool-rack.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        800,
+        1109,
+        960,
+        1231
+      ]
+    },
+    {
+      "file": "decor/broken-robot.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        960,
+        1090,
+        1098,
+        1234
+      ]
+    },
+    {
+      "file": "decor/antenna.png",
+      "width": 128,
+      "height": 128,
+      "source": "world",
+      "sourceRect": [
+        1125,
+        1090,
+        1216,
+        1235
+      ]
+    },
+    {
+      "file": "ui/play.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        31,
+        38,
+        155,
+        161
+      ]
+    },
+    {
+      "file": "ui/pause.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        186,
+        38,
+        310,
+        161
+      ]
+    },
+    {
+      "file": "ui/resume.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        339,
+        38,
+        464,
+        161
+      ]
+    },
+    {
+      "file": "ui/replay.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        492,
+        38,
+        616,
+        161
+      ]
+    },
+    {
+      "file": "ui/home.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        646,
+        38,
+        771,
+        161
+      ]
+    },
+    {
+      "file": "ui/sound.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        800,
+        38,
+        960,
+        161
+      ]
+    },
+    {
+      "file": "ui/mute.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        960,
+        38,
+        1120,
+        160
+      ]
+    },
+    {
+      "file": "ui/exit.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        1120,
+        38,
+        1224,
+        161
+      ]
+    },
+    {
+      "file": "ui/help.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        31,
+        189,
+        155,
+        313
+      ]
+    },
+    {
+      "file": "ui/credits.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        186,
+        189,
+        310,
+        313
+      ]
+    },
+    {
+      "file": "ui/settings.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        339,
+        189,
+        463,
+        313
+      ]
+    },
+    {
+      "file": "ui/trophy.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        492,
+        189,
+        615,
+        313
+      ]
+    },
+    {
+      "file": "ui/failure.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        646,
+        189,
+        771,
+        313
+      ]
+    },
+    {
+      "file": "ui/next.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        800,
+        189,
+        960,
+        313
+      ]
+    },
+    {
+      "file": "ui/back.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        960,
+        189,
+        1120,
+        313
+      ]
+    },
+    {
+      "file": "ui/close.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        1120,
+        189,
+        1224,
+        313
+      ]
+    },
+    {
+      "file": "ui/heart-full.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        31,
+        343,
+        155,
+        468
+      ]
+    },
+    {
+      "file": "ui/heart-empty.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        185,
+        343,
+        311,
+        468
+      ]
+    },
+    {
+      "file": "ui/shield.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        339,
+        343,
+        464,
+        468
+      ]
+    },
+    {
+      "file": "ui/battery.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        493,
+        343,
+        616,
+        468
+      ]
+    },
+    {
+      "file": "ui/scrap.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        645,
+        343,
+        771,
+        468
+      ]
+    },
+    {
+      "file": "ui/chip.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        800,
+        343,
+        960,
+        468
+      ]
+    },
+    {
+      "file": "ui/keycard.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        960,
+        342,
+        1120,
+        468
+      ]
+    },
+    {
+      "file": "ui/star.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        1120,
+        341,
+        1226,
+        468
+      ]
+    },
+    {
+      "file": "ui/button-normal.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        29,
+        511,
+        160,
+        614
+      ]
+    },
+    {
+      "file": "ui/button-hover.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        183,
+        508,
+        314,
+        616
+      ]
+    },
+    {
+      "file": "ui/button-pressed.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        335,
+        508,
+        467,
+        616
+      ]
+    },
+    {
+      "file": "ui/button-disabled.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        488,
+        508,
+        620,
+        616
+      ]
+    },
+    {
+      "file": "ui/slot-empty.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        643,
+        500,
+        800,
+        622
+      ]
+    },
+    {
+      "file": "ui/slot-selected.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        800,
+        500,
+        960,
+        623
+      ]
+    },
+    {
+      "file": "ui/slot-locked.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        960,
+        501,
+        1120,
+        623
+      ]
+    },
+    {
+      "file": "ui/slot-complete.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        1120,
+        500,
+        1226,
+        623
+      ]
+    },
+    {
+      "file": "ui/input-off.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        32,
+        648,
+        156,
+        773
+      ]
+    },
+    {
+      "file": "ui/input-on.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        186,
+        648,
+        310,
+        773
+      ]
+    },
+    {
+      "file": "ui/output-off.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        339,
+        648,
+        463,
+        773
+      ]
+    },
+    {
+      "file": "ui/output-on.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        493,
+        648,
+        614,
+        773
+      ]
+    },
+    {
+      "file": "ui/toggle-off.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        640,
+        649,
+        800,
+        773
+      ]
+    },
+    {
+      "file": "ui/toggle-on.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        800,
+        649,
+        960,
+        773
+      ]
+    },
+    {
+      "file": "ui/junction-off.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        960,
+        648,
+        1120,
+        773
+      ]
+    },
+    {
+      "file": "ui/junction-on.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        1120,
+        647,
+        1226,
+        773
+      ]
+    },
+    {
+      "file": "ui/wire-off.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        30,
+        793,
+        156,
+        919
+      ]
+    },
+    {
+      "file": "ui/wire-on.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        186,
+        793,
+        311,
+        919
+      ]
+    },
+    {
+      "file": "ui/elbow-off.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        338,
+        792,
+        463,
+        919
+      ]
+    },
+    {
+      "file": "ui/elbow-on.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        493,
+        792,
+        615,
+        919
+      ]
+    },
+    {
+      "file": "ui/cross-off.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        643,
+        791,
+        800,
+        919
+      ]
+    },
+    {
+      "file": "ui/cross-on.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        800,
+        791,
+        960,
+        919
+      ]
+    },
+    {
+      "file": "ui/crossover.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        960,
+        791,
+        1120,
+        919
+      ]
+    },
+    {
+      "file": "ui/socket.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        1120,
+        792,
+        1227,
+        919
+      ]
+    },
+    {
+      "file": "ui/and.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        30,
+        941,
+        158,
+        1066
+      ]
+    },
+    {
+      "file": "ui/or.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        183,
+        942,
+        312,
+        1066
+      ]
+    },
+    {
+      "file": "ui/not.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        335,
+        942,
+        465,
+        1066
+      ]
+    },
+    {
+      "file": "ui/xor.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        487,
+        942,
+        618,
+        1066
+      ]
+    },
+    {
+      "file": "ui/nand.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        640,
+        941,
+        800,
+        1066
+      ]
+    },
+    {
+      "file": "ui/nor.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        800,
+        942,
+        960,
+        1066
+      ]
+    },
+    {
+      "file": "ui/xnor.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        960,
+        942,
+        1120,
+        1066
+      ]
+    },
+    {
+      "file": "ui/buffer.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        1120,
+        942,
+        1230,
+        1066
+      ]
+    },
+    {
+      "file": "ui/zero.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        30,
+        1088,
+        156,
+        1214
+      ]
+    },
+    {
+      "file": "ui/one.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        184,
+        1088,
+        311,
+        1214
+      ]
+    },
+    {
+      "file": "ui/correct.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        339,
+        1088,
+        462,
+        1214
+      ]
+    },
+    {
+      "file": "ui/incorrect.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        492,
+        1088,
+        615,
+        1214
+      ]
+    },
+    {
+      "file": "ui/lock.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        644,
+        1088,
+        800,
+        1214
+      ]
+    },
+    {
+      "file": "ui/drag.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        800,
+        1088,
+        960,
+        1214
+      ]
+    },
+    {
+      "file": "ui/pointer.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        960,
+        1088,
+        1120,
+        1214
+      ]
+    },
+    {
+      "file": "ui/power.png",
+      "width": 128,
+      "height": 128,
+      "source": "ui",
+      "sourceRect": [
+        1120,
+        1088,
+        1225,
+        1213
+      ]
+    },
+    {
+      "file": "ui/title.png",
+      "width": 640,
+      "height": 360,
+      "source": "panels",
+      "sourceRect": [
+        17,
+        125,
+        615,
+        425
+      ]
+    },
+    {
+      "file": "ui/dialog.png",
+      "width": 640,
+      "height": 360,
+      "source": "panels",
+      "sourceRect": [
+        648,
+        142,
+        1280,
+        416
+      ]
+    },
+    {
+      "file": "ui/puzzle-board.png",
+      "width": 640,
+      "height": 360,
+      "source": "panels",
+      "sourceRect": [
+        25,
+        491,
+        640,
+        823
+      ]
+    },
+    {
+      "file": "ui/inventory-tray.png",
+      "width": 640,
+      "height": 360,
+      "source": "panels",
+      "sourceRect": [
+        640,
+        538,
+        1280,
+        778
+      ]
+    },
+    {
+      "file": "ui/module-complete.png",
+      "width": 640,
+      "height": 360,
+      "source": "panels",
+      "sourceRect": [
+        22,
+        916,
+        607,
+        1165
+      ]
+    },
+    {
+      "file": "ui/mission-failed.png",
+      "width": 640,
+      "height": 360,
+      "source": "panels",
+      "sourceRect": [
+        648,
+        935,
+        1280,
+        1165
+      ]
+    },
+    {
+      "file": "background/station.png",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "file": "terrain/floor-surface.png",
+      "width": 64,
+      "height": 64,
+      "source": "derived opaque surface from existing terrain"
+    },
+    {
+      "file": "terrain/platform-surface.png",
+      "width": 64,
+      "height": 32,
+      "source": "derived opaque surface from existing terrain"
+    },
+    {
+      "file": "player-v3/idle-01.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/idle.png",
+      "sourceRect": [
+        125,
+        85,
+        341,
+        397
+      ],
+      "anchorX": 222,
+      "feetY": 112,
+      "sha256": "7bfe88c1228d4a1a0d3730704c2b4cdca0df03e96e65ab3f872be1c35569100b"
+    },
+    {
+      "file": "player-v3/idle-02.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/idle.png",
+      "sourceRect": [
+        565,
+        109,
+        770,
+        397
+      ],
+      "anchorX": 677,
+      "feetY": 112,
+      "sha256": "fb3cf0b13d3e067dc175e9ddf93ef69187351cbc13b5a4fdf861218684e25feb"
+    },
+    {
+      "file": "player-v3/idle-03.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/idle.png",
+      "sourceRect": [
+        1009,
+        85,
+        1228,
+        397
+      ],
+      "anchorX": 1108.5,
+      "feetY": 112,
+      "sha256": "c64ca05933ee1d54173fccbd24afa26fb40c184c11e147c7f39011398a851123"
+    },
+    {
+      "file": "player-v3/idle-04.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/idle.png",
+      "sourceRect": [
+        1451,
+        85,
+        1675,
+        398
+      ],
+      "anchorX": 1552,
+      "feetY": 112,
+      "sha256": "778b3b12d88cd017d739186afa6f8c38aab856667b16c0d5091bab5489134d33"
+    },
+    {
+      "file": "player-v3/idle-05.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/idle.png",
+      "sourceRect": [
+        123,
+        529,
+        334,
+        841
+      ],
+      "anchorX": 226,
+      "feetY": 112,
+      "sha256": "5b8786303dafe2f2276badfe4cb4c89bcc82d808d8e94699e0081cf5678f1195"
+    },
+    {
+      "file": "player-v3/idle-06.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/idle.png",
+      "sourceRect": [
+        564,
+        522,
+        784,
+        841
+      ],
+      "anchorX": 665,
+      "feetY": 112,
+      "sha256": "df661b3d5d9e178d6d65940d2d32e78e9d9d3f80be63472141c82c62634a548e"
+    },
+    {
+      "file": "player-v3/idle-07.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/idle.png",
+      "sourceRect": [
+        1010,
+        545,
+        1210,
+        842
+      ],
+      "anchorX": 1108.5,
+      "feetY": 112,
+      "sha256": "fae85264da9b1637abfefcf752777418bf5bef934b950ad407a99db8f9783d9b"
+    },
+    {
+      "file": "player-v3/idle-08.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/idle.png",
+      "sourceRect": [
+        1460,
+        537,
+        1675,
+        841
+      ],
+      "anchorX": 1552,
+      "feetY": 112,
+      "sha256": "5d8c0c2694aa5ee8b0e7e6961f0a7ec7d3f86dfaa4060e9ef6e2fc32324effab"
+    },
+    {
+      "file": "player-v3/run-01.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/run.png",
+      "sourceRect": [
+        107,
+        69,
+        380,
+        413
+      ],
+      "anchorX": 218,
+      "feetY": 112,
+      "sha256": "e1db45047f7764acf98ee71b74468e74b3c4efa9bfb2dc9ec779b81573fc5026"
+    },
+    {
+      "file": "player-v3/run-02.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/run.png",
+      "sourceRect": [
+        566,
+        94,
+        812,
+        414
+      ],
+      "anchorX": 657.5,
+      "feetY": 112,
+      "sha256": "0c7568b8946f28ec756a824dd364cd28464058925cf5a3a1319ea9af95efb21a"
+    },
+    {
+      "file": "player-v3/run-03.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/run.png",
+      "sourceRect": [
+        1005,
+        69,
+        1260,
+        414
+      ],
+      "anchorX": 1105,
+      "feetY": 112,
+      "sha256": "8db30b0c566fc05f88a2ac8a02d14d9674f1585c3a68920df80bfaf042e21d96"
+    },
+    {
+      "file": "player-v3/run-04.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/run.png",
+      "sourceRect": [
+        1425,
+        67,
+        1718,
+        387
+      ],
+      "anchorX": 1557,
+      "feetY": 112,
+      "sha256": "10333d2c44108bef9e91e8f983310af78be19d937551f00ade9df7a7f07b7c7a"
+    },
+    {
+      "file": "player-v3/run-05.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/run.png",
+      "sourceRect": [
+        131,
+        499,
+        418,
+        835
+      ],
+      "anchorX": 255,
+      "feetY": 112,
+      "sha256": "41cc7861507a810609b80b6b4274cd10d2b6ef9102afdbf11fbf01f75fc58d73"
+    },
+    {
+      "file": "player-v3/run-06.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/run.png",
+      "sourceRect": [
+        618,
+        518,
+        880,
+        836
+      ],
+      "anchorX": 743.5,
+      "feetY": 112,
+      "sha256": "6ca154709d332720d6b28bae44d0ed8c4bdc34b72fb3155d50c8698c5d9c427f"
+    },
+    {
+      "file": "player-v3/run-07.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/run.png",
+      "sourceRect": [
+        1033,
+        499,
+        1300,
+        837
+      ],
+      "anchorX": 1148.5,
+      "feetY": 112,
+      "sha256": "405752a280cc5af551a2c57791fb46d31a8acf48f9029a01eca4f146ad8c21d7"
+    },
+    {
+      "file": "player-v3/run-08.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/run.png",
+      "sourceRect": [
+        1498,
+        485,
+        1769,
+        808
+      ],
+      "anchorX": 1610,
+      "feetY": 112,
+      "sha256": "5938b89e3c9f12d39a4df514c2c9d34df8c68efa14a998e32ac7c9a5c11a2f05"
+    },
+    {
+      "file": "player-v3/jump-01.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/jump.png",
+      "sourceRect": [
+        130,
+        125,
+        328,
+        414
+      ],
+      "anchorX": 220.5,
+      "feetY": 112,
+      "sha256": "b6279de72a5b6aba96efb3c4154e19977b284a5aa9c31b6b5aa6474b68bcf7b0"
+    },
+    {
+      "file": "player-v3/jump-02.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/jump.png",
+      "sourceRect": [
+        576,
+        159,
+        787,
+        414
+      ],
+      "anchorX": 685.5,
+      "feetY": 112,
+      "sha256": "2126e29754707f69145f5bbb419eb0526d46f09bda5e8d702bad43500a87745c"
+    },
+    {
+      "file": "player-v3/jump-03.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/jump.png",
+      "sourceRect": [
+        1018,
+        201,
+        1228,
+        414
+      ],
+      "anchorX": 1133.5,
+      "feetY": 112,
+      "sha256": "362ae5f01e514fc682261b5166e09239925deb0f2bb2e9f60f9066aaf2fa5c35"
+    },
+    {
+      "file": "player-v3/jump-04.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/jump.png",
+      "sourceRect": [
+        1443,
+        97,
+        1682,
+        415
+      ],
+      "anchorX": 1536.5,
+      "feetY": 112,
+      "sha256": "44053fbdbf0091b109ece50eca747d020d356151682dff7d834b3f79b5eb959d"
+    },
+    {
+      "file": "player-v3/jump-05.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/jump.png",
+      "sourceRect": [
+        118,
+        507,
+        359,
+        827
+      ],
+      "anchorX": 200,
+      "feetY": 112,
+      "sha256": "0d4b040eecca3744a5521b822d44a08d6ed742b8b0582d129036c9c47c252969"
+    },
+    {
+      "file": "player-v3/jump-06.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/jump.png",
+      "sourceRect": [
+        576,
+        507,
+        815,
+        805
+      ],
+      "anchorX": 690,
+      "feetY": 112,
+      "sha256": "ccc0c76638f7c6e228d4d9a2dc852961fd9090c25bd11498e00410423358a08c"
+    },
+    {
+      "file": "player-v3/jump-07.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/jump.png",
+      "sourceRect": [
+        1026,
+        505,
+        1253,
+        770
+      ],
+      "anchorX": 1127.5,
+      "feetY": 112,
+      "sha256": "c242fcf3884fec79b36e59d92a9534155c84f8082162581c104ceed5fcd6efdb"
+    },
+    {
+      "file": "player-v3/jump-08.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/jump.png",
+      "sourceRect": [
+        1465,
+        487,
+        1693,
+        739
+      ],
+      "anchorX": 1561,
+      "feetY": 112,
+      "sha256": "c368ae6ca4bfff718ecfece7068c887de667a7b77ef9fa01b9889528fb618649"
+    },
+    {
+      "file": "player-v3/fall-01.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/fall.png",
+      "sourceRect": [
+        127,
+        71,
+        347,
+        380
+      ],
+      "anchorX": 240,
+      "feetY": 112,
+      "sha256": "e45b9871e3fa9fcb144515898b486dbd7015669dbd7a75dceef4190db6392233"
+    },
+    {
+      "file": "player-v3/fall-02.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/fall.png",
+      "sourceRect": [
+        538,
+        80,
+        782,
+        396
+      ],
+      "anchorX": 662,
+      "feetY": 112,
+      "sha256": "f389c930870e8c754ac2819bf00b740500b10fffed1d6dcdade0f26a511d3e5e"
+    },
+    {
+      "file": "player-v3/fall-03.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/fall.png",
+      "sourceRect": [
+        951,
+        86,
+        1230,
+        435
+      ],
+      "anchorX": 1129.5,
+      "feetY": 112,
+      "sha256": "b05b5f3c73d73d184c71ba80873296e463c075870826590996849ddc24b1dc86"
+    },
+    {
+      "file": "player-v3/fall-04.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/fall.png",
+      "sourceRect": [
+        1376,
+        90,
+        1683,
+        423
+      ],
+      "anchorX": 1548,
+      "feetY": 112,
+      "sha256": "0faf95b44c351f2bc5f5f65d02840c16fa161934ab3330be4f996b6f51258029"
+    },
+    {
+      "file": "player-v3/fall-05.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/fall.png",
+      "sourceRect": [
+        78,
+        495,
+        374,
+        838
+      ],
+      "anchorX": 249.5,
+      "feetY": 112,
+      "sha256": "104c4879e66ac13644be91f82536ce8b8fc4d8acbb5a8472417f70687843c666"
+    },
+    {
+      "file": "player-v3/fall-06.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/fall.png",
+      "sourceRect": [
+        557,
+        500,
+        804,
+        841
+      ],
+      "anchorX": 662,
+      "feetY": 112,
+      "sha256": "de01d623b6922a13e6c50a4b312747efb2ab846ed85ba46a770f6d717d5c264c"
+    },
+    {
+      "file": "player-v3/fall-07.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/fall.png",
+      "sourceRect": [
+        985,
+        511,
+        1248,
+        843
+      ],
+      "anchorX": 1097.5,
+      "feetY": 112,
+      "sha256": "17d0a2efb9421eb35ebc866f1c9ef0eaee9f35be2b3b477df926b8242f1fe0cc"
+    },
+    {
+      "file": "player-v3/fall-08.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/fall.png",
+      "sourceRect": [
+        1438,
+        510,
+        1695,
+        841
+      ],
+      "anchorX": 1541.5,
+      "feetY": 112,
+      "sha256": "4deb8e46866a8f70208840703e82168dc3c9788d844aec0997389623326e838c"
+    },
+    {
+      "file": "player-v3/land-01.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/land.png",
+      "sourceRect": [
+        120,
+        77,
+        369,
+        437
+      ],
+      "anchorX": 239,
+      "feetY": 112,
+      "sha256": "48c47acfee5416e3f9eb9f2b2f2556a3b3799ddd5ed4a28f897242ab040bc70f"
+    },
+    {
+      "file": "player-v3/land-02.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/land.png",
+      "sourceRect": [
+        562,
+        110,
+        810,
+        437
+      ],
+      "anchorX": 664.5,
+      "feetY": 112,
+      "sha256": "b55d1e50fbc8deda4dfe41c0055faa7912e5acbcc70aeba9caa9d2691085dd01"
+    },
+    {
+      "file": "player-v3/land-03.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/land.png",
+      "sourceRect": [
+        998,
+        154,
+        1245,
+        437
+      ],
+      "anchorX": 1121,
+      "feetY": 112,
+      "sha256": "6252df2969bf64af4d37f17453bcde1d859a3d8c6458030b802dfe4c1d092db7"
+    },
+    {
+      "file": "player-v3/land-04.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/land.png",
+      "sourceRect": [
+        1446,
+        187,
+        1700,
+        437
+      ],
+      "anchorX": 1587,
+      "feetY": 112,
+      "sha256": "0e4c987b6610ceedaf273988c9a9cfbb1125614698f06be9dc1be3ebdedc0458"
+    },
+    {
+      "file": "player-v3/land-05.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/land.png",
+      "sourceRect": [
+        129,
+        536,
+        377,
+        835
+      ],
+      "anchorX": 246,
+      "feetY": 112,
+      "sha256": "c2a21dd1b2f13f71f9644c1b248cf23ec6f6b5f8eeef52c27b664ca80d31ceee"
+    },
+    {
+      "file": "player-v3/land-06.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/land.png",
+      "sourceRect": [
+        568,
+        545,
+        818,
+        835
+      ],
+      "anchorX": 683,
+      "feetY": 112,
+      "sha256": "05da8ec578babae1c1a8f4f047a5ce937b01689f2585d65675aa791f2d84527a"
+    },
+    {
+      "file": "player-v3/land-07.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/land.png",
+      "sourceRect": [
+        1005,
+        511,
+        1245,
+        835
+      ],
+      "anchorX": 1110,
+      "feetY": 112,
+      "sha256": "778537d639d95f03331a08aaf6a586949b3ae65927ae2aeb707dc162f848e3b5"
+    },
+    {
+      "file": "player-v3/land-08.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/land.png",
+      "sourceRect": [
+        1449,
+        511,
+        1689,
+        835
+      ],
+      "anchorX": 1554,
+      "feetY": 112,
+      "sha256": "88cc043b4fd8e4a4465bae93504303be69540d931894b0e07bdfb3ab6c170ce0"
+    },
+    {
+      "file": "player-v3/shoot-01.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/shoot.png",
+      "sourceRect": [
+        101,
+        116,
+        316,
+        390
+      ],
+      "anchorX": 201,
+      "feetY": 112,
+      "sha256": "fa4f2f9258a9af6be0fefcc79a33fb71331b5207b4f84083ab81c5835e10d510"
+    },
+    {
+      "file": "player-v3/shoot-02.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/shoot.png",
+      "sourceRect": [
+        533,
+        124,
+        774,
+        390
+      ],
+      "anchorX": 626.5,
+      "feetY": 112,
+      "sha256": "4d9806a89c92d468a16708189338e2435ebea49c5f04afd1109d5409b9c23d4d"
+    },
+    {
+      "file": "player-v3/shoot-03.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/shoot.png",
+      "sourceRect": [
+        951,
+        121,
+        1178,
+        390
+      ],
+      "anchorX": 1045.5,
+      "feetY": 112,
+      "sha256": "dc8df9d9d6afd57e22a7e3fbf68cb149042328fab76101a40ce8fe7ff5bec784"
+    },
+    {
+      "file": "player-v3/shoot-04.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/shoot.png",
+      "sourceRect": [
+        1369,
+        119,
+        1597,
+        390
+      ],
+      "anchorX": 1464,
+      "feetY": 112,
+      "sha256": "a2ae8406f5d04355750fe69ecf1ef9c11db55dd7078b7f32c7eff0e570d18481"
+    },
+    {
+      "file": "player-v3/shoot-05.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/shoot.png",
+      "sourceRect": [
+        77,
+        547,
+        332,
+        802
+      ],
+      "anchorX": 217,
+      "feetY": 112,
+      "sha256": "434b03c93be1636b5d72b8ff098030e7915bf85a8b7cd2f3305da406d682b559"
+    },
+    {
+      "file": "player-v3/shoot-06.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/shoot.png",
+      "sourceRect": [
+        530,
+        542,
+        776,
+        802
+      ],
+      "anchorX": 676,
+      "feetY": 112,
+      "sha256": "215dfe7c5ebf04ad215b73a999a2c4c8ed3c94a23087e173a4c7fc707cc22760"
+    },
+    {
+      "file": "player-v3/shoot-07.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/shoot.png",
+      "sourceRect": [
+        967,
+        532,
+        1207,
+        804
+      ],
+      "anchorX": 1064,
+      "feetY": 112,
+      "sha256": "5a29bdc931a8ac205c541d702f90c099ca94375d03b38620c23551bda181783e"
+    },
+    {
+      "file": "player-v3/shoot-08.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/shoot.png",
+      "sourceRect": [
+        1430,
+        532,
+        1653,
+        804
+      ],
+      "anchorX": 1524.5,
+      "feetY": 112,
+      "sha256": "fe9f9d20ec05c45d1ae2cbf8a8cc69e95db6fa61bc0372d0551c877d5e6fb2c8"
+    },
+    {
+      "file": "player-v3/hurt-01.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/hurt.png",
+      "sourceRect": [
+        120,
+        98,
+        412,
+        407
+      ],
+      "anchorX": 225.5,
+      "feetY": 112,
+      "sha256": "f26edcbee3e2bb0acd57744246cd70364cf3fc6945366ba30f1cf1fed14528da"
+    },
+    {
+      "file": "player-v3/hurt-02.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/hurt.png",
+      "sourceRect": [
+        575,
+        114,
+        823,
+        408
+      ],
+      "anchorX": 714,
+      "feetY": 112,
+      "sha256": "e7520630c15dc0381fcf883e8dfdc99dd52bba97515bfa811dccf91eae4edce9"
+    },
+    {
+      "file": "player-v3/hurt-03.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/hurt.png",
+      "sourceRect": [
+        959,
+        134,
+        1258,
+        408
+      ],
+      "anchorX": 1146,
+      "feetY": 112,
+      "sha256": "6081c35d687803fe4bb4e04268759022bef5b938770f6988061e4cc26eaf05d2"
+    },
+    {
+      "file": "player-v3/hurt-04.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/hurt.png",
+      "sourceRect": [
+        1437,
+        119,
+        1694,
+        407
+      ],
+      "anchorX": 1577.5,
+      "feetY": 112,
+      "sha256": "a76aeb89ba11aa6a51e5ed039edb66de913160b7f3ded9faa4dc4c9f531059c5"
+    },
+    {
+      "file": "player-v3/hurt-05.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/hurt.png",
+      "sourceRect": [
+        134,
+        542,
+        361,
+        814
+      ],
+      "anchorX": 231.5,
+      "feetY": 112,
+      "sha256": "e38e809aeb9c4d5d2ae530f9945cd59cd896eec358c94b29ab4d795dacad0283"
+    },
+    {
+      "file": "player-v3/hurt-06.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/hurt.png",
+      "sourceRect": [
+        538,
+        542,
+        838,
+        814
+      ],
+      "anchorX": 693,
+      "feetY": 112,
+      "sha256": "189334abffc8869717d5c090ee894d67ba20c589297868c45f78c31914495305"
+    },
+    {
+      "file": "player-v3/hurt-07.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/hurt.png",
+      "sourceRect": [
+        1013,
+        511,
+        1235,
+        814
+      ],
+      "anchorX": 1110.5,
+      "feetY": 112,
+      "sha256": "bc66c32f9a3794ed1d2b82165d0011f78a8f90a55d28606e7dacf61d1d4c9791"
+    },
+    {
+      "file": "player-v3/hurt-08.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/hurt.png",
+      "sourceRect": [
+        1456,
+        506,
+        1670,
+        814
+      ],
+      "anchorX": 1551.5,
+      "feetY": 112,
+      "sha256": "55998393949911854f77bdea0a0178700a92f843812c99b2ae0870286da36912"
+    },
+    {
+      "file": "player-v3/death-01.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/death.png",
+      "sourceRect": [
+        118,
+        89,
+        352,
+        438
+      ],
+      "anchorX": 220,
+      "feetY": 112,
+      "sha256": "03d627201160098e4078ad49d0ac557387e443094f72c31573beee23dadaed5e"
+    },
+    {
+      "file": "player-v3/death-02.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/death.png",
+      "sourceRect": [
+        568,
+        121,
+        781,
+        438
+      ],
+      "anchorX": 677,
+      "feetY": 112,
+      "sha256": "ed33e69a1df60c86f5be0498d70423f953e408baf239bad7b1167ca087f31d7a"
+    },
+    {
+      "file": "player-v3/death-03.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/death.png",
+      "sourceRect": [
+        998,
+        160,
+        1211,
+        438
+      ],
+      "anchorX": 1106,
+      "feetY": 112,
+      "sha256": "28bc8d0527e6f4ad5aa6439905ccdedd3cd579f59efa0832995bd8bf202128e6"
+    },
+    {
+      "file": "player-v3/death-04.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/death.png",
+      "sourceRect": [
+        1429,
+        191,
+        1663,
+        438
+      ],
+      "anchorX": 1544,
+      "feetY": 112,
+      "sha256": "28c50beb398632a70d54c8f8ac13acae770f89b05cbe10bb6aa407996d5ac897"
+    },
+    {
+      "file": "player-v3/death-05.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/death.png",
+      "sourceRect": [
+        65,
+        542,
+        373,
+        818
+      ],
+      "anchorX": 247.5,
+      "feetY": 112,
+      "sha256": "86ddcf88b1a7242297e8f8b4c91de5ed211cfbeb0b0404ec90166ea72edc2b07"
+    },
+    {
+      "file": "player-v3/death-06.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/death.png",
+      "sourceRect": [
+        504,
+        591,
+        820,
+        827
+      ],
+      "anchorX": 643,
+      "feetY": 112,
+      "sha256": "dc064204a7c93333b89715f6a0bfa803afcf86ab2525528d30f7dba39b16332a"
+    },
+    {
+      "file": "player-v3/death-07.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/death.png",
+      "sourceRect": [
+        923,
+        668,
+        1257,
+        829
+      ],
+      "anchorX": 1082.5,
+      "feetY": 112,
+      "sha256": "01de856af97520250127fde79e18e60903a5ba3fa16ad21b14afb6cf326be987"
+    },
+    {
+      "file": "player-v3/death-08.png",
+      "width": 128,
+      "height": 128,
+      "source": "player-v3/sources/death.png",
+      "sourceRect": [
+        1366,
+        691,
+        1725,
+        831
+      ],
+      "anchorX": 1547,
+      "feetY": 112,
+      "sha256": "949375d7ab89be1f91c2c6335bc14f06f73fe1cc6b011c55f601dedfa939e296"
+    },
+    {
+      "file": "ui/dialog-frame.png",
+      "width": 583,
+      "height": 271,
+      "source": "ui/dialog.png",
+      "note": "Trimmed transparent margins for border-image frame use"
+    },
+    {
+      "file": "ui/puzzle-board-frame.png",
+      "width": 590,
+      "height": 338,
+      "source": "ui/puzzle-board.png",
+      "note": "Trimmed transparent margins for border-image frame use"
+    },
+    {
+      "file": "ui/inventory-tray-frame.png",
+      "width": 594,
+      "height": 194,
+      "source": "ui/inventory-tray.png",
+      "note": "Trimmed transparent margins for border-image frame use"
+    },
+    {
+      "file": "background/locations/2.png",
+      "width": 1672,
+      "height": 941,
+      "source": "background/locations/PROMPTS.md"
+    },
+    {
+      "file": "background/locations/3.png",
+      "width": 1672,
+      "height": 941,
+      "source": "background/locations/PROMPTS.md"
+    },
+    {
+      "file": "background/locations/4.png",
+      "width": 1672,
+      "height": 941,
+      "source": "background/locations/PROMPTS.md"
+    },
+    {
+      "file": "background/locations/5.png",
+      "width": 1672,
+      "height": 941,
+      "source": "background/locations/PROMPTS.md"
+    },
+    {
+      "file": "background/locations/6.png",
+      "width": 1672,
+      "height": 941,
+      "source": "background/locations/PROMPTS.md"
+    },
+    {
+      "file": "background/locations/7.png",
+      "width": 1672,
+      "height": 941,
+      "source": "background/locations/PROMPTS.md"
+    },
+    {
+      "file": "background/locations/8.png",
+      "width": 1672,
+      "height": 941,
+      "source": "background/locations/PROMPTS.md"
+    }
+  ],
+  "animations": {
+    "Idle": {
+      "frames": [
+        "player-v3/idle-03.png"
+      ],
+      "fps": 1,
+      "loop": true,
+      "note": "Stable ready stance; original generated idle sequence retained as source only."
+    },
+    "Run": {
+      "frames": [
+        "player-v3/run-01.png",
+        "player-v3/run-02.png",
+        "player-v3/run-03.png",
+        "player-v3/run-04.png",
+        "player-v3/run-05.png",
+        "player-v3/run-06.png",
+        "player-v3/run-07.png",
+        "player-v3/run-08.png"
+      ],
+      "fps": 12,
+      "loop": true
+    },
+    "Jump": {
+      "frames": [
+        "player-v3/jump-01.png",
+        "player-v3/jump-02.png",
+        "player-v3/jump-03.png",
+        "player-v3/jump-04.png",
+        "player-v3/jump-05.png",
+        "player-v3/jump-06.png",
+        "player-v3/jump-07.png",
+        "player-v3/jump-08.png"
+      ],
+      "fps": 16,
+      "loop": false
+    },
+    "Fall": {
+      "frames": [
+        "player-v3/fall-01.png",
+        "player-v3/fall-02.png",
+        "player-v3/fall-03.png",
+        "player-v3/fall-04.png",
+        "player-v3/fall-05.png",
+        "player-v3/fall-06.png",
+        "player-v3/fall-07.png",
+        "player-v3/fall-08.png"
+      ],
+      "fps": 12,
+      "loop": true
+    },
+    "Hurt": {
+      "frames": [
+        "player-v3/hurt-01.png",
+        "player-v3/hurt-02.png",
+        "player-v3/hurt-03.png",
+        "player-v3/hurt-04.png",
+        "player-v3/hurt-05.png",
+        "player-v3/hurt-06.png",
+        "player-v3/hurt-07.png",
+        "player-v3/hurt-08.png"
+      ],
+      "fps": 20,
+      "loop": false
+    },
+    "Shoot": {
+      "frames": [
+        "player-v3/shoot-01.png",
+        "player-v3/shoot-02.png",
+        "player-v3/shoot-03.png",
+        "player-v3/shoot-04.png",
+        "player-v3/shoot-05.png",
+        "player-v3/shoot-06.png",
+        "player-v3/shoot-07.png",
+        "player-v3/shoot-08.png"
+      ],
+      "fps": 16,
+      "loop": false
+    },
+    "Death": {
+      "frames": [
+        "player-v3/death-01.png",
+        "player-v3/death-02.png",
+        "player-v3/death-03.png",
+        "player-v3/death-04.png",
+        "player-v3/death-05.png",
+        "player-v3/death-06.png",
+        "player-v3/death-07.png",
+        "player-v3/death-08.png"
+      ],
+      "fps": 10,
+      "loop": false
+    },
+    "Land": {
+      "frames": [
+        "player-v3/land-01.png",
+        "player-v3/land-02.png",
+        "player-v3/land-03.png",
+        "player-v3/land-04.png",
+        "player-v3/land-05.png",
+        "player-v3/land-06.png",
+        "player-v3/land-07.png",
+        "player-v3/land-08.png"
+      ],
+      "fps": 24,
+      "loop": false
+    },
+    "Drone": {
+      "frames": [
+        "enemies/drone-1.png",
+        "enemies/drone-2.png",
+        "enemies/drone-3.png",
+        "enemies/drone-4.png",
+        "enemies/drone-5.png",
+        "enemies/drone-6.png",
+        "enemies/drone-7.png",
+        "enemies/drone-8.png"
+      ],
+      "fps": 10,
+      "loop": true
+    }
+  },
+  "player": {
+    "width": 128,
+    "height": 128,
+    "feetY": 112,
+    "suggestedCollisionMask": [
+      {
+        "x": 45,
+        "y": 32
+      },
+      {
+        "x": 83,
+        "y": 32
+      },
+      {
+        "x": 83,
+        "y": 112
+      },
+      {
+        "x": 45,
+        "y": 112
+      }
+    ],
+    "normalization": "player-v3/manifest.json"
+  },
+  "supplementalPacks": [
+    {
+      "manifest": "cables/manifest.json",
+      "individualAssets": 34,
+      "purpose": "Exact-grid automatic cable connections"
+    },
+    {
+      "manifest": "combat/manifest.json",
+      "individualAssets": 144,
+      "purpose": "18 detailed giant robot actions, eight frames each"
+    }
+  ],
+  "patrol": {
+    "frameSize": 128,
+    "displaySize": 72,
+    "collisionMask": [
+      {
+        "x": 32,
+        "y": 26
+      },
+      {
+        "x": 96,
+        "y": 26
+      },
+      {
+        "x": 96,
+        "y": 120
+      },
+      {
+        "x": 32,
+        "y": 120
+      }
+    ],
+    "note": "Fixed body mask shared by all eight frames, centered for horizontal mirroring."
+  }
+}

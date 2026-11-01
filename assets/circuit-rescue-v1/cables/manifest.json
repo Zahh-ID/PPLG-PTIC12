@@ -1,0 +1,315 @@
+{
+  "tileSize": 64,
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "center": {
+    "x": 32,
+    "y": 32
+  },
+  "bits": {
+    "up": 1,
+    "right": 2,
+    "down": 4,
+    "left": 8
+  },
+  "assets": [
+    {
+      "file": "cable-00-off.png",
+      "mask": 0,
+      "powered": false,
+      "connections": []
+    },
+    {
+      "file": "cable-01-off.png",
+      "mask": 1,
+      "powered": false,
+      "connections": [
+        "up"
+      ]
+    },
+    {
+      "file": "cable-02-off.png",
+      "mask": 2,
+      "powered": false,
+      "connections": [
+        "right"
+      ]
+    },
+    {
+      "file": "cable-03-off.png",
+      "mask": 3,
+      "powered": false,
+      "connections": [
+        "up",
+        "right"
+      ]
+    },
+    {
+      "file": "cable-04-off.png",
+      "mask": 4,
+      "powered": false,
+      "connections": [
+        "down"
+      ]
+    },
+    {
+      "file": "cable-05-off.png",
+      "mask": 5,
+      "powered": false,
+      "connections": [
+        "up",
+        "down"
+      ]
+    },
+    {
+      "file": "cable-06-off.png",
+      "mask": 6,
+      "powered": false,
+      "connections": [
+        "right",
+        "down"
+      ]
+    },
+    {
+      "file": "cable-07-off.png",
+      "mask": 7,
+      "powered": false,
+      "connections": [
+        "up",
+        "right",
+        "down"
+      ]
+    },
+    {
+      "file": "cable-08-off.png",
+      "mask": 8,
+      "powered": false,
+      "connections": [
+        "left"
+      ]
+    },
+    {
+      "file": "cable-09-off.png",
+      "mask": 9,
+      "powered": false,
+      "connections": [
+        "up",
+        "left"
+      ]
+    },
+    {
+      "file": "cable-10-off.png",
+      "mask": 10,
+      "powered": false,
+      "connections": [
+        "right",
+        "left"
+      ]
+    },
+    {
+      "file": "cable-11-off.png",
+      "mask": 11,
+      "powered": false,
+      "connections": [
+        "up",
+        "right",
+        "left"
+      ]
+    },
+    {
+      "file": "cable-12-off.png",
+      "mask": 12,
+      "powered": false,
+      "connections": [
+        "down",
+        "left"
+      ]
+    },
+    {
+      "file": "cable-13-off.png",
+      "mask": 13,
+      "powered": false,
+      "connections": [
+        "up",
+        "down",
+        "left"
+      ]
+    },
+    {
+      "file": "cable-14-off.png",
+      "mask": 14,
+      "powered": false,
+      "connections": [
+        "right",
+        "down",
+        "left"
+      ]
+    },
+    {
+      "file": "cable-15-off.png",
+      "mask": 15,
+      "powered": false,
+      "connections": [
+        "up",
+        "right",
+        "down",
+        "left"
+      ]
+    },
+    {
+      "file": "cable-00-on.png",
+      "mask": 0,
+      "powered": true,
+      "connections": []
+    },
+    {
+      "file": "cable-01-on.png",
+      "mask": 1,
+      "powered": true,
+      "connections": [
+        "up"
+      ]
+    },
+    {
+      "file": "cable-02-on.png",
+      "mask": 2,
+      "powered": true,
+      "connections": [
+        "right"
+      ]
+    },
+    {
+      "file": "cable-03-on.png",
+      "mask": 3,
+      "powered": true,
+      "connections": [
+        "up",
+        "right"
+      ]
+    },
+    {
+      "file": "cable-04-on.png",
+      "mask": 4,
+      "powered": true,
+      "connections": [
+        "down"
+      ]
+    },
+    {
+      "file": "cable-05-on.png",
+      "mask": 5,
+      "powered": true,
+      "connections": [
+        "up",
+        "down"
+      ]
+    },
+    {
+      "file": "cable-06-on.png",
+      "mask": 6,
+      "powered": true,
+      "connections": [
+        "right",
+        "down"
+      ]
+    },
+    {
+      "file": "cable-07-on.png",
+      "mask": 7,
+      "powered": true,
+      "connections": [
+        "up",
+        "right",
+        "down"
+      ]
+    },
+    {
+      "file": "cable-08-on.png",
+      "mask": 8,
+      "powered": true,
+      "connections": [
+        "left"
+      ]
+    },
+    {
+      "file": "cable-09-on.png",
+      "mask": 9,
+      "powered": true,
+      "connections": [
+        "up",
+        "left"
+      ]
+    },
+    {
+      "file": "cable-10-on.png",
+      "mask": 10,
+      "powered": true,
+      "connections": [
+        "right",
+        "left"
+      ]
+    },
+    {
+      "file": "cable-11-on.png",
+      "mask": 11,
+      "powered": true,
+      "connections": [
+        "up",
+        "right",
+        "left"
+      ]
+    },
+    {
+      "file": "cable-12-on.png",
+      "mask": 12,
+      "powered": true,
+      "connections": [
+        "down",
+        "left"
+      ]
+    },
+    {
+      "file": "cable-13-on.png",
+      "mask": 13,
+      "powered": true,
+      "connections": [
+        "up",
+        "down",
+        "left"
+      ]
+    },
+    {
+      "file": "cable-14-on.png",
+      "mask": 14,
+      "powered": true,
+      "connections": [
+        "right",
+        "down",
+        "left"
+      ]
+    },
+    {
+      "file": "cable-15-on.png",
+      "mask": 15,
+      "powered": true,
+      "connections": [
+        "up",
+        "right",
+        "down",
+        "left"
+      ]
+    },
+    {
+      "file": "crossing-insulated-off.png",
+      "powered": false,
+      "insulated": true
+    },
+    {
+      "file": "crossing-insulated-on.png",
+      "powered": true,
+      "insulated": true
+    }
+  ]
+}

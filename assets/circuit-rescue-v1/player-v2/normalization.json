@@ -1,0 +1,670 @@
+{
+  "source": "sources/robot.png",
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "feetY": 112,
+  "frames": [
+    {
+      "file": "player-v2/idle-01.png",
+      "sourceRect": [
+        64,
+        31,
+        153,
+        160
+      ],
+      "anchorX": 113,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/idle-02.png",
+      "sourceRect": [
+        209,
+        31,
+        300,
+        160
+      ],
+      "anchorX": 248,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/idle-03.png",
+      "sourceRect": [
+        358,
+        30,
+        449,
+        160
+      ],
+      "anchorX": 398,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/idle-04.png",
+      "sourceRect": [
+        507,
+        31,
+        602,
+        160
+      ],
+      "anchorX": 547.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/idle-05.png",
+      "sourceRect": [
+        655,
+        28,
+        750,
+        160
+      ],
+      "anchorX": 696,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/idle-06.png",
+      "sourceRect": [
+        806,
+        29,
+        904,
+        160
+      ],
+      "anchorX": 847,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/idle-07.png",
+      "sourceRect": [
+        956,
+        26,
+        1052,
+        160
+      ],
+      "anchorX": 997.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/idle-08.png",
+      "sourceRect": [
+        1104,
+        28,
+        1199,
+        160
+      ],
+      "anchorX": 1145.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/run-01.png",
+      "sourceRect": [
+        59,
+        180,
+        159,
+        312
+      ],
+      "anchorX": 103.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/run-02.png",
+      "sourceRect": [
+        202,
+        179,
+        303,
+        312
+      ],
+      "anchorX": 248.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/run-03.png",
+      "sourceRect": [
+        354,
+        180,
+        461,
+        312
+      ],
+      "anchorX": 399.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/run-04.png",
+      "sourceRect": [
+        503,
+        180,
+        606,
+        312
+      ],
+      "anchorX": 548,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/run-05.png",
+      "sourceRect": [
+        649,
+        180,
+        758,
+        312
+      ],
+      "anchorX": 698,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/run-06.png",
+      "sourceRect": [
+        803,
+        180,
+        913,
+        312
+      ],
+      "anchorX": 849,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/run-07.png",
+      "sourceRect": [
+        955,
+        180,
+        1062,
+        312
+      ],
+      "anchorX": 1001,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/run-08.png",
+      "sourceRect": [
+        1103,
+        183,
+        1204,
+        312
+      ],
+      "anchorX": 1147,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/jump-01.png",
+      "sourceRect": [
+        55,
+        346,
+        146,
+        466
+      ],
+      "anchorX": 106,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/jump-02.png",
+      "sourceRect": [
+        215,
+        346,
+        308,
+        466
+      ],
+      "anchorX": 265,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/jump-03.png",
+      "sourceRect": [
+        362,
+        341,
+        466,
+        471
+      ],
+      "anchorX": 404.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/jump-04.png",
+      "sourceRect": [
+        518,
+        334,
+        619,
+        468
+      ],
+      "anchorX": 554,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/jump-05.png",
+      "sourceRect": [
+        664,
+        329,
+        765,
+        468
+      ],
+      "anchorX": 701.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/jump-06.png",
+      "sourceRect": [
+        805,
+        325,
+        913,
+        467
+      ],
+      "anchorX": 847.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/jump-07.png",
+      "sourceRect": [
+        951,
+        332,
+        1059,
+        468
+      ],
+      "anchorX": 991.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/jump-08.png",
+      "sourceRect": [
+        1107,
+        340,
+        1206,
+        466
+      ],
+      "anchorX": 1153.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/fall-01.png",
+      "sourceRect": [
+        58,
+        494,
+        164,
+        624
+      ],
+      "anchorX": 98.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/fall-02.png",
+      "sourceRect": [
+        205,
+        494,
+        307,
+        628
+      ],
+      "anchorX": 246.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/fall-03.png",
+      "sourceRect": [
+        356,
+        505,
+        461,
+        641
+      ],
+      "anchorX": 404,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/fall-04.png",
+      "sourceRect": [
+        505,
+        513,
+        611,
+        641
+      ],
+      "anchorX": 553.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/fall-05.png",
+      "sourceRect": [
+        660,
+        519,
+        765,
+        641
+      ],
+      "anchorX": 704,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/fall-06.png",
+      "sourceRect": [
+        811,
+        524,
+        906,
+        641
+      ],
+      "anchorX": 860.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/fall-07.png",
+      "sourceRect": [
+        959,
+        526,
+        1053,
+        641
+      ],
+      "anchorX": 1011.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/fall-08.png",
+      "sourceRect": [
+        1107,
+        516,
+        1197,
+        641
+      ],
+      "anchorX": 1156.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/hurt-01.png",
+      "sourceRect": [
+        51,
+        660,
+        158,
+        802
+      ],
+      "anchorX": 115.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/hurt-02.png",
+      "sourceRect": [
+        211,
+        667,
+        315,
+        802
+      ],
+      "anchorX": 274,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/hurt-03.png",
+      "sourceRect": [
+        354,
+        673,
+        474,
+        811
+      ],
+      "anchorX": 427.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/hurt-04.png",
+      "sourceRect": [
+        515,
+        682,
+        622,
+        811
+      ],
+      "anchorX": 575.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/hurt-05.png",
+      "sourceRect": [
+        659,
+        684,
+        768,
+        811
+      ],
+      "anchorX": 722.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/hurt-06.png",
+      "sourceRect": [
+        805,
+        682,
+        916,
+        811
+      ],
+      "anchorX": 856,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/hurt-07.png",
+      "sourceRect": [
+        964,
+        682,
+        1068,
+        811
+      ],
+      "anchorX": 1010,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/hurt-08.png",
+      "sourceRect": [
+        1112,
+        684,
+        1211,
+        811
+      ],
+      "anchorX": 1158,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/shoot-01.png",
+      "sourceRect": [
+        49,
+        837,
+        175,
+        975
+      ],
+      "anchorX": 93.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/shoot-02.png",
+      "sourceRect": [
+        223,
+        846,
+        347,
+        977
+      ],
+      "anchorX": 259.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/shoot-03.png",
+      "sourceRect": [
+        370,
+        841,
+        492,
+        976
+      ],
+      "anchorX": 410.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/shoot-04.png",
+      "sourceRect": [
+        508,
+        836,
+        648,
+        977
+      ],
+      "anchorX": 553,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/shoot-05.png",
+      "sourceRect": [
+        657,
+        843,
+        788,
+        977
+      ],
+      "anchorX": 698.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/shoot-06.png",
+      "sourceRect": [
+        801,
+        841,
+        942,
+        977
+      ],
+      "anchorX": 848,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/shoot-07.png",
+      "sourceRect": [
+        958,
+        842,
+        1092,
+        977
+      ],
+      "anchorX": 1001,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/shoot-08.png",
+      "sourceRect": [
+        1111,
+        841,
+        1209,
+        977
+      ],
+      "anchorX": 1152,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/death-01.png",
+      "sourceRect": [
+        54,
+        1015,
+        160,
+        1162
+      ],
+      "anchorX": 105.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/death-02.png",
+      "sourceRect": [
+        199,
+        1029,
+        308,
+        1162
+      ],
+      "anchorX": 243.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/death-03.png",
+      "sourceRect": [
+        344,
+        1035,
+        462,
+        1162
+      ],
+      "anchorX": 391.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/death-04.png",
+      "sourceRect": [
+        485,
+        1049,
+        614,
+        1166
+      ],
+      "anchorX": 540.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/death-05.png",
+      "sourceRect": [
+        632,
+        1057,
+        781,
+        1170
+      ],
+      "anchorX": 704,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/death-06.png",
+      "sourceRect": [
+        798,
+        1081,
+        988,
+        1170
+      ],
+      "anchorX": 892.5,
+      "feetY": 112,
+      "scale": 0.62
+    },
+    {
+      "file": "player-v2/death-07.png",
+      "sourceRect": [
+        1016,
+        1082,
+        1206,
+        1170
+      ],
+      "anchorX": 1111,
+      "feetY": 112,
+      "scale": 0.62
+    }
+  ]
+}

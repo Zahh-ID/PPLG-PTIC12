@@ -1,30 +1,29 @@
 {
-  "name": "logicworld",
-  "version": "0.1.0",
+  "name": "animal-hunter",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
+  "description": "Circuit Rescue logic-gate adventure, checks and HTML5 build tools",
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "scripts": {
-    "start": "node --env-file-if-exists=.env server/index.js",
-    "build:client": "node scripts/build-client.js",
-    "test": "node --test --test-timeout=15000 tests/*.test.js",
-    "test:browser": "node tests/browser.mjs",
-    "db:configure": "node scripts/configure-db.js",
-    "db:up": "node scripts/db.js up",
-    "db:status": "node scripts/db.js status",
-    "db:stop": "node scripts/db.js stop",
-    "db:restart": "node scripts/db.js restart",
-    "db:migrate": "node --env-file=.env scripts/migrate-db.js",
-    "test:postgres": "node --env-file=.env --test --test-timeout=30000 tests/postgres.test.js",
-    "test:browser:postgres": "node --env-file=.env scripts/test-browser-postgres.js"
-  },
-  "dependencies": {
-    "pg": "^8.23.1",
-    "ws": "^8.18.3"
+    "test": "npm run check && npm run test:circuits && npm run check:actors && npm run check:combat && npm run check:maps && npm run check:workflows",
+    "build:web": "node scripts/build-web.mjs",
+    "test:browser": "node tests/campaign.browser.mjs",
+    "check:workflows": "node scripts/check-workflows.mjs",
+    "check": "node scripts/check-project.mjs",
+    "test:circuits": "node scripts/test-circuit-model.mjs",
+    "check:combat": "node scripts/check-combat-assets.mjs",
+    "check:actors": "node scripts/check-actor-definitions.mjs",
+    "check:maps": "node scripts/check-location-maps.mjs",
+    "events:pull": "node scripts/sync-events.mjs pull",
+    "events:push": "node scripts/sync-events.mjs push"
   },
   "devDependencies": {
-    "puppeteer": "^25.16.0"
+    "gdcore-tools": "2.0.0-gd-v5.6.269-autobuild",
+    "gdexporter": "4.0.0-beta7",
+    "puppeteer": "25.16.0",
+    "yaml": "2.9.1"
   }
 }
