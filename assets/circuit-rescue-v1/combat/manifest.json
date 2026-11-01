@@ -1,0 +1,1201 @@
+{
+  "frameCountPerAction": 8,
+  "totalFrames": 144,
+  "generatedWith": "Built-in image generation using the original character sheets as design references",
+  "animations": {
+    "mecha": {
+      "Idle": {
+        "frames": [
+          "mecha/idle/01.png",
+          "mecha/idle/02.png",
+          "mecha/idle/03.png",
+          "mecha/idle/04.png",
+          "mecha/idle/05.png",
+          "mecha/idle/06.png",
+          "mecha/idle/07.png",
+          "mecha/idle/08.png"
+        ],
+        "fps": 10,
+        "loop": true,
+        "width": 256,
+        "height": 256,
+        "feetY": 224,
+        "source": "sources/mecha-idle.png"
+      },
+      "Walk": {
+        "frames": [
+          "mecha/walk/01.png",
+          "mecha/walk/02.png",
+          "mecha/walk/03.png",
+          "mecha/walk/04.png",
+          "mecha/walk/05.png",
+          "mecha/walk/06.png",
+          "mecha/walk/07.png",
+          "mecha/walk/08.png"
+        ],
+        "fps": 10,
+        "loop": true,
+        "width": 256,
+        "height": 256,
+        "feetY": 224,
+        "source": "sources/mecha-walk.png"
+      },
+      "Jump": {
+        "frames": [
+          "mecha/jump/01.png",
+          "mecha/jump/02.png",
+          "mecha/jump/03.png",
+          "mecha/jump/04.png",
+          "mecha/jump/05.png",
+          "mecha/jump/06.png",
+          "mecha/jump/07.png",
+          "mecha/jump/08.png"
+        ],
+        "fps": 16,
+        "loop": false,
+        "width": 256,
+        "height": 256,
+        "feetY": 224,
+        "source": "sources/mecha-jump.png"
+      },
+      "Fall": {
+        "frames": [
+          "mecha/fall/01.png",
+          "mecha/fall/02.png",
+          "mecha/fall/03.png",
+          "mecha/fall/04.png",
+          "mecha/fall/05.png",
+          "mecha/fall/06.png",
+          "mecha/fall/07.png",
+          "mecha/fall/08.png"
+        ],
+        "fps": 16,
+        "loop": true,
+        "width": 256,
+        "height": 256,
+        "feetY": 224,
+        "source": "sources/mecha-fall.png"
+      },
+      "Land": {
+        "frames": [
+          "mecha/land/01.png",
+          "mecha/land/02.png",
+          "mecha/land/03.png",
+          "mecha/land/04.png",
+          "mecha/land/05.png",
+          "mecha/land/06.png",
+          "mecha/land/07.png",
+          "mecha/land/08.png"
+        ],
+        "fps": 10,
+        "loop": false,
+        "width": 256,
+        "height": 256,
+        "feetY": 224,
+        "source": "sources/mecha-land.png"
+      },
+      "Shoot": {
+        "frames": [
+          "mecha/shoot/01.png",
+          "mecha/shoot/02.png",
+          "mecha/shoot/03.png",
+          "mecha/shoot/04.png",
+          "mecha/shoot/05.png",
+          "mecha/shoot/06.png",
+          "mecha/shoot/07.png",
+          "mecha/shoot/08.png"
+        ],
+        "fps": 10,
+        "loop": false,
+        "width": 256,
+        "height": 256,
+        "feetY": 224,
+        "source": "sources/mecha-shoot.png"
+      },
+      "Shield": {
+        "frames": [
+          "mecha/shield/01.png",
+          "mecha/shield/02.png",
+          "mecha/shield/03.png",
+          "mecha/shield/04.png",
+          "mecha/shield/05.png",
+          "mecha/shield/06.png",
+          "mecha/shield/07.png",
+          "mecha/shield/08.png"
+        ],
+        "fps": 10,
+        "loop": true,
+        "width": 256,
+        "height": 256,
+        "feetY": 224,
+        "source": "sources/mecha-shield.png"
+      },
+      "Hurt": {
+        "frames": [
+          "mecha/hurt/01.png",
+          "mecha/hurt/02.png",
+          "mecha/hurt/03.png",
+          "mecha/hurt/04.png",
+          "mecha/hurt/05.png",
+          "mecha/hurt/06.png",
+          "mecha/hurt/07.png",
+          "mecha/hurt/08.png"
+        ],
+        "fps": 10,
+        "loop": false,
+        "width": 256,
+        "height": 256,
+        "feetY": 224,
+        "source": "sources/mecha-hurt.png"
+      },
+      "Death": {
+        "frames": [
+          "mecha/death/01.png",
+          "mecha/death/02.png",
+          "mecha/death/03.png",
+          "mecha/death/04.png",
+          "mecha/death/05.png",
+          "mecha/death/06.png",
+          "mecha/death/07.png",
+          "mecha/death/08.png"
+        ],
+        "fps": 10,
+        "loop": false,
+        "width": 256,
+        "height": 256,
+        "feetY": 224,
+        "source": "sources/mecha-death.png"
+      }
+    },
+    "boss": {
+      "Idle": {
+        "frames": [
+          "boss/idle/01.png",
+          "boss/idle/02.png",
+          "boss/idle/03.png",
+          "boss/idle/04.png",
+          "boss/idle/05.png",
+          "boss/idle/06.png",
+          "boss/idle/07.png",
+          "boss/idle/08.png"
+        ],
+        "fps": 10,
+        "loop": true,
+        "width": 512,
+        "height": 512,
+        "feetY": 448,
+        "source": "sources/boss-idle.png"
+      },
+      "Walk": {
+        "frames": [
+          "boss/walk/01.png",
+          "boss/walk/02.png",
+          "boss/walk/03.png",
+          "boss/walk/04.png",
+          "boss/walk/05.png",
+          "boss/walk/06.png",
+          "boss/walk/07.png",
+          "boss/walk/08.png"
+        ],
+        "fps": 10,
+        "loop": true,
+        "width": 512,
+        "height": 512,
+        "feetY": 448,
+        "source": "sources/boss-walk.png"
+      },
+      "Windup": {
+        "frames": [
+          "boss/windup/01.png",
+          "boss/windup/02.png",
+          "boss/windup/03.png",
+          "boss/windup/04.png",
+          "boss/windup/05.png",
+          "boss/windup/06.png",
+          "boss/windup/07.png",
+          "boss/windup/08.png"
+        ],
+        "fps": 10,
+        "loop": false,
+        "width": 512,
+        "height": 512,
+        "feetY": 448,
+        "source": "sources/boss-windup.png"
+      },
+      "Shoot": {
+        "frames": [
+          "boss/shoot/01.png",
+          "boss/shoot/02.png",
+          "boss/shoot/03.png",
+          "boss/shoot/04.png",
+          "boss/shoot/05.png",
+          "boss/shoot/06.png",
+          "boss/shoot/07.png",
+          "boss/shoot/08.png"
+        ],
+        "fps": 10,
+        "loop": false,
+        "width": 512,
+        "height": 512,
+        "feetY": 448,
+        "source": "sources/boss-shoot.png"
+      },
+      "Slam": {
+        "frames": [
+          "boss/slam/01.png",
+          "boss/slam/02.png",
+          "boss/slam/03.png",
+          "boss/slam/04.png",
+          "boss/slam/05.png",
+          "boss/slam/06.png",
+          "boss/slam/07.png",
+          "boss/slam/08.png"
+        ],
+        "fps": 10,
+        "loop": false,
+        "width": 512,
+        "height": 512,
+        "feetY": 448,
+        "source": "sources/boss-slam.png"
+      },
+      "Shield": {
+        "frames": [
+          "boss/shield/01.png",
+          "boss/shield/02.png",
+          "boss/shield/03.png",
+          "boss/shield/04.png",
+          "boss/shield/05.png",
+          "boss/shield/06.png",
+          "boss/shield/07.png",
+          "boss/shield/08.png"
+        ],
+        "fps": 10,
+        "loop": true,
+        "width": 512,
+        "height": 512,
+        "feetY": 448,
+        "source": "sources/boss-shield.png"
+      },
+      "Exposed": {
+        "frames": [
+          "boss/exposed/01.png",
+          "boss/exposed/02.png",
+          "boss/exposed/03.png",
+          "boss/exposed/04.png",
+          "boss/exposed/05.png",
+          "boss/exposed/06.png",
+          "boss/exposed/07.png",
+          "boss/exposed/08.png"
+        ],
+        "fps": 10,
+        "loop": true,
+        "width": 512,
+        "height": 512,
+        "feetY": 448,
+        "source": "sources/boss-exposed.png"
+      },
+      "Hurt": {
+        "frames": [
+          "boss/hurt/01.png",
+          "boss/hurt/02.png",
+          "boss/hurt/03.png",
+          "boss/hurt/04.png",
+          "boss/hurt/05.png",
+          "boss/hurt/06.png",
+          "boss/hurt/07.png",
+          "boss/hurt/08.png"
+        ],
+        "fps": 10,
+        "loop": false,
+        "width": 512,
+        "height": 512,
+        "feetY": 448,
+        "source": "sources/boss-hurt.png"
+      },
+      "Death": {
+        "frames": [
+          "boss/death/01.png",
+          "boss/death/02.png",
+          "boss/death/03.png",
+          "boss/death/04.png",
+          "boss/death/05.png",
+          "boss/death/06.png",
+          "boss/death/07.png",
+          "boss/death/08.png"
+        ],
+        "fps": 10,
+        "loop": false,
+        "width": 512,
+        "height": 512,
+        "feetY": 448,
+        "source": "sources/boss-death.png"
+      }
+    }
+  },
+  "assets": [
+    {
+      "file": "mecha/idle/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "78376f43104bba57b11e4eefe9abc68b6fca3bf846d6ae5e39204a5afa6d5ce0"
+    },
+    {
+      "file": "mecha/idle/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "1aae2f8edbd8a79f36671e1629b78e69687ae434a2e7aaab4607847a4d98e742"
+    },
+    {
+      "file": "mecha/idle/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "170ed1b5f2fab406d64b958a1f84c24a803ee13c152ed9820805d3411b393bfa"
+    },
+    {
+      "file": "mecha/idle/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "74d82d4328b1ca165233ce1f4e7165433c7bb0c00e3f8b462481831be1edab26"
+    },
+    {
+      "file": "mecha/idle/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "1d545b5a91a028a7d01b12939fffc42cf8253e6dbb72787f719acbe93ff581fe"
+    },
+    {
+      "file": "mecha/idle/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "472db01c9632b592659833ff9c21bcf139eb4d54102bb184c14968a39157e262"
+    },
+    {
+      "file": "mecha/idle/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "18ceb05337aa572dfcfbe4967add3b7877244aad345a6b1367a9eb04c2561b25"
+    },
+    {
+      "file": "mecha/idle/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "fee41e46652a496e865d7b0a81e9dbdfa8d7da9b29b1be397a79e415e24a7b27"
+    },
+    {
+      "file": "mecha/walk/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "e87d28c59893f026b4bee9199ff29ef842de2203d437d6f20def8ef946ac2188"
+    },
+    {
+      "file": "mecha/walk/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "2480fa615b01a59b6298803daf602aef519554c36c950b1fb286d832176b0ae2"
+    },
+    {
+      "file": "mecha/walk/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "e95a282a953003a426eb548f8bccfd29f2b2a401275b51b65c479707c255bd73"
+    },
+    {
+      "file": "mecha/walk/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "89db5d855badb13f4f76e62866115ca9e5003363e83eedd852b9d4bd917afba3"
+    },
+    {
+      "file": "mecha/walk/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "03543f5a76fa11390cad7a6f693cd322efa41807024e1a828ed455e946fb6920"
+    },
+    {
+      "file": "mecha/walk/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "2d3cc2ace35751b4bc54ce50962d060ffa2a626d6de84cd5972493e7084dc859"
+    },
+    {
+      "file": "mecha/walk/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "baedfcbf31524d0c0eb4aae0bc949793660df3ba97c7be1e83cfc1c1e9c8d8c2"
+    },
+    {
+      "file": "mecha/walk/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "1a2b4f9ec18ac96ca21405829df6bc50cd80898eb8c201acb533b5844a5053e2"
+    },
+    {
+      "file": "mecha/jump/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "97715b12c87069f2658760c12e6a91ddeb4612863738db8a9289d7e2ba47f4bf"
+    },
+    {
+      "file": "mecha/jump/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "ce8c952f38126d7441a846cc16d7ae33e66bd61c6cbbda1fd90c97bd40b6288b"
+    },
+    {
+      "file": "mecha/jump/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "4fbc94ca37263ff82d3daa6fc550ba2592d000ac96ce36b7b729945fbf7d2d49"
+    },
+    {
+      "file": "mecha/jump/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "aaa7ea74508ebb51b7b2df2ee3ecbd19c3c6ea59038bca1db33b6649f9aab799"
+    },
+    {
+      "file": "mecha/jump/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "cb0e240606d35f95213b4787017613ef220ff2b4c06bbaf8479a0ca8a6beba48"
+    },
+    {
+      "file": "mecha/jump/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "a647ff5c5c83d5cb05a73d342837e389696c8e25e98001411b4b044f348122d7"
+    },
+    {
+      "file": "mecha/jump/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "5fcdada8aac3df89576f2a837f054c990b75dd36a691f5f99489a12bec88ca0b"
+    },
+    {
+      "file": "mecha/jump/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "5e516b51a7ff158c9057ceea195b1c2c7f4876f309a4de53ca78649164aa9b8f"
+    },
+    {
+      "file": "mecha/fall/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "8ed48e7af3bbc0f36ebeccf6e43e410920e99973cd53f79b58b2340e01fbf955"
+    },
+    {
+      "file": "mecha/fall/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "4b1e71b70a5b13536c57b9c3ef40beaac2d629b76d8e86900a3634a73d648571"
+    },
+    {
+      "file": "mecha/fall/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "6babb0bbb51ada82d07d6743d2baa5a72a291db1b6680df4787645f8e825dcde"
+    },
+    {
+      "file": "mecha/fall/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "c417509227bf5a347c0ad600cfe1d9615276d9efbabbb54b76bccef1b23b5fd3"
+    },
+    {
+      "file": "mecha/fall/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "b62be0d82365a78d971980c50d1cb57bfb51175b19de2a6817a6cf24d4506bc6"
+    },
+    {
+      "file": "mecha/fall/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "a14ad0ed630aa1876194e14ce7436dbcbd6fb6e1d4668cebada5b37d9a269385"
+    },
+    {
+      "file": "mecha/fall/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "9b538fa14720817e355087a80c79c43dc7eb67d9480e7df088e5c40c879eca79"
+    },
+    {
+      "file": "mecha/fall/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "2f0e434da15afa4943fb6824928a584395f4ee7671350de3a6bbb839bc885ffd"
+    },
+    {
+      "file": "mecha/land/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "2eb488f15b55baabe0ff1e31c7017aee0a850afc5498b7048430b53a3481257a"
+    },
+    {
+      "file": "mecha/land/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "ec3975144042e649d48701baece8c0574d9cad8b90db21e6a2a9059628374861"
+    },
+    {
+      "file": "mecha/land/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "dccdb1b610a4a90665715a6ff22e8f5b8fb893af73c6f6a42c9e5a6e686ebee2"
+    },
+    {
+      "file": "mecha/land/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "3a7083d10b7bbb3aa065148c7d2d8c08f92ac7a60877392ea81acd0fb6bdf80c"
+    },
+    {
+      "file": "mecha/land/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "3529bfca72932a4cce78b16ef6748e8bbb30a0db3eeabb4605e64e3a28c833d5"
+    },
+    {
+      "file": "mecha/land/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "6e0628823dcaa67edca3ea9f188abce6e141937022980a817c9d6c8fab1d0051"
+    },
+    {
+      "file": "mecha/land/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "f02948e8afb69d8f990fcd3882d6fdf4a8f82d1dc3e8cc107e38af410f6a202f"
+    },
+    {
+      "file": "mecha/land/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "c5fe57822e1a9764bb766b8707ac3599a90454453645419a1bae29500e202c12"
+    },
+    {
+      "file": "mecha/shoot/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "bcd5c79aa027cc91e6a18b24ea74b954f0e97f2577b5a8ad21a85056f0d526f7"
+    },
+    {
+      "file": "mecha/shoot/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "86e41780322551ede6520a301e0aa41d92743bec68eea428fb9d003707ab7b56"
+    },
+    {
+      "file": "mecha/shoot/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "1268c2a4d4acd4e6b01b71ed0ce44c4bb6645bc7532b5193b4c9df002e2423d3"
+    },
+    {
+      "file": "mecha/shoot/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "32de8fa20d1d05effcc87740b0a0955a1fdd7d9f6fadd744f854d20c479dcb13"
+    },
+    {
+      "file": "mecha/shoot/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "3bef00955111f5ed64bb0e83ce49508064a9de0e0ee62ca566d7748c7d02ea5f"
+    },
+    {
+      "file": "mecha/shoot/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "9a7903b4a30984eb62ffa3dbb0dae6617a499221e535b5442b3fb7409a269ace"
+    },
+    {
+      "file": "mecha/shoot/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "d070f1c69adf0ff88e5e3935f500c6895764304d80cf0e5a7413751730ce006b"
+    },
+    {
+      "file": "mecha/shoot/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "5472e2f9de7da781186b4e1a2d93382d475ddfd8e55340e17e34ced72a0f6bb4"
+    },
+    {
+      "file": "mecha/shield/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "8bb6579801693cd77782ff0c264792212c819407a2e6bcb8955fe4e6cbe059c1"
+    },
+    {
+      "file": "mecha/shield/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "11f688a88028ec0f025643135647b59b3e970c1c60476789ba2649efdd899c85"
+    },
+    {
+      "file": "mecha/shield/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "34c996e693dd66cfdaa0076443f2d83e43a68a778b4b209480cef606e10b0331"
+    },
+    {
+      "file": "mecha/shield/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "dd0a7b0467b817b79f3cbf53662aaee4f0840b06d6119585fffc6ec94b2d93fb"
+    },
+    {
+      "file": "mecha/shield/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "7f73556ac4025e801544b15d68c27cbbdf271dd15611a197b19c296a64b0ee4a"
+    },
+    {
+      "file": "mecha/shield/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "b245b9668ee1b73b17cf2d3e14ad01cf88499e2283efb434d344c286108775d6"
+    },
+    {
+      "file": "mecha/shield/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "938d53d85cd65d202503cfa3ba649c0e7e157a535f6e03738ee807cae7590dca"
+    },
+    {
+      "file": "mecha/shield/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "66c7029957dbeadfe2e952c5f7aad22c79af79ad98ad6ebee0cd9bbc6a06250e"
+    },
+    {
+      "file": "mecha/hurt/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "41ce8ec0d3b33168cee88e54cf68c25e4c8a35a5af1d182bcc17cf6329356c9b"
+    },
+    {
+      "file": "mecha/hurt/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "861a88ec94bf2bc8e4777465523a700b4dc8dcce99c8726ec08b9729b6efb349"
+    },
+    {
+      "file": "mecha/hurt/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "35ccbf93af32364d4771a05aca9eba7f2bfcac2066b61d88ffad29e0fa72af53"
+    },
+    {
+      "file": "mecha/hurt/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "f1dd159c06d871448b9f78a22e508b2f49f9923e543b0162d236047e9bfd48b7"
+    },
+    {
+      "file": "mecha/hurt/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "cb11a5a8bc3bcc68b4c7f047756ce55633b3b5b230ef70bc26bed7a6dd93d0c3"
+    },
+    {
+      "file": "mecha/hurt/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "efbec09484a33a5d1dc0e27947cb49be2404a708a6af6d7fb62715ce8bf15dcf"
+    },
+    {
+      "file": "mecha/hurt/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "97f6a49848e6a48f9ee57c51972a8ba79a7697c1a264f07c090a1fd2b5324b6e"
+    },
+    {
+      "file": "mecha/hurt/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "2cb501cbef9776785760411c98819c55991ed64d4829a021523a65b4d5bc2205"
+    },
+    {
+      "file": "mecha/death/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "02b47011010ac9bafde2e0feb0dfff4f0cf7b1adf128861ec4f7551bf83bb93f"
+    },
+    {
+      "file": "mecha/death/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "9af9c350d5c8f9c17f6bb9a9797024ea9aefd3bb9571b85f89b795f42b66e89e"
+    },
+    {
+      "file": "mecha/death/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "6c2072038e4710347be4c756013b006977565b101596d699d43d7407fe69abc3"
+    },
+    {
+      "file": "mecha/death/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "c1efc3bc90b3e6797a6aef34a9a4cff45d8909ecdcf61324bf8ad17a23831df9"
+    },
+    {
+      "file": "mecha/death/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "8ed8b4482b1b0079a5a83104add5c15579c2a1443c3dd04d9bdabf1c3b796b30"
+    },
+    {
+      "file": "mecha/death/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "801385fca430684db3b8404baabab18eb59c7a1978d3dac7f6f856a14136c391"
+    },
+    {
+      "file": "mecha/death/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "c42449a49ec08e4f01bc3f92127f179da70ec1d0d6f120e02c1190481fce6f44"
+    },
+    {
+      "file": "mecha/death/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "ef589edb80c9d78782d78e4a9768ba3484c124219ce45168eb13958a5eec7327"
+    },
+    {
+      "file": "boss/idle/01.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "a68394144543ab9f8544bc0d6d6034d89dafa5a7ad5919023fb43de5343c1ec2"
+    },
+    {
+      "file": "boss/idle/02.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "c4d9a96a6c25a2b0142638b83df9b2fff92e18d6c0b2fe6300d8552ebf2d18f8"
+    },
+    {
+      "file": "boss/idle/03.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "a2775354c8ff4e1edb359da7f271da7ca797000942b6401f43400253681b54fc"
+    },
+    {
+      "file": "boss/idle/04.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "2ce2848362bb9dd4d72ce62761981da968917d50fe86c2fe6bc53de048e32369"
+    },
+    {
+      "file": "boss/idle/05.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "832538071fc2113b2bc8df9b908bf990fc39911a2d61b4b0a41db939d6b74916"
+    },
+    {
+      "file": "boss/idle/06.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "c1b3ad6a93e316417fe611f237cbb6ceecbe5648cdbca4916d1f86e4e8cbf1f4"
+    },
+    {
+      "file": "boss/idle/07.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "e6dfb8e37c7de3dd47e6aae59c6f449f4596160c61440776e7c9f126648f0e28"
+    },
+    {
+      "file": "boss/idle/08.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "bcb3d9e528b0109a026424c3aac09483bdc38c78206c7e4861d963e0a6e5ae23"
+    },
+    {
+      "file": "boss/walk/01.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "ab139443b5f06f43487c53997e4007b091e4a206f23bb3805e45c5e701125a33"
+    },
+    {
+      "file": "boss/walk/02.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "74539de000159e57e3c7c2b9841a6654b0be5db9bf6be36ccf02c3703493fb85"
+    },
+    {
+      "file": "boss/walk/03.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "53a4b0ab125809600568f56d793364704c6d866e9be6e83d8eca81cc862f30bf"
+    },
+    {
+      "file": "boss/walk/04.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "529e0e9082efe878b438f5ed8612298a22d646c5830d87c4eaebcfcc972795e7"
+    },
+    {
+      "file": "boss/walk/05.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "c180daf65b62f9f4988dd5cb009351fc57f40ad4740dd4dc72f90ae198793c20"
+    },
+    {
+      "file": "boss/walk/06.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "770ce98ad349a9c75621d28c2bd8c461eca47997aa017dfb4acba4dd06cb63d6"
+    },
+    {
+      "file": "boss/walk/07.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "de4227652dda11bb9cfee50892a2a59b05226bb22441a1d35d1cda6ea500c704"
+    },
+    {
+      "file": "boss/walk/08.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "e5672c0a12465fadc89a23f380bb6e278e9c6f6de8d174e22c91405f180452c1"
+    },
+    {
+      "file": "boss/windup/01.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "9c1d96a884d6db02588302faa9e86c64303ed18803cd6e7b94e6bde808b5d657"
+    },
+    {
+      "file": "boss/windup/02.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "895306fb901cef5722503805d74c60cbb39eec58252edbfd778c655825fde339"
+    },
+    {
+      "file": "boss/windup/03.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "483b851a579ad407c656d4ea200400450b2fdc983adbf429e806b28b2f7269e4"
+    },
+    {
+      "file": "boss/windup/04.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "63fa48815b641ed2da6cf9a0df7327a1ccee53e0a5c91f61958611ef5bfdb300"
+    },
+    {
+      "file": "boss/windup/05.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "8e43e16a2a0464fe88f7355a08e91a02a14d9092b570346809bb8be37592e7f5"
+    },
+    {
+      "file": "boss/windup/06.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "6428e9622ad9d89ea629931d8e001cab48c688a1772fe958fc96777d2d5e549d"
+    },
+    {
+      "file": "boss/windup/07.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "b01a5ca75cc38ccb8e32a08cf73262f8f68d469dcad924c1e47298a87fcedcf3"
+    },
+    {
+      "file": "boss/windup/08.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "0fdb91edc6345d70a21c0fa7123fa9464a8bd9402665dad5db3ecdea1facf95d"
+    },
+    {
+      "file": "boss/shoot/01.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "bf497a204c0eabe644696457d94b1f8d6770829bcb667c2bae72e2217157011d"
+    },
+    {
+      "file": "boss/shoot/02.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "73a881c8d1fb78a9eb18ae721dd7c677db801c11b8216fb68e092dfa81ba4bd2"
+    },
+    {
+      "file": "boss/shoot/03.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "40cff91714d1f0a81ee02e4d162615c1ebc3e201726f5094ceb111a5cc07c892"
+    },
+    {
+      "file": "boss/shoot/04.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "d6c1aa689167a5c78405e0c263b842f63a3da9cb597b1b0461e6dd90a757cda6"
+    },
+    {
+      "file": "boss/shoot/05.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "83317eaf3523a77dc301506031918d2a05639133576c58a171e1928f57e73be7"
+    },
+    {
+      "file": "boss/shoot/06.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "f6b09cf9c6f1fbe18ab82bdc31c2f57a0b1d38d451d1400392d679a37a34259d"
+    },
+    {
+      "file": "boss/shoot/07.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "f70e86be3b08566f2e31d39d7d2f0704f99ed11f136925e96fc68e5b51a2e43d"
+    },
+    {
+      "file": "boss/shoot/08.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "b139b8ee548d6f7f1755e53cf84ffc173ee9b0d34c5e4b5be8f5f5e2d8af9c57"
+    },
+    {
+      "file": "boss/slam/01.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "e22cf37d770c864a73ad4204fa4142280abdb536584b38596d5717c3afa77b4a"
+    },
+    {
+      "file": "boss/slam/02.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "fe86651a945474ed0fdbf31b569718d9ef28bb015f889c72d81f7cb5a2509804"
+    },
+    {
+      "file": "boss/slam/03.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "635412ff9e152a257d0a2f6b735d895668a1c5378d4d440743920a8d22fbd8e8"
+    },
+    {
+      "file": "boss/slam/04.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "6580b2de1e662755cb1958b0cfed58d524e1e3cc82e80c58ebcaa5dea2f66880"
+    },
+    {
+      "file": "boss/slam/05.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "24870a9b7a2dc4ecc31f2fa32115ee59ce0739e9def039cbf9223ea047fb71ba"
+    },
+    {
+      "file": "boss/slam/06.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "33b83ea4825a286cf8b82962dc5d59a5e8c5fff599ab982a5c7660f8e6014f66"
+    },
+    {
+      "file": "boss/slam/07.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "3fbe0c50d3cb212cdbad797bf8e8eb9bcf8144f02a671d2213620709746b8b75"
+    },
+    {
+      "file": "boss/slam/08.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "66412141d62f98c4d0e452e432e42f6bbfa7be490e00ba781e4f09d3ce516e81"
+    },
+    {
+      "file": "boss/shield/01.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "d379ca85689f6b89e22038609f0d8f2fdf86ac1abdbc048d7308cc7ac9e53c75"
+    },
+    {
+      "file": "boss/shield/02.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "01e14e608d34c0c74950b861002170620423d1ee5b2b01cc64a3efdaf9634877"
+    },
+    {
+      "file": "boss/shield/03.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "08ad7903776ea0657fd1edfa13f1e1bd1aed0e874acc284e25e93939c8d01f98"
+    },
+    {
+      "file": "boss/shield/04.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "5936c68204f482c66708c1388c073e27cdad53aa9dc70e4683e84bd1d6e81a5b"
+    },
+    {
+      "file": "boss/shield/05.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "ff971a2a8f52facac8b470fd8dd8c37d32d246b8803c2b78bd7343935eab1eb3"
+    },
+    {
+      "file": "boss/shield/06.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "9ccac8d173b3d6f99194fd87e5bf7e135a186edd54ff151f2e7f65e0cc3f6700"
+    },
+    {
+      "file": "boss/shield/07.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "d271651a7ac31b80eb6c706755657b511a4285999a93e0187d3710aba1ec6379"
+    },
+    {
+      "file": "boss/shield/08.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "2fd8df30d9519c5e23cc06776820edd39eca626afd92781260c27aefdb8c30b4"
+    },
+    {
+      "file": "boss/exposed/01.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "88be62f45e12ff019132f41a421c25c8ab158dc55e0d5485c0a1983f7c13fe7d"
+    },
+    {
+      "file": "boss/exposed/02.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "e9c078794d5d12f5d342381771b449abf2061e4473ba96641168055e9270e76f"
+    },
+    {
+      "file": "boss/exposed/03.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "a140e1bb628855e6b8f9fe220a851d84a8c5e733dec135a74870e2ebc3f5e7d4"
+    },
+    {
+      "file": "boss/exposed/04.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "496d156649fc50c58f7e5afc17af6acc840cba20ce2249c0b355f5dca1b243a3"
+    },
+    {
+      "file": "boss/exposed/05.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "fd13f091acd6f478a690b65affc7eb1840bd4cbd94ce3c03c26c184ea3259f18"
+    },
+    {
+      "file": "boss/exposed/06.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "3d1f91c07456ccfda7c77ea15a45aeda38b43bd2f2c09d35a2cfd09fd8f911d8"
+    },
+    {
+      "file": "boss/exposed/07.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "aff6a34058ac67f7bfb0b78f8bbcba6edda44f120717dbedbb7ece2bebf18a99"
+    },
+    {
+      "file": "boss/exposed/08.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "978a9c9c4282d672baff4eb776e9fc5e550993f1c97f22a4dee9712dc89ebb1d"
+    },
+    {
+      "file": "boss/hurt/01.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "ab24e184ab06bb7ed70d7e7c6582d9ddfe57d8f7645ba3c5ab887ace5244cff7"
+    },
+    {
+      "file": "boss/hurt/02.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "9f6f4de4de8aa630df02caf64f160df026c89aeaad6b284a5b80be268e418b31"
+    },
+    {
+      "file": "boss/hurt/03.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "3954cc2d2e8f8397b8e70e6bbb50951efee626f9597007f0390d4b65170400c4"
+    },
+    {
+      "file": "boss/hurt/04.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "8e97feaf24a10ab0203043876ac37e5ba61e348c919e01bb2873cf66930819e3"
+    },
+    {
+      "file": "boss/hurt/05.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "77ec43de2f73bf2cb033131b2fa441bfe1d94e86cde10bc4f7f7e85aefbee431"
+    },
+    {
+      "file": "boss/hurt/06.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "8d3addc66f4c5dc290d22a3f753c88f8dab976467d33a780bbe577e811177f74"
+    },
+    {
+      "file": "boss/hurt/07.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "39bb8570f779e1b7eeb96cf3b4dcb3921e6185ae55c50d2abecff39a1b75fbc5"
+    },
+    {
+      "file": "boss/hurt/08.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "84ebcfd917b29b85a646be500efdfd07154b9e2737bf4770e4fcd9d3a2058aa4"
+    },
+    {
+      "file": "boss/death/01.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "ddc11de2857247252523834ac49432bcf5c48f77b591bf011e8f344b29924615"
+    },
+    {
+      "file": "boss/death/02.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "2bb17a2e5643581102c811ebd6c4f674cccabe48d3850800bdf5d2af7e61117a"
+    },
+    {
+      "file": "boss/death/03.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "920d799781f1587d330512aa3c11d4674858a159db3401b5180be91cab1f5978"
+    },
+    {
+      "file": "boss/death/04.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "0ef9c5dbff1da834ff6c6410060a47cae4f5e6d83b63404900f519cd06b07637"
+    },
+    {
+      "file": "boss/death/05.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "3aaa1a2c9430ed11dbf5cf4af3f0c222763f1e611b8c6ce820a93637e33b443d"
+    },
+    {
+      "file": "boss/death/06.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "3d70fc5e1426fd671ae80ec695e77735dd41e8156d805c95f0f77d0c8a171909"
+    },
+    {
+      "file": "boss/death/07.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "a1895f4739d27f89cab752e65bdea7d15a7b2310982b568f84107f32cfd7e45e"
+    },
+    {
+      "file": "boss/death/08.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "a28219e4c6d20d443632e4e127b71ed97138062b835037deaced3c5c06400ca5"
+    }
+  ]
+}
