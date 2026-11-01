@@ -29,3 +29,7 @@ See [cables/README.md](cables/README.md) and [cables/manifest.json](cables/manif
 ## Distinct location backgrounds
 
 Level 1 uses `background/station.png`. Levels 2–8 use `background/locations/2.png` through `8.png`: warehouse, transit, tower, reactor, hangar, battlefield and guardian core. [Generation prompts](background/locations/PROMPTS.md) are retained. These images provide scenery; native GDevelop platforms define collision and traversable routes.
+
+## Mobile controls
+
+Three transparent generated buttons are in `mobile/`: jump, fire and interact. [Prompts](mobile/PROMPTS.md) are retained. Touch controls reuse `ui/back.png`, `next.png`, `shield.png`, `pause.png` and `resume.png` for the other actions. Press feedback is applied at runtime. All controls have accessible names without adding text over the artwork.

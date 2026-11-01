@@ -6,6 +6,8 @@ if (!player) return;
 const campaign=runtimeScene.__campaign;
 if(runtimeScene.__animalUI?.modal || runtimeScene.__animalUI?.transitioning) return;
 const input = runtimeScene.getGame().getInputManager();
+const touchInput=runtimeScene.getGame().__crTouch;
+const pressed=(code,action)=>input.isKeyPressed(code)||!!touchInput?.held[action]||action==='fire'&&!!touchInput?.fireRequested;
 const move = player.getBehavior('Platformer');
 const sceneNumber=(name,fallback)=>{const n=runtimeScene.getVariables().get(name).getAsNumber();return n>0?n:fallback;};
 const worldWidth=sceneNumber('WorldWidth',4096),worldHeight=sceneNumber('WorldHeight',720);
@@ -47,7 +49,7 @@ function die(){
 }
 function damage(amount){
   if(game.state!=='playing'||game.time<game.invincibleUntil)return;
-  if(campaign?.mecha&&input.isKeyPressed(75)&&game.shield>.05)return;
+  if(campaign?.mecha&&pressed(75,'shield')&&game.shield>.05)return;
   game.health=Math.max(0,game.health-amount);game.invincibleUntil=game.time+1.3;
   game.hurtUntil=game.time+(campaign?.mecha ? .8 : .42);
   move.setCurrentSpeed(-game.facing*180);
@@ -57,7 +59,7 @@ if(campaign?.pendingDamage){damage(campaign.pendingDamage);campaign.pendingDamag
 if(game.state==='playing'){
   if(campaign?.mecha){
     game.maxHealth=6;player.setWidth(192);player.setHeight(192);
-    game.shield=Math.max(0,Math.min(3,game.shield+(input.isKeyPressed(75)?-dt:dt*.4)));
+    game.shield=Math.max(0,Math.min(3,game.shield+(pressed(75,'shield')?-dt:dt*.4)));
   }
   const speed=move.getCurrentSpeed();
   if(Math.abs(speed)>5)game.facing=speed<0?-1:1;
@@ -69,7 +71,7 @@ if(game.state==='playing'){
   // Steady translucency communicates invulnerability without rapid flashing.
   player.setOpacity(game.time<game.invincibleUntil?180:255);
   // Hold J or X to shoot. A cooldown and finite ammunition prevent unlimited fire.
-  if((input.isKeyPressed(74)||input.isKeyPressed(88))&&game.time-game.shotAt>=(campaign?.mecha ? .85 : .52)&&(campaign?.mecha||game.ammo>0)&&game.time>=game.hurtUntil){
+  if((pressed(74,'fire')||input.isKeyPressed(88))&&game.time-game.shotAt>=(campaign?.mecha ? .85 : .52)&&(campaign?.mecha||game.ammo>0)&&game.time>=game.hurtUntil){
     game.shotAt=game.time;if(!campaign?.mecha)game.ammo--;restartPlayerAnimation=true;
     const bullet=runtimeScene.createObject('Bullet');
     const scale=campaign?.mecha?1.5:1;
@@ -170,7 +172,7 @@ const grounded=move.isOnFloor(),moving=Math.abs(move.getCurrentSpeed())>5;
 let playerAction=game.state==='dying'||game.state==='gameover'?'Death':
  game.state==='won'?'Idle':game.time<game.hurtUntil?'Hurt':
  game.time-game.shotAt<(campaign?.mecha ? .85 : .52)?'Shoot':
- campaign?.mecha&&input.isKeyPressed(75)&&game.shield>0?'Shield':
+ campaign?.mecha&&pressed(75,'shield')&&game.shield>0?'Shield':
  !grounded?(move.isFalling()?'Fall':'Jump'):
  !moving&&game.time<game.landUntil?'Land':moving?'Run':'Idle';
 if(campaign?.mecha)playerAction='Mecha'+playerAction;
@@ -183,6 +185,7 @@ game.cameraX+=(targetX-game.cameraX)*(1-Math.exp(-dt*8));
 game.cameraY+=(targetY-game.cameraY)*(1-Math.exp(-dt*7));
 runtimeScene.getLayer('').setCameraX(game.cameraX);runtimeScene.getLayer('').setCameraY(game.cameraY);
 for(const name of ['Background','HUD']){runtimeScene.getLayer(name).setCameraX(640);runtimeScene.getLayer(name).setCameraY(360);}
+if(touchInput)touchInput.fireRequested=false;
 for(let i=0;i<objects('HUDHeart').length;i++)animate(objects('HUDHeart')[i],i<(campaign?.mecha?Math.ceil(game.health/2):game.health)?'Full':'Empty');
 setText('HUDMessage',game.time<game.messageUntil?game.message:'');
 // Save the completed run, then show the dedicated ending screen.

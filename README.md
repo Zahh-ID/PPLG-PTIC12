@@ -32,6 +32,8 @@ The project was last saved with GDevelop **5.6.283**. Use GDevelop to edit and p
 
 Escape closes help/credits. Credits opened from the pause panel return to that paused panel. The play icon closes the chest credits and resumes the adventure.
 
+Phones and touch tablets automatically show generated movement, jump, fire, interact and pause/continue buttons. Desktop computers, narrow desktop windows and mouse-first touch laptops keep the mobile overlay hidden. Detection combines mobile-device hints, touch capability and the primary pointer/hover signals; width alone never enables the controls. Portrait/landscape state updates as the device rotates. Hold multiple controls together to move while firing or jumping. The shield button appears with the mecha. Buttons release on pointer cancellation, focus loss and dialog entry; quick action taps are buffered until the next game frame. Keyboard controls remain available. The fixed 1280×720 game view scales to fit smaller screens so HUD elements remain visible; landscape is recommended. Controls respect screen safe areas. Run `npm run test:mobile` after exporting for browser regression checks; physical-device testing is still needed.
+
 ## Gameplay
 
 - **Eight locations / 24 challenges:** a station, warehouse, transit network, tower, reactor, hangar, battlefield and guardian core. Each has three separate terminals across vertical or branching routes.
@@ -165,4 +167,4 @@ No dependency installation or generated export is required to open the repositor
 
 ## GitHub Pages
 
-GitHub Actions setup is included: pushes/PRs run checks, while Pages publishing is a separate manual workflow with `publish` defaulting to **false** and deployment limited to `main`. Nothing has been published or enabled remotely. Read the [deployment guide](docs/deployment.md) before the first release.
+Play the deployed game at [Circuit Rescue on GitHub Pages](https://zahh-id.github.io/PPLG-PTIC12/). Pushes/PRs run checks, while publishing updates is a separate manual workflow with `publish` defaulting to **false** and deployment limited to `main`. Read the [deployment guide](docs/deployment.md) for release steps.
