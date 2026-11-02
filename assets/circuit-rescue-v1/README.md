@@ -39,3 +39,5 @@ The generated `mobile/fullscreen.png` and `exit-fullscreen.png` buttons add expa
 ## Language and level navigation
 
 `navigation/language.png`, `level-list.png` and `level-complete.png` supply the language menu, unrestricted eight-level selector and completion badge. [Generation prompts](navigation/PROMPTS.md) are retained. Dialog borders and navigation arrows reuse the existing pack; bilingual labels and educational content remain live text rather than being baked into images.
+
+Current robot combat uses [combat-v2](combat-v2/README.md): regenerated articulated mecha/guards, separate Bastion and Crimson Warden bosses, four distinct projectile types, and the expanded final-arena background. All 40 animations contain eight frames. Original atlases and prompts are included. The earlier combat folder is retained for reference.

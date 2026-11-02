@@ -82,13 +82,13 @@ In sector 6, repair all three hangar systems, approach the mecha and press **E**
 - **K:** shield with a three-second reserve; releasing K regenerates it at 0.4 seconds per second.
 - Mecha hull is 6 health. Each HUD heart represents two hull points. The normal robot has 3 health; each heart represents one.
 - Three lives and checkpoints still apply. Boarding restores hull and supplies; checkpoints restore health.
-- Guardian attacks alternate a telegraphed cannon shot and a nearby slam. Dodge shots or use the shield. Enemy contact also damages the player.
-- Sector 7 guardian: 16 hull; complete all three systems to disable its shield. Sector 8 guardian: 36 hull, three phases. Its shield returns at 24 and 12 hull. Visit the separate Core Stabilizer and Final Shield terminals for the AND repair and NOR build. Future phase terminals stay locked until needed. Combat freezes while solving.
+- Bastion uses aimed missile salvos, physical rams and stomps. The Crimson Warden chooses sword sweeps, lunges, targeted leaps/slams and violet waves based on distance and elevated targets. Marked windups precede damage; attacks lock facing and target positions. Exposed recovery and EMP stagger windows take double cannon damage.
+- Sector 7 Bastion: 24 hull; complete all three systems to disable its shield. Sector 8 Crimson Warden: 60 hull, three phases. Its shield returns at 40 and 20 hull. Visit the separate Core Stabilizer and Final Shield terminals for the AND repair and NOR build. Future phase terminals stay locked until needed. Combat freezes while solving.
 - Defeat the guardian and reach the airlock. The final sector leads to `winner`.
 
 ## Detailed giant-robot art
 
-The [combat asset guide](../assets/circuit-rescue-v1/combat/README.md) documents **18 actions × 8 frames = 144 frames**. Mecha has Idle, Walk, Jump, Fall, Land, Shoot, Shield, Hurt and Death. Guardian has Idle, Walk, Windup, Shoot, Slam, Shield, Exposed, Hurt and Death. Walk is mapped to MechaRun and guardian Death to Defeated. Original high-detail sheets and generation prompts are retained. Frame counts, per-action unique hashes, transparency and visible content are checked during packaging; human art/animation review is still appropriate before release.
+The [current combat asset guide](../assets/circuit-rescue-v1/combat-v2/README.md) documents **36 actor actions plus four projectile types × 8 frames = 320 frames**. Mecha has Idle, Walk, Jump, Fall, Land, Shoot, Shield, Hurt and Death. Guardian has Idle, Walk, Windup, Shoot, Slam, Shield, Exposed, Hurt and Death. Walk is mapped to MechaRun and guardian Death to Defeated. Original high-detail sheets and generation prompts are retained. Sentries have Idle, Walk, Shoot, Hurt, Death and Melee; the final boss also has Slash, Jump and Dash. One common scale and anchor per actor preserves proportions across actions. Body masks exclude sword blades and muzzle effects. Frame counts, per-action unique hashes, transparency and visible content are checked during packaging; human art/animation review is still appropriate before release.
 
 ## Menus, replay and credits
 
@@ -98,8 +98,9 @@ The supplied developer portraits, names, roles and NIMs are unchanged. Collect t
 
 ## Event sources and validation
 
-- `src/events/campaign.js`: sector definitions, terminal/boarding/boss controller, circuit model and workbench dialog; embedded in all eight sectors.
-- `src/events/gameplay.js`: movement presentation, patrols, collection, health/lives, shooting, boss hit handling and sector transitions; embedded in all eight sectors.
+- `src/events/campaign.js`: sector definitions, terminal and boarding controller, circuit model and workbench dialog; embedded in all eight sectors.
+- `src/events/gameplay.js`: movement presentation, collection, health/lives, shooting, boss hit handling and sector transitions; embedded in all eight sectors.
+- `src/events/combat.js`: guard perception/attacks, boss states, telegraphs, projectiles and interactive cover; embedded in all eight sectors.
 - `src/events/ui.js`: menus, HUD, help, pause, results and credits; embedded in all eleven scenes.
 - `src/events/localization.js`: Indonesian default, persistent language preference, catalog and text translation; first event in all eleven scenes.
 - `src/events/journey.js`: concept introductions, unrestricted level selection and completion navigation; last event in all eleven scenes.
@@ -107,3 +108,7 @@ The supplied developer portraits, names, roles and NIMs are unchanged. Collect t
 Run `npm run events:push -- --dry-run`, `npm run check`, and `npm run test:circuits`. Close GDevelop before pushing source edits, then reopen the project. The synchronization tool requires all shared copies to agree on pull. Original pre-campaign project backups are ignored under `.local/backups/campaign/`.
 
 This is a playable first campaign pass. Audio, persistent saves, a full inventory/crafting interface and release balancing are not implemented.
+
+## Final arena interactions
+
+Sector 8 is 6000 × 2200. Its boss is 640 world units tall, compared with the 192-unit mecha. Elevated routes, a checkpoint and supplies support a longer fight. The camera widens in the arena and frames both combatants when close. Three cover pylons power up after the first repair. Charged pylons block hostile shots; E/mobile Interact discharges an EMP, clears nearby shots, refills shield energy and staggers a nearby vulnerable boss. A pylon recharges over 16 seconds of unpaused game time. Boss missiles/waves clear when its shield returns, and combat pauses inside learning dialogs.

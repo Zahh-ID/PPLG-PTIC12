@@ -58,12 +58,12 @@ Phones and touch tablets automatically show generated movement, jump, fire, inte
 - **Dialog missions:** predict outputs with draggable 0/1 tokens, repair a wrong chip and broken wire, then build a circuit. Later quizzes include three inputs and a NAND-only interlock. Circuit cables automatically connect in four directions; testing rejects short circuits, feedback and disconnected ports. Incorrect answers consume no components.
 - **Progression:** terminals need one, two and three recovered components. Complete all three systems before leaving. The first repair powers a moving lift, the second removes the exit barrier, and all three power the airlock. The keycard is optional and unlocks the credits chest.
 - **Mecha:** repair and board it in sector 6. Six hull points, unlimited cannon shots and a rechargeable shield support combat in sectors 7–8.
-- **Boss:** a siege guardian in sector 7 and a three-phase Core Guardian in sector 8. Later shield phases require new circuit repairs. Combat pauses during dialogs.
+- **Boss:** Bastion, a yellow siege walker in sector 7, and the three-phase Crimson Warden sword guardian in sector 8. Later shield phases require new circuit repairs. Combat pauses during dialogs.
 - **Results:** dedicated station-restored and mission-failed scenes show final score and component count, with replay/home controls.
 - **Chest easter egg:** the game pauses, the treasure chest opens in a popup, and the developer portraits and credits appear. The reward is granted once per run.
 - **Icon HUD:** pause, continue, replay, home, help, and credits use the game's artwork instead of text labels on buttons.
 
-Maps have individual dimensions from 2000–4000 units wide and 1400–2400 units tall. The camera follows both axes; background and HUD remain fixed. Native one-way platforms support climbing and return routes. See [location layouts](docs/location-layouts.json) for dimensions, room positions and route measurements. The giant robot pack has **18 actions with eight frames each (144 frames)**. Mecha frames are 256×256 and boss frames 512×512; original detailed sheets are retained. Normal robot frames remain 128×128. The small robot has 64 recreated source frames, including its own eight-frame Land action; live Idle uses the stable ready pose.
+Maps have individual dimensions from 2000–6000 units wide and 1400–2400 units tall. The final arena widens the camera view and frames the player with the nearby active boss. The camera follows both axes; background and HUD remain fixed. Native one-way platforms support climbing and return routes. See [location layouts](docs/location-layouts.json) for dimensions, room positions and route measurements. The current combat pack has **36 actor actions and four projectile animations, eight frames each (320 frames)**. The older combat pack is retained as source history. Current mecha/boss frames are 256×256 at their generated source-cell resolution; original detailed sheets are retained. Normal robot frames remain 128×128. The small robot has 64 recreated source frames, including its own eight-frame Land action; live Idle uses the stable ready pose.
 
 Play continues the current sector during the running session, or the next sector after a completion. The opening replay icon begins a new campaign; gameplay replay restarts the current sector. Active-run progress resets when closing the game; language and completion badges remain in browser storage. Audio, persistent run saves and a full crafting inventory are not implemented yet.
 
@@ -84,7 +84,8 @@ docs/
   chest-credits.md                 Chest reveal and credit details
   asset-audit.json                 Resource-catalog cleanup record
 src/events/
-  campaign.js                      Sector objectives, circuit dialog/model, mecha and boss controller
+  campaign.js                      Sector objectives, circuit dialog/model and mecha boarding
+  combat.js                        Guard/boss AI, telegraphs, hostile shots and arena cover
   gameplay.js                      Editable game-rule event source
   ui.js                            Shared menu, HUD, pause and credits source
 scripts/
@@ -133,7 +134,7 @@ Local backups, autosaves, prepared-project copies, old runtime reports, contact-
 
 4. Reopen `Animal Hunter.json` and preview the game.
 
-The push command updates matching embedded events and creates an ignored recovery copy in `.local/backups/event-sync/`. UI, localization and journey sources are shared across all eleven scenes; gameplay and campaign sources are shared across eight sectors. Localization initializes first and journey renders/translates last. Pulling stops if shared copies differ. These commands also work as `node scripts/sync-events.mjs pull` / `push` and `node scripts/check-project.mjs`. Run `npm run test:circuits` to verify all lesson functions, guardian phase targets and invalid wiring.
+The push command updates matching embedded events and creates an ignored recovery copy in `.local/backups/event-sync/`. UI, localization and journey sources are shared across all eleven scenes; gameplay, campaign and combat sources are shared across eight sectors. Localization initializes first and journey renders/translates last. Pulling stops if shared copies differ. These commands also work as `node scripts/sync-events.mjs pull` / `push` and `node scripts/check-project.mjs`. Run `npm run test:circuits` to verify all lesson functions, guardian phase targets and invalid wiring.
 
 The main project remains the source of truth for scene layouts, object definitions, behaviors, and event structure. Source files and embedded JavaScript are synchronized explicitly; there is no background auto-sync.
 
@@ -182,3 +183,13 @@ No dependency installation or generated export is required to open the repositor
 ## GitHub Pages
 
 Play the deployed game at [Circuit Rescue on GitHub Pages](https://zahh-id.github.io/PPLG-PTIC12/). Pushes/PRs run checks, while publishing updates is a separate manual workflow with `publish` defaulting to **false** and deployment limited to `main`. Read the [deployment guide](docs/deployment.md) for release steps.
+
+## Robot combat rework
+
+The mecha and sentries use new articulated animations. Every action has eight generated frames, with a common scale and anchor across actions and fixed body collision masks. Artwork, source atlases, prompts and frame hashes are in `assets/circuit-rescue-v1/combat-v2/`. Low-alpha matte residue is removed during extraction; original generated atlases are preserved.
+
+Level 7 uses Bastion, a yellow siege walker with orange missile salvos, ramming and stomps. Level 8 uses the much larger Crimson Warden with sword sweeps, lunges, targeted leaps/slams and violet sword waves. Distance and elevated targets affect attack choices. Marked windups precede damage; exposed recovery and EMP stagger windows take double cannon damage. Boss facing locks during committed attacks. The three XOR/AND/NOR shield phases remain part of the fight.
+
+The final arena is 6000 × 2200 with elevated routes, a checkpoint, supplies and three cover pylons. Completing the first repair powers cover. Charged cover blocks hostile projectiles; press E or mobile Interact nearby to clear shots, restore shield energy and stagger a nearby vulnerable boss. Each pylon recharges for 16 seconds of active game time. Sentries detect line of sight, approach targets, aim before firing red plasma, use close-range swipes and refuse unsupported steps.
+
+`src/events/combat.js` owns hostile AI and projectiles. Run `npm run test:combat-browser` after a web export; CI and Pages require it. Tests use native GDevelop physics and real rendered animation frames, with controlled positions/HP to exercise attacks and shield phases. Physical mobile testing is still needed.

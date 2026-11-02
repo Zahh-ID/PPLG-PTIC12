@@ -2696,6 +2696,3850 @@
       "width": 1254,
       "height": 1254,
       "source": "mobile/PROMPTS.md"
+    },
+    {
+      "file": "combat-v2/mecha/idle/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "7cb1e8eb8f57f6d9c2f1ea6ce502299a6ade16631410420a1c24ef4ec14b4402",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        0,
+        0
+      ],
+      "visiblePixels": 16929
+    },
+    {
+      "file": "combat-v2/mecha/idle/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "41764e959864268fc1b0326ca7ca5eba589cfbe351738b1c97a776d2d675c6b1",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        1,
+        0
+      ],
+      "visiblePixels": 16854
+    },
+    {
+      "file": "combat-v2/mecha/idle/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "ff9f7ed28347f7adc73353a9c40d053974156f0e51026141b256c3ffb5e91ea7",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        2,
+        0
+      ],
+      "visiblePixels": 16849
+    },
+    {
+      "file": "combat-v2/mecha/idle/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "821f279a065c8917a7a59e41f3df90087ef0fbd4addfed4ec7a1bfb0c0dd08bc",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        3,
+        0
+      ],
+      "visiblePixels": 16888
+    },
+    {
+      "file": "combat-v2/mecha/idle/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "e3c3f8d9a5107706e6de9f9f4cf27f373bd8c67dbae9c27ab6deb06b0d2dd7df",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        4,
+        0
+      ],
+      "visiblePixels": 16866
+    },
+    {
+      "file": "combat-v2/mecha/idle/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "507e1b9d02c740938c7253f702a7361fa47e8f885bd725b5ccf203b264d10d21",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        5,
+        0
+      ],
+      "visiblePixels": 16830
+    },
+    {
+      "file": "combat-v2/mecha/idle/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "cd941ba532ff75924215c2329659156fffcd227d9674df46d12ea49648ecb4cb",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        6,
+        0
+      ],
+      "visiblePixels": 16868
+    },
+    {
+      "file": "combat-v2/mecha/idle/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "29ca4284653af148a7d8a1f8c247db8b353d2ade251537fc7c53a7542829560c",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        7,
+        0
+      ],
+      "visiblePixels": 16789
+    },
+    {
+      "file": "combat-v2/mecha/walk/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "2e8b7b618d869b7a08f45df86348bc269663471491400ba69934695ac4d6eb07",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        0,
+        1
+      ],
+      "visiblePixels": 17438
+    },
+    {
+      "file": "combat-v2/mecha/walk/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "deef0f4a463b46905a717a20f88d93813bac37d0f7679b235a66e8aa1e8f07dd",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        1,
+        1
+      ],
+      "visiblePixels": 17191
+    },
+    {
+      "file": "combat-v2/mecha/walk/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "be9fbd0c2753302c8e9d8736ec2b92341bb5b4acefc5e7324d0d7883a25e2422",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        2,
+        1
+      ],
+      "visiblePixels": 16861
+    },
+    {
+      "file": "combat-v2/mecha/walk/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "0fe158c024b1f62de227fd2d7bf6190242e1bd9ba2128d92bc33c7ca9a6c4d78",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        3,
+        1
+      ],
+      "visiblePixels": 17255
+    },
+    {
+      "file": "combat-v2/mecha/walk/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "48b5410d199c9764d93dfacb802a8ac6fe1c6430b0901eceb74448284300275b",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        4,
+        1
+      ],
+      "visiblePixels": 16304
+    },
+    {
+      "file": "combat-v2/mecha/walk/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "18d31572ac3ca4327cb031a7cb461a24054b9c6a7be95a7377c8e8398698c3e8",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        5,
+        1
+      ],
+      "visiblePixels": 16370
+    },
+    {
+      "file": "combat-v2/mecha/walk/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "76dc60fc388e98add3048c65040bda5025dc1b3321d08d703a8eb7f53e24fd80",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        6,
+        1
+      ],
+      "visiblePixels": 17008
+    },
+    {
+      "file": "combat-v2/mecha/walk/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "dd8c7efcff6b7abdf52963a925576675a4b96ccec30b38ab07b2e8b61b213b53",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        7,
+        1
+      ],
+      "visiblePixels": 16801
+    },
+    {
+      "file": "combat-v2/mecha/jump/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "38478f391f353f175fbfe331388f18f78e5858d0d3b5c02ce54c124de9d6f2d0",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        0,
+        2
+      ],
+      "visiblePixels": 15618
+    },
+    {
+      "file": "combat-v2/mecha/jump/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "df8c67caed0a9aa32c24ad77bfa0f6814f386388c1801457c7d4a7effe7b89f8",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        1,
+        2
+      ],
+      "visiblePixels": 15249
+    },
+    {
+      "file": "combat-v2/mecha/jump/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "839237ed1c3d2ccb39ba6092b2a386f29a26bc5c8ec87cda7e85ce44bd923796",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        2,
+        2
+      ],
+      "visiblePixels": 14813
+    },
+    {
+      "file": "combat-v2/mecha/jump/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "0d3ee2c581a54321604d52b19c2b6ef4cbd0435a903f1ee14707df91064c86d1",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        3,
+        2
+      ],
+      "visiblePixels": 13797
+    },
+    {
+      "file": "combat-v2/mecha/jump/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "9ce1a4c752443568f0a33bf5c1373fba63f34373034adcf52773c1e87f967695",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        4,
+        2
+      ],
+      "visiblePixels": 13354
+    },
+    {
+      "file": "combat-v2/mecha/jump/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "3b37bcbebb2793f79bd1828f8c7e7cea0e0b8ef253df9c6c82629adc4a66acb7",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        5,
+        2
+      ],
+      "visiblePixels": 13752
+    },
+    {
+      "file": "combat-v2/mecha/jump/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "f7af5a09e469cfeaee6fe6f05e6c64bc5ea14ec96699ecaefa651af2c96533d8",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        6,
+        2
+      ],
+      "visiblePixels": 13864
+    },
+    {
+      "file": "combat-v2/mecha/jump/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "e679d0a0dde4a8fabf0a48354bf46d0172f27ae6dae0cef18201908e4b4b8ec2",
+      "source": "sources/mecha-locomotion.png",
+      "cell": [
+        7,
+        2
+      ],
+      "visiblePixels": 15638
+    },
+    {
+      "file": "combat-v2/mecha/shoot/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "caf26d098983905005d5cd185d2b7f75cc73147649288335c7728968bbc91f93",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        0,
+        0
+      ],
+      "visiblePixels": 17632
+    },
+    {
+      "file": "combat-v2/mecha/shoot/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "0e4b6c2f55712af9b9e2db9bef8d73313f000a8af7c4c34970a2189d839458a7",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        1,
+        0
+      ],
+      "visiblePixels": 17517
+    },
+    {
+      "file": "combat-v2/mecha/shoot/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "f69fed1bef8900a12b4a1583476da88d6384df28e827ae7c66d524a3cdb9d388",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        2,
+        0
+      ],
+      "visiblePixels": 16632
+    },
+    {
+      "file": "combat-v2/mecha/shoot/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "61eeb47b861081372ef2c55b97d9e8ca1fc4b501ea4fc03fc282effbb5458a56",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        3,
+        0
+      ],
+      "visiblePixels": 17054
+    },
+    {
+      "file": "combat-v2/mecha/shoot/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "6f4aa44338588f25c73a26f149f831ab26e914574a721c5d2def7d5b5db9a696",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        4,
+        0
+      ],
+      "visiblePixels": 18420
+    },
+    {
+      "file": "combat-v2/mecha/shoot/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "b2eb0a7e8242ede46594917751e756cb7c3e4ee139c0168edbc24160f44911af",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        5,
+        0
+      ],
+      "visiblePixels": 16663
+    },
+    {
+      "file": "combat-v2/mecha/shoot/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "1d08068a9210e35c5803f03020af759bf685c528d866977ed743cd6f15a09eed",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        6,
+        0
+      ],
+      "visiblePixels": 17229
+    },
+    {
+      "file": "combat-v2/mecha/shoot/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "5c405f71b371ee64d29c4882e1a6f411ada16ef9797323c3cfcc962263a7c7dc",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        7,
+        0
+      ],
+      "visiblePixels": 17568
+    },
+    {
+      "file": "combat-v2/mecha/shield/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "407807f4fc4d2823c226a5fa2f0820e3844e946970c432c0df844668d5e1e906",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        0,
+        1
+      ],
+      "visiblePixels": 18450
+    },
+    {
+      "file": "combat-v2/mecha/shield/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "a021fdb5a6eab716234553bd4a261657e72e80f583fa2ec8250641faa31824f7",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        1,
+        1
+      ],
+      "visiblePixels": 20118
+    },
+    {
+      "file": "combat-v2/mecha/shield/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "394d1b1ed5e2aac3114e092bd9f458eb42877d46483041b07faef4ba96b4a1f1",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        2,
+        1
+      ],
+      "visiblePixels": 18308
+    },
+    {
+      "file": "combat-v2/mecha/shield/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "642a5eb8b81967c1d44207be433f72448d7a3f9e728fea54513410fa262e2320",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        3,
+        1
+      ],
+      "visiblePixels": 18725
+    },
+    {
+      "file": "combat-v2/mecha/shield/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "00d3a0864dde851a0cd6592129275d29ef982f106d76f952b474fef3b5895b78",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        4,
+        1
+      ],
+      "visiblePixels": 19262
+    },
+    {
+      "file": "combat-v2/mecha/shield/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "27eddf51cefefea7e673393fbc3d25d1656ce9c41d66b7f9cb77278c0ace4ce8",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        5,
+        1
+      ],
+      "visiblePixels": 18682
+    },
+    {
+      "file": "combat-v2/mecha/shield/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "602d718d5f55774f2a0c0db390a8c1634e17a68ba510cea6a721e1568166d49b",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        6,
+        1
+      ],
+      "visiblePixels": 18291
+    },
+    {
+      "file": "combat-v2/mecha/shield/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "a49183881a389203d77191e0aabcd5572d3466babd48321681d39e5fe4e23b32",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        7,
+        1
+      ],
+      "visiblePixels": 18014
+    },
+    {
+      "file": "combat-v2/mecha/hurt/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "0c9209036cc41155bd3c1b72b4df5ebbbf3f0ad21f9ca81454a804ca4d4c2fa4",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        0,
+        2
+      ],
+      "visiblePixels": 18046
+    },
+    {
+      "file": "combat-v2/mecha/hurt/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "74d0027a1d5a6af9ba853b10fbe8370f4182b7e5f2fadc0351d0f00712ef6aae",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        1,
+        2
+      ],
+      "visiblePixels": 18367
+    },
+    {
+      "file": "combat-v2/mecha/hurt/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "0ce38129f0dd80e1af78f939c888c4ee1b921ee687e02aa41190644d18b3cc4c",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        2,
+        2
+      ],
+      "visiblePixels": 18408
+    },
+    {
+      "file": "combat-v2/mecha/hurt/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "e5bc27c8e484c96466382eedc930c9ca1f2c4aaebcfb806db5a1c610aa394b61",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        3,
+        2
+      ],
+      "visiblePixels": 18292
+    },
+    {
+      "file": "combat-v2/mecha/hurt/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "09a4eae3d9c78dd7dbeff252c36574dfa19cd4e08771c06ccf9d5fb8b94ea181",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        4,
+        2
+      ],
+      "visiblePixels": 16716
+    },
+    {
+      "file": "combat-v2/mecha/hurt/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "a4f8406afa5bf02b924c9eca6bf3239e8a09b04b6efc1fa4bd3720e47e5b65f8",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        5,
+        2
+      ],
+      "visiblePixels": 19258
+    },
+    {
+      "file": "combat-v2/mecha/hurt/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "54a1ee8ac863e7b71806d51e070a722de1058f656769daf05aff525324b743d4",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        6,
+        2
+      ],
+      "visiblePixels": 17866
+    },
+    {
+      "file": "combat-v2/mecha/hurt/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "21ee32befadb8d751fea291fe7b1485d537b8a597026df6a5c0dbf6dc2b5e874",
+      "source": "sources/mecha-combat.png",
+      "cell": [
+        7,
+        2
+      ],
+      "visiblePixels": 17673
+    },
+    {
+      "file": "combat-v2/mecha/fall/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "7a809a1f8ec2c27739108b410246df579f00fe3353013f30ff1e83d545ca1b92",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        0,
+        0
+      ],
+      "visiblePixels": 15852
+    },
+    {
+      "file": "combat-v2/mecha/fall/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "de09b486efcd5f9bebe1d5dfcae02127c73da436fd1f9749c5547c7ebfcfbb08",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        1,
+        0
+      ],
+      "visiblePixels": 16511
+    },
+    {
+      "file": "combat-v2/mecha/fall/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "84919c962504868ca573d90a54ddfd138c09c92d914892468aa9b72434f583c7",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        2,
+        0
+      ],
+      "visiblePixels": 15815
+    },
+    {
+      "file": "combat-v2/mecha/fall/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "fc64e9db84bebaadb0744201a6fc6db945b29e273cc117661d2d1be761a39708",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        3,
+        0
+      ],
+      "visiblePixels": 16874
+    },
+    {
+      "file": "combat-v2/mecha/fall/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "31165f24350fd6378ae708fa1c3e31d61908d3d3e404294bc0a64707ac09a0e4",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        4,
+        0
+      ],
+      "visiblePixels": 16552
+    },
+    {
+      "file": "combat-v2/mecha/fall/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "ababfcd4a077a39169949b1e71b23269e14bc100cb50e08dfc0046d6a81a99c0",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        5,
+        0
+      ],
+      "visiblePixels": 16297
+    },
+    {
+      "file": "combat-v2/mecha/fall/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "9c615baf8672aad02d6b3753df8e70c62ec96ee1d89dcd9b38eff533caac7fd2",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        6,
+        0
+      ],
+      "visiblePixels": 15224
+    },
+    {
+      "file": "combat-v2/mecha/fall/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "b4daf1b03793a57e8e7e92b01be8e8be14760db92f13aa091fb10c48d9ce0d30",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        7,
+        0
+      ],
+      "visiblePixels": 15093
+    },
+    {
+      "file": "combat-v2/mecha/land/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "7b2cb5eca0f6d0fcf51801967b243d991c5418afb69859582fc8f9fc5fc83e55",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        0,
+        1
+      ],
+      "visiblePixels": 15394
+    },
+    {
+      "file": "combat-v2/mecha/land/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "8691f59405681e043f2e4e5682ff1d9bcc17c7411bfd6a04fbc15d517bd7d333",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        1,
+        1
+      ],
+      "visiblePixels": 13375
+    },
+    {
+      "file": "combat-v2/mecha/land/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "8a0d4b93ec92197b31c9e738bc1d48b5b9f40b802371aad36b6df10f1da7909e",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        2,
+        1
+      ],
+      "visiblePixels": 10896
+    },
+    {
+      "file": "combat-v2/mecha/land/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "521b0ecb2f23da2d36d4373b9ae6a9f99374843f5c8a56dbbd685c66e6a3399c",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        3,
+        1
+      ],
+      "visiblePixels": 16682
+    },
+    {
+      "file": "combat-v2/mecha/land/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "cffeb236b1b496eea5b1a1aaa5bce682250f49b2eab61aa6f1fc2162fd622ba5",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        4,
+        1
+      ],
+      "visiblePixels": 16689
+    },
+    {
+      "file": "combat-v2/mecha/land/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "0c0316f3f738642b09e1bc9ed7126768a4be33a9d79ce2ef7a43363af67e65d3",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        5,
+        1
+      ],
+      "visiblePixels": 17930
+    },
+    {
+      "file": "combat-v2/mecha/land/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "35b8f1185ebb3dc4a774465015d97e05cb5589b54afe419530044f541c78d9ac",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        6,
+        1
+      ],
+      "visiblePixels": 18238
+    },
+    {
+      "file": "combat-v2/mecha/land/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "dcca1a379b82d52d70c8c207801af06ea7032ef94f2eb08a1ce1a9f37cdd3c94",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        7,
+        1
+      ],
+      "visiblePixels": 18577
+    },
+    {
+      "file": "combat-v2/mecha/death/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "28fa30d883a100644928892ae7f6b4e4ed842f4eddc16673141aef78d987385f",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        0,
+        2
+      ],
+      "visiblePixels": 20011
+    },
+    {
+      "file": "combat-v2/mecha/death/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "f5ca03727be362b71592b22eb778a51373268bcf8effae73d21d04edc2161b4f",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        1,
+        2
+      ],
+      "visiblePixels": 20307
+    },
+    {
+      "file": "combat-v2/mecha/death/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "9fe78bb2c0006ec459eb8a5e15f0caba9df84864d194693948c7a93b50dd6399",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        2,
+        2
+      ],
+      "visiblePixels": 20124
+    },
+    {
+      "file": "combat-v2/mecha/death/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "6b544689af42a4d2820ee49e684c1e7c49af0b5d625471a6fcc5ecb37211c30b",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        3,
+        2
+      ],
+      "visiblePixels": 16621
+    },
+    {
+      "file": "combat-v2/mecha/death/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "14fec759038cde89b13ac3fd9a0cc359065db7ae67c4aa5374b13f7404db72b5",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        4,
+        2
+      ],
+      "visiblePixels": 15246
+    },
+    {
+      "file": "combat-v2/mecha/death/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "c5373327b60dda5b46603cfec791dfe8f93c7593acf2eb05135f3f9301b4189f",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        5,
+        2
+      ],
+      "visiblePixels": 14537
+    },
+    {
+      "file": "combat-v2/mecha/death/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "f6e97e9ede8183f4990d86732f5d0221c7e78916e1f3a5441b1738ae6af4b365",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        6,
+        2
+      ],
+      "visiblePixels": 13665
+    },
+    {
+      "file": "combat-v2/mecha/death/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "2565820bf4fcd6962bed836e073276a2a4363c611926bcd08fa8b2d7f674467a",
+      "source": "sources/mecha-landing.png",
+      "cell": [
+        7,
+        2
+      ],
+      "visiblePixels": 12821
+    },
+    {
+      "file": "combat-v2/boss7/idle/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "e9b2125b950c2e1f42cff8de7d570c01924dd743856b8166ee71ff46be07fd72",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        0,
+        0
+      ],
+      "visiblePixels": 20181
+    },
+    {
+      "file": "combat-v2/boss7/idle/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "12b890e1a6b39d5e4fc6620d7ffd06dc67c29e57e3069b5d03f9ea835ad8b8f5",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        1,
+        0
+      ],
+      "visiblePixels": 19932
+    },
+    {
+      "file": "combat-v2/boss7/idle/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "46440d557959a7c21661bf73e224f7606bc2bc65180d7ca8f629bac631f9084c",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        2,
+        0
+      ],
+      "visiblePixels": 19899
+    },
+    {
+      "file": "combat-v2/boss7/idle/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "ad2f73e458d7846fb018b0b1648546f0796fa3a66b57046dcd3023ed27cf106e",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        3,
+        0
+      ],
+      "visiblePixels": 19874
+    },
+    {
+      "file": "combat-v2/boss7/idle/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "a3f308a8266aa49a4efe62cf81f841a332fadf1efb23eb81baac094d4b01cdf5",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        4,
+        0
+      ],
+      "visiblePixels": 19980
+    },
+    {
+      "file": "combat-v2/boss7/idle/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "7faecca3b2c24798a6c6eb53e20f97f1bb06a2005af2d5a4cad9534c00bfbd53",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        5,
+        0
+      ],
+      "visiblePixels": 20005
+    },
+    {
+      "file": "combat-v2/boss7/idle/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "6b44502a5eac1f828a68597bbd74bed32089a10296f3ea878091c1c775ea466c",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        6,
+        0
+      ],
+      "visiblePixels": 19952
+    },
+    {
+      "file": "combat-v2/boss7/idle/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "0088a047674fdf73f60559a8cd95d8c237dc06241504e643c93c3aba638aac6c",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        7,
+        0
+      ],
+      "visiblePixels": 19970
+    },
+    {
+      "file": "combat-v2/boss7/walk/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "2e19ae23e6dad268afe6e7998b0458d555133c4b72059b87d20d81faa3cf70a0",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        0,
+        1
+      ],
+      "visiblePixels": 19640
+    },
+    {
+      "file": "combat-v2/boss7/walk/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "83854430484c3321246062fcb4563eee29c05950781901de692c1d6b4ec7f129",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        1,
+        1
+      ],
+      "visiblePixels": 19578
+    },
+    {
+      "file": "combat-v2/boss7/walk/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "c6877171d742075b8386dbd1dc05132939bb4ae68ec07ef7b23db65b8266b558",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        2,
+        1
+      ],
+      "visiblePixels": 19416
+    },
+    {
+      "file": "combat-v2/boss7/walk/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "fed7a29225028a80d8af80814a82ef6d2fdaaa67d53f67830d16efdf07cc9072",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        3,
+        1
+      ],
+      "visiblePixels": 19028
+    },
+    {
+      "file": "combat-v2/boss7/walk/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "99665afbb74dfa723d9b29ac47b9b837d05cd5497d412f008346b01e50c08288",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        4,
+        1
+      ],
+      "visiblePixels": 18015
+    },
+    {
+      "file": "combat-v2/boss7/walk/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "7861718f6f24c2f8f3629db8049dc0234e7631420b706c3a5c9209180f943b46",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        5,
+        1
+      ],
+      "visiblePixels": 18011
+    },
+    {
+      "file": "combat-v2/boss7/walk/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "c1283d5d161ad58ab8dea4e614bcad604e98b063a42ef3b913e3bd7aecbc3e1e",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        6,
+        1
+      ],
+      "visiblePixels": 19699
+    },
+    {
+      "file": "combat-v2/boss7/walk/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "0bf21303d77448e9c8638eade880120d23bf7a9e9c63f7e1592646b70a2eaa80",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        7,
+        1
+      ],
+      "visiblePixels": 19406
+    },
+    {
+      "file": "combat-v2/boss7/windup/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "bba37f798941ff2836054ca48d3a4551aaf9a308f5fa27a569a779f257df8c21",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        0,
+        2
+      ],
+      "visiblePixels": 19500
+    },
+    {
+      "file": "combat-v2/boss7/windup/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "28e0d0df4760dfb46a67d2061010107e596e7cd6bab235a81bff805c84e1b65b",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        1,
+        2
+      ],
+      "visiblePixels": 19203
+    },
+    {
+      "file": "combat-v2/boss7/windup/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "75f94cb813059b5d0f748444dc742e95d13df03870c8aaf95f8d27e7594608fa",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        2,
+        2
+      ],
+      "visiblePixels": 19113
+    },
+    {
+      "file": "combat-v2/boss7/windup/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "ffc00452f0032e6ea48251e3cc88ef72c80d1329a2140f62fa966f91ddc44dc4",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        3,
+        2
+      ],
+      "visiblePixels": 18807
+    },
+    {
+      "file": "combat-v2/boss7/windup/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "6775feef3d7ab29756a3290c126616d9556137c4dce80ea7fed3f27f9288b540",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        4,
+        2
+      ],
+      "visiblePixels": 18709
+    },
+    {
+      "file": "combat-v2/boss7/windup/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "508d2b4ebcc235b86c67123a424fa150ce427faf06bf103b9a979202fe84bbd8",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        5,
+        2
+      ],
+      "visiblePixels": 18734
+    },
+    {
+      "file": "combat-v2/boss7/windup/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "be05b9cc5870130a1ca08828035dddee38359c7240a5ac861847bd0c4be097cb",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        6,
+        2
+      ],
+      "visiblePixels": 18825
+    },
+    {
+      "file": "combat-v2/boss7/windup/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "6e1b12dba9866a8c413abc9e830b2c28c2009f94ff72f3fb1e2a8695e0148f0b",
+      "source": "sources/boss7-locomotion.png",
+      "cell": [
+        7,
+        2
+      ],
+      "visiblePixels": 18753
+    },
+    {
+      "file": "combat-v2/boss7/shoot/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "125584ee1bf42004edff7db7f35192bfedd99e8fad29fd5b866665848032caae",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        0,
+        0
+      ],
+      "visiblePixels": 19889
+    },
+    {
+      "file": "combat-v2/boss7/shoot/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "44ae4cf73503d669a362e5979dbcb96a8c027fbc783fe935f820e2b57ca5dfaf",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        1,
+        0
+      ],
+      "visiblePixels": 19715
+    },
+    {
+      "file": "combat-v2/boss7/shoot/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "4f92eed651f03202ffa09034e82140a2916d6b5d32fef4d3e12e186ea2f222e3",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        2,
+        0
+      ],
+      "visiblePixels": 18705
+    },
+    {
+      "file": "combat-v2/boss7/shoot/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "e8dfe71be271619684bfc46d26792b4d95c0953b640acb61e150cd31a47e65a0",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        3,
+        0
+      ],
+      "visiblePixels": 21014
+    },
+    {
+      "file": "combat-v2/boss7/shoot/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "c42dea68ae77837a0340442c5162af336ee665d16ff6fbfe8b894ee54037a467",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        4,
+        0
+      ],
+      "visiblePixels": 20850
+    },
+    {
+      "file": "combat-v2/boss7/shoot/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "b7defdb8901b7f4c5bd324f3aaf279a151ec1439da5aa9cd7f06c71041dbf40d",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        5,
+        0
+      ],
+      "visiblePixels": 19303
+    },
+    {
+      "file": "combat-v2/boss7/shoot/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "2cdea072a9d78c6d8953e6230fbe1c576325c9979f488976fec28d88b3e41a16",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        6,
+        0
+      ],
+      "visiblePixels": 19943
+    },
+    {
+      "file": "combat-v2/boss7/shoot/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "db7d182dcef0331ab409fa74a6043f39f395453d46c7c47c32654b7c473b0bc8",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        7,
+        0
+      ],
+      "visiblePixels": 19871
+    },
+    {
+      "file": "combat-v2/boss7/slam/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "8d1a526d79b3fae145ad430d70ca68469877caa9fcd004c2694c7f1a26054b04",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        0,
+        1
+      ],
+      "visiblePixels": 19817
+    },
+    {
+      "file": "combat-v2/boss7/slam/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "8118c39dba6ae334bc43c6fede08dbf15600204b541d4337b6cbf5d337709b19",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        1,
+        1
+      ],
+      "visiblePixels": 20155
+    },
+    {
+      "file": "combat-v2/boss7/slam/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "ec5de9ec45de78504d79379bf0af112ebbc068b027273b06e2e6761cf09f97cd",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        2,
+        1
+      ],
+      "visiblePixels": 19504
+    },
+    {
+      "file": "combat-v2/boss7/slam/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "d9e14c40cf75e2ac8d7cce066895861417353e4070733efe84e31d06b241b4c0",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        3,
+        1
+      ],
+      "visiblePixels": 18523
+    },
+    {
+      "file": "combat-v2/boss7/slam/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "022a898d3c357e87ef429bb6eda6e87171df9e012268531bc687f8ecfe3370c7",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        4,
+        1
+      ],
+      "visiblePixels": 17079
+    },
+    {
+      "file": "combat-v2/boss7/slam/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "94d17145195b41329c72a3a01183dea13fb5aac6581539c07bd030c9969fda80",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        5,
+        1
+      ],
+      "visiblePixels": 18294
+    },
+    {
+      "file": "combat-v2/boss7/slam/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "3d6fa6616586fdd47bbc926b9df5251232cee407b7534f70cdded5e2c5a64344",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        6,
+        1
+      ],
+      "visiblePixels": 20837
+    },
+    {
+      "file": "combat-v2/boss7/slam/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "a4a55f2cf62ccd34ed96bb2988d22a77ada8155e8cf0404802dd5313808297b8",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        7,
+        1
+      ],
+      "visiblePixels": 19860
+    },
+    {
+      "file": "combat-v2/boss7/shield/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "e1c3ea1b19e37e2886f2a3ba3fd3479ea04d5c379affd6c913b968a23e68207a",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        0,
+        2
+      ],
+      "visiblePixels": 19777
+    },
+    {
+      "file": "combat-v2/boss7/shield/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "13e0dacd47d1f223316223aeacc7d830d2fdcf2ce6467718c25ace8a6b9cdac0",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        1,
+        2
+      ],
+      "visiblePixels": 18860
+    },
+    {
+      "file": "combat-v2/boss7/shield/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "052b89151d8773fc8fc48fd38af643a35a40209248307ef4f5432f2533dea611",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        2,
+        2
+      ],
+      "visiblePixels": 17944
+    },
+    {
+      "file": "combat-v2/boss7/shield/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "4fae784e68b512d27af3d3c931bf00cac08a42ae7c1dfacdadab9b9cbab62116",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        3,
+        2
+      ],
+      "visiblePixels": 17268
+    },
+    {
+      "file": "combat-v2/boss7/shield/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "ea595e5f7f0c25cccf1f0259c06e83b311e5842b7efa22ffd6a0cbe2df4a2baf",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        4,
+        2
+      ],
+      "visiblePixels": 16845
+    },
+    {
+      "file": "combat-v2/boss7/shield/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "c9a52a6c3576590ca43ebf8d3cfda58c8cac4565d02ced03efc1f4717f651fb2",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        5,
+        2
+      ],
+      "visiblePixels": 19152
+    },
+    {
+      "file": "combat-v2/boss7/shield/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "1bc52d6087f75370e6822dc9aba85831051c8f180b96e1c4c9ca9e8e7fb7a132",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        6,
+        2
+      ],
+      "visiblePixels": 19599
+    },
+    {
+      "file": "combat-v2/boss7/shield/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "ed63447010b216e7a5e705eb840d3cb57c5aa69dd79cd56ef9f942e4ff6b65a5",
+      "source": "sources/boss7-combat.png",
+      "cell": [
+        7,
+        2
+      ],
+      "visiblePixels": 19789
+    },
+    {
+      "file": "combat-v2/boss7/exposed/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "caecbdc7ecd078124bda945d3539e443a74b77ec5886bb524a01d4c8f20d68dd",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        0,
+        0
+      ],
+      "visiblePixels": 20159
+    },
+    {
+      "file": "combat-v2/boss7/exposed/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "16212249486f1cdfc04f8b30d6a2c31ae8be3c1ca7d22748a5e26baf153d669d",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        1,
+        0
+      ],
+      "visiblePixels": 20882
+    },
+    {
+      "file": "combat-v2/boss7/exposed/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "e9ee693bd76a1d756e6f8248c533063221d4f849c60848898e781dad9844cb87",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        2,
+        0
+      ],
+      "visiblePixels": 20881
+    },
+    {
+      "file": "combat-v2/boss7/exposed/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "9cd0ec3a301adbed1d2d37f1e642dd1ace15a8ff77206074fdaa63a40917d3d0",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        3,
+        0
+      ],
+      "visiblePixels": 22105
+    },
+    {
+      "file": "combat-v2/boss7/exposed/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "31af00e50a4790568cc9c971d6ec60c4f366d39bef7b1fbf170fb6bb47815e94",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        4,
+        0
+      ],
+      "visiblePixels": 22416
+    },
+    {
+      "file": "combat-v2/boss7/exposed/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "2b4bdfb555d5b9c5baf2f79e4084fc03f9264781a8ccfe5a30bd463e630e93fe",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        5,
+        0
+      ],
+      "visiblePixels": 22538
+    },
+    {
+      "file": "combat-v2/boss7/exposed/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "3b62b4cd7295101df580d4d08b28f49b9b5fa2acbac3044d01cb91324721c1ed",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        6,
+        0
+      ],
+      "visiblePixels": 22575
+    },
+    {
+      "file": "combat-v2/boss7/exposed/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "0d4255bf259c2614923b9c9538780abcc4ed0955078f2495c008bb49b3dc4aac",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        7,
+        0
+      ],
+      "visiblePixels": 22897
+    },
+    {
+      "file": "combat-v2/boss7/hurt/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "da8f7e78794342aa2330081cb1f00202c73771f97d14c7d3c24a05df9db6ec99",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        0,
+        1
+      ],
+      "visiblePixels": 20055
+    },
+    {
+      "file": "combat-v2/boss7/hurt/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "d7a10ea75dad61d270463e255ae642b0e99e71e691424f801ffa4be034b85895",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        1,
+        1
+      ],
+      "visiblePixels": 21001
+    },
+    {
+      "file": "combat-v2/boss7/hurt/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "df0e88558dac378f23736e88555205c526b5951512460ea738f6c8d32e31bdf4",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        2,
+        1
+      ],
+      "visiblePixels": 20792
+    },
+    {
+      "file": "combat-v2/boss7/hurt/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "76e78a2906af92e042dcce8726e30009125fe2fa6cd2085bb06e1f0d6f0e5c9c",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        3,
+        1
+      ],
+      "visiblePixels": 20190
+    },
+    {
+      "file": "combat-v2/boss7/hurt/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "29cf25f214980aaef9023aa04741d2867b560931955a6932f17aab80d6079814",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        4,
+        1
+      ],
+      "visiblePixels": 19959
+    },
+    {
+      "file": "combat-v2/boss7/hurt/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "1a93179de19730f3eaf6bf80b4d164fb094f98ca75df92c84c2bbeff044d4793",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        5,
+        1
+      ],
+      "visiblePixels": 20442
+    },
+    {
+      "file": "combat-v2/boss7/hurt/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "5e2a692b9cdf5977660b8ab84f7681f372ac936e2d188878eb67c9ef91ab38cf",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        6,
+        1
+      ],
+      "visiblePixels": 20234
+    },
+    {
+      "file": "combat-v2/boss7/hurt/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "41e2db5d98540b0b89cc288cce8894342f42376288c0c8087055226a7dc63af7",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        7,
+        1
+      ],
+      "visiblePixels": 20198
+    },
+    {
+      "file": "combat-v2/boss7/death/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "2a7c92828e315691ed39737c64b0139a47c3d70842b718aa93a350853706d897",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        0,
+        2
+      ],
+      "visiblePixels": 19953
+    },
+    {
+      "file": "combat-v2/boss7/death/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "ba0c44f6c53197c912e8cc617b4115d6e07996903650faa595031fa8169a7a79",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        1,
+        2
+      ],
+      "visiblePixels": 20150
+    },
+    {
+      "file": "combat-v2/boss7/death/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "cdd19097e7915d21bb4699c248bfb90ba51fac7d9bbe93ad9aa64cfe313271ac",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        2,
+        2
+      ],
+      "visiblePixels": 19923
+    },
+    {
+      "file": "combat-v2/boss7/death/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "e76f1db0db764f39bda9e8f63811fc25970c36e03a16a13a15841bb5c3bf55c9",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        3,
+        2
+      ],
+      "visiblePixels": 18912
+    },
+    {
+      "file": "combat-v2/boss7/death/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "92025ea872071f3d95a8370d9a40f861181732ae72a48ff32d0592c296c49399",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        4,
+        2
+      ],
+      "visiblePixels": 18590
+    },
+    {
+      "file": "combat-v2/boss7/death/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "8f42c77bb116184d05e38cd183a4b20cbf5639c74a248edc87f9a668fefcdd35",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        5,
+        2
+      ],
+      "visiblePixels": 15911
+    },
+    {
+      "file": "combat-v2/boss7/death/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "3e9525b920318e701612377694dcd3908ef5d4bb46f2e073bb30a1783bdda974",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        6,
+        2
+      ],
+      "visiblePixels": 13581
+    },
+    {
+      "file": "combat-v2/boss7/death/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "4f9c4ec0c0886dad04c70b1aa6f18e6868922a06ea12b2e85072d84944066951",
+      "source": "sources/boss7-recovery.png",
+      "cell": [
+        7,
+        2
+      ],
+      "visiblePixels": 13450
+    },
+    {
+      "file": "combat-v2/boss8/idle/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "d769245890d7a68465dd52180ee3f66d9d4e1cc93371bc8b4bd2b74263f9b579",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        0,
+        0
+      ],
+      "visiblePixels": 16062
+    },
+    {
+      "file": "combat-v2/boss8/idle/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "794e98aeb0dcb0a39b192436efaede63930af167d4878c68d1499cd6ffb28cf1",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        1,
+        0
+      ],
+      "visiblePixels": 15982
+    },
+    {
+      "file": "combat-v2/boss8/idle/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "c1e0e8ed693dc177f1268b99938c5264a225e97e7af013ab005ff8476f0c08a9",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        2,
+        0
+      ],
+      "visiblePixels": 16044
+    },
+    {
+      "file": "combat-v2/boss8/idle/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "70b3b370104fa35d36ac57b81792c6b4ac512ea807be9c34e4de7da6ffef3fae",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        3,
+        0
+      ],
+      "visiblePixels": 16078
+    },
+    {
+      "file": "combat-v2/boss8/idle/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "858ae39f85e0cc064c1f2ebeda9b6ebb7af94f691a45c14506f86b6f3165193d",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        4,
+        0
+      ],
+      "visiblePixels": 16225
+    },
+    {
+      "file": "combat-v2/boss8/idle/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "3959d02cddd529cbb5521616d5586d4f88523693a334cdeaaa52e1fa97d2e187",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        5,
+        0
+      ],
+      "visiblePixels": 16149
+    },
+    {
+      "file": "combat-v2/boss8/idle/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "a45c41ddcd20fc91911d21a6dbd3eba376cb96e1b8c8cf8ae9ef8b74f30a558d",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        6,
+        0
+      ],
+      "visiblePixels": 16172
+    },
+    {
+      "file": "combat-v2/boss8/idle/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "5c68bbe4fa7f091f4012d0d9a735ab8af9f743e401f875a2801bc849a2bd6e11",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        7,
+        0
+      ],
+      "visiblePixels": 16058
+    },
+    {
+      "file": "combat-v2/boss8/walk/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "9c32d2e17ea57c897f8b3ae2fcafe44ace3f72747a6471c01e7f11f795b6aea7",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        0,
+        1
+      ],
+      "visiblePixels": 15597
+    },
+    {
+      "file": "combat-v2/boss8/walk/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "7e07b992b20cb356d02beee74b20e77d19ed475ff8c254e7e854a4a3a7db197a",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        1,
+        1
+      ],
+      "visiblePixels": 14834
+    },
+    {
+      "file": "combat-v2/boss8/walk/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "2318b09f6204c4d519001e5d31855ddd51de9ebcc10eb2e93f7e2da9777bffab",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        2,
+        1
+      ],
+      "visiblePixels": 14119
+    },
+    {
+      "file": "combat-v2/boss8/walk/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "888b54d33b3adc85d0d656abb40d801e13a5b946325dd8c32676c708d88ad6d4",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        3,
+        1
+      ],
+      "visiblePixels": 15397
+    },
+    {
+      "file": "combat-v2/boss8/walk/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "18a7ef25cdbc4948c8dbc81246920902088edea03f6ec79022d99fc487d2352c",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        4,
+        1
+      ],
+      "visiblePixels": 15306
+    },
+    {
+      "file": "combat-v2/boss8/walk/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "5370998bc7d6b3294721912556749d1d895b3e60a93e92f27bca45e895779384",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        5,
+        1
+      ],
+      "visiblePixels": 15478
+    },
+    {
+      "file": "combat-v2/boss8/walk/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "9be87b143d247a5e60e57307715b3a647ede6153b2fd4c541671153264e81f9d",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        6,
+        1
+      ],
+      "visiblePixels": 14155
+    },
+    {
+      "file": "combat-v2/boss8/walk/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "a73a022e08f96e85083db3187fad9e24e3c232d6b1dc4a00f791f5008f9f1c95",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        7,
+        1
+      ],
+      "visiblePixels": 15186
+    },
+    {
+      "file": "combat-v2/boss8/windup/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "224efc7bfdc1c1e1c8a8b3a97db28525fa416204ca5157eaf8cdecc2da7706cc",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        0,
+        2
+      ],
+      "visiblePixels": 13703
+    },
+    {
+      "file": "combat-v2/boss8/windup/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "e3a718eff6631b1dbdd5960ee8dce0711011ca1779f0323df20feba15b74c627",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        1,
+        2
+      ],
+      "visiblePixels": 13148
+    },
+    {
+      "file": "combat-v2/boss8/windup/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "995eb502b4291b8fe3fc329b20e966578eaf5f657eac01696e80a6b50fba0002",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        2,
+        2
+      ],
+      "visiblePixels": 13984
+    },
+    {
+      "file": "combat-v2/boss8/windup/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "8497e0fad580c89d93cb8a212d0899687148071b4529be21eea2bc3d25fdba4f",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        3,
+        2
+      ],
+      "visiblePixels": 15175
+    },
+    {
+      "file": "combat-v2/boss8/windup/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "e3024ad83a0784a947af3d5ac373db240778877b2baf3315346ec608b7c25996",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        4,
+        2
+      ],
+      "visiblePixels": 16662
+    },
+    {
+      "file": "combat-v2/boss8/windup/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "b7b815ee6ba39038666ec45ce89bae35656102e659a51dfddb84c05840e5ec6e",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        5,
+        2
+      ],
+      "visiblePixels": 15704
+    },
+    {
+      "file": "combat-v2/boss8/windup/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "3c3f1ab14f7cb38536d63188bf6a624e75f51161e07f39938c672c0dc2b2b2f7",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        6,
+        2
+      ],
+      "visiblePixels": 15823
+    },
+    {
+      "file": "combat-v2/boss8/windup/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "a74f0dedca172ffccc2969a54b82d38f1a0b717e3a8a6c0d5953d849b96ccc3a",
+      "source": "sources/boss8-locomotion.png",
+      "cell": [
+        7,
+        2
+      ],
+      "visiblePixels": 16330
+    },
+    {
+      "file": "combat-v2/boss8/shoot/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "88db9b4a5e1e84c69b04d9f1a3235ff628c1edfe5e232828bd8e1bf5f3703e4b",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        0,
+        0
+      ],
+      "visiblePixels": 16691
+    },
+    {
+      "file": "combat-v2/boss8/shoot/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "16e7f2c205a56a026554c4a86bdf4cfcbc3fbe34cdd768fe57d1378e26f0c920",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        1,
+        0
+      ],
+      "visiblePixels": 16636
+    },
+    {
+      "file": "combat-v2/boss8/shoot/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "8af8b32d11cf6d037913a842e39acaefcce9a5d9fd557b4582734f891b86573b",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        2,
+        0
+      ],
+      "visiblePixels": 15848
+    },
+    {
+      "file": "combat-v2/boss8/shoot/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "0aaaa4be736904a917542d03a66c900b934459ebb4293d8e123808072013abaf",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        3,
+        0
+      ],
+      "visiblePixels": 12674
+    },
+    {
+      "file": "combat-v2/boss8/shoot/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "73b05b452daedaa4a1edb2603be72599a81ad407540118f6942584d4270c8124",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        4,
+        0
+      ],
+      "visiblePixels": 12956
+    },
+    {
+      "file": "combat-v2/boss8/shoot/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "02f8d70e793717ec138821e90567e912d2ee09ca412e2bddbf1225a88c8e47e7",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        5,
+        0
+      ],
+      "visiblePixels": 17981
+    },
+    {
+      "file": "combat-v2/boss8/shoot/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "e1d2d45bd340584da3c57a0598d068c7c65234326cef986af7fe2d06fbeea346",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        6,
+        0
+      ],
+      "visiblePixels": 19531
+    },
+    {
+      "file": "combat-v2/boss8/shoot/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "f2d4cd7bee074cd60df171d1655d29ead7187fde9c5dc25a7abc158fb11f9a51",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        7,
+        0
+      ],
+      "visiblePixels": 16745
+    },
+    {
+      "file": "combat-v2/boss8/slam/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "e50fffd5a1d3d91c76f657e0b2e304f84759615903a87dc9b59c393d924a607f",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        0,
+        1
+      ],
+      "visiblePixels": 17183
+    },
+    {
+      "file": "combat-v2/boss8/slam/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "d14004f24830f5c591bbc8e898d84a662e0ca9d0d47917e5a4dc7df072579fbb",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        1,
+        1
+      ],
+      "visiblePixels": 16725
+    },
+    {
+      "file": "combat-v2/boss8/slam/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "a4b9d7bb35d321ca20e1cfef1e99f999ccd5c22e3adbeea871242ea249e6c8a9",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        2,
+        1
+      ],
+      "visiblePixels": 16775
+    },
+    {
+      "file": "combat-v2/boss8/slam/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "03f5d70bcf26b09ce3e96d9f1a32cdd74eb3988b976714922099980ed842c6d1",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        3,
+        1
+      ],
+      "visiblePixels": 13787
+    },
+    {
+      "file": "combat-v2/boss8/slam/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "259271e05f8b9699c5d214e39413e80017c7546f71628e291c3b64c5593f3a18",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        4,
+        1
+      ],
+      "visiblePixels": 11795
+    },
+    {
+      "file": "combat-v2/boss8/slam/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "b0e5ef31e1c3a0fc02c8ddaeef6ac0736e40c68fdfc56f2beca380648ea800c9",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        5,
+        1
+      ],
+      "visiblePixels": 12004
+    },
+    {
+      "file": "combat-v2/boss8/slam/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "4944fd66e1f8bd30a644c8bfb10e7810e98175be1c7ef32b8e342c9ed8e28ef6",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        6,
+        1
+      ],
+      "visiblePixels": 16319
+    },
+    {
+      "file": "combat-v2/boss8/slam/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "8af9f2c9278e8010c375adaa3d4d018928928cd718238561984116701062181f",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        7,
+        1
+      ],
+      "visiblePixels": 15849
+    },
+    {
+      "file": "combat-v2/boss8/shield/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "255584b1a7974cd05b94bec56a9b2f1a243cf72820b36f3ebad497424ade89a3",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        0,
+        2
+      ],
+      "visiblePixels": 16225
+    },
+    {
+      "file": "combat-v2/boss8/shield/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "2e2042385651a50990585f053db13ecbdd71f29ab00682510a720d4487348f32",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        1,
+        2
+      ],
+      "visiblePixels": 16462
+    },
+    {
+      "file": "combat-v2/boss8/shield/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "2e6d98852b38f9a7cfc64fa6ffe84db2ae0b05dcbe2eac87976c2edf12dfacac",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        2,
+        2
+      ],
+      "visiblePixels": 16283
+    },
+    {
+      "file": "combat-v2/boss8/shield/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "98fd37cf18a2206f4499eb94318933754308985dd6a39228dcb882bcb66869c1",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        3,
+        2
+      ],
+      "visiblePixels": 16596
+    },
+    {
+      "file": "combat-v2/boss8/shield/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "1eb4fea91f70d052bc43724728c2f51f9675e97e677284dfee8e153287a7abc7",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        4,
+        2
+      ],
+      "visiblePixels": 15063
+    },
+    {
+      "file": "combat-v2/boss8/shield/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "930b70e952b3e68b5b0535572550575f5250e137eeee794810b6b5fb01dbac8a",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        5,
+        2
+      ],
+      "visiblePixels": 16557
+    },
+    {
+      "file": "combat-v2/boss8/shield/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "abe90c6b0bb789e964390eee2c9c2769b670b257e5e264ecc63fb2e73d9d41f8",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        6,
+        2
+      ],
+      "visiblePixels": 17629
+    },
+    {
+      "file": "combat-v2/boss8/shield/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "0b32d154f9280b0befaa4f509b5ca2a9c513ff3c07e09371e122fea8d61392ab",
+      "source": "sources/boss8-combat.png",
+      "cell": [
+        7,
+        2
+      ],
+      "visiblePixels": 16311
+    },
+    {
+      "file": "combat-v2/boss8/exposed/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "518f2d89528bf1f974e0089d034dfe5c78101d30f936ac75fc598ff4b4700fb4",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        0,
+        0
+      ],
+      "visiblePixels": 16753
+    },
+    {
+      "file": "combat-v2/boss8/exposed/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "513d9463ac71ad9beb68dc0c9d6f100c3112249c123fd58b4ff007135f48ee2c",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        1,
+        0
+      ],
+      "visiblePixels": 17641
+    },
+    {
+      "file": "combat-v2/boss8/exposed/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "5ca8189ccdbfdccdfe1cb6175d1ad23f42f2fb8d2a2e8003656caad54dd6e5da",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        2,
+        0
+      ],
+      "visiblePixels": 17973
+    },
+    {
+      "file": "combat-v2/boss8/exposed/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "49c4ecde6c3eb9e284af99aa66c4923e3b92151dc16372d7ba4f6ac9db19203f",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        3,
+        0
+      ],
+      "visiblePixels": 18123
+    },
+    {
+      "file": "combat-v2/boss8/exposed/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "566adda8d8cc46f7f71b3e596af53fb44fdcd53b4f87e38fb605001cbacbc323",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        4,
+        0
+      ],
+      "visiblePixels": 17919
+    },
+    {
+      "file": "combat-v2/boss8/exposed/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "4fac5eff90fce5a8b00fc97b8827edaa3a821f40e332f8818100a0d9b4c77d1e",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        5,
+        0
+      ],
+      "visiblePixels": 17771
+    },
+    {
+      "file": "combat-v2/boss8/exposed/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "ea708a46cf4e38a4d79a0f304d1e3c7290c3b71bfc47378e2cc584cefc4bccbc",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        6,
+        0
+      ],
+      "visiblePixels": 17635
+    },
+    {
+      "file": "combat-v2/boss8/exposed/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "fef189f3c9f3e24195d8c4b3320cb2389c1e42c04dab3da7f144819447da8873",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        7,
+        0
+      ],
+      "visiblePixels": 16724
+    },
+    {
+      "file": "combat-v2/boss8/hurt/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "75b44fecdb95987c30339ad653cdbb1e8b5275b395ca5f624795e0757548e919",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        0,
+        1
+      ],
+      "visiblePixels": 17318
+    },
+    {
+      "file": "combat-v2/boss8/hurt/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "c95a78d5c7886ae9a129521224b572b09ddb6380d1c0a4767c3efb78d97035d5",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        1,
+        1
+      ],
+      "visiblePixels": 16935
+    },
+    {
+      "file": "combat-v2/boss8/hurt/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "05eaa0de9559c319164a98e245c7ac748c7b04ac82fd70995071dc1b2e60201f",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        2,
+        1
+      ],
+      "visiblePixels": 16770
+    },
+    {
+      "file": "combat-v2/boss8/hurt/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "8e896247ff41f42a90686997a4d5485003def62a8dfce91f43c711e3aaff60d0",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        3,
+        1
+      ],
+      "visiblePixels": 16987
+    },
+    {
+      "file": "combat-v2/boss8/hurt/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "cc68231a3795062b128c63cbf7204cd67d45eaf019e064353497788ddb172a4f",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        4,
+        1
+      ],
+      "visiblePixels": 16416
+    },
+    {
+      "file": "combat-v2/boss8/hurt/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "d9fea22a0ae1adba42003e6794a99c7743bc272ff5bd61354bbe972f586f9888",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        5,
+        1
+      ],
+      "visiblePixels": 17478
+    },
+    {
+      "file": "combat-v2/boss8/hurt/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "edbf6888a6cf67b45e548e7d128351ade32f429a491840425a9db12e7d008b5f",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        6,
+        1
+      ],
+      "visiblePixels": 15934
+    },
+    {
+      "file": "combat-v2/boss8/hurt/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "ff5ff9810925272ab2f23acc97531a161bf38ea091ba4edefcca1a8b275338f4",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        7,
+        1
+      ],
+      "visiblePixels": 16563
+    },
+    {
+      "file": "combat-v2/boss8/death/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "3fb010501ba72aa636cbb481c4679c14f22d8ab0baf65a8056aadab589d5adba",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        0,
+        2
+      ],
+      "visiblePixels": 15832
+    },
+    {
+      "file": "combat-v2/boss8/death/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "c06200e551b61ecd714e1b9f3acfb4e9abced8730d4c3091d0e8a81396528ba7",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        1,
+        2
+      ],
+      "visiblePixels": 15404
+    },
+    {
+      "file": "combat-v2/boss8/death/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "af7a2570c2a1b306c589442af61812b8545e123b0b8ed0ac2984f5dd37c4689b",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        2,
+        2
+      ],
+      "visiblePixels": 15749
+    },
+    {
+      "file": "combat-v2/boss8/death/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "a777bacae3242f6738476c4daa1d72d7d11af7ea6229678c975f7323c3d16a67",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        3,
+        2
+      ],
+      "visiblePixels": 15451
+    },
+    {
+      "file": "combat-v2/boss8/death/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "3fc90c1a1be56fad7d025aafeac3fc8fec2ec4b2c3a1d437869ab1504c13b134",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        4,
+        2
+      ],
+      "visiblePixels": 13356
+    },
+    {
+      "file": "combat-v2/boss8/death/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "5356a62ea4e41efed93db9e2bf6e7807c7e0900243f33fceb5fad09d5be292cb",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        5,
+        2
+      ],
+      "visiblePixels": 12515
+    },
+    {
+      "file": "combat-v2/boss8/death/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "ed9598b2bf3c9afc20b39b845904eaf0942109787e610376c58aab486db7b2ee",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        6,
+        2
+      ],
+      "visiblePixels": 12732
+    },
+    {
+      "file": "combat-v2/boss8/death/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "0817a94bf347e4c0206ed2862fb4d1c6c607686c5ce89cfc3ad8add065310b66",
+      "source": "sources/boss8-recovery.png",
+      "cell": [
+        7,
+        2
+      ],
+      "visiblePixels": 11284
+    },
+    {
+      "file": "combat-v2/boss8/slash/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "231d78f29435127efa40fa7065a67c8c88f8a35c77f06667ba6e91e8f1ccced9",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        0,
+        0
+      ],
+      "visiblePixels": 17016
+    },
+    {
+      "file": "combat-v2/boss8/slash/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "3932fc1be0f513044968b7fb500605e6b634b22b162e68fdf5bcb153c1a9bb43",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        1,
+        0
+      ],
+      "visiblePixels": 16815
+    },
+    {
+      "file": "combat-v2/boss8/slash/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "f38b85b20de9eed15a47e13c6e41fc0e9871cad7ea0dc1976e7ed5c95e06ea8a",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        2,
+        0
+      ],
+      "visiblePixels": 14455
+    },
+    {
+      "file": "combat-v2/boss8/slash/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "4ac244c9357c2c43d4f3cdabe84569b0b1337f43b2e4b849f3230eecc2d0dae8",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        3,
+        0
+      ],
+      "visiblePixels": 15827
+    },
+    {
+      "file": "combat-v2/boss8/slash/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "11d30b3a5ee3c0a872fd82ed23b87fe78a45ee39cbd5b33d60070c47582810a0",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        4,
+        0
+      ],
+      "visiblePixels": 11306
+    },
+    {
+      "file": "combat-v2/boss8/slash/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "f422d2ba5e5e0e226a93712e4689a7d3dcd705a26a49a482228d3b65554b83e1",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        5,
+        0
+      ],
+      "visiblePixels": 16503
+    },
+    {
+      "file": "combat-v2/boss8/slash/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "d727a7111a2645b233d972f0b57e0a15fab45307f1fee79644ac864df8b2e438",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        6,
+        0
+      ],
+      "visiblePixels": 9316
+    },
+    {
+      "file": "combat-v2/boss8/slash/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "19437c791f2ffe54c2d8f636979727e9054e8445a4583310d679c7d6fa8a3b4f",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        7,
+        0
+      ],
+      "visiblePixels": 15817
+    },
+    {
+      "file": "combat-v2/boss8/jump/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "4889c901d4216627f3d6c93c10e9fa9b354f7867f6764e38cf11ae88175e885f",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        0,
+        1
+      ],
+      "visiblePixels": 12890
+    },
+    {
+      "file": "combat-v2/boss8/jump/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "c0ed4873f727bdfd5ecfb7b102918d2cbeb1273f745d081899394f378e8effbd",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        1,
+        1
+      ],
+      "visiblePixels": 15395
+    },
+    {
+      "file": "combat-v2/boss8/jump/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "ee95f92458c50e8de85afe60f1d1c0dd885bf047a6fd884ed3064f70fc126138",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        2,
+        1
+      ],
+      "visiblePixels": 16139
+    },
+    {
+      "file": "combat-v2/boss8/jump/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "77d2bdac314b8878c39788c0f2261f61a66203177a6b561d06708baccc984741",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        3,
+        1
+      ],
+      "visiblePixels": 14878
+    },
+    {
+      "file": "combat-v2/boss8/jump/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "d2be901196ef3313df6c3195632eff2b044c20b0f0245b449e4ddee26b37a584",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        4,
+        1
+      ],
+      "visiblePixels": 15223
+    },
+    {
+      "file": "combat-v2/boss8/jump/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "bb9cfc963c45f59a29f4d642690c0d8f1a3af1fd5c2b71f6dda5961b23f4790a",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        5,
+        1
+      ],
+      "visiblePixels": 15902
+    },
+    {
+      "file": "combat-v2/boss8/jump/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "d8a4a6238abd23248b5bff192bb885767d1bcacc6b18e836fc759d244e21df68",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        6,
+        1
+      ],
+      "visiblePixels": 13545
+    },
+    {
+      "file": "combat-v2/boss8/jump/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "94fb21c2d4324096cee130a23b367dba1272adf33e228c01778d5e940378d9bd",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        7,
+        1
+      ],
+      "visiblePixels": 14355
+    },
+    {
+      "file": "combat-v2/boss8/dash/01.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "24b2c806ca9a6efbfc389b758b1b12fd25fd1da239695e14eb060b8da6f1a13f",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        0,
+        2
+      ],
+      "visiblePixels": 12489
+    },
+    {
+      "file": "combat-v2/boss8/dash/02.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "b188819fdbfdcb0426c09429f0d3942ec700da1779fcc5781e38e052d637d1b2",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        1,
+        2
+      ],
+      "visiblePixels": 14316
+    },
+    {
+      "file": "combat-v2/boss8/dash/03.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "316d81c49a9d202b3c13c65d5f9af492047cb2a596557074f2857aa144fdd109",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        2,
+        2
+      ],
+      "visiblePixels": 14474
+    },
+    {
+      "file": "combat-v2/boss8/dash/04.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "3bbdb9d6c9337188e13b2d5d69b7d843d51aae751ad0a5f3fa858c81167f3596",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        3,
+        2
+      ],
+      "visiblePixels": 14914
+    },
+    {
+      "file": "combat-v2/boss8/dash/05.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "f416fa57c1f4d82007cd0d14fb9b79bad6991ed7724fe5abfef80ecb3f560cae",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        4,
+        2
+      ],
+      "visiblePixels": 15164
+    },
+    {
+      "file": "combat-v2/boss8/dash/06.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "bf179165f349b93e64cee6d410b1bf13401702766657de46e8bd83e0a0ca81f4",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        5,
+        2
+      ],
+      "visiblePixels": 14748
+    },
+    {
+      "file": "combat-v2/boss8/dash/07.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "96e98ae9c30c3715fd026e127e1b03914307c0ff630ae399acd523330e230d8e",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        6,
+        2
+      ],
+      "visiblePixels": 15426
+    },
+    {
+      "file": "combat-v2/boss8/dash/08.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "fc9c814a2f22db48900d0c0f3839e2889a3017e1481e233f8796a29a877c09bd",
+      "source": "sources/boss8-melee.png",
+      "cell": [
+        7,
+        2
+      ],
+      "visiblePixels": 14199
+    },
+    {
+      "file": "combat-v2/guard/idle/01.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "e0681c3befef441afac328b8e2d5517fb93bac69c6dec227d7c3df0e33417354",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        0,
+        0
+      ],
+      "visiblePixels": 3691
+    },
+    {
+      "file": "combat-v2/guard/idle/02.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "1a2d4e989aa7ea261f4a69b5c4841e220b2258cd0192c7210b5a5ae983b5fa8e",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        1,
+        0
+      ],
+      "visiblePixels": 3666
+    },
+    {
+      "file": "combat-v2/guard/idle/03.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "84626d9e2b934cd1825a6460787f7a1f526fd770d04c035cb4bbf73def1132d4",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        2,
+        0
+      ],
+      "visiblePixels": 3730
+    },
+    {
+      "file": "combat-v2/guard/idle/04.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "d4c82d2b670afca329ae426985706d97a7263d8d07e9f0506bbd7df961eb6c27",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        3,
+        0
+      ],
+      "visiblePixels": 3712
+    },
+    {
+      "file": "combat-v2/guard/idle/05.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "71138b1056610b9c0619857de7b9689abfa68644041a8c44a1405d173d99005f",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        4,
+        0
+      ],
+      "visiblePixels": 3639
+    },
+    {
+      "file": "combat-v2/guard/idle/06.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "a95039b355e2709f3235a0ea640ceb6491ca3f98280e1c06994f065d6ba06941",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        5,
+        0
+      ],
+      "visiblePixels": 3654
+    },
+    {
+      "file": "combat-v2/guard/idle/07.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "77492cb9d95b94c410e835205ac6f4d1d7c21a18ff7e9a9b1adbff71b5708458",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        6,
+        0
+      ],
+      "visiblePixels": 3657
+    },
+    {
+      "file": "combat-v2/guard/idle/08.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "1c1bd52d4e802793dc56532a3efafe70713a762a66853c7b377768c1fab485c9",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        7,
+        0
+      ],
+      "visiblePixels": 3643
+    },
+    {
+      "file": "combat-v2/guard/walk/01.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "6755947a638ee14361163cbb24d0aadd44a01eb43bb9f5d792d42cf38c3127a9",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        0,
+        1
+      ],
+      "visiblePixels": 3692
+    },
+    {
+      "file": "combat-v2/guard/walk/02.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "31adc6154762ffe8131ddcfa28a4891fffb30df9ffbc8d360cdea949ef68d763",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        1,
+        1
+      ],
+      "visiblePixels": 3519
+    },
+    {
+      "file": "combat-v2/guard/walk/03.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "7d977d77b69d0ecace3a9b06b24f8cdfd536f90417797f2d42d6599aef268338",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        2,
+        1
+      ],
+      "visiblePixels": 3582
+    },
+    {
+      "file": "combat-v2/guard/walk/04.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "862c1915919db49b367ddf68697c7d6ae57fa51cae3f7e8bdde8845297924337",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        3,
+        1
+      ],
+      "visiblePixels": 3674
+    },
+    {
+      "file": "combat-v2/guard/walk/05.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "a445bc96f3032a9b0c92383fb40c23555dd3714bac96bcc9aaf6a862a818d946",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        4,
+        1
+      ],
+      "visiblePixels": 3518
+    },
+    {
+      "file": "combat-v2/guard/walk/06.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "54cbf1523106bed504779715ae13a9fd8b66eefed8266b06e28be7bf2e6a0b3d",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        5,
+        1
+      ],
+      "visiblePixels": 3483
+    },
+    {
+      "file": "combat-v2/guard/walk/07.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "bf7f690f607c613169e71e3a1928361828dff97eeee1ef4d7ce09f6c45138b37",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        6,
+        1
+      ],
+      "visiblePixels": 3465
+    },
+    {
+      "file": "combat-v2/guard/walk/08.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "93a70038d79a31f269c0d20eda6a49c0b83590b04d99ed05615147a210522b8c",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        7,
+        1
+      ],
+      "visiblePixels": 3764
+    },
+    {
+      "file": "combat-v2/guard/shoot/01.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "3e18019c0d60c43947c775e6e4bae41125d68f65dfa09b58cb7475ff776aced1",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        0,
+        2
+      ],
+      "visiblePixels": 3684
+    },
+    {
+      "file": "combat-v2/guard/shoot/02.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "86d861dd8ef77cf2cd98d54079346b39c06c74a95517c3f484c9e211c0b79158",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        1,
+        2
+      ],
+      "visiblePixels": 3402
+    },
+    {
+      "file": "combat-v2/guard/shoot/03.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "f24403dc79bff5a33625bd9f666a2ce79d9fc0cccafbe2a99c0834561f690ca8",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        2,
+        2
+      ],
+      "visiblePixels": 3744
+    },
+    {
+      "file": "combat-v2/guard/shoot/04.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "5b0bbc1fc993a592fb6e91a4a0c86f613e642d99977866589b057e09cbc50103",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        3,
+        2
+      ],
+      "visiblePixels": 3708
+    },
+    {
+      "file": "combat-v2/guard/shoot/05.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "e4afd21aa5ec089b9b966efd672d75b409f6620dc37532e3e41b0a2b4f157e5c",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        4,
+        2
+      ],
+      "visiblePixels": 3785
+    },
+    {
+      "file": "combat-v2/guard/shoot/06.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "f6c26c0529ecba2e3c4b82f175c428dd56662b22125acb850008ba343fbe7b97",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        5,
+        2
+      ],
+      "visiblePixels": 3581
+    },
+    {
+      "file": "combat-v2/guard/shoot/07.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "463102f6439f34fb6f72c2f8820d0a48bea2bece200a9592116b3fe6dd140b67",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        6,
+        2
+      ],
+      "visiblePixels": 3699
+    },
+    {
+      "file": "combat-v2/guard/shoot/08.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "f7e13c83462478ec0bc9eab5ea35e863569c7a9fe1f90b5601825e1668dcac8f",
+      "source": "sources/guard-locomotion.png",
+      "cell": [
+        7,
+        2
+      ],
+      "visiblePixels": 3621
+    },
+    {
+      "file": "combat-v2/guard/hurt/01.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "2f654ae20322e3d42d0b7231ee50370e1488b38c7568d1b8ad9d520c35ad57e7",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        0,
+        0
+      ],
+      "visiblePixels": 4067
+    },
+    {
+      "file": "combat-v2/guard/hurt/02.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "4e0c875105351c64d5a942ced85cb77222f67ecd2ab8ebe742143e70dbc7436a",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        1,
+        0
+      ],
+      "visiblePixels": 4198
+    },
+    {
+      "file": "combat-v2/guard/hurt/03.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "a31cb0ad6b5e635d8299283ea31636c22a3ccd8e3de3071e069d72a8378859be",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        2,
+        0
+      ],
+      "visiblePixels": 4280
+    },
+    {
+      "file": "combat-v2/guard/hurt/04.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "97386a069d557b50fcc4cf51c62988ed8e030b60a2c025f9b1afa47e11adf0ff",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        3,
+        0
+      ],
+      "visiblePixels": 3653
+    },
+    {
+      "file": "combat-v2/guard/hurt/05.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "cb831dcf4cd4a49ba2d09e2b28845375f4d571ffdbb21f30e5027ba8f7f60c9e",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        4,
+        0
+      ],
+      "visiblePixels": 3992
+    },
+    {
+      "file": "combat-v2/guard/hurt/06.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "72594cc615486365fabda24edfcde37fb0ee2d31189a8a34e8cd89553e3604a2",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        5,
+        0
+      ],
+      "visiblePixels": 4265
+    },
+    {
+      "file": "combat-v2/guard/hurt/07.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "482e3c0ff28e580516e3d1a19a23a70a38e994319a3b0299f7617a7a1402492e",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        6,
+        0
+      ],
+      "visiblePixels": 4153
+    },
+    {
+      "file": "combat-v2/guard/hurt/08.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "6e32a4452daea8c1bd461dd495b9c297a68b573b901e7d1ef2bcc35086af670a",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        7,
+        0
+      ],
+      "visiblePixels": 4083
+    },
+    {
+      "file": "combat-v2/guard/death/01.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "7e55810efbc9c6c3587184f404f57dc9ef87bdc39cb9ee64087955bf5423c180",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        0,
+        1
+      ],
+      "visiblePixels": 4009
+    },
+    {
+      "file": "combat-v2/guard/death/02.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "0d12e49c4b0f11073f192a847ea7b15db9d6f9ca69dc8f99965680b34b936602",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        1,
+        1
+      ],
+      "visiblePixels": 3711
+    },
+    {
+      "file": "combat-v2/guard/death/03.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "fd26e8b627b0f03b14dfc8c5c0c705b1d19265e354c947fdb0400968455eb977",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        2,
+        1
+      ],
+      "visiblePixels": 3679
+    },
+    {
+      "file": "combat-v2/guard/death/04.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "86878886935a35d6c32338f7b06a668a805d1239de344477391a82911712a55a",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        3,
+        1
+      ],
+      "visiblePixels": 3953
+    },
+    {
+      "file": "combat-v2/guard/death/05.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "832b77df77e342e0b9a82be492aab6a99504e81e76f7aca3f12b6c1f28376822",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        4,
+        1
+      ],
+      "visiblePixels": 3481
+    },
+    {
+      "file": "combat-v2/guard/death/06.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "75f4fb8db2631404bfa5591348f6aa9898c45e7475b921ba18e634609f030c66",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        5,
+        1
+      ],
+      "visiblePixels": 2697
+    },
+    {
+      "file": "combat-v2/guard/death/07.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "c72fe46dc0370b2db50a4ed6bde8f1281d3f4ac2cb8ff9cd48c5420205f1fc4f",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        6,
+        1
+      ],
+      "visiblePixels": 2632
+    },
+    {
+      "file": "combat-v2/guard/death/08.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "2cb107c556016d150010f31cba4e6868197facee722fb05c074dc4139c41784b",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        7,
+        1
+      ],
+      "visiblePixels": 2409
+    },
+    {
+      "file": "combat-v2/guard/melee/01.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "65dae315993e6534eb74a769a7c93f209977142046fd122c7fca7e9aa430a9f0",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        0,
+        2
+      ],
+      "visiblePixels": 4009
+    },
+    {
+      "file": "combat-v2/guard/melee/02.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "3ca5467bbb9495773084b45e41c05a46a2d9f53012dde263a811edc054f2ad78",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        1,
+        2
+      ],
+      "visiblePixels": 3694
+    },
+    {
+      "file": "combat-v2/guard/melee/03.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "19fca52b7dd0220fa9ca7dc8cbfb1b68a6cd12766b4a5ac5f11908d795d433b3",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        2,
+        2
+      ],
+      "visiblePixels": 4196
+    },
+    {
+      "file": "combat-v2/guard/melee/04.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "49cdb1caa45a3f4be13a69d035b5993ad916e0b1355735f1c8b1e8da8b5a2b16",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        3,
+        2
+      ],
+      "visiblePixels": 3878
+    },
+    {
+      "file": "combat-v2/guard/melee/05.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "c703996feca235f97d9797bcd9ada33d3aaa30c18982548696ed31964523c0dc",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        4,
+        2
+      ],
+      "visiblePixels": 4287
+    },
+    {
+      "file": "combat-v2/guard/melee/06.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "46817f4df7f5aa698dd01ce12be06ca3fa60b90d4146bbf10717fa0adba3520c",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        5,
+        2
+      ],
+      "visiblePixels": 4011
+    },
+    {
+      "file": "combat-v2/guard/melee/07.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "2f9713e17d70eeeb5a7841664e2757342401d8d8a75165642592361b599b8176",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        6,
+        2
+      ],
+      "visiblePixels": 3912
+    },
+    {
+      "file": "combat-v2/guard/melee/08.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "5db93f4697dadbe7c5d012e9a9deda7083d150991dccbc83d1a8c3ecb1cdaa08",
+      "source": "sources/guard-combat.png",
+      "cell": [
+        7,
+        2
+      ],
+      "visiblePixels": 3928
+    },
+    {
+      "file": "combat-v2/projectiles/cannon/01.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "e858f167ec5a2cec8bed12884485b68c3adacec6677cd47a5c72f16a850c74cb",
+      "source": "sources/projectiles.png",
+      "cell": [
+        0,
+        0
+      ],
+      "visiblePixels": 1429
+    },
+    {
+      "file": "combat-v2/projectiles/cannon/02.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "c30911d7de6d7a30a98f2e9314fb72bd273bb51498e1468078487e73e4234484",
+      "source": "sources/projectiles.png",
+      "cell": [
+        1,
+        0
+      ],
+      "visiblePixels": 1947
+    },
+    {
+      "file": "combat-v2/projectiles/cannon/03.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "3bb6cd0ab79180262a5860114ec660242be68a81b168a9c0dcb85eefc2777572",
+      "source": "sources/projectiles.png",
+      "cell": [
+        2,
+        0
+      ],
+      "visiblePixels": 2729
+    },
+    {
+      "file": "combat-v2/projectiles/cannon/04.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "15cb2064d02eec447737da455586488d223883c7186b25e3cf67a7baff0ad06a",
+      "source": "sources/projectiles.png",
+      "cell": [
+        3,
+        0
+      ],
+      "visiblePixels": 3164
+    },
+    {
+      "file": "combat-v2/projectiles/cannon/05.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "2cdc3235cd966dc597f041b9733d8ba4cc4d159db9db9ff0d9590aca8e0cb319",
+      "source": "sources/projectiles.png",
+      "cell": [
+        4,
+        0
+      ],
+      "visiblePixels": 3286
+    },
+    {
+      "file": "combat-v2/projectiles/cannon/06.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "1ea657a5ae5aa24635ee463d25c68088872b62dfe27b51c881e3d7350654d3f4",
+      "source": "sources/projectiles.png",
+      "cell": [
+        5,
+        0
+      ],
+      "visiblePixels": 2246
+    },
+    {
+      "file": "combat-v2/projectiles/cannon/07.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "53bdc6cf18263d195bec3682bd121f0f4d4bf3829e2d2dc5b4bfb8ab9366243f",
+      "source": "sources/projectiles.png",
+      "cell": [
+        6,
+        0
+      ],
+      "visiblePixels": 1607
+    },
+    {
+      "file": "combat-v2/projectiles/cannon/08.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "a39564cbc48fa8f8b0bafa651ad403d0b66ff9af2c3ec95cffd16de658042275",
+      "source": "sources/projectiles.png",
+      "cell": [
+        7,
+        0
+      ],
+      "visiblePixels": 1108
+    },
+    {
+      "file": "combat-v2/projectiles/plasma/01.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "129ba2f8048c33d53a85273fe3a7b948749199b2fbb85ab7c41731ce0259721a",
+      "source": "sources/projectiles.png",
+      "cell": [
+        0,
+        1
+      ],
+      "visiblePixels": 1289
+    },
+    {
+      "file": "combat-v2/projectiles/plasma/02.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "a81f60a9e4e1fd7b15bf2e69d156f7b0b1dfaa4eafca155d3d01e2a28b70f020",
+      "source": "sources/projectiles.png",
+      "cell": [
+        1,
+        1
+      ],
+      "visiblePixels": 2123
+    },
+    {
+      "file": "combat-v2/projectiles/plasma/03.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "6aed69bf9282d76de3759056228efd14410ea128696c7662072d6d7172d12fad",
+      "source": "sources/projectiles.png",
+      "cell": [
+        2,
+        1
+      ],
+      "visiblePixels": 2927
+    },
+    {
+      "file": "combat-v2/projectiles/plasma/04.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "323c3d19f6398e2166c25b657b6cf45ee8b24b59c2c277a324ec2e36768b3985",
+      "source": "sources/projectiles.png",
+      "cell": [
+        3,
+        1
+      ],
+      "visiblePixels": 3710
+    },
+    {
+      "file": "combat-v2/projectiles/plasma/05.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "d2ebca9932ad56d301a148ee41c6acfea65039f98c072d4ae3a29a6b2d7ea62d",
+      "source": "sources/projectiles.png",
+      "cell": [
+        4,
+        1
+      ],
+      "visiblePixels": 3038
+    },
+    {
+      "file": "combat-v2/projectiles/plasma/06.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "f868bd45a1bdfbf315ea8f5dbc924cc4a0c6c045a19d7714d4dbd1695bcd27e5",
+      "source": "sources/projectiles.png",
+      "cell": [
+        5,
+        1
+      ],
+      "visiblePixels": 2047
+    },
+    {
+      "file": "combat-v2/projectiles/plasma/07.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "7b94e55c7767eac8f7aec1faed19ea7af855e4da448ebb6b7cb35d44b31ea335",
+      "source": "sources/projectiles.png",
+      "cell": [
+        6,
+        1
+      ],
+      "visiblePixels": 1448
+    },
+    {
+      "file": "combat-v2/projectiles/plasma/08.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "f704b1f3207d3b034135b5da0f8ef4b6d1234181fac5ced7d260c8a8c73a75cf",
+      "source": "sources/projectiles.png",
+      "cell": [
+        7,
+        1
+      ],
+      "visiblePixels": 1027
+    },
+    {
+      "file": "combat-v2/projectiles/missile/01.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "3c4e000088342b800b773baa507eb91a4f09bda1cce804ddb7c490d4f3f85310",
+      "source": "sources/projectiles.png",
+      "cell": [
+        0,
+        2
+      ],
+      "visiblePixels": 2028
+    },
+    {
+      "file": "combat-v2/projectiles/missile/02.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "09edf8efac10f7a668cccd98f9bc5e9c8ec36e511651a6469c90222e6a5ed97b",
+      "source": "sources/projectiles.png",
+      "cell": [
+        1,
+        2
+      ],
+      "visiblePixels": 2280
+    },
+    {
+      "file": "combat-v2/projectiles/missile/03.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "066141d769808f105eb024e80963b15621b284931c5fc96fcc29ed593e0c2de3",
+      "source": "sources/projectiles.png",
+      "cell": [
+        2,
+        2
+      ],
+      "visiblePixels": 2860
+    },
+    {
+      "file": "combat-v2/projectiles/missile/04.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "52fe87ba009179ba7b89b5ba3dadb16b20595d0183e8f17f082ba263dcc08e04",
+      "source": "sources/projectiles.png",
+      "cell": [
+        3,
+        2
+      ],
+      "visiblePixels": 3670
+    },
+    {
+      "file": "combat-v2/projectiles/missile/05.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "3772422678a898d8abdd4015dd98b32ebf65e11ff21119f9935fb6a80debe3ba",
+      "source": "sources/projectiles.png",
+      "cell": [
+        4,
+        2
+      ],
+      "visiblePixels": 3302
+    },
+    {
+      "file": "combat-v2/projectiles/missile/06.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "23ce072618458ab87d70b5e2514c6077141210324663524abe1778887f65c7c1",
+      "source": "sources/projectiles.png",
+      "cell": [
+        5,
+        2
+      ],
+      "visiblePixels": 2467
+    },
+    {
+      "file": "combat-v2/projectiles/missile/07.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "45799cce96aa0d183159fb9575850483034ff4fdb348aa148d26eaa2e8843062",
+      "source": "sources/projectiles.png",
+      "cell": [
+        6,
+        2
+      ],
+      "visiblePixels": 1884
+    },
+    {
+      "file": "combat-v2/projectiles/missile/08.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "d6b1397f0181dc2bc8b916eceb0c31a9722c5afb4f2840ff0e11f6d3f1163c81",
+      "source": "sources/projectiles.png",
+      "cell": [
+        7,
+        2
+      ],
+      "visiblePixels": 1474
+    },
+    {
+      "file": "combat-v2/projectiles/wave/01.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "3f315e0d07ea078db8ff94c5082e4128354f85493233f615e403bade0c0fbdb1",
+      "source": "sources/projectiles.png",
+      "cell": [
+        0,
+        3
+      ],
+      "visiblePixels": 1784
+    },
+    {
+      "file": "combat-v2/projectiles/wave/02.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "29096b7d31d2e2da0e48aa0c74dd942ed55915fbb4d488e7fbe8dd08b8278230",
+      "source": "sources/projectiles.png",
+      "cell": [
+        1,
+        3
+      ],
+      "visiblePixels": 2978
+    },
+    {
+      "file": "combat-v2/projectiles/wave/03.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "9c44c7ca130bc407434b164ad02abdb90198647b93f2b8b06947a2277a24ec70",
+      "source": "sources/projectiles.png",
+      "cell": [
+        2,
+        3
+      ],
+      "visiblePixels": 4170
+    },
+    {
+      "file": "combat-v2/projectiles/wave/04.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "df3e9d7106236c97a46359f738fb6b308e64e3f7fcb4655a194440d630f33f94",
+      "source": "sources/projectiles.png",
+      "cell": [
+        3,
+        3
+      ],
+      "visiblePixels": 5682
+    },
+    {
+      "file": "combat-v2/projectiles/wave/05.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "88f6f63fab8ca38db5e48160285a9c03240dc896610d82558f15b752798d5f3f",
+      "source": "sources/projectiles.png",
+      "cell": [
+        4,
+        3
+      ],
+      "visiblePixels": 4848
+    },
+    {
+      "file": "combat-v2/projectiles/wave/06.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "722f5f9b1acd5c18b5fcccb20d0fc8dde37238b3e42ed373279d51cdf30ee869",
+      "source": "sources/projectiles.png",
+      "cell": [
+        5,
+        3
+      ],
+      "visiblePixels": 4027
+    },
+    {
+      "file": "combat-v2/projectiles/wave/07.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "f04c720a034043e8f5520c60fa73bfe3fdfaa5a68d540883e796e3c9da69773d",
+      "source": "sources/projectiles.png",
+      "cell": [
+        6,
+        3
+      ],
+      "visiblePixels": 3054
+    },
+    {
+      "file": "combat-v2/projectiles/wave/08.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "97aabf05cb84d00530b07224160a52661906193f08a73bc61d88f08d0715037b",
+      "source": "sources/projectiles.png",
+      "cell": [
+        7,
+        3
+      ],
+      "visiblePixels": 1636
+    },
+    {
+      "file": "combat-v2/arena.png",
+      "source": "combat-v2/sources/arena.png"
     }
   ],
   "animations": {
@@ -2818,6 +6662,16 @@
       ],
       "fps": 10,
       "loop": true
+    },
+    "combatV2": {
+      "manifest": "combat-v2/manifest.json",
+      "actors": [
+        "mecha",
+        "guard",
+        "boss7",
+        "boss8"
+      ],
+      "framesPerAction": 8
     }
   },
   "player": {

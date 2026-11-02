@@ -28,11 +28,11 @@ if(!c||runtimeScene.getTimeManager().isFirstFrame()){
  c=runtimeScene.__campaign={level,definition:LEVELS[level],tasks:[0,1,2].map(taskDefinition),completed:[false,false,false],boards:{},editorHistories:{},activeTerminalId:2,solved:false,mecha:level>=7,boarded:level>=7,eWas:false,bossPhase:0,pendingDamage:0};
  const globals=runtimeScene.getGame().getVariables();globals.get('CRResumeLevel').setNumber(level);
  for(const term of O('MissionTerminal'))term.setAnimationName('Off');
- if(level>=7){c.boss={hp:level===7?16:36,max:level===7?16:36,shield:true,attackAt:2,flashUntil:0,dead:false};}
+ if(level>=7){c.boss={hp:level===7?24:60,max:level===7?24:60,shield:true,attackAt:2,flashUntil:0,dead:false};}
 }
 const game=runtimeScene.__islandGame,ui=runtimeScene.__animalUI;
 const touchInput=runtimeScene.getGame().__crTouch,requestedInteract=!!touchInput?.interactRequested;
-const e=input.isKeyPressed(69)||!!touchInput?.held.interact,edge=e&&!c.eWas||requestedInteract;c.eWas=e;if(touchInput)touchInput.interactRequested=false;
+const e=input.isKeyPressed(69)||!!touchInput?.held.interact,edge=e&&!c.eWas||requestedInteract;c.eWas=e;c.interactEdge=edge;if(touchInput)touchInput.interactRequested=false;
 const p=first('Player');
 const terminal=p?O('MissionTerminal').map(o=>({o,d:Math.hypot(p.getX()+p.getWidth()/2-o.getX()-o.getWidth()/2,p.getY()+p.getHeight()*.875-o.getY()-o.getHeight())})).sort((a,b)=>a.d-b.d)[0]?.o:null;
 const near=terminal&&p&&Math.abs(p.getX()+p.getWidth()/2-terminal.getX()-terminal.getWidth()/2)<150&&Math.abs(p.getY()+p.getHeight()*.875-terminal.getY()-terminal.getHeight())<140;
@@ -211,19 +211,11 @@ function openMission(requestedId){
 }
 c.openMission=openMission;
 // Repairs change routes, while the always-reachable stairs prevent a failed quiz from trapping the player.
-for(const gate of O('RouteGate')){gate.hide(c.completed[1]);gate.activateBehavior('Platform',!c.completed[1]);}
+for(const gate of O('RouteGate')){gate.hide(c.completed[level===8?0:1]);gate.activateBehavior('Platform',!c.completed[level===8?0:1]);}
 for(const lift of O('RepairLift')){if(lift.__homeY===undefined)lift.__homeY=lift.getY();if(c.completed[0]&&lift.__powerAt===undefined)lift.__powerAt=game?.time??0;const travel=lift.getVariables().get('Travel').getAsNumber()||-300;lift.setY(lift.__homeY+(c.completed[0]?(1-Math.cos(((game?.time??0)-lift.__powerAt)*.7))*travel/2:0));lift.setColor(c.completed[0]?'110;245;255':'120;145;160');}
 for(const label of O('RoomLabel')){const id=label.getVariables().get('RoomId').getAsNumber();label.setString((c.completed[id]?'[ONLINE] ':'')+SYSTEMS[level][id]);}
 if(game&&ui&&!ui.modal&&game.state==='playing'){
  if(near){const id=terminal.getVariables().get('TerminalId').getAsNumber();if(edge)openMission(id);else if(!c.completed[id]){game.message=c.tasks[id].title+' [E] • Needs '+c.tasks[id].requiredParts+' parts';game.messageUntil=game.time+.2;}}
  if(level===6&&c.solved&&!c.boarded){const mech=first('HangarMecha');if(mech&&Math.abs(p.getX()-mech.getX())<190&&Math.abs(p.getY()+112-mech.getY()-224)<150&&edge){c.boarded=true;c.mecha=true;game.health=6;game.maxHealth=6;game.ammo=40;game.shield=3;p.setY(p.getY()-56);p.setWidth(192);p.setHeight(192);mech.hide();game.message='MECHA ONLINE • J/X cannon • Hold K shield';game.messageUntil=game.time+8;}}
- if(c.boss&&!c.boss.dead){const boss=c.boss,b=first('CoreBoss'),dt=Math.min(runtimeScene.getTimeManager().getElapsedTime()/1000,.08);
-  if(boss.shield){boss.windupUntil=0;boss.actionUntil=0;}
-  if(!boss.shield&&game.time>=boss.attackAt&&!boss.windupUntil){boss.windupUntil=game.time+.8;boss.slam=!!boss.slamNext;boss.slamNext=!boss.slamNext;}
-  if(boss.windupUntil&&game.time>=boss.windupUntil){boss.windupUntil=0;boss.actionUntil=game.time+.8;boss.attackAt=game.time+2.4;if(boss.slam){if(b&&Math.abs(p.getX()-b.getX())<350&&Math.abs(p.getY()+p.getHeight()*.875-b.getY()-280)<140)c.pendingDamage+=2;}else if(b){const bolt=runtimeScene.createObject('EnemyBolt');bolt.setPosition(b.getX(),b.getY()+200);bolt.setWidth(38);bolt.setHeight(28);bolt.setZOrder(13);bolt.__vx=-450;bolt.__ttl=10;}}
-  const action=boss.shield?'Shield':game.time<boss.flashUntil?'Hurt':boss.windupUntil?'Windup':game.time<boss.actionUntil?(boss.slam?'Slam':'Shoot'):level===8&&c.bossPhase===2?'Exposed':'Idle';
-  if(b){if(b.getAnimationName()!==action)b.setAnimationName(action);b.setWidth(320);b.setHeight(320);if(gdjs.RuntimeObject.collisionTest(p,b,false))c.pendingDamage++;}
-  for(const bolt of O('EnemyBolt')){bolt.setX(bolt.getX()+bolt.__vx*dt);bolt.__ttl-=dt;if(gdjs.RuntimeObject.collisionTest(p,bolt,false)){c.pendingDamage++;bolt.deleteFromScene(runtimeScene);}else if(bolt.__ttl<=0)bolt.deleteFromScene(runtimeScene);}
-  if(boss.hp<=0){boss.dead=true;game.score+=600;if(b)b.setAnimationName('Defeated');game.message='GUARDIAN DEFEATED • Reach the airlock';game.messageUntil=game.time+10;}
- }
+
 }

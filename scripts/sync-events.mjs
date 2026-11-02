@@ -9,6 +9,7 @@ if(!['pull','push'].includes(mode)||flags.some(f=>f!=='--dry-run')){
 const normalize=text=>text.replace(/\r\n/g,'\n').trimEnd()+'\n';
 const project=JSON.parse(fs.readFileSync(projectFile,'utf8'));
 const mappings=[
+  {file:'combat.js',matches:code=>code.includes('const combatCampaign=')&&code.includes('function bolt('),expected:8},
   {file:'localization.js',matches:code=>code.includes('const localeOwner=')&&code.includes('function tr('),expected:11},
   {file:'mobile-browser.js',matches:code=>code.includes('const browserOwner=')&&code.includes('Browser-owned controls'),expected:11},
   {file:'journey.js',matches:code=>code.includes('const journeyGame=')&&code.includes('const introductions='),expected:11},
