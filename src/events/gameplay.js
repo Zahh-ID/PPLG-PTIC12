@@ -192,6 +192,7 @@ setText('HUDMessage',game.time<game.messageUntil?game.message:'');
 if(game.state==='won'||game.state==='gameover'){
  const global=runtimeScene.getGame().getVariables();
  for(const [name,value]of Object.entries({AHLastScore:game.score,AHLastCoins:game.coins,AHLastTotalCoins:game.totalCoins,AHLastLives:game.lives,AHLastAmmo:game.ammo}))global.get(name).setNumber(value);
+ if(game.state==='won'&&runtimeScene.getGame().__crJourney){global.get('CRScore').setNumber(game.score);return;}
  runtimeScene.getTimeManager().setTimeScale(1);
  let destination='game over';
  if(game.state==='won'){

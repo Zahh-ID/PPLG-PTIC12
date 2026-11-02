@@ -33,3 +33,9 @@ Level 1 uses `background/station.png`. Levels 2–8 use `background/locations/2.
 ## Mobile controls
 
 Three transparent generated buttons are in `mobile/`: jump, fire and interact. [Prompts](mobile/PROMPTS.md) are retained. Touch controls reuse `ui/back.png`, `next.png`, `shield.png`, `pause.png` and `resume.png` for the other actions. Press feedback is applied at runtime. All controls have accessible names without adding text over the artwork.
+
+The generated `mobile/fullscreen.png` and `exit-fullscreen.png` buttons add expand/contract actions for mobile browsers. Fullscreen captures the entire document so touch controls and dialogs remain inside it.
+
+## Language and level navigation
+
+`navigation/language.png`, `level-list.png` and `level-complete.png` supply the language menu, unrestricted eight-level selector and completion badge. [Generation prompts](navigation/PROMPTS.md) are retained. Dialog borders and navigation arrows reuse the existing pack; bilingual labels and educational content remain live text rather than being baked into images.

@@ -8,10 +8,13 @@
     "node": ">=24"
   },
   "scripts": {
-    "test": "npm run check && npm run test:circuits && npm run check:actors && npm run check:combat && npm run check:maps && npm run check:workflows",
+    "test": "npm run check && npm run test:circuits && npm run test:localization && npm run check:actors && npm run check:combat && npm run check:maps && npm run check:workflows",
     "build:web": "node scripts/build-web.mjs",
     "test:browser": "node tests/campaign.browser.mjs",
     "test:mobile": "node tests/mobile.browser.mjs",
+    "test:journey": "node tests/journey.browser.mjs",
+    "test:mobile-browser": "node tests/mobile-browser.browser.mjs",
+    "test:localization": "node scripts/test-localization.mjs",
     "check:workflows": "node scripts/check-workflows.mjs",
     "check": "node scripts/check-project.mjs",
     "test:circuits": "node scripts/test-circuit-model.mjs",

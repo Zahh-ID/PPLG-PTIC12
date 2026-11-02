@@ -6,6 +6,20 @@ A pixel-art logic-gate adventure built in **GDevelop 5**. Explore eight space-st
 
 The project filename remains **Animal Hunter.json** for compatibility with existing repository tools. Its game title is **Circuit Rescue**. See the [campaign guide](docs/circuit-rescue-campaign.md) for sector objectives, circuit ports, controls, combat and implementation limits.
 
+## Language and level navigation
+
+New players start in **Bahasa Indonesia**. The speech-bubble/globe icon on the opening/result screens and pause menu switches between Indonesian and English; the selected language is saved in the browser. Standard gate symbols (AND, OR, NOT, XOR, NAND and NOR), the game title, developer names and NIMs remain unchanged. Menus, HUD messages, rules, hints and challenge feedback use the selected language.
+
+The route icon opens all **eight levels**, with no unlock requirement. Selecting one starts a fresh run at that level; levels 7–8 start with the mecha. Every entry shows a paused introduction with the gate concept, binary-signal explanation, worked example and mission. Start Level begins gameplay.
+
+Reaching a powered exit opens **Level Complete** instead of advancing automatically. Choose **Next Level**, **Level List** or **Main Menu**; the final level offers **View Ending**. Returning from the level list restores the completion dialog. Main-menu Play continues with the next level after a completion. Completion badges are saved locally, but the active run, inventory, health and score are still session-only.
+
+The new navigation icons and completion badge use generated artwork in [navigation/](assets/circuit-rescue-v1/navigation/PROMPTS.md). Run `npm run test:localization` and `npm run test:journey` for language and navigation checks; the browser test requires an HTML5 export first.
+
+On mobile, the generated expand/contract control toggles fullscreen for the entire app, including its HTML dialogs and touch controls. Introductions and challenges include their own fullscreen control. A supported browser must receive a user tap; rejected or unsupported requests show a localized explanation and leave the game usable. Landscape orientation is requested when supported. Browser/system exit controls remain available.
+
+The mobile game surface blocks page scrolling/overscroll, pinch/double-tap zoom, long-press menus, selection and native image dragging. Single-finger dialog scrolling and editable inputs remain usable; desktop browser defaults are untouched. Run `npm run test:mobile-browser` for fullscreen and gesture-policy checks.
+
 ## Open and play
 
 1. Clone or download this repository, including its `assets/` directory.
@@ -51,7 +65,7 @@ Phones and touch tablets automatically show generated movement, jump, fire, inte
 
 Maps have individual dimensions from 2000–4000 units wide and 1400–2400 units tall. The camera follows both axes; background and HUD remain fixed. Native one-way platforms support climbing and return routes. See [location layouts](docs/location-layouts.json) for dimensions, room positions and route measurements. The giant robot pack has **18 actions with eight frames each (144 frames)**. Mecha frames are 256×256 and boss frames 512×512; original detailed sheets are retained. Normal robot frames remain 128×128. The small robot has 64 recreated source frames, including its own eight-frame Land action; live Idle uses the stable ready pose.
 
-Play continues the current sector during the running session. The opening replay icon begins a new campaign; gameplay replay restarts the current sector. Progress resets when closing the game. Audio, persistent saves and a full crafting inventory are not implemented yet.
+Play continues the current sector during the running session, or the next sector after a completion. The opening replay icon begins a new campaign; gameplay replay restarts the current sector. Active-run progress resets when closing the game; language and completion badges remain in browser storage. Audio, persistent run saves and a full crafting inventory are not implemented yet.
 
 ## Repository layout
 
@@ -108,7 +122,7 @@ Local backups, autosaves, prepared-project copies, old runtime reports, contact-
 ### Editing the JavaScript source
 
 1. Close the project in GDevelop to prevent an older open editor state from overwriting the update.
-2. Edit `src/events/campaign.js`, `src/events/gameplay.js` or `src/events/ui.js`.
+2. Edit `src/events/campaign.js`, `src/events/gameplay.js`, `src/events/ui.js`, `src/events/localization.js` or `src/events/journey.js`.
 3. Review the planned synchronization and apply it:
 
    ```sh
@@ -119,7 +133,7 @@ Local backups, autosaves, prepared-project copies, old runtime reports, contact-
 
 4. Reopen `Animal Hunter.json` and preview the game.
 
-The push command updates matching embedded events and creates an ignored recovery copy in `.local/backups/event-sync/`. UI is shared across all eleven scenes; gameplay and campaign sources are shared across eight sectors. Pulling stops if shared copies differ. These commands also work as `node scripts/sync-events.mjs pull` / `push` and `node scripts/check-project.mjs`. Run `npm run test:circuits` to verify all lesson functions, guardian phase targets and invalid wiring.
+The push command updates matching embedded events and creates an ignored recovery copy in `.local/backups/event-sync/`. UI, localization and journey sources are shared across all eleven scenes; gameplay and campaign sources are shared across eight sectors. Localization initializes first and journey renders/translates last. Pulling stops if shared copies differ. These commands also work as `node scripts/sync-events.mjs pull` / `push` and `node scripts/check-project.mjs`. Run `npm run test:circuits` to verify all lesson functions, guardian phase targets and invalid wiring.
 
 The main project remains the source of truth for scene layouts, object definitions, behaviors, and event structure. Source files and embedded JavaScript are synchronized explicitly; there is no background auto-sync.
 

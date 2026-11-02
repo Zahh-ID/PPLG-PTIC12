@@ -9,6 +9,9 @@ if(!['pull','push'].includes(mode)||flags.some(f=>f!=='--dry-run')){
 const normalize=text=>text.replace(/\r\n/g,'\n').trimEnd()+'\n';
 const project=JSON.parse(fs.readFileSync(projectFile,'utf8'));
 const mappings=[
+  {file:'localization.js',matches:code=>code.includes('const localeOwner=')&&code.includes('function tr('),expected:11},
+  {file:'mobile-browser.js',matches:code=>code.includes('const browserOwner=')&&code.includes('Browser-owned controls'),expected:11},
+  {file:'journey.js',matches:code=>code.includes('const journeyGame=')&&code.includes('const introductions='),expected:11},
   {file:'gameplay.js',matches:code=>code.includes('__islandGame')&&code.includes('function damage('),expected:8},
   {file:'ui.js',matches:code=>code.includes('__animalUI')&&code.includes('creditsReady'),expected:11},
   {file:'campaign.js',matches:code=>code.includes('const LEVELS=')&&code.includes('function openMission('),expected:8}
