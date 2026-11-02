@@ -11,6 +11,8 @@ npm ci
 npm test
 npm run build:web
 npx puppeteer browsers install chrome
+npm run test:mobile-browser
+npm run test:journey
 npm run test:browser
 npm run test:mobile
 ```
@@ -20,6 +22,10 @@ npm run test:mobile
 `build:web` exports `Animal Hunter.json` into ignored `dist/`, adds `.nojekyll`, and never uploads anything. It replaces only the fixed `dist/` output directory. The HTML5 exporter and its GDevelop core are pinned in `package-lock.json`; update them together and rerun the browser checks when changing versions. GDevelop itself is not required for this CLI export.
 
 `test:browser` serves the export locally under `/circuit-rescue/` to check relative resource paths used by project Pages sites. It starts from the opening menu and exercises all 24 challenge dialogs, blank-answer rejection, token drag/drop, faulty-circuit repair, NAND-only construction, individual terminal progress, barriers, native platform jumping, a moving lift, mecha boarding, guardian phases and the winner scene. It fails for JavaScript exceptions or missing local resources. Screenshots/results go to ignored `.local/reports/`.
+
+`test:journey` checks the Indonesian default, English persistence after reload, translated native text and challenge feedback, all eight introductions, direct selection of any level, completion/back/menu/next routing, the final ending and portrait level-list layout. Circuit regression selects English explicitly so feedback assertions remain stable; the journey suite tests the actual default language. Both GitHub workflows run journey, mobile/device and campaign browser tests before publishing.
+
+`test:mobile-browser` checks a real user-activated Fullscreen API request and exit, localized rejection/unsupported fallbacks, suppressed mobile browser gestures, preserved dialog scrolling, fullscreen inside dialogs, and untouched desktop behavior. The fullscreen target is the document element, so HTML UI stays visible. [Fullscreen requires user activation](https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullscreen); [touch-action rules](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/touch-action) distinguish custom game gestures from scrollable dialogs. Browser and OS support still determine fullscreen/orientation availability; browser/system exit controls are not disabled.
 
 The browser test repositions the player, grants temporary invulnerability and shortens guardian health to keep regression checks fast. It checks real UI interactions, physics samples and campaign progression, rather than a complete manual traversal or combat balance. `test:mobile` adds fourteen touch/device checks: multi-finger movement/fire/jump, cancellation, slide-away release, pause/continue, interaction/dialog suppression, portrait fit, mecha shield, focus loss, hidden controls on desktop/narrow desktop/touch laptops, and large-tablet landscape detection. Physical-device/browser testing and audio remain outside this coverage. GDevelop's external analytics requests are not treated as missing local assets.
 

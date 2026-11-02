@@ -2,6 +2,14 @@
 
 The game is now an eight-sector pixel-art station adventure. Open **Animal Hunter.json** (the filename is retained for existing tools); its display title is Circuit Rescue. Preview from `opening` or preview any sector directly in GDevelop.
 
+## Bilingual introductions and completion flow
+
+The default language is Indonesian. Choose English or Bahasa Indonesia through the language icon on opening/result screens, the pause menu, or an introduction. The browser remembers this preference. `localization.js` contains an explicit English-to-Indonesian catalog and dynamic-message rules. Native text and DOM challenge labels are translated without changing circuit values, object names, gate symbols, developer names or NIMs. New text should be added to this catalog. Locale initialization is the first event in every scene; `journey.js` runs last so translated text is ready before rendering.
+
+Every sector starts with a paused introduction explaining its gate rule, what binary 0/1 mean, a worked example and the mission. NOT, AND, OR, XOR, NAND/NOR, NAND→NOT composition, NOR safety logic and the three final shield phases have distinct content.
+
+All eight sectors can be selected from the route/level-list icon; there are no locks. Choosing a sector starts a fresh run at that sector. Finishing one records a local completion badge and opens a dialog with Next Level, Level List and Main Menu. The last sector uses View Ending. Browsing the list and choosing Back returns to the completion dialog. Main-menu Play resumes at the next sector after a completion. Run state is not persisted; language and completion badges are separate browser preferences. Blocked browser storage falls back to in-memory state.
+
 ## Sector progression
 
 | Scene | Sector | Repair lesson | Unlock |
@@ -84,7 +92,7 @@ The [combat asset guide](../assets/circuit-rescue-v1/combat/README.md) documents
 
 ## Menus, replay and credits
 
-Play continues the current sector in the running session. The separate replay icon on the opening menu begins a new campaign. R or replay during gameplay restarts the current sector, including its components, puzzle and combat. Home returns to opening. Progress currently lives in GDevelop global variables and resets after closing the game; no persistent save is implemented.
+Play continues the current sector in the running session, or the next sector after a completion. The separate replay icon on the opening menu begins a new campaign. R or replay during gameplay restarts the current sector, including its components, puzzle and combat. Home returns to opening. Active-run progress lives in GDevelop global variables and resets after closing the game. Browser storage retains language and completion badges; it does not save the run.
 
 The supplied developer portraits, names, roles and NIMs are unchanged. Collect the optional keycard and open the chest to see its reveal followed by credits. Credits are also available through menu/pause/result icons. Do not alter the supplied NIM lengths.
 
@@ -93,6 +101,8 @@ The supplied developer portraits, names, roles and NIMs are unchanged. Collect t
 - `src/events/campaign.js`: sector definitions, terminal/boarding/boss controller, circuit model and workbench dialog; embedded in all eight sectors.
 - `src/events/gameplay.js`: movement presentation, patrols, collection, health/lives, shooting, boss hit handling and sector transitions; embedded in all eight sectors.
 - `src/events/ui.js`: menus, HUD, help, pause, results and credits; embedded in all eleven scenes.
+- `src/events/localization.js`: Indonesian default, persistent language preference, catalog and text translation; first event in all eleven scenes.
+- `src/events/journey.js`: concept introductions, unrestricted level selection and completion navigation; last event in all eleven scenes.
 
 Run `npm run events:push -- --dry-run`, `npm run check`, and `npm run test:circuits`. Close GDevelop before pushing source edits, then reopen the project. The synchronization tool requires all shared copies to agree on pull. Original pre-campaign project backups are ignored under `.local/backups/campaign/`.
 

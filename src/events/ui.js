@@ -45,7 +45,7 @@ if(touch){
  touch.enabled=touchCapable&&(mobileDevice||coarse&&!hover);touch.root.dataset.device=touch.enabled?'mobile':'desktop';touch.root.dataset.orientation=window.matchMedia('(orientation: portrait)').matches?'portrait':'landscape';touch.active=touch.enabled&&!ui.modal&&!ui.transitioning&&(!game||game.state==='playing');if(!touch.active)touch.clear();touch.root.hidden=!touch.enabled||ui.transitioning||!!ui.modal&&ui.modal!=='pause';touch.root.querySelector('.cr-move').hidden=!touch.active;touch.root.querySelector('.cr-actions').hidden=!touch.active;touch.buttons.get('shield').hidden=!runtimeScene.__campaign?.mecha;const pause=touch.buttons.get('pause');pause.querySelector('img').src=owner.getGameData().resources.resources.find(r=>r.name===(ui.modal==='pause'?'CR_ui_resume_png':'CR_ui_pause_png'))?.file??'';pause.setAttribute('aria-label',ui.modal==='pause'?'Continue adventure':'Pause adventure');
  if(touch.active){const move=first('Player')?.getBehavior('Platformer');if(move){if(touch.held.left&&!touch.held.right)move.simulateLeftKey();if(touch.held.right&&!touch.held.left)move.simulateRightKey();if(touch.held.jump||touch.jumpRequested)move.simulateJumpKey();}touch.jumpRequested=false;}
 }
-if(ui.modal==='mission')return;
+if(ui.modal==='mission'||ui.modal==='journey')return;
 const isResult=sceneName==='winner'||sceneName==='game over';
 const keyEdge=code=>{const now=input.isKeyPressed(code),edge=now&&!ui.keys[code];ui.keys[code]=now;return edge;};
 const enter=keyEdge(13),escape=keyEdge(27),helpKey=keyEdge(72),pauseKey=keyEdge(80)||!!touch?.pauseRequested,replayKey=keyEdge(82);if(touch)touch.pauseRequested=false;
