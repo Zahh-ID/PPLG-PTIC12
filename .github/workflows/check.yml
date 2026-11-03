@@ -33,6 +33,8 @@ jobs:
         timeout-minutes: 5
       - run: npm run test:mobile
         timeout-minutes: 5
+      - run: npm run test:combat-browser
+        timeout-minutes: 7
       - run: npm run test:browser
         timeout-minutes: 12
       - name: Save test reports

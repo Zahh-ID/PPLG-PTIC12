@@ -40,7 +40,7 @@ function effect(name,x,y,w=48,h=48,life=.15){
   const o=runtimeScene.createObject(name);if(!o)return;
   o.setPosition(x,y);o.setWidth(w);o.setHeight(h);o.setZOrder(20);o.__ttl=life;
 }
-function killCrab(crab){effect('Impact',crab.getX(),crab.getY(),80,80,.18);crab.deleteFromScene(runtimeScene);game.score+=50;}
+function killCrab(crab){if(crab.__patrol.deadAt!==undefined)return;effect('Impact',crab.getX(),crab.getY(),80,80,.18);crab.__patrol.deadAt=game.time;crab.activateBehavior('Platformer',false);animate(crab,'Death');game.score+=50;}
 function die(){
   if(game.state!=='playing')return;
   game.state='dying';game.lives--;game.deathAt=game.time;
@@ -76,37 +76,23 @@ if(game.state==='playing'){
     const bullet=runtimeScene.createObject('Bullet');
     const scale=campaign?.mecha?1.5:1;
     const handX=player.getX()+(game.facing>0?92:22)*scale;
-    bullet.setPosition(handX,player.getY()+62*scale);bullet.setWidth(campaign?.mecha?50:30);bullet.setHeight(campaign?.mecha?22:12);
+    bullet.setPosition(handX,player.getY()+62*scale);bullet.setWidth(campaign?.mecha?80:30);bullet.setHeight(campaign?.mecha?48:12);if(campaign?.mecha)bullet.setAnimationName('Cannon');
     bullet.setZOrder(12);bullet.flipX(game.facing<0);bullet.__velocity=game.facing*780;bullet.__ttl=1.5;
     effect('Muzzle',handX-10,player.getY()+46,40,36,.09);
   }
-  // Crabs use the same Platformer engine for gravity and ground contact.
-  for(const crab of objects('Crab')){
-    const patrol=crab.__patrol;if(!patrol)continue;
-    if(crab.getX()<=patrol.left)patrol.direction=1;
-    if(crab.getX()>=patrol.right)patrol.direction=-1;
-    const behavior=crab.getBehavior('Platformer');
-    if(patrol.direction<0)behavior.simulateLeftKey();else behavior.simulateRightKey();
-    crab.flipX(patrol.direction<0);
-    if(hit(player,crab)){
-      const feet=player.getY()+player.getHeight()*.875;
-      const droneTop=crab.getY()+crab.getHeight()*26/128;
-      if(move.isFalling()&&feet<droneTop+22){killCrab(crab);move.setCurrentFallSpeed(-380);}
-      else damage(1);
-    }
-  }
+  // Guards and hostile projectiles run in the combat event after these player decisions.
   for(const bullet of objects('Bullet')){
     bullet.setX(bullet.getX()+bullet.__velocity*dt);bullet.__ttl-=dt;
     let destroyed=bullet.__ttl<=0;
-    for(const crab of objects('Crab'))if(!destroyed&&hit(bullet,crab)){
-      crab.__patrol.hp--;effect('Impact',bullet.getX(),bullet.getY()-12,36,36,.12);
+    for(const crab of objects('Crab'))if(!destroyed&&crab.__patrol.deadAt===undefined&&hit(bullet,crab)){
+      crab.__patrol.hp--;crab.__patrol.hurtUntil=game.time+.7;effect('Impact',bullet.getX(),bullet.getY()-12,36,36,.12);
       if(crab.__patrol.hp<=0)killCrab(crab);destroyed=true;
     }
     const boss=objects('CoreBoss')[0];
     if(!destroyed&&boss&&campaign?.boss&&!campaign.boss.dead&&hit(bullet,boss)){
       destroyed=true;
-      if(!campaign.boss.shield){campaign.boss.hp--;campaign.boss.flashUntil=game.time+.2;
-        if(campaign.level===8&&campaign.boss.hp>0&&campaign.boss.hp<=(campaign.bossPhase===0?24:campaign.bossPhase===1?12:-1)){
+      if(!campaign.boss.shield){campaign.boss.hp=Math.max(0,campaign.boss.hp-(['recover','stagger'].includes(campaign.boss.state)?2:1));campaign.boss.flashUntil=game.time+.2;
+        if(campaign.level===8&&campaign.boss.hp>0&&campaign.boss.hp<=(campaign.bossPhase<2?campaign.boss.max*(2-campaign.bossPhase)/3:-1)){
           campaign.bossPhase++;campaign.boss.shield=true;campaign.solved=false;campaign.activeTerminalId=campaign.bossPhase;campaign.board=campaign.boards[campaign.bossPhase]??null;
           objects('MissionTerminal').find(o=>o.getVariables().get('TerminalId').getAsNumber()===campaign.bossPhase)?.setAnimationName('Off');notice('SHIELD RESTORED • Find '+campaign.tasks[campaign.bossPhase].title+' [E]',6);
         }
@@ -165,8 +151,12 @@ for(const name of ['Muzzle','Impact','Spark'])for(const o of objects(name)){
   o.__ttl-=dt;if(o.__ttl<=0)o.deleteFromScene(runtimeScene);
 }
 if(game.state!=='playing')for(const crab of objects('Crab'))crab.getBehavior('Platformer').setCurrentSpeed(0);
-const targetX=Math.max(640,Math.min(worldWidth-640,player.getX()+player.getWidth()/2));
-const targetY=Math.max(360,Math.min(worldHeight-360,player.getY()+player.getHeight()/2-40));
+const targetZoom=campaign?.level===8&&player.getX()>2700 ? .75:1;game.cameraZoom=(game.cameraZoom??1)+(targetZoom-(game.cameraZoom??1))*(1-Math.exp(-dt*4));runtimeScene.getLayer('').setCameraZoom(game.cameraZoom);
+const halfW=640/game.cameraZoom,halfH=360/game.cameraZoom;
+const cameraBoss=objects('CoreBoss')[0],playerCenter=player.getX()+player.getWidth()/2;
+const focusX=campaign?.level===8&&cameraBoss&&!campaign.boss?.dead&&!campaign.boss?.shield&&Math.abs(cameraBoss.getX()+cameraBoss.getWidth()/2-playerCenter)<1350?(playerCenter+cameraBoss.getX()+cameraBoss.getWidth()/2)/2:playerCenter;
+const targetX=Math.max(halfW,Math.min(worldWidth-halfW,focusX));
+const targetY=Math.max(halfH,Math.min(worldHeight-halfH,player.getY()+player.getHeight()/2-40));
 // A single animation choice prevents competing state changes from restarting frames.
 const grounded=move.isOnFloor(),moving=Math.abs(move.getCurrentSpeed())>5;
 let playerAction=game.state==='dying'||game.state==='gameover'?'Death':
