@@ -23,7 +23,8 @@
     "check:maps": "node scripts/check-location-maps.mjs",
     "events:pull": "node scripts/sync-events.mjs pull",
     "events:push": "node scripts/sync-events.mjs push",
-    "test:combat-browser": "node tests/combat.browser.mjs"
+    "test:combat-browser": "node tests/combat.browser.mjs",
+    "test:readability": "node tests/readability.browser.mjs"
   },
   "devDependencies": {
     "gdcore-tools": "2.0.0-gd-v5.6.269-autobuild",

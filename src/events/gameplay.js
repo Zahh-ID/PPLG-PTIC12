@@ -50,7 +50,7 @@ function die(){
 function damage(amount){
   if(game.state!=='playing'||game.time<game.invincibleUntil)return;
   if(campaign?.mecha&&pressed(75,'shield')&&game.shield>.05)return;
-  game.health=Math.max(0,game.health-amount);game.invincibleUntil=game.time+1.3;
+  game.health=Math.max(0,game.health-Math.min(2,amount));game.invincibleUntil=game.time+1.3;
   game.hurtUntil=game.time+(campaign?.mecha ? .8 : .42);
   move.setCurrentSpeed(-game.facing*180);
   if(game.health===0)die();
@@ -62,7 +62,7 @@ if(game.state==='playing'){
     game.shield=Math.max(0,Math.min(3,game.shield+(pressed(75,'shield')?-dt:dt*.4)));
   }
   const speed=move.getCurrentSpeed();
-  if(Math.abs(speed)>5)game.facing=speed<0?-1:1;
+  if(Math.abs(speed)>5&&game.time>=game.hurtUntil)game.facing=speed<0?-1:1;
   player.flipX(game.facing<0);
   const onFloor=move.isOnFloor();
   if(onFloor&&!game.wasOnFloor)game.landUntil=game.time+(campaign?.mecha ? .8 : .34);
@@ -141,7 +141,9 @@ if(game.state==='dying'){
       game.state='playing';game.health=game.maxHealth;game.ammo=Math.max(8,game.ammo);
       player.setPosition(game.checkpointX,game.checkpointY);
       player.activateBehavior('Platformer',true);move.setCurrentSpeed(0);move.setCurrentFallSpeed(0);
-      game.invincibleUntil=game.time+1.5;game.hurtUntil=0;game.landUntil=0;game.shotAt=-10;
+      if(campaign)campaign.pendingDamage=0;
+      for(const shot of objects('EnemyBolt'))shot.deleteFromScene(runtimeScene);
+      game.invincibleUntil=game.time+2;game.hurtUntil=0;game.landUntil=0;game.shotAt=-10;
       notice('Try again! '+game.lives+' lives remaining.');
     }
   }
@@ -161,13 +163,13 @@ const targetY=Math.max(halfH,Math.min(worldHeight-halfH,player.getY()+player.get
 const grounded=move.isOnFloor(),moving=Math.abs(move.getCurrentSpeed())>5;
 let playerAction=game.state==='dying'||game.state==='gameover'?'Death':
  game.state==='won'?'Idle':game.time<game.hurtUntil?'Hurt':
- game.time-game.shotAt<(campaign?.mecha ? .85 : .52)?'Shoot':
  campaign?.mecha&&pressed(75,'shield')&&game.shield>0?'Shield':
+ game.time-game.shotAt<(campaign?.mecha ? .85 : .52)?'Shoot':
  !grounded?(move.isFalling()?'Fall':'Jump'):
  !moving&&game.time<game.landUntil?'Land':moving?'Run':'Idle';
 if(campaign?.mecha)playerAction='Mecha'+playerAction;
 if(player.getAnimationName()!==playerAction)player.setAnimationName(playerAction);
-if(restartPlayerAnimation)player.setAnimationFrame(0);
+if(restartPlayerAnimation&&playerAction.endsWith('Shoot'))player.setAnimationFrame(0);
 const playerSize=campaign?.mecha?192:128;
 if(player.getWidth()!==playerSize)player.setWidth(playerSize);
 if(player.getHeight()!==playerSize)player.setHeight(playerSize);

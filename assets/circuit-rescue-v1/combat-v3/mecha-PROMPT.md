@@ -1,0 +1,7 @@
+# mecha generation
+
+Built-in imagegen, 5 November 2026. Reference: combat-v2/sources/mecha-landing.png.
+
+Production pixel-art game animation atlas. Recreate the friendly white, orange and navy rideable mecha with cyan visor facing RIGHT from reference, keeping identity, armor and pixel art detail. EXACT even grid EIGHT columns by 9 rows, 8 distinct sequential frames per row. Rows in exact order: Idle, Walk, Jump, Shoot, Shield, Hurt, Fall, Land, Death. Clear coherent action motion, consistent body proportions, scale and standing foot baseline across all frames and rows. Walking shows alternating strides. Idle only subtle breathing, not violent head shifts. Fall ends in stable falling pose; Land crouches then returns standing; Death ends in collapsed wreck; Shield raises then holds steady. EVERY CELL must have generous transparent empty margin on ALL FOUR SIDES; all weapon tips, dust and sparks remain inside OWN cell. Never any adjacent-cell fragment. No labels, grid lines, scenery, gradients or shadows behind sprite. Entire background TRUE transparent alpha zero. All rows equally high; all columns equally wide. Complete detailed body visible in every cell. Do not simplify to one pose.
+
+Full cells extracted using the actual source dimensions divided by eight columns and the action row count. One fixed scale and vertical offset per actor aligns the body baseline with the existing fixed mask. No per-frame resizing/recentering. Eight frames retained for every action. Source and extraction metadata are preserved in manifest.json.

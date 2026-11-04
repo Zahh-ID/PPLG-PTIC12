@@ -17,3 +17,15 @@ const project=JSON.parse(fs.readFileSync(new URL('../Animal Hunter.json',import.
 for(const s of sectors){const level=Number(s.variables.find(v=>v.name==='CampaignLevel').value),boss=s.objects.find(o=>o.name==='CoreBoss');if(boss){for(const a of boss.animations)for(const d of a.directions){assert.equal(d.sprites.length,8);for(const f of d.sprites){assert.ok(f.hasCustomCollisionMask);assert.equal(f.customCollisionMask[0][2].y,224);}}}const guard=s.objects.find(o=>o.name==='Crab');assert.deepEqual(guard.animations.map(a=>a.name).sort(),['Death','Hurt','Idle','Melee','Shoot','Walk']);const bolt=s.objects.find(o=>o.name==='EnemyBolt');assert.deepEqual(bolt.animations.map(a=>a.name),['Plasma','Missile','Wave']);if(level>=7)assert.ok(boss.animations[0].directions[0].sprites[0].image.includes('boss'+level));}
 const final=project.layouts.find(s=>s.name==='sector8');assert.equal(Number(final.variables.find(v=>v.name==='WorldWidth').value),6000);assert.equal(final.instances.find(i=>i.name==='CoreBoss').width,640);assert.equal(final.instances.filter(i=>i.name==='ArenaCover').length,3);
 console.log('Combat v2 OK: 36 actor actions + 4 projectile animations, 320 distinct frames, fixed body masks, different bosses and a 6000px final arena.');
+// Current replacement pack: keep legacy packs available, validate the files actually selected by runtime resources.
+const v3root=new URL('../assets/circuit-rescue-v1/combat-v3/',import.meta.url),v3=JSON.parse(fs.readFileSync(new URL('manifest.json',v3root)));
+let v3count=0;
+for(const [actor,number] of Object.entries({boss8:12,mecha:9,guard:6})){
+ assert.equal(Object.keys(v3.animations[actor]).length,number);
+ for(const [action,a] of Object.entries(v3.animations[actor])){
+  assert.equal(a.frames.length,8,actor+'/'+action);const unique=new Set();
+  for(const file of a.frames){const bytes=fs.readFileSync(new URL(file,v3root)),entry=v3.assets.find(e=>e.file===file);assert.equal(bytes.readUInt32BE(16),a.width);assert.equal(bytes.readUInt32BE(20),a.height);const hash=crypto.createHash('sha256').update(bytes).digest('hex');assert.equal(hash,entry.sha256);unique.add(hash);assert.ok(project.resources.resources.some(r=>r.file==='assets/circuit-rescue-v1/combat-v3/'+file),'Replacement frame is not referenced: '+file);v3count++;}
+  assert.equal(unique.size,8,actor+'/'+action+' must retain eight distinct poses');
+ }
+}
+assert.equal(v3count,216);console.log('Combat v3 OK: 216 replacement frames, 27 eight-frame actions, dimensions/hashes and runtime references verified.');
