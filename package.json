@@ -8,8 +8,8 @@
     "node": ">=24"
   },
   "scripts": {
-    "test": "npm run check && npm run test:circuits && npm run test:localization && npm run check:actors && npm run check:combat && npm run check:maps && npm run check:workflows",
-    "build:web": "node scripts/build-web.mjs",
+    "test": "npm run check && npm run test:circuits && npm run test:localization && npm run check:actors && npm run check:animations && npm run check:frame-pixels && npm run check:placements && npm run check:combat && npm run check:maps && npm run check:workflows && npm run check:svg",
+    "build:web": "npm run assets:svg && npm run events:push && node scripts/build-web.mjs",
     "test:browser": "node tests/campaign.browser.mjs",
     "test:mobile": "node tests/mobile.browser.mjs",
     "test:journey": "node tests/journey.browser.mjs",
@@ -24,12 +24,29 @@
     "events:pull": "node scripts/sync-events.mjs pull",
     "events:push": "node scripts/sync-events.mjs push",
     "test:combat-browser": "node tests/combat.browser.mjs",
-    "test:readability": "node tests/readability.browser.mjs"
+    "test:gameplay": "node tests/gameplay.browser.mjs",
+    "test:routes": "node tests/routes.browser.mjs",
+    "check:animations": "node scripts/audit-animations.mjs",
+    "test:readability": "node tests/readability.browser.mjs",
+    "assets:svg": "node scripts/generate-svg-ui.mjs",
+    "test:modals": "node tests/modals.browser.mjs",
+    "check:svg": "node scripts/check-svg-ui.mjs",
+    "check:frame-pixels": "node scripts/audit-actor-frames.mjs",
+    "check:placements": "node scripts/check-world-placement.mjs",
+    "test:world": "node tests/world-mechanics.browser.mjs",
+    "test:ports": "node tests/circuit-ports.browser.mjs",
+    "world:rebuild": "node scripts/rework-worlds.mjs --apply",
+    "test:highlights": "node tests/highlights.browser.mjs"
   },
   "devDependencies": {
     "gdcore-tools": "2.0.0-gd-v5.6.269-autobuild",
     "gdexporter": "4.0.0-beta7",
     "puppeteer": "25.16.0",
+    "svgpath": "2.6.0",
     "yaml": "2.9.1"
+  },
+  "dependencies": {
+    "animejs": "4.5.0",
+    "lottie-web": "5.13.0"
   }
 }

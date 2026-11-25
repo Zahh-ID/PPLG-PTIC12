@@ -1,0 +1,23 @@
+{
+  "canvas": 128,
+  "floorBaseline": 122,
+  "kinds": [
+    "relay",
+    "fan",
+    "lever",
+    "scanner",
+    "winch",
+    "signal",
+    "pump",
+    "valve",
+    "reactor",
+    "coupler",
+    "shield",
+    "weapon"
+  ],
+  "states": [
+    "off",
+    "on"
+  ],
+  "purpose": "Floor-anchored mission machinery; native vector assets, no raster atlas download."
+}

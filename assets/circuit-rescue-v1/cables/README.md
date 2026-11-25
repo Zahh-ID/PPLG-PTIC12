@@ -1,3 +1,5 @@
+> Legacy raster cable-tile pack. The active workbench now uses explicit port links and auto-routed SVG cables; see the campaign guide. This art remains available as source material.
+
 # Auto-connecting cables
 
 34 transparent, exact-grid 64×64 PNGs. No tile padding or UI frames. All 16 neighbor combinations exist in off/on states; isolated cables use mask 0. Two additional insulated crossing images are provided. Generated as original pixel geometry with scripts/generate-circuit-cables.mjs; existing generated art is unchanged.

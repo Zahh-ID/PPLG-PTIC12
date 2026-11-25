@@ -11,6 +11,7 @@ npm ci
 npm test
 npm run build:web
 npx puppeteer browsers install chrome
+npm run test:modals
 npm run test:mobile-browser
 npm run test:journey
 npm run test:browser
@@ -20,6 +21,8 @@ npm run test:mobile
 `npm test` checks project references and JavaScript syntax, 102 truth-table cases across 24 challenges, invalid circuit networks, actor masks/animation definitions, 144 giant-robot frames, map reachability and workflow safeguards. Checks do not rewrite the game project.
 
 `build:web` exports `Animal Hunter.json` into ignored `dist/`, adds `.nojekyll`, and never uploads anything. It replaces only the fixed `dist/` output directory. The HTML5 exporter and its GDevelop core are pinned in `package-lock.json`; update them together and rerun the browser checks when changing versions. GDevelop itself is not required for this CLI export.
+
+The build first generates SVG/Lottie UI assets and synchronizes readable event sources into the project. It then bundles the compiled theme, metadata, logo, vector animation JSON, local Anime.js/Lottie runtimes and licenses, and both UI controllers into `dist/vector-ui/`; no animation CDN is needed. `test:modals` checks real logo/icon vector rendering, single-play feedback, plain-language examples, input locking, pause/resume ordering, focus, portrait board bounds, rotation during entry and reduced-motion behavior. Both workflows run it before the remaining browser suites. These checks do not establish visual acceptance.
 
 `test:browser` serves the export locally under `/circuit-rescue/` to check relative resource paths used by project Pages sites. It starts from the opening menu and exercises all 24 challenge dialogs, blank-answer rejection, token drag/drop, faulty-circuit repair, NAND-only construction, individual terminal progress, barriers, native platform jumping, a moving lift, mecha boarding, guardian phases and the winner scene. It fails for JavaScript exceptions or missing local resources. Screenshots/results go to ignored `.local/reports/`.
 

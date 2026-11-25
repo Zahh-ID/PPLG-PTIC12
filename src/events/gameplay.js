@@ -1,6 +1,7 @@
 // GDevelop JavaScript event: runs after native Platformer controls.
 // Physics stay in Platformer/Platform behaviors. This block handles game rules and presentation.
-const objects = name => runtimeScene.getObjects(name);
+// Deletion mutates GDevelop's live list. A snapshot keeps every shot/effect updated.
+const objects = name => runtimeScene.getObjects(name).slice();
 const player = objects('Player')[0];
 if (!player) return;
 const campaign=runtimeScene.__campaign;
@@ -21,17 +22,17 @@ const animate = (object,name) => {if(object.getAnimationName()!==name)object.set
 let game = runtimeScene.__islandGame;
 if (!game || runtimeScene.getTimeManager().isFirstFrame()) {
   game = runtimeScene.__islandGame = {
-    time:0,health:campaign?.mecha?6:3,maxHealth:campaign?.mecha?6:3,shield:3,lives:3,ammo:40,coins:0,score:runtimeScene.getGame().getVariables().get('CRScore').getAsNumber(),key:false,
+    time:0,health:campaign?.mecha?6:3,maxHealth:campaign?.mecha?6:3,shield:3,lives:3,ammo:40,coins:0,score:runtimeScene.getGame().getVariables().get('CRScore').getAsNumber(),
     state:'playing',facing:1,shotAt:-10,hurtUntil:0,invincibleUntil:0,
-    deathAt:0,checkpointX:player.getX(),checkpointY:player.getY(),checkpointActive:false,
+    deathAt:0,checkpointX:player.getX(),checkpointY:player.getY(),checkpointFeetY:player.getY()+(campaign?.mecha?168:112),checkpointActive:false,
     message:'Explore the rooms. Collect parts and repair three systems [E].',messageUntil:5,
     wasOnFloor:false,landUntil:0,cameraX:Math.max(640,Math.min(worldWidth-640,player.getX()+64)),cameraY:Math.max(360,Math.min(worldHeight-360,player.getY()+64)),totalCoins:objects('Coin').length
   };
   for(const crab of objects('Crab')) {
     crab.__patrol = {left:crab.getX()-90,right:crab.getX()+90,direction:-1,hp:2};
   }
-  for(const chest of objects('Chest')){chest.__opened=false;chest.setAnimationName('Closed');}
   for(const flag of objects('Checkpoint'))flag.setColor('255;255;255');
+  for(const part of objects('Coin'))part.setAnimationName('Part'+part.getVariables().get('PartId').getAsNumber());
   player.activateBehavior('Platformer',true);player.setOpacity(255);
 }
 game.time += dt;
@@ -46,6 +47,7 @@ function die(){
   game.state='dying';game.lives--;game.deathAt=game.time;
   move.setCurrentSpeed(0);move.setCurrentFallSpeed(0);
   player.activateBehavior('Platformer',false);player.setOpacity(255);
+  for(const name of ['Bullet','EnemyBolt','Muzzle'])for(const shot of objects(name))shot.deleteFromScene(runtimeScene);
 }
 function damage(amount){
   if(game.state!=='playing'||game.time<game.invincibleUntil)return;
@@ -62,8 +64,9 @@ if(game.state==='playing'){
     game.shield=Math.max(0,Math.min(3,game.shield+(pressed(75,'shield')?-dt:dt*.4)));
   }
   const speed=move.getCurrentSpeed();
-  if(Math.abs(speed)>5&&game.time>=game.hurtUntil)game.facing=speed<0?-1:1;
-  player.flipX(game.facing<0);
+  const manualSteering=[37,39,65,68].some(code=>input.isKeyPressed(code))||touchInput?.held.left||touchInput?.held.right;
+  if(Math.abs(speed)>5&&game.time>=game.hurtUntil&&(!move.isOnLadder()||manualSteering))game.facing=speed<0?-1:1;
+  player.flipX(!move.isOnLadder()&&game.facing<0);
   const onFloor=move.isOnFloor();
   if(onFloor&&!game.wasOnFloor)game.landUntil=game.time+(campaign?.mecha ? .8 : .34);
   if(!onFloor||Math.abs(speed)>5)game.landUntil=0;
@@ -81,9 +84,16 @@ if(game.state==='playing'){
     effect('Muzzle',handX-10,player.getY()+46,40,36,.09);
   }
   // Guards and hostile projectiles run in the combat event after these player decisions.
+  const bulletSolids=[...objects('Ground'),...objects('Bulkhead'),...objects('Ledge').filter(o=>o.isVisible()),...['RouteGate','ShortcutGate'].flatMap(name=>objects(name).filter(o=>o.isVisible()))];
   for(const bullet of objects('Bullet')){
-    bullet.setX(bullet.getX()+bullet.__velocity*dt);bullet.__ttl-=dt;
+    bullet.__ttl=(bullet.__ttl??0)-dt;
     let destroyed=bullet.__ttl<=0;
+    // Sample the native collision masks along the whole movement, including the muzzle.
+    // Terrain wins ties, so a target behind a wall cannot absorb a shot through it.
+    const dx=(bullet.__velocity??0)*dt,steps=Math.max(1,Math.ceil(Math.abs(dx)/6)),startX=bullet.getX();
+    for(let step=0;step<=steps&&!destroyed;step++){
+    bullet.setX(startX+dx*step/steps);
+    destroyed=bulletSolids.some(terrain=>hit(bullet,terrain));
     for(const crab of objects('Crab'))if(!destroyed&&crab.__patrol.deadAt===undefined&&hit(bullet,crab)){
       crab.__patrol.hp--;crab.__patrol.hurtUntil=game.time+.7;effect('Impact',bullet.getX(),bullet.getY()-12,36,36,.12);
       if(crab.__patrol.hp<=0)killCrab(crab);destroyed=true;
@@ -98,33 +108,22 @@ if(game.state==='playing'){
         }
       }else notice('Shield active! Repair the terminal first.',2);
     }
-    for(const terrain of [...objects('Ground'),...objects('Ledge'),...objects('RouteGate').filter(o=>o.isVisible())])if(!destroyed&&hit(bullet,terrain))destroyed=true;
+    }
     if(destroyed)bullet.deleteFromScene(runtimeScene);
   }
   for(const coin of objects('Coin'))if(hit(player,coin)){
     game.coins++;game.score+=10;effect('Spark',coin.getX(),coin.getY(),36,36,.16);coin.deleteFromScene(runtimeScene);notice('Component recovered: '+game.coins+'/3');
   }
-  for(const supply of objects('Ammo'))if(hit(player,supply)){
-    game.ammo=Math.min(40,game.ammo+8);supply.deleteFromScene(runtimeScene);notice('+8 ammunition');
+  for(const supply of objects('Ammo'))if(hit(player,supply)&&(campaign?.mecha?game.shield<3:game.ammo<40)){
+    if(campaign?.mecha){game.shield=Math.min(3,game.shield+1.5);notice('Shield energy restored');}else {game.ammo=Math.min(40,game.ammo+8);notice('+8 ammunition');}supply.deleteFromScene(runtimeScene);
   }
   for(const heart of objects('HealthPickup'))if(game.health<game.maxHealth&&hit(player,heart)){
     game.health=Math.min(game.maxHealth,game.health+1);heart.deleteFromScene(runtimeScene);notice('Health restored');
   }
-  for(const key of objects('Key'))if(hit(player,key)){
-    game.key=true;game.score+=50;key.deleteFromScene(runtimeScene);notice('Keycard found! It opens the hidden credits chest.',5);
-  }
   const flag=objects('Checkpoint')[0];
   if(flag&&!game.checkpointActive&&hit(player,flag)){
-    game.checkpointActive=true;game.checkpointX=flag.getX();game.checkpointY=flag.getY()+flag.getHeight()-(campaign?.mecha?168:112);game.health=game.maxHealth;
+    game.checkpointActive=true;game.checkpointX=flag.getX();game.checkpointFeetY=flag.getVariables().get('FloorY').getAsNumber()||flag.getY()+flag.getHeight();game.checkpointY=game.checkpointFeetY-(campaign?.mecha?168:112);game.health=game.maxHealth;
     flag.setColor('140;255;170');notice('Checkpoint saved. Health restored.',4);
-  }
-  for(const chest of objects('Chest'))if(!chest.__opened&&hit(player,chest)){
-    if(game.key){
-      chest.__opened=true;animate(chest,'Open');game.score+=100;game.ammo=Math.min(40,game.ammo+8);notice('Treasure found! +100 score and +8 ammo');
-      const ui=runtimeScene.__animalUI;
-      if(ui){ui.modal='treasure';ui.treasureShownAt=Date.now();ui.creditsReturnTo='';runtimeScene.getTimeManager().setTimeScale(0);}
-    }
-    else notice('This chest needs the keycard.',1);
   }
   const exit=objects('ExitDoor')[0];
   if(exit&&hit(player,exit)){
@@ -132,18 +131,21 @@ if(game.state==='playing'){
     else notice(campaign?.boss&&!campaign.boss.dead?'Defeat the guardian before leaving.':campaign?.level===6&&campaign.solved?'Board your mecha [E] before leaving.':'Complete the circuit mission at the terminal [E].',2);
   }
   if(player.getY()>worldHeight+200){game.health=0;die();}
-  player.setX(Math.max(-35,Math.min(worldWidth-96,player.getX())));
+  const bodyLeft=campaign?.mecha?36:45,bodyRight=campaign?.mecha?156:83;
+  player.setX(Math.max(-bodyLeft,Math.min(worldWidth-bodyRight,player.getX())));
 }
 if(game.state==='dying'){
   if(game.time-game.deathAt>1){
     if(game.lives<=0)game.state='gameover';
     else {
       game.state='playing';game.health=game.maxHealth;game.ammo=Math.max(8,game.ammo);
+      // A checkpoint stores its support surface, not the previous robot's height.
+      game.checkpointY=game.checkpointFeetY-(campaign?.mecha?168:112);
       player.setPosition(game.checkpointX,game.checkpointY);
       player.activateBehavior('Platformer',true);move.setCurrentSpeed(0);move.setCurrentFallSpeed(0);
       if(campaign)campaign.pendingDamage=0;
-      for(const shot of objects('EnemyBolt'))shot.deleteFromScene(runtimeScene);
-      game.invincibleUntil=game.time+2;game.hurtUntil=0;game.landUntil=0;game.shotAt=-10;
+      for(const name of ['Bullet','EnemyBolt'])for(const shot of objects(name))shot.deleteFromScene(runtimeScene);
+      game.invincibleUntil=game.time+2;game.hurtUntil=0;game.landUntil=0;game.shotAt=-10;game.wasOnFloor=false;
       notice('Try again! '+game.lives+' lives remaining.');
     }
   }
@@ -161,14 +163,17 @@ const targetX=Math.max(halfW,Math.min(worldWidth-halfW,focusX));
 const targetY=Math.max(halfH,Math.min(worldHeight-halfH,player.getY()+player.getHeight()/2-40));
 // A single animation choice prevents competing state changes from restarting frames.
 const grounded=move.isOnFloor(),moving=Math.abs(move.getCurrentSpeed())>5;
+const onRail=move.isOnLadder(),climbing=onRail&&(input.isKeyPressed(38)||input.isKeyPressed(40)||input.isKeyPressed(87)||input.isKeyPressed(83)||touchInput?.held.climbUp||touchInput?.held.climbDown);
 let playerAction=game.state==='dying'||game.state==='gameover'?'Death':
  game.state==='won'?'Idle':game.time<game.hurtUntil?'Hurt':
- campaign?.mecha&&pressed(75,'shield')&&game.shield>0?'Shield':
- game.time-game.shotAt<(campaign?.mecha ? .85 : .52)?'Shoot':
+ campaign?.mecha&&pressed(75,'shield')&&game.shield>.05?'Shield':
+ onRail?(campaign?.mecha?'Idle':'Climb'):
  !grounded?(move.isFalling()?'Fall':'Jump'):
- !moving&&game.time<game.landUntil?'Land':moving?'Run':'Idle';
+ moving?'Run':game.time-game.shotAt<(campaign?.mecha ? .85 : .52)?'Shoot':
+ game.time<game.landUntil?'Land':'Idle';
 if(campaign?.mecha)playerAction='Mecha'+playerAction;
 if(player.getAnimationName()!==playerAction)player.setAnimationName(playerAction);
+if(onRail&&(campaign?.mecha||!climbing))player.pauseAnimation();else player.playAnimation();
 if(restartPlayerAnimation&&playerAction.endsWith('Shoot'))player.setAnimationFrame(0);
 const playerSize=campaign?.mecha?192:128;
 if(player.getWidth()!==playerSize)player.setWidth(playerSize);
@@ -197,6 +202,6 @@ if(game.state==='won'||game.state==='gameover'){
  return;
 }
 const animationOverride=game.state!=='playing'?'Locked':game.time<game.hurtUntil?'Hurt':game.time-game.shotAt<(campaign?.mecha ? .85 : .52)?'Shoot':game.time<game.landUntil?'Land':campaign?.mecha?'Mecha':'';
-for(const [name,value]of Object.entries({Health:game.health,Lives:game.lives,Ammo:game.ammo,Coins:game.coins,Score:game.score,HasKey:game.key,CheckpointActive:game.checkpointActive,GameState:game.state,AnimationOverride:animationOverride})){
+for(const [name,value]of Object.entries({Health:game.health,Lives:game.lives,Ammo:game.ammo,Coins:game.coins,Score:game.score,CheckpointActive:game.checkpointActive,GameState:game.state,AnimationOverride:animationOverride})){
  const v=runtimeScene.getVariables().get(name);if(typeof value==='number')v.setNumber(value);else if(typeof value==='boolean')v.setBoolean(value);else v.setString(value);
 }

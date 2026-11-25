@@ -35,89 +35,229 @@
       "Station airlock"
     ],
     "spawn": [
-      96,
+      208,
       1200
     ],
     "routes": [
       {
-        "from": [
-          400,
-          1200
-        ],
-        "to": [
-          1100,
-          840
-        ],
-        "steps": 4,
-        "maxRise": 90,
-        "maxRun": 175
+        "type": "native-rail",
+        "x": 814,
+        "top": 840,
+        "bottom": 1200,
+        "from": 0,
+        "to": 1,
+        "poweredShortcut": false
       },
       {
-        "from": [
-          1100,
-          840
-        ],
-        "to": [
-          1900,
-          480
-        ],
-        "steps": 4,
-        "maxRise": 90,
-        "maxRun": 200
+        "type": "native-rail",
+        "x": 1564,
+        "top": 480,
+        "bottom": 840,
+        "from": 1,
+        "to": 2,
+        "poweredShortcut": false
+      },
+      {
+        "type": "native-rail",
+        "x": 260,
+        "top": 480,
+        "bottom": 1200,
+        "from": 0,
+        "to": 2,
+        "shortcut": true,
+        "poweredShortcut": true
       }
     ],
     "platforms": [
       {
-        "x": 475,
-        "y": 1110,
-        "width": 240
+        "x": 160,
+        "y": 1080,
+        "width": 200
       },
       {
-        "x": 650,
-        "y": 1020,
-        "width": 240
+        "x": 1660,
+        "y": 360,
+        "width": 200
       },
       {
-        "x": 825,
-        "y": 930,
-        "width": 240
-      },
-      {
-        "x": 1200,
-        "y": 750,
-        "width": 240
-      },
-      {
-        "x": 1400,
-        "y": 660,
-        "width": 240
-      },
-      {
-        "x": 1600,
-        "y": 570,
-        "width": 240
+        "x": 710,
+        "y": 1200,
+        "width": 90
       },
       {
         "x": 160,
         "y": 1200,
-        "width": 620
+        "width": 204
+      },
+      {
+        "x": 364,
+        "y": 1200,
+        "width": 346
       },
       {
         "x": 860,
         "y": 840,
-        "width": 620
+        "width": 58
+      },
+      {
+        "x": 1460,
+        "y": 840,
+        "width": 40
+      },
+      {
+        "x": 918,
+        "y": 840,
+        "width": 542
       },
       {
         "x": 1660,
         "y": 480,
-        "width": 620
+        "width": 8
       },
       {
-        "x": 1680,
+        "x": 1668,
         "y": 480,
-        "width": 720
+        "width": 632
+      },
+      {
+        "x": 710,
+        "y": 1200,
+        "width": 200
+      },
+      {
+        "x": 368,
+        "y": 1200,
+        "width": 342
+      },
+      {
+        "x": 718,
+        "y": 840,
+        "width": 200
+      },
+      {
+        "x": 918,
+        "y": 840,
+        "width": 342
+      },
+      {
+        "x": 1460,
+        "y": 840,
+        "width": 200
+      },
+      {
+        "x": 1068,
+        "y": 840,
+        "width": 392
+      },
+      {
+        "x": 1468,
+        "y": 480,
+        "width": 200
+      },
+      {
+        "x": 1668,
+        "y": 480,
+        "width": 392
+      },
+      {
+        "x": 164,
+        "y": 1200,
+        "width": 200
+      },
+      {
+        "x": 364,
+        "y": 1200,
+        "width": 196
+      },
+      {
+        "x": 1460,
+        "y": 480,
+        "width": 208
+      },
+      {
+        "x": 164,
+        "y": 480,
+        "width": 200
+      },
+      {
+        "x": 364,
+        "y": 480,
+        "width": 1096
+      },
+      {
+        "x": 1660,
+        "y": 480,
+        "width": 8
+      },
+      {
+        "x": 1668,
+        "y": 480,
+        "width": 692
       }
-    ]
+    ],
+    "topology": {
+      "version": 2,
+      "rooms": [
+        {
+          "id": 0,
+          "x": 160,
+          "floor": 1200,
+          "width": 640,
+          "center": 464
+        },
+        {
+          "id": 1,
+          "x": 860,
+          "floor": 840,
+          "width": 640,
+          "center": 1164
+        },
+        {
+          "id": 2,
+          "x": 1660,
+          "floor": 480,
+          "width": 640,
+          "center": 1964
+        }
+      ],
+      "shafts": [
+        {
+          "x": 814,
+          "top": 840,
+          "bottom": 1200,
+          "from": 0,
+          "to": 1
+        },
+        {
+          "x": 1564,
+          "top": 480,
+          "bottom": 840,
+          "from": 1,
+          "to": 2
+        },
+        {
+          "x": 260,
+          "top": 480,
+          "bottom": 1200,
+          "from": 0,
+          "to": 2,
+          "shortcut": true
+        }
+      ],
+      "materials": [
+        "fuse",
+        "wire-coil",
+        "battery"
+      ],
+      "devices": [
+        "relay",
+        "fan",
+        "lever"
+      ],
+      "roomHeight": 340,
+      "description": "Connected machinery rooms, service lofts, climbing shafts and repair-powered return paths"
+    },
+    "spawnClearance": 12
   },
   {
     "level": 2,
@@ -155,134 +295,204 @@
       "Warehouse exit"
     ],
     "spawn": [
-      96,
+      308,
       1450
     ],
     "routes": [
       {
-        "from": [
-          500,
-          1450
-        ],
-        "to": [
-          2400,
-          1090
-        ],
-        "steps": 9,
-        "maxRise": 40,
-        "maxRun": 211.11111111111111
+        "type": "native-rail",
+        "x": 1514,
+        "top": 1090,
+        "bottom": 1450,
+        "from": 0,
+        "to": 1,
+        "poweredShortcut": false
       },
       {
-        "from": [
-          2400,
-          1090
-        ],
-        "to": [
-          800,
-          730
-        ],
-        "steps": 8,
-        "maxRise": 45,
-        "maxRun": 200
+        "type": "native-rail",
+        "x": 1664,
+        "top": 730,
+        "bottom": 1090,
+        "from": 1,
+        "to": 2,
+        "poweredShortcut": false
+      },
+      {
+        "type": "native-rail",
+        "x": 360,
+        "top": 730,
+        "bottom": 1450,
+        "from": 0,
+        "to": 2,
+        "shortcut": true,
+        "poweredShortcut": true
       }
     ],
     "platforms": [
       {
-        "x": 611,
-        "y": 1410,
-        "width": 240
-      },
-      {
-        "x": 822,
-        "y": 1370,
-        "width": 240
-      },
-      {
-        "x": 1033,
+        "x": 260,
         "y": 1330,
-        "width": 240
+        "width": 200
       },
       {
-        "x": 1244,
-        "y": 1290,
-        "width": 240
-      },
-      {
-        "x": 1456,
-        "y": 1250,
-        "width": 240
-      },
-      {
-        "x": 1667,
-        "y": 1210,
-        "width": 240
-      },
-      {
-        "x": 1878,
-        "y": 1170,
-        "width": 240
-      },
-      {
-        "x": 2089,
-        "y": 1130,
-        "width": 240
-      },
-      {
-        "x": 2100,
-        "y": 1045,
-        "width": 240
-      },
-      {
-        "x": 1900,
-        "y": 1000,
-        "width": 240
-      },
-      {
-        "x": 1700,
-        "y": 955,
-        "width": 240
-      },
-      {
-        "x": 1500,
-        "y": 910,
-        "width": 240
-      },
-      {
-        "x": 1300,
-        "y": 865,
-        "width": 240
-      },
-      {
-        "x": 1100,
-        "y": 820,
-        "width": 240
-      },
-      {
-        "x": 900,
-        "y": 775,
-        "width": 240
+        "x": 560,
+        "y": 610,
+        "width": 200
       },
       {
         "x": 260,
         "y": 1450,
-        "width": 620
+        "width": 204
+      },
+      {
+        "x": 464,
+        "y": 1450,
+        "width": 436
       },
       {
         "x": 2160,
         "y": 1090,
-        "width": 620
+        "width": 640
       },
       {
         "x": 560,
         "y": 730,
-        "width": 620
+        "width": 640
       },
       {
-        "x": 680,
+        "x": 1410,
+        "y": 1450,
+        "width": 200
+      },
+      {
+        "x": 468,
+        "y": 1450,
+        "width": 942
+      },
+      {
+        "x": 1418,
+        "y": 1090,
+        "width": 200
+      },
+      {
+        "x": 1618,
+        "y": 1090,
+        "width": 150
+      },
+      {
+        "x": 1768,
+        "y": 1090,
+        "width": 792
+      },
+      {
+        "x": 1568,
+        "y": 1090,
+        "width": 50
+      },
+      {
+        "x": 1618,
+        "y": 1090,
+        "width": 150
+      },
+      {
+        "x": 1560,
         "y": 730,
-        "width": 920
+        "width": 200
+      },
+      {
+        "x": 768,
+        "y": 730,
+        "width": 792
+      },
+      {
+        "x": 264,
+        "y": 1450,
+        "width": 200
+      },
+      {
+        "x": 464,
+        "y": 1450,
+        "width": 196
+      },
+      {
+        "x": 264,
+        "y": 730,
+        "width": 200
+      },
+      {
+        "x": 464,
+        "y": 730,
+        "width": 496
+      },
+      {
+        "x": 560,
+        "y": 730,
+        "width": 900
       }
-    ]
+    ],
+    "topology": {
+      "version": 2,
+      "rooms": [
+        {
+          "id": 0,
+          "x": 260,
+          "floor": 1450,
+          "width": 640,
+          "center": 564
+        },
+        {
+          "id": 1,
+          "x": 2160,
+          "floor": 1090,
+          "width": 640,
+          "center": 2464
+        },
+        {
+          "id": 2,
+          "x": 560,
+          "floor": 730,
+          "width": 640,
+          "center": 864
+        }
+      ],
+      "shafts": [
+        {
+          "x": 1514,
+          "top": 1090,
+          "bottom": 1450,
+          "from": 0,
+          "to": 1
+        },
+        {
+          "x": 1664,
+          "top": 730,
+          "bottom": 1090,
+          "from": 1,
+          "to": 2
+        },
+        {
+          "x": 360,
+          "top": 730,
+          "bottom": 1450,
+          "from": 0,
+          "to": 2,
+          "shortcut": true
+        }
+      ],
+      "materials": [
+        "scrap-gear",
+        "wire-coil",
+        "battery"
+      ],
+      "devices": [
+        "scanner",
+        "winch",
+        "lever"
+      ],
+      "roomHeight": 340,
+      "description": "Connected machinery rooms, service lofts, climbing shafts and repair-powered return paths"
+    },
+    "spawnClearance": 12
   },
   {
     "level": 3,
@@ -330,109 +540,156 @@
       "Transit junction"
     ],
     "spawn": [
-      96,
+      308,
       1300
     ],
     "routes": [
       {
-        "from": [
-          500,
-          1300
-        ],
-        "to": [
-          1700,
-          940
-        ],
-        "steps": 6,
-        "maxRise": 60,
-        "maxRun": 200
+        "type": "native-rail",
+        "x": 1164,
+        "top": 940,
+        "bottom": 1300,
+        "from": 0,
+        "to": 1,
+        "poweredShortcut": false
       },
       {
-        "from": [
-          1700,
-          940
-        ],
-        "to": [
-          2900,
-          1300
-        ],
-        "steps": 6,
-        "maxRise": 60,
-        "maxRun": 200
+        "type": "native-rail",
+        "x": 2364,
+        "top": 940,
+        "bottom": 1300,
+        "from": 1,
+        "to": 2,
+        "poweredShortcut": false
       }
     ],
     "platforms": [
       {
-        "x": 600,
-        "y": 1240,
-        "width": 240
-      },
-      {
-        "x": 800,
+        "x": 260,
         "y": 1180,
-        "width": 240
+        "width": 200
       },
       {
-        "x": 1000,
-        "y": 1120,
-        "width": 240
-      },
-      {
-        "x": 1200,
-        "y": 1060,
-        "width": 240
-      },
-      {
-        "x": 1400,
-        "y": 1000,
-        "width": 240
-      },
-      {
-        "x": 1800,
-        "y": 1000,
-        "width": 240
-      },
-      {
-        "x": 2000,
-        "y": 1060,
-        "width": 240
-      },
-      {
-        "x": 2200,
-        "y": 1120,
-        "width": 240
-      },
-      {
-        "x": 2400,
+        "x": 2660,
         "y": 1180,
-        "width": 240
-      },
-      {
-        "x": 2600,
-        "y": 1240,
-        "width": 240
+        "width": 200
       },
       {
         "x": 260,
         "y": 1300,
-        "width": 620
+        "width": 640
       },
       {
         "x": 1460,
         "y": 940,
-        "width": 620
+        "width": 640
       },
       {
         "x": 2660,
         "y": 1300,
-        "width": 620
+        "width": 640
       },
       {
-        "x": 2730,
+        "x": 1060,
         "y": 1300,
-        "width": 870
+        "width": 200
+      },
+      {
+        "x": 468,
+        "y": 1300,
+        "width": 592
+      },
+      {
+        "x": 1068,
+        "y": 940,
+        "width": 200
+      },
+      {
+        "x": 1268,
+        "y": 940,
+        "width": 592
+      },
+      {
+        "x": 2260,
+        "y": 940,
+        "width": 200
+      },
+      {
+        "x": 1668,
+        "y": 940,
+        "width": 592
+      },
+      {
+        "x": 2268,
+        "y": 1300,
+        "width": 200
+      },
+      {
+        "x": 2468,
+        "y": 1300,
+        "width": 592
+      },
+      {
+        "x": 2660,
+        "y": 1300,
+        "width": 850
       }
-    ]
+    ],
+    "topology": {
+      "version": 2,
+      "rooms": [
+        {
+          "id": 0,
+          "x": 260,
+          "floor": 1300,
+          "width": 640,
+          "center": 564
+        },
+        {
+          "id": 1,
+          "x": 1460,
+          "floor": 940,
+          "width": 640,
+          "center": 1764
+        },
+        {
+          "id": 2,
+          "x": 2660,
+          "floor": 1300,
+          "width": 640,
+          "center": 2964
+        }
+      ],
+      "shafts": [
+        {
+          "x": 1164,
+          "top": 940,
+          "bottom": 1300,
+          "from": 0,
+          "to": 1
+        },
+        {
+          "x": 2364,
+          "top": 940,
+          "bottom": 1300,
+          "from": 1,
+          "to": 2
+        }
+      ],
+      "materials": [
+        "fuse",
+        "scrap-gear",
+        "wire-coil"
+      ],
+      "devices": [
+        "signal",
+        "lever",
+        "relay"
+      ],
+      "roomHeight": 340,
+      "description": "Connected machinery rooms, service lofts, climbing shafts and repair-powered return paths"
+    },
+    "spawnClearance": 12
   },
   {
     "level": 4,
@@ -470,119 +727,219 @@
       "Tower uplink"
     ],
     "spawn": [
-      96,
+      258,
       2200
     ],
     "routes": [
       {
-        "from": [
-          450,
-          2200
-        ],
-        "to": [
-          1500,
-          1480
-        ],
-        "steps": 7,
-        "maxRise": 102.85714285714286,
-        "maxRun": 150
+        "type": "native-rail",
+        "x": 1039,
+        "top": 1480,
+        "bottom": 2200,
+        "from": 0,
+        "to": 1,
+        "poweredShortcut": false
       },
       {
-        "from": [
-          1500,
-          1480
-        ],
-        "to": [
-          500,
-          760
-        ],
-        "steps": 7,
-        "maxRise": 102.85714285714286,
-        "maxRun": 142.85714285714286
+        "type": "native-rail",
+        "x": 1064,
+        "top": 760,
+        "bottom": 1480,
+        "from": 1,
+        "to": 2,
+        "poweredShortcut": false
+      },
+      {
+        "type": "native-rail",
+        "x": 310,
+        "top": 760,
+        "bottom": 2200,
+        "from": 0,
+        "to": 2,
+        "shortcut": true,
+        "poweredShortcut": true
       }
     ],
     "platforms": [
       {
-        "x": 500,
-        "y": 2097,
-        "width": 240
+        "x": 210,
+        "y": 2080,
+        "width": 200
       },
       {
-        "x": 650,
-        "y": 1994,
-        "width": 240
-      },
-      {
-        "x": 800,
-        "y": 1891,
-        "width": 240
-      },
-      {
-        "x": 950,
-        "y": 1789,
-        "width": 240
-      },
-      {
-        "x": 1100,
-        "y": 1686,
-        "width": 240
-      },
-      {
-        "x": 1250,
-        "y": 1583,
-        "width": 240
-      },
-      {
-        "x": 1257,
-        "y": 1377,
-        "width": 240
-      },
-      {
-        "x": 1114,
-        "y": 1274,
-        "width": 240
-      },
-      {
-        "x": 971,
-        "y": 1171,
-        "width": 240
-      },
-      {
-        "x": 829,
-        "y": 1069,
-        "width": 240
-      },
-      {
-        "x": 686,
-        "y": 966,
-        "width": 240
-      },
-      {
-        "x": 543,
-        "y": 863,
-        "width": 240
+        "x": 260,
+        "y": 640,
+        "width": 200
       },
       {
         "x": 210,
         "y": 2200,
-        "width": 620
+        "width": 204
+      },
+      {
+        "x": 414,
+        "y": 2200,
+        "width": 436
       },
       {
         "x": 1260,
         "y": 1480,
-        "width": 620
+        "width": 640
       },
       {
         "x": 260,
         "y": 760,
-        "width": 620
+        "width": 154
       },
       {
-        "x": 380,
+        "x": 414,
         "y": 760,
-        "width": 820
+        "width": 486
+      },
+      {
+        "x": 935,
+        "y": 2200,
+        "width": 200
+      },
+      {
+        "x": 418,
+        "y": 2200,
+        "width": 517
+      },
+      {
+        "x": 943,
+        "y": 1480,
+        "width": 200
+      },
+      {
+        "x": 1143,
+        "y": 1480,
+        "width": 25
+      },
+      {
+        "x": 1168,
+        "y": 1480,
+        "width": 492
+      },
+      {
+        "x": 968,
+        "y": 1480,
+        "width": 175
+      },
+      {
+        "x": 1143,
+        "y": 1480,
+        "width": 25
+      },
+      {
+        "x": 960,
+        "y": 760,
+        "width": 200
+      },
+      {
+        "x": 468,
+        "y": 760,
+        "width": 492
+      },
+      {
+        "x": 214,
+        "y": 2200,
+        "width": 200
+      },
+      {
+        "x": 414,
+        "y": 2200,
+        "width": 196
+      },
+      {
+        "x": 214,
+        "y": 760,
+        "width": 200
+      },
+      {
+        "x": 414,
+        "y": 760,
+        "width": 246
+      },
+      {
+        "x": 960,
+        "y": 760,
+        "width": 100
+      },
+      {
+        "x": 260,
+        "y": 760,
+        "width": 154
+      },
+      {
+        "x": 414,
+        "y": 760,
+        "width": 546
       }
-    ]
+    ],
+    "topology": {
+      "version": 2,
+      "rooms": [
+        {
+          "id": 0,
+          "x": 210,
+          "floor": 2200,
+          "width": 640,
+          "center": 514
+        },
+        {
+          "id": 1,
+          "x": 1260,
+          "floor": 1480,
+          "width": 640,
+          "center": 1564
+        },
+        {
+          "id": 2,
+          "x": 260,
+          "floor": 760,
+          "width": 640,
+          "center": 564
+        }
+      ],
+      "shafts": [
+        {
+          "x": 1039,
+          "top": 1480,
+          "bottom": 2200,
+          "from": 0,
+          "to": 1
+        },
+        {
+          "x": 1064,
+          "top": 760,
+          "bottom": 1480,
+          "from": 1,
+          "to": 2
+        },
+        {
+          "x": 310,
+          "top": 760,
+          "bottom": 2200,
+          "from": 0,
+          "to": 2,
+          "shortcut": true
+        }
+      ],
+      "materials": [
+        "battery",
+        "wire-coil",
+        "fuse"
+      ],
+      "devices": [
+        "scanner",
+        "relay",
+        "signal"
+      ],
+      "roomHeight": 340,
+      "description": "Security tower with switchback shafts and a powered return loop"
+    },
+    "spawnClearance": 12
   },
   {
     "level": 5,
@@ -620,147 +977,214 @@
       "Reactor interlock"
     ],
     "spawn": [
-      140,
+      208,
       480
     ],
     "routes": [
       {
-        "from": [
-          400,
-          480
-        ],
-        "to": [
-          1900,
-          1200
-        ],
-        "steps": 7,
-        "maxRise": 102.85714285714286,
-        "maxRun": 214.28571428571428
+        "type": "native-rail",
+        "x": 1214,
+        "top": 480,
+        "bottom": 1200,
+        "from": 0,
+        "to": 1,
+        "poweredShortcut": false
       },
       {
-        "from": [
-          1900,
-          1200
-        ],
-        "to": [
-          700,
-          1920
-        ],
-        "steps": 7,
-        "maxRise": 102.85714285714286,
-        "maxRun": 171.42857142857142
+        "type": "native-rail",
+        "x": 1364,
+        "top": 1200,
+        "bottom": 1920,
+        "from": 1,
+        "to": 2,
+        "poweredShortcut": false
       },
       {
-        "from": [
-          140,
-          2160
-        ],
-        "to": [
-          700,
-          1920
-        ],
-        "steps": 3,
-        "maxRise": 80,
-        "maxRun": 186.66666666666666
+        "type": "native-rail",
+        "x": 260,
+        "top": 480,
+        "bottom": 1920,
+        "from": 0,
+        "to": 2,
+        "shortcut": true,
+        "poweredShortcut": true
       }
     ],
     "platforms": [
       {
-        "x": 514,
-        "y": 583,
-        "width": 240
+        "x": 160,
+        "y": 360,
+        "width": 200
       },
       {
-        "x": 729,
-        "y": 686,
-        "width": 240
-      },
-      {
-        "x": 943,
-        "y": 789,
-        "width": 240
-      },
-      {
-        "x": 1157,
-        "y": 891,
-        "width": 240
-      },
-      {
-        "x": 1371,
-        "y": 994,
-        "width": 240
-      },
-      {
-        "x": 1586,
-        "y": 1097,
-        "width": 240
-      },
-      {
-        "x": 1629,
-        "y": 1303,
-        "width": 240
-      },
-      {
-        "x": 1457,
-        "y": 1406,
-        "width": 240
-      },
-      {
-        "x": 1286,
-        "y": 1509,
-        "width": 240
-      },
-      {
-        "x": 1114,
-        "y": 1611,
-        "width": 240
-      },
-      {
-        "x": 943,
-        "y": 1714,
-        "width": 240
-      },
-      {
-        "x": 771,
-        "y": 1817,
-        "width": 240
+        "x": 460,
+        "y": 1800,
+        "width": 200
       },
       {
         "x": 160,
         "y": 480,
-        "width": 620
+        "width": 204
+      },
+      {
+        "x": 364,
+        "y": 480,
+        "width": 436
       },
       {
         "x": 1660,
         "y": 1200,
-        "width": 620
+        "width": 640
       },
       {
         "x": 460,
         "y": 1920,
-        "width": 620
+        "width": 640
       },
       {
-        "x": 0,
+        "x": 1110,
         "y": 480,
-        "width": 500
+        "width": 200
       },
       {
-        "x": 227,
-        "y": 2080,
-        "width": 240
+        "x": 368,
+        "y": 480,
+        "width": 742
       },
       {
-        "x": 413,
-        "y": 2000,
-        "width": 240
+        "x": 1118,
+        "y": 1200,
+        "width": 200
       },
       {
-        "x": 580,
+        "x": 1318,
+        "y": 1200,
+        "width": 150
+      },
+      {
+        "x": 1468,
+        "y": 1200,
+        "width": 592
+      },
+      {
+        "x": 1268,
+        "y": 1200,
+        "width": 50
+      },
+      {
+        "x": 1318,
+        "y": 1200,
+        "width": 150
+      },
+      {
+        "x": 1260,
         "y": 1920,
-        "width": 1200
+        "width": 200
+      },
+      {
+        "x": 668,
+        "y": 1920,
+        "width": 592
+      },
+      {
+        "x": 164,
+        "y": 480,
+        "width": 200
+      },
+      {
+        "x": 364,
+        "y": 480,
+        "width": 196
+      },
+      {
+        "x": 164,
+        "y": 1920,
+        "width": 200
+      },
+      {
+        "x": 364,
+        "y": 1920,
+        "width": 496
+      },
+      {
+        "x": 1260,
+        "y": 1920,
+        "width": 208
+      },
+      {
+        "x": 460,
+        "y": 1920,
+        "width": 800
+      },
+      {
+        "x": 1468,
+        "y": 1920,
+        "width": 292
       }
-    ]
+    ],
+    "spawnClearance": 12,
+    "topology": {
+      "version": 2,
+      "rooms": [
+        {
+          "id": 0,
+          "x": 160,
+          "floor": 480,
+          "width": 640,
+          "center": 464
+        },
+        {
+          "id": 1,
+          "x": 1660,
+          "floor": 1200,
+          "width": 640,
+          "center": 1964
+        },
+        {
+          "id": 2,
+          "x": 460,
+          "floor": 1920,
+          "width": 640,
+          "center": 764
+        }
+      ],
+      "shafts": [
+        {
+          "x": 1214,
+          "top": 480,
+          "bottom": 1200,
+          "from": 0,
+          "to": 1
+        },
+        {
+          "x": 1364,
+          "top": 1200,
+          "bottom": 1920,
+          "from": 1,
+          "to": 2
+        },
+        {
+          "x": 260,
+          "top": 480,
+          "bottom": 1920,
+          "from": 0,
+          "to": 2,
+          "shortcut": true
+        }
+      ],
+      "materials": [
+        "energy-orb",
+        "wire-coil",
+        "battery"
+      ],
+      "devices": [
+        "pump",
+        "valve",
+        "reactor"
+      ],
+      "roomHeight": 340,
+      "description": "Descending reactor rooms with service lofts and a return shaft"
+    }
   },
   {
     "level": 6,
@@ -798,99 +1222,209 @@
       "Mecha startup"
     ],
     "spawn": [
-      96,
+      308,
       1440
     ],
     "routes": [
       {
-        "from": [
-          500,
-          1440
-        ],
-        "to": [
-          1450,
-          1080
-        ],
-        "steps": 5,
-        "maxRise": 72,
-        "maxRun": 190
+        "type": "native-rail",
+        "x": 1039,
+        "top": 1080,
+        "bottom": 1440,
+        "from": 0,
+        "to": 1,
+        "poweredShortcut": false
       },
       {
-        "from": [
-          1450,
-          1080
-        ],
-        "to": [
-          2400,
-          1440
-        ],
-        "steps": 5,
-        "maxRise": 72,
-        "maxRun": 190
+        "type": "native-rail",
+        "x": 1989,
+        "top": 1080,
+        "bottom": 1440,
+        "from": 1,
+        "to": 2,
+        "poweredShortcut": false
+      },
+      {
+        "type": "native-rail",
+        "x": 350,
+        "top": 1280,
+        "bottom": 1440,
+        "service": true,
+        "poweredShortcut": false
+      },
+      {
+        "type": "native-rail",
+        "x": 2250,
+        "top": 1280,
+        "bottom": 1440,
+        "service": true,
+        "poweredShortcut": false
       }
     ],
     "platforms": [
       {
-        "x": 590,
-        "y": 1368,
-        "width": 240
+        "x": 260,
+        "y": 1280,
+        "width": 200
       },
       {
-        "x": 780,
-        "y": 1296,
-        "width": 240
-      },
-      {
-        "x": 970,
-        "y": 1224,
-        "width": 240
-      },
-      {
-        "x": 1160,
-        "y": 1152,
-        "width": 240
-      },
-      {
-        "x": 1540,
-        "y": 1152,
-        "width": 240
-      },
-      {
-        "x": 1730,
-        "y": 1224,
-        "width": 240
-      },
-      {
-        "x": 1920,
-        "y": 1296,
-        "width": 240
-      },
-      {
-        "x": 2110,
-        "y": 1368,
-        "width": 240
+        "x": 2160,
+        "y": 1280,
+        "width": 200
       },
       {
         "x": 260,
         "y": 1440,
-        "width": 620
+        "width": 194
+      },
+      {
+        "x": 454,
+        "y": 1440,
+        "width": 446
       },
       {
         "x": 1210,
         "y": 1080,
-        "width": 620
+        "width": 640
       },
       {
         "x": 2160,
         "y": 1440,
-        "width": 620
+        "width": 194
       },
       {
-        "x": 2090,
+        "x": 2354,
         "y": 1440,
-        "width": 1110
+        "width": 446
+      },
+      {
+        "x": 935,
+        "y": 1440,
+        "width": 200
+      },
+      {
+        "x": 468,
+        "y": 1440,
+        "width": 467
+      },
+      {
+        "x": 943,
+        "y": 1080,
+        "width": 200
+      },
+      {
+        "x": 1143,
+        "y": 1080,
+        "width": 467
+      },
+      {
+        "x": 1885,
+        "y": 1080,
+        "width": 200
+      },
+      {
+        "x": 1418,
+        "y": 1080,
+        "width": 467
+      },
+      {
+        "x": 1893,
+        "y": 1440,
+        "width": 200
+      },
+      {
+        "x": 2146,
+        "y": 1440,
+        "width": 208
+      },
+      {
+        "x": 2093,
+        "y": 1440,
+        "width": 53
+      },
+      {
+        "x": 2354,
+        "y": 1440,
+        "width": 206
+      },
+      {
+        "x": 2160,
+        "y": 1440,
+        "width": 194
+      },
+      {
+        "x": 2354,
+        "y": 1440,
+        "width": 846
       }
-    ]
+    ],
+    "topology": {
+      "version": 2,
+      "rooms": [
+        {
+          "id": 0,
+          "x": 260,
+          "floor": 1440,
+          "width": 640,
+          "center": 564
+        },
+        {
+          "id": 1,
+          "x": 1210,
+          "floor": 1080,
+          "width": 640,
+          "center": 1514
+        },
+        {
+          "id": 2,
+          "x": 2160,
+          "floor": 1440,
+          "width": 640,
+          "center": 2464
+        }
+      ],
+      "shafts": [
+        {
+          "x": 1039,
+          "top": 1080,
+          "bottom": 1440,
+          "from": 0,
+          "to": 1
+        },
+        {
+          "x": 1989,
+          "top": 1080,
+          "bottom": 1440,
+          "from": 1,
+          "to": 2
+        },
+        {
+          "x": 350,
+          "top": 1280,
+          "bottom": 1440,
+          "service": true
+        },
+        {
+          "x": 2250,
+          "top": 1280,
+          "bottom": 1440,
+          "service": true
+        }
+      ],
+      "materials": [
+        "battery",
+        "scrap-gear",
+        "wire-coil"
+      ],
+      "devices": [
+        "reactor",
+        "coupler",
+        "lever"
+      ],
+      "roomHeight": 340,
+      "description": "Connected machinery rooms, service lofts, climbing shafts and repair-powered return paths"
+    },
+    "spawnClearance": 12
   },
   {
     "level": 7,
@@ -942,104 +1476,271 @@
       "Siege controller"
     ],
     "spawn": [
-      96,
+      208,
       1250
     ],
     "routes": [
       {
-        "from": [
-          400,
-          1250
-        ],
-        "to": [
-          1650,
-          890
-        ],
-        "steps": 6,
-        "maxRise": 60,
-        "maxRun": 208.33333333333334
+        "type": "native-rail",
+        "x": 1089,
+        "top": 890,
+        "bottom": 1250,
+        "from": 0,
+        "to": 1,
+        "poweredShortcut": false
       },
       {
-        "from": [
-          1650,
-          890
-        ],
-        "to": [
-          2700,
-          1250
-        ],
-        "steps": 5,
-        "maxRise": 72,
-        "maxRun": 210
+        "type": "native-rail",
+        "x": 2239,
+        "top": 890,
+        "bottom": 1250,
+        "from": 1,
+        "to": 2,
+        "poweredShortcut": false
+      },
+      {
+        "type": "native-rail",
+        "x": 2900,
+        "top": 1010,
+        "bottom": 1250,
+        "arena": true,
+        "balcony": {
+          "x": 2780,
+          "width": 650
+        },
+        "poweredShortcut": false
+      },
+      {
+        "type": "native-rail",
+        "x": 250,
+        "top": 1090,
+        "bottom": 1250,
+        "service": true,
+        "poweredShortcut": false
+      },
+      {
+        "type": "native-rail",
+        "x": 2550,
+        "top": 1090,
+        "bottom": 1250,
+        "service": true,
+        "poweredShortcut": false
       }
     ],
     "platforms": [
       {
-        "x": 508,
-        "y": 1190,
-        "width": 240
+        "x": 160,
+        "y": 1090,
+        "width": 200
       },
       {
-        "x": 717,
-        "y": 1130,
-        "width": 240
-      },
-      {
-        "x": 925,
-        "y": 1070,
-        "width": 240
-      },
-      {
-        "x": 1133,
-        "y": 1010,
-        "width": 240
-      },
-      {
-        "x": 1342,
-        "y": 950,
-        "width": 240
-      },
-      {
-        "x": 1760,
-        "y": 962,
-        "width": 240
-      },
-      {
-        "x": 1970,
-        "y": 1034,
-        "width": 240
-      },
-      {
-        "x": 2180,
-        "y": 1106,
-        "width": 240
-      },
-      {
-        "x": 2390,
-        "y": 1178,
-        "width": 240
+        "x": 2460,
+        "y": 1090,
+        "width": 200
       },
       {
         "x": 160,
         "y": 1250,
-        "width": 620
+        "width": 194
+      },
+      {
+        "x": 354,
+        "y": 1250,
+        "width": 446
       },
       {
         "x": 1410,
         "y": 890,
-        "width": 620
+        "width": 640
+      },
+      {
+        "x": 2796,
+        "y": 1250,
+        "width": 208
       },
       {
         "x": 2460,
         "y": 1250,
-        "width": 620
+        "width": 194
       },
       {
-        "x": 2580,
+        "x": 2654,
         "y": 1250,
-        "width": 1200
+        "width": 142
+      },
+      {
+        "x": 3004,
+        "y": 1250,
+        "width": 96
+      },
+      {
+        "x": 985,
+        "y": 1250,
+        "width": 200
+      },
+      {
+        "x": 368,
+        "y": 1250,
+        "width": 617
+      },
+      {
+        "x": 993,
+        "y": 890,
+        "width": 200
+      },
+      {
+        "x": 1193,
+        "y": 890,
+        "width": 617
+      },
+      {
+        "x": 2135,
+        "y": 890,
+        "width": 200
+      },
+      {
+        "x": 1618,
+        "y": 890,
+        "width": 517
+      },
+      {
+        "x": 2143,
+        "y": 1250,
+        "width": 200
+      },
+      {
+        "x": 2796,
+        "y": 1250,
+        "width": 64
+      },
+      {
+        "x": 2446,
+        "y": 1250,
+        "width": 208
+      },
+      {
+        "x": 2343,
+        "y": 1250,
+        "width": 103
+      },
+      {
+        "x": 2796,
+        "y": 1010,
+        "width": 208
+      },
+      {
+        "x": 2780,
+        "y": 1010,
+        "width": 16
+      },
+      {
+        "x": 3004,
+        "y": 1010,
+        "width": 426
+      },
+      {
+        "x": 2796,
+        "y": 1250,
+        "width": 208
+      },
+      {
+        "x": 2760,
+        "y": 1250,
+        "width": 36
+      },
+      {
+        "x": 3004,
+        "y": 1250,
+        "width": 996
+      },
+      {
+        "x": 2796,
+        "y": 1250,
+        "width": 208
+      },
+      {
+        "x": 2460,
+        "y": 1250,
+        "width": 194
       }
-    ]
+    ],
+    "topology": {
+      "version": 2,
+      "rooms": [
+        {
+          "id": 0,
+          "x": 160,
+          "floor": 1250,
+          "width": 640,
+          "center": 464
+        },
+        {
+          "id": 1,
+          "x": 1410,
+          "floor": 890,
+          "width": 640,
+          "center": 1714
+        },
+        {
+          "id": 2,
+          "x": 2460,
+          "floor": 1250,
+          "width": 640,
+          "center": 2764
+        }
+      ],
+      "shafts": [
+        {
+          "x": 1089,
+          "top": 890,
+          "bottom": 1250,
+          "from": 0,
+          "to": 1
+        },
+        {
+          "x": 2239,
+          "top": 890,
+          "bottom": 1250,
+          "from": 1,
+          "to": 2
+        },
+        {
+          "x": 2900,
+          "top": 1010,
+          "bottom": 1250,
+          "arena": true,
+          "balcony": {
+            "x": 2780,
+            "width": 650
+          }
+        },
+        {
+          "x": 250,
+          "top": 1090,
+          "bottom": 1250,
+          "service": true
+        },
+        {
+          "x": 2550,
+          "top": 1090,
+          "bottom": 1250,
+          "service": true
+        }
+      ],
+      "materials": [
+        "fuse",
+        "battery",
+        "scrap-gear"
+      ],
+      "devices": [
+        "shield",
+        "weapon",
+        "relay"
+      ],
+      "roomHeight": 340,
+      "description": "Industrial rooms opening into a broad guardian arena"
+    },
+    "spawnClearance": 12
   },
   {
     "level": 8,
@@ -1081,117 +1782,313 @@
       "Final shield"
     ],
     "spawn": [
-      96,
+      248,
       1750
     ],
     "routes": [
       {
-        "from": [
-          440,
-          1750
-        ],
-        "to": [
-          1190,
-          1390
-        ],
-        "steps": 3,
-        "maxRise": 120,
-        "maxRun": 150
+        "type": "native-rail",
+        "x": 879,
+        "top": 1390,
+        "bottom": 1750,
+        "from": 0,
+        "to": 1,
+        "poweredShortcut": false
       },
       {
-        "from": [
-          1190,
-          1390
-        ],
-        "to": [
-          2190,
-          1030
-        ],
-        "steps": 3,
-        "maxRise": 120,
-        "maxRun": 180
+        "type": "native-rail",
+        "x": 1754,
+        "top": 1030,
+        "bottom": 1390,
+        "from": 1,
+        "to": 2,
+        "poweredShortcut": false
+      },
+      {
+        "type": "native-rail",
+        "x": 300,
+        "top": 1030,
+        "bottom": 1750,
+        "from": 0,
+        "to": 2,
+        "shortcut": true,
+        "poweredShortcut": true
+      },
+      {
+        "type": "native-rail",
+        "x": 2440,
+        "top": 1030,
+        "bottom": 1750,
+        "arena": true,
+        "return": true,
+        "poweredShortcut": false
+      },
+      {
+        "type": "native-rail",
+        "x": 3100,
+        "top": 1390,
+        "bottom": 1750,
+        "arena": true,
+        "balcony": {
+          "x": 2960,
+          "width": 1240
+        },
+        "poweredShortcut": false
+      },
+      {
+        "type": "native-rail",
+        "x": 5100,
+        "top": 1150,
+        "bottom": 1750,
+        "arena": true,
+        "balcony": {
+          "x": 4300,
+          "width": 1200
+        },
+        "poweredShortcut": false
+      },
+      {
+        "type": "native-rail",
+        "x": 290,
+        "top": 1590,
+        "bottom": 1750,
+        "service": true,
+        "poweredShortcut": false
+      },
+      {
+        "type": "native-rail",
+        "x": 2040,
+        "top": 870,
+        "bottom": 1030,
+        "service": true,
+        "poweredShortcut": false
       }
     ],
     "platforms": [
       {
         "x": 200,
+        "y": 1590,
+        "width": 200
+      },
+      {
+        "x": 1950,
+        "y": 870,
+        "width": 200
+      },
+      {
+        "x": 775,
         "y": 1750,
-        "width": 700
+        "width": 65
+      },
+      {
+        "x": 200,
+        "y": 1750,
+        "width": 204
+      },
+      {
+        "x": 404,
+        "y": 1750,
+        "width": 371
       },
       {
         "x": 950,
         "y": 1390,
-        "width": 700
+        "width": 33
+      },
+      {
+        "x": 983,
+        "y": 1390,
+        "width": 607
+      },
+      {
+        "x": 2336,
+        "y": 1030,
+        "width": 208
       },
       {
         "x": 1950,
         "y": 1030,
-        "width": 700
+        "width": 194
       },
       {
-        "x": 600,
-        "y": 1630,
-        "width": 300
-      },
-      {
-        "x": 750,
-        "y": 1510,
-        "width": 300
-      },
-      {
-        "x": 900,
-        "y": 1390,
-        "width": 300
-      },
-      {
-        "x": 1450,
-        "y": 1270,
-        "width": 300
-      },
-      {
-        "x": 1630,
-        "y": 1150,
-        "width": 300
-      },
-      {
-        "x": 1810,
+        "x": 2144,
         "y": 1030,
-        "width": 300
+        "width": 192
       },
       {
-        "x": 3000,
-        "y": 1630,
-        "width": 360
+        "x": 2544,
+        "y": 1030,
+        "width": 46
       },
       {
-        "x": 3280,
-        "y": 1510,
-        "width": 380
+        "x": 775,
+        "y": 1750,
+        "width": 200
       },
       {
-        "x": 3560,
+        "x": 408,
+        "y": 1750,
+        "width": 367
+      },
+      {
+        "x": 783,
         "y": 1390,
-        "width": 440
+        "width": 200
       },
       {
-        "x": 4000,
-        "y": 1510,
-        "width": 380
+        "x": 983,
+        "y": 1390,
+        "width": 367
       },
       {
-        "x": 4380,
-        "y": 1630,
-        "width": 360
+        "x": 1650,
+        "y": 1390,
+        "width": 200
       },
       {
-        "x": 5000,
-        "y": 1510,
-        "width": 420
+        "x": 1158,
+        "y": 1390,
+        "width": 492
       },
       {
-        "x": 4780,
-        "y": 1630,
-        "width": 300
+        "x": 1658,
+        "y": 1030,
+        "width": 200
+      },
+      {
+        "x": 2336,
+        "y": 1030,
+        "width": 14
+      },
+      {
+        "x": 1936,
+        "y": 1030,
+        "width": 208
+      },
+      {
+        "x": 1858,
+        "y": 1030,
+        "width": 78
+      },
+      {
+        "x": 204,
+        "y": 1750,
+        "width": 200
+      },
+      {
+        "x": 404,
+        "y": 1750,
+        "width": 196
+      },
+      {
+        "x": 1650,
+        "y": 1030,
+        "width": 208
+      },
+      {
+        "x": 204,
+        "y": 1030,
+        "width": 200
+      },
+      {
+        "x": 2336,
+        "y": 1030,
+        "width": 14
+      },
+      {
+        "x": 1936,
+        "y": 1030,
+        "width": 208
+      },
+      {
+        "x": 404,
+        "y": 1030,
+        "width": 1246
+      },
+      {
+        "x": 2996,
+        "y": 1390,
+        "width": 208
+      },
+      {
+        "x": 2960,
+        "y": 1390,
+        "width": 36
+      },
+      {
+        "x": 3204,
+        "y": 1390,
+        "width": 996
+      },
+      {
+        "x": 4996,
+        "y": 1150,
+        "width": 208
+      },
+      {
+        "x": 4300,
+        "y": 1150,
+        "width": 696
+      },
+      {
+        "x": 5204,
+        "y": 1150,
+        "width": 296
+      },
+      {
+        "x": 2996,
+        "y": 1750,
+        "width": 208
+      },
+      {
+        "x": 4996,
+        "y": 1750,
+        "width": 208
+      },
+      {
+        "x": 2760,
+        "y": 1750,
+        "width": 236
+      },
+      {
+        "x": 3204,
+        "y": 1750,
+        "width": 1792
+      },
+      {
+        "x": 5204,
+        "y": 1750,
+        "width": 796
+      },
+      {
+        "x": 2336,
+        "y": 1750,
+        "width": 208
+      },
+      {
+        "x": 2996,
+        "y": 1750,
+        "width": 208
+      },
+      {
+        "x": 4996,
+        "y": 1750,
+        "width": 208
+      },
+      {
+        "x": 1950,
+        "y": 1750,
+        "width": 386
+      },
+      {
+        "x": 2544,
+        "y": 1750,
+        "width": 452
+      },
+      {
+        "x": 5204,
+        "y": 1750,
+        "width": 756
       }
     ],
     "cover": [
@@ -1199,6 +2096,108 @@
       4200,
       5100
     ],
-    "bossSize": 640
+    "bossSize": 640,
+    "topology": {
+      "version": 2,
+      "rooms": [
+        {
+          "id": 0,
+          "x": 200,
+          "floor": 1750,
+          "width": 640,
+          "center": 504
+        },
+        {
+          "id": 1,
+          "x": 950,
+          "floor": 1390,
+          "width": 640,
+          "center": 1254
+        },
+        {
+          "id": 2,
+          "x": 1950,
+          "floor": 1030,
+          "width": 640,
+          "center": 2254
+        }
+      ],
+      "shafts": [
+        {
+          "x": 879,
+          "top": 1390,
+          "bottom": 1750,
+          "from": 0,
+          "to": 1
+        },
+        {
+          "x": 1754,
+          "top": 1030,
+          "bottom": 1390,
+          "from": 1,
+          "to": 2
+        },
+        {
+          "x": 300,
+          "top": 1030,
+          "bottom": 1750,
+          "from": 0,
+          "to": 2,
+          "shortcut": true
+        },
+        {
+          "x": 2440,
+          "top": 1030,
+          "bottom": 1750,
+          "arena": true,
+          "return": true
+        },
+        {
+          "x": 3100,
+          "top": 1390,
+          "bottom": 1750,
+          "arena": true,
+          "balcony": {
+            "x": 2960,
+            "width": 1240
+          }
+        },
+        {
+          "x": 5100,
+          "top": 1150,
+          "bottom": 1750,
+          "arena": true,
+          "balcony": {
+            "x": 4300,
+            "width": 1200
+          }
+        },
+        {
+          "x": 290,
+          "top": 1590,
+          "bottom": 1750,
+          "service": true
+        },
+        {
+          "x": 2040,
+          "top": 870,
+          "bottom": 1030,
+          "service": true
+        }
+      ],
+      "materials": [
+        "energy-orb",
+        "battery",
+        "wire-coil"
+      ],
+      "devices": [
+        "shield",
+        "reactor",
+        "shield"
+      ],
+      "roomHeight": 340,
+      "description": "Industrial rooms opening into a broad guardian arena"
+    },
+    "spawnClearance": 12
   }
 ]

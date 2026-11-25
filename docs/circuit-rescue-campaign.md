@@ -23,9 +23,9 @@ All eight sectors can be selected from the route/level-list icon; there are no l
 | `sector7` | 7 — Industrial Battlefield | Three-input prediction; NOR repair/build | Siege weapon, then guardian fight |
 | `sector8` | 8 — Guardian Core | XOR build, AND repair, NOR build in separate rooms | Three-phase guardian and ending |
 
-Each map contains three components and three separately named terminals, supplies, a checkpoint, an optional keycard/credits chest and an exit. Terminal 1 needs one component, terminal 2 needs two, and terminal 3 needs three. Each completion awards 150 score once. Components and repairs survive life loss and reset on sector replay. The first system activates a native moving lift; the second deactivates the exit barrier; all three are needed to power the airlock. Boss and boarding conditions also apply. Parts use a count rather than a separate crafting inventory.
+Each map contains three components and three separately named terminals, supplies, a checkpoint and an exit. Terminal 1 needs one component, terminal 2 needs two, and terminal 3 needs three. Each completion awards 150 score once. Components and repairs survive life loss and reset on sector replay. All three repairs are needed to open the airlock. Routes have no blocking gates. Climb marked rails with W/S or up/down; Space jumps off. Touch climb controls appear near rails. Rail hatches open during descent and close after the body clears. Boss and boarding conditions also apply. Parts use a count rather than a separate crafting inventory. The three materials in a sector use different artwork (fuses, wire coils, batteries, gears or energy cells) and occupy side lofts/bays. Mission targets are relays, fans, winches, scanners, valves, pumps, couplers and shield equipment rather than repeated computer terminals. Generated pixel-art PNGs share a visible floor baseline; unrepaired machines are dimmed until repaired. Crates, wall racks, supplies and checkpoint/exit artwork use explicit placement anchors.
 
-Each location has its own generated background and world dimensions. Rooms are connected by native one-way platform routes, with vertical climbing, descending reactor rooms, warehouse backtracking and battlefield gaps. The camera follows X and Y while HUD/background remain fixed. [Layout data](location-layouts.json) records room positions and route measurements. Run `npm run check:maps` for supported spawns, terminal IDs and conservative platform-route reachability; this structural check supplements runtime playtesting.
+Each location has its own generated background and world dimensions. Rooms have solid decks, door lintels, service lofts, native climbing rails. Primary shafts connect the three machinery rooms. Repair-powered return loops and separate material bays provide backtracking and alternate routes. The reactor descends through its rooms; the battlefield/core open into broad arenas with elevated gantries. The core has an explicit return shaft to its phase rooms. The camera follows X and Y while HUD/background remain fixed. [Layout data](location-layouts.json) records room positions and route measurements. Run `npm run check:maps` for supported spawns, terminal IDs and conservative platform-route reachability; this structural check supplements runtime playtesting. `npm run test:routes` walks and jumps through every sector with native controls, checks all three parts and terminals, boards the level-6 mecha and returns to the final phase terminals. Combat is removed and puzzle results are supplied in this route-only test. Native jump speed is 850: held jumps rise approximately 168–174px at 20–60fps, leaving clearance above the 120px steps. All authored spawns start 12px above their floor so collision platforms register before landing.
 
 ## Dialog missions
 
@@ -41,28 +41,13 @@ The challenge dialog has three stages:
 
 Escape closes any stage. Tab/Shift+Tab stay within visible dialog buttons. Boss-phase briefs and explanations follow the current XOR/AND/NOR target. No new artwork is required; the shell reuses the existing chip and trophy icons.
 
-The workbench is a 10×7 grid. Drag a tool onto a cell, or select a tool and click cells. Gates go in marked sockets. Wires occupy ordinary empty cells. Right-click or use Erase to remove a piece. Clear board resets the puzzle. Closing the dialog preserves the current board for that sector and restores focus to the game canvas.
+The workbench uses explicit component ports. Place gates in the marked sockets, then drag from one port to another or tap the two ports. A connection can start at either end. Both gate inputs are on the left; the output is on the right. NOT and buffer expose one input. Cables route automatically; painting grid cells is no longer part of the interaction.
 
-Gate **input 1 enters from the left**, **input 2 enters from below**, and **output leaves to the right**. NOT and buffer use only the left input. Source A/B cells emit from the right; Y receives from the left. Gates are directional. Cables connect in all four cardinal directions; junctions join all arms electrically. Separate the A, B and output networks to prevent short circuits.
+Each input accepts one source. Connecting a different output replaces its existing cable and can be undone. Outputs support fan-out: the NAND-only AND lesson connects the first NAND output to both inputs of the second NAND. Crossing cables remain independent; there are no accidental electrical junctions. Validation evaluates the actual directed port graph and detects missing connections and feedback cycles.
 
-The wire graphic is chosen from a four-bit mask: up=1, right=2, down=4, left=8. Every board edit refreshes the connection shapes. Signal evaluation follows the actual wire networks and gate ports, detects missing connections, multiple drivers and feedback loops, and calculates output values. This is not a gate-name-only answer check.
+Select Trim and tap a cable or port to disconnect it. Right-clicking a cable also removes it. Keyboard users can focus ports and press Enter/Space to connect; Delete/Backspace disconnects a focused port or cable. Undo/redo and Clear preserve complete gate/link snapshots. Closing or changing stages cancels a pending connection and preserves completed edits. Escape cancels a pending cable before closing the dialog.
 
-The workbench reuses the generated metal dialog, board and inventory-tray frames, blank button states, socket artwork and completion badge. Transparent margins are trimmed into three derived frame PNGs; original artwork remains intact. Gate sockets show gold inputs and a cyan output.
-
-### Wire editing
-
-- Select **WIRE** or press **W**, then drag to extend a cable. Fast pointer movement fills intermediate cells; corners and junctions update automatically.
-- Select **TRIM** or press **E**, then drag to shorten/remove cables. Right-drag trims without changing the selected tool. Trimming protects gates, sources and output nodes.
-- One drag is one undo step. Use **Undo / Ctrl+Z** and **Redo / Ctrl+Y / Ctrl+Shift+Z**. Clear Board is also undoable. The last 50 undo states are retained for the current board, including when closing/reopening the dialog.
-- Drag gate tools into sockets, or select a gate and click its socket. Dragging displays a ghost and highlights its target.
-- Focus a cell and use arrow keys to navigate. Delete/Backspace removes the focused gate or cable; fixed sources/output remain protected.
-- Click an A/B source with Wire selected, or use the A/B controls, to inspect the live signal.
-
-The 10×7 board uses exact 44-pixel cells. Small screens stack the panels and allow horizontal board scrolling; touch-specific usability still needs device testing.
-
-**Test circuit** evaluates every input combination and shows expected versus actual Y. A/B controls let the learner inspect powered wires in one case. **Complete repair** appears only after all cases pass. Any edit invalidates the previous result. Wrong answers do not consume components or lives. The sixth-sector puzzle requires both sockets, with NAND and NOT providing the intended solution.
-
-The workbench uses HTML/CSS/DOM in a GDevelop JavaScript event so it can handle drag/drop, selectable tools, a grid, truth tables and accessible buttons. Native Platformer/Platform behaviors still handle map movement/collision. HTML5/browser and desktop previews are the current target. The responsive dialog can shrink on smaller screens, but phone/touch interaction has not been validated.
+The truth table previews each input case. Passing every case enables Complete Repair. The same interactions work with desktop pointers and touch; direct and reverse gestures, fan-out, rewiring, trimming, undo and cancellation are browser-tested.
 
 ## Actor collision and animation
 
@@ -70,9 +55,9 @@ The small-robot resources now use `assets/circuit-rescue-v1/player-v3/`: 64 recr
 
 The live small-robot Idle action uses only the calm ready stance (`idle-03.png`), including menu portraits. The exaggerated crouch/head-tilt sequence is retained as source artwork but no longer plays. Moving, combat and mecha clips are unchanged.
 
-Patrol robots (internally named `Crab` for compatibility) render at 72×72. Every animation frame uses the same centered body mask (32,26)–(96,120) on its 128×128 source canvas, excluding transparent margins and the antenna. The symmetric mask stays aligned when mirrored. Their spawn feet align with the floor.
+Patrol robots (internally named `Crab` for compatibility) render at a consistent 96×96 in every sector. Every animation frame uses the same centered body mask (32,26)–(96,120) on its 128×128 source canvas, excluding transparent margins and the antenna. The symmetric mask stays aligned when mirrored. Their spawn feet align with the floor.
 
-Player animation is selected once per frame in `gameplay.js` from the native Platformer movement state and combat state. The previous native SetAnimationName actions have been removed to prevent competing controllers. Landing is canceled when moving or airborne; continuous fire does not briefly return to Idle between shots. The normal robot Shoot action uses 16 fps so all eight frames fit its 0.52-second firing interval. Invulnerability uses steady translucency instead of rapid blinking. Run `npm run check:actors` after changing actor frames, masks or animation events.
+Player animation is selected once per frame in `gameplay.js` from the native Platformer movement state and combat state. The previous native SetAnimationName actions have been removed to prevent competing controllers. Locomotion takes priority while running or airborne, so firing does not freeze the legs in a standing shooting pose. A stationary robot plays Shoot; landing is canceled when moving or airborne. The normal robot Shoot action uses 16 fps so all eight frames fit its 0.52-second firing interval. Invulnerability uses steady translucency instead of rapid blinking. Run `npm run check:actors` after changing actor frames, masks or animation events.
 
 ## Mecha and guardian fights
 
@@ -81,8 +66,8 @@ In sector 6, repair all three hangar systems, approach the mecha and press **E**
 - **J / X:** cannon, unlimited mecha energy shots; normal robot ammunition remains finite.
 - **K:** shield with a three-second reserve; releasing K regenerates it at 0.4 seconds per second.
 - Mecha hull is 6 health. Each HUD heart represents two hull points. The normal robot has 3 health; each heart represents one.
-- Three lives and checkpoints still apply. Boarding restores hull and supplies; checkpoints restore health.
-- Bastion uses aimed missile salvos, physical rams and stomps. The Crimson Warden chooses sword sweeps, lunges, targeted leaps/slams and violet waves based on distance and elevated targets. Marked windups precede damage; attacks lock facing and target positions. Exposed recovery and EMP stagger windows take double cannon damage.
+- Three lives and checkpoints still apply. Boarding restores hull and supplies; checkpoints restore health. Checkpoints retain the floor height so returning in the larger mecha preserves body clearance.
+- Bastion uses aimed missile salvos, physical rams and stomps. The Crimson Warden chooses sword sweeps, lunges, targeted leaps/slams and violet waves based on distance and elevated targets. Marked windups precede damage; attacks lock facing and target positions. Exposed recovery and EMP stagger windows take double cannon damage. Exposed recovery does not inflict incidental contact damage.
 - Sector 7 Bastion: 24 hull; complete all three systems to disable its shield. Sector 8 Crimson Warden: 60 hull, three phases. Its shield returns at 40 and 20 hull. Visit the separate Core Stabilizer and Final Shield terminals for the AND repair and NOR build. Future phase terminals stay locked until needed. Combat freezes while solving.
 - Defeat the guardian and reach the airlock. The final sector leads to `winner`.
 
@@ -94,7 +79,7 @@ The [current combat asset guide](../assets/circuit-rescue-v1/combat-v2/README.md
 
 Play continues the current sector in the running session, or the next sector after a completion. The separate replay icon on the opening menu begins a new campaign. R or replay during gameplay restarts the current sector, including its components, puzzle and combat. Home returns to opening. Active-run progress lives in GDevelop global variables and resets after closing the game. Browser storage retains language and completion badges; it does not save the run.
 
-The supplied developer portraits, names, roles and NIMs are unchanged. Collect the optional keycard and open the chest to see its reveal followed by credits. Credits are also available through menu/pause/result icons. Do not alter the supplied NIM lengths.
+The supplied developer portraits, names, roles and NIMs are unchanged. Credits are available through menu/pause/result icons. The optional keycard, chest reveal and chest rewards have been removed from every level. Do not alter the supplied NIM lengths.
 
 ## Event sources and validation
 
@@ -112,3 +97,15 @@ This is a playable first campaign pass. Audio, persistent saves, a full inventor
 ## Final arena interactions
 
 Sector 8 is 6000 × 2200. Its boss is 640 world units tall, compared with the 192-unit mecha. Elevated routes, a checkpoint and supplies support a longer fight. The camera widens in the arena and frames both combatants when close. Three cover pylons power up after the first repair. Charged pylons block hostile shots; E/mobile Interact discharges an EMP, clears nearby shots, refills shield energy and staggers a nearby vulnerable boss. A pylon recharges over 16 seconds of unpaused game time. Boss missiles/waves clear when its shield returns, and combat pauses inside learning dialogs.
+
+## Normal sentries and world authoring
+
+Normal sentries have a 560-unit detection radius and a 440-unit horizontal firing range, editable on the Crab object's FireRange/DetectionRange variables. They aim before firing, shoot flat along their facing and do not track a target above/below their gun lane. Plasma expires after its configured distance. These sentries use ranged attacks; the retained Melee clip is not selected by the sentry controller. Bosses retain their distinct missiles, waves and melee attacks.
+
+World layout and placement metadata is in `docs/location-layouts.json`. `scripts/rework-worlds.mjs` rebuilds generated room architecture and placements with `npm run world:rebuild`, after creating a recovery copy under `.local/backups/world-rework`. It preserves event sources, UI, portraits and actor art. Treat that command as an intentional layout reset; reconcile manual editor changes before rerunning it. Generated machinery PNGs and their source atlas are in `assets/circuit-rescue-v1/world-devices-pixel/`. The former SVG variants remain as archived sources.
+
+Run `npm run check:placements`, `npm run check:frame-pixels`, `npm run test:world`, `npm run test:ports` and `npm run test:routes` for the added coverage. Full pixel-frame metrics and candidate border contacts are saved under `.local/reports`; appearance remains a developer review.
+
+Mecha landing frames use compensated drawing origins and source collision coordinates to align their visible feet without changing the effective world body. `scripts/normalize-actor-anchors.mjs` derives these anchors from the pixel audit and keeps an ArtFoot point on each frame. `test:gameplay` verifies the native polygon and ArtFoot coordinate for all eight landing poses. Run-cycle frames that lift both feet retain that intended stride motion.
+
+Generated ladder art is in `assets/circuit-rescue-v1/climb-v1/`; rear-facing robot frames derived from the original player reference are in `assets/circuit-rescue-v1/climb-v2/`. The climbing pose pauses while stationary; mecha holds its idle pose on rails. Elevators have been removed from all levels.

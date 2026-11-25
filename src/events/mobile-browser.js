@@ -10,7 +10,7 @@ if(!mobileBrowser&&typeof document!=='undefined'){
  const isStandalone=()=>navigator.standalone===true||matchMedia('(display-mode: standalone)').matches||(matchMedia('(display-mode: fullscreen)').matches&&!document.fullscreenElement&&!document.webkitFullscreenElement);
  const isIPhone=()=>/iPhone|iPod/i.test(navigator.userAgent);
  const installLabel='Open as web app';
- const installGuide='On iPhone, open this game in Safari, tap Share → Add to Home Screen, enable Open as Web App if shown, then launch it from the Home Screen icon.';
+ const installGuide='On iPhone, open this game in Safari, tap Share, then Add to Home Screen, enable Open as Web App if shown, then launch it from the Home Screen icon.';
  const isFullscreen=()=>!!(document.fullscreenElement||document.webkitFullscreenElement);
  const supported=()=>typeof document.documentElement.requestFullscreen==='function'?document.fullscreenEnabled!==false:typeof document.documentElement.webkitRequestFullscreen==='function'&&document.webkitFullscreenEnabled!==false;
  const art=name=>browserOwner.getGameData().resources.resources.find(r=>r.name==='CR_mobile_'+name.replace(/-/g,'_')+'_png')?.file??'';

@@ -1,8 +1,6 @@
-# Chest easter egg and developer credits
+# Developer credits
 
-Collect the brass key, then open the treasure chest in `permainan` as usual. The game pauses and shows a closed-to-open chest reveal. After about 2.1 seconds it automatically shows the developer cards; the play/continue icon or Enter advances sooner. The chest still awards 100 score and 8 ammo once per run.
-
-The credits use the supplied portraits without alteration:
+Credits are always available from the opening, pause, winner and game-over menus. There are no developer chests or keycard pickups in the eight gameplay levels, and credits grant no gameplay rewards.
 
 | Developer | Role | NIM |
 | --- | --- | --- |
@@ -10,10 +8,6 @@ The credits use the supplied portraits without alteration:
 | Nazwa Hilmia Zida | Artist | 24053360454 |
 | Syarifatus Sholihah | Level Design | 240533602750 |
 
-The continue icon or Escape closes the credits. After a chest reveal, gameplay resumes. When credits were opened from the pause menu, closing returns to that paused menu instead. Movement, timers and shooting stay frozen throughout the reveal and credits.
+The supplied portraits remain in `assets/developer-portraits-v1`. Names, roles and NIMs are editable text objects in each scene's interface folder. Closing credits returns to the pause menu when opened there; otherwise it returns to the current menu. Gameplay remains paused while credits are open.
 
-The scroll/quill credits icon is enabled on the opening screen, winner screen, game-over screen and pause menu. The pause menu now has four icon buttons: continue, replay, credits and home. Replay resets the chest for a new run.
-
-Portrait PNGs are in `assets/developer-portraits-v1`, with matching global objects in the Developer Portraits folder. Each scene has Interface > Developer Credits and Interface > Chest Reveal folders. Names, roles and NIMs are editable text objects in those folders.
-
-The UI event controls the reveal timing and credit cards. `treasureShownAt` uses wall-clock time so the reveal can advance while game time is paused. The game-rule event opens the dialog only when a keyed chest is first opened. Sources are snapshotted in `src/events/ui.js` and `src/events/gameplay.js`; edit embedded events in GDevelop to change runtime behavior.
+The shared controller is `src/events/ui.js`. Run `npm run events:push` after editing readable event sources. The former chest artwork remains in the source asset archive for reuse; its objects, pickups, HUD indicator and reveal logic are no longer used.

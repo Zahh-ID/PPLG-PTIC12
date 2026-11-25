@@ -1,7 +1,7 @@
 // Robot combat: readable state machines, fixed facing during attacks and repair-powered arena tools.
 const combatCampaign=runtimeScene.__campaign,combatGame=runtimeScene.__islandGame;
 if(!combatCampaign||!combatGame)return;
-const c=combatCampaign,g=combatGame,O=name=>runtimeScene.getObjects(name),p=O('Player')[0];
+const c=combatCampaign,g=combatGame,O=name=>runtimeScene.getObjects(name).slice(),p=O('Player')[0];
 if(!p||runtimeScene.__animalUI?.modal||runtimeScene.__animalUI?.transitioning)return;
 const now=g.time,dt=Math.min(runtimeScene.getTimeManager().getElapsedTime()/1000,.08);
 const worldWidth=runtimeScene.getVariables().get('WorldWidth').getAsNumber();
@@ -10,10 +10,10 @@ const px=center(p),py=p.getY()+p.getHeight()*.55;
 const animate=(o,a)=>{if(o.getAnimationName()!==a)o.setAnimationName(a);};
 const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
 const overlap=(x,y,w,h,o)=>{const left=c.mecha ? .1875:45/128,right=c.mecha ? .8125:83/128,top=c.mecha?40/256:32/128;return x<o.getX()+o.getWidth()*right&&x+w>o.getX()+o.getWidth()*left&&y<feet(o)&&y+h>o.getY()+o.getHeight()*top;};
-const solids=()=>[...O('Ground'),...O('RouteGate').filter(o=>o.isVisible())];
+const solids=()=>[...O('Ground'),...O('Bulkhead'),...['RouteGate','ShortcutGate'].flatMap(name=>O(name).filter(o=>o.isVisible()))];
 // Segment/box test keeps guards from firing through solid room walls.
 function crosses(x,y,tx,ty,o){let lo=0,hi=1;for(const[v,d,a,b]of [[x,tx-x,o.getX(),o.getX()+o.getWidth()],[y,ty-y,o.getY(),o.getY()+o.getHeight()]]){if(Math.abs(d)<.001){if(v<a||v>b)return false;}else{let t0=(a-v)/d,t1=(b-v)/d;if(t0>t1)[t0,t1]=[t1,t0];lo=Math.max(lo,t0);hi=Math.min(hi,t1);if(lo>hi)return false;}}return hi>=0&&lo<=1;}
-function bolt(kind,x,y,tx,ty,speed=360){const o=runtimeScene.createObject('EnemyBolt');if(!o)return;const sizes={Plasma:[44,36],Missile:[90,58],Wave:[110,148]};const[w,h]=sizes[kind];o.setAnimationName(kind);o.setWidth(w);o.setHeight(h);o.setPosition(x-w/2,y-h/2);o.setZOrder(14);const a=Math.atan2(ty-y,tx-x);o.__vx=Math.cos(a)*speed;o.__vy=Math.sin(a)*speed;o.__ttl=7;o.__kind=kind;o.setAngle(a*180/Math.PI);return o;}
+function bolt(kind,x,y,tx,ty,speed=360,range=Infinity){const o=runtimeScene.createObject('EnemyBolt');if(!o)return;const sizes={Plasma:[44,36],Missile:[90,58],Wave:[110,148]};const[w,h]=sizes[kind];o.setAnimationName(kind);o.setWidth(w);o.setHeight(h);o.setPosition(x-w/2,y-h/2);o.setZOrder(14);const a=Math.atan2(ty-y,tx-x);o.__vx=Math.cos(a)*speed;o.__vy=Math.sin(a)*speed;o.__ttl=7;o.__kind=kind;o.__distanceLeft=range;o.__travelled=0;o.setAngle(a*180/Math.PI);return o;}
 function message(text){g.message=text;g.messageUntil=now+1.1;}
 c.combat??={shots:0,attacks:[],coverUses:0};
 // Damage is one readable impact, never the sum of overlapping guards/projectiles.
@@ -24,28 +24,34 @@ for(const e of O('Crab')){
  if(a.deadAt!==undefined){animate(e,'Death');if(now-a.deadAt>.85)e.deleteFromScene(runtimeScene);continue;}
  a.state??='patrol';a.until??=0;a.home??=center(e);
  const ex=center(e),ey=e.getY()+e.getHeight()*.5,dx=px-ex,dy=py-ey;
- const sees=Math.abs(dx)<650&&Math.abs(dy)<170&&!solids().some(o=>crosses(ex,ey,px,py,o));
- if(a.hurtUntil>now){move.setCurrentSpeed(0);animate(e,'Hurt');continue;}
- if(a.state==='aim'||a.state==='melee-windup'){
+ const fireRange=e.getVariables().get('FireRange').getAsNumber()||440,detectRange=e.getVariables().get('DetectionRange').getAsNumber()||560;
+ const playerTop=p.getY()+(c.mecha?30:32),aligned=ey>=playerTop&&ey<=feet(p);
+ const sees=Math.abs(dx)<detectRange&&aligned&&!solids().some(o=>crosses(ex,ey,px,ey,o));
+ if(a.hurtUntil>now){
+  // A hit cancels the committed attack. Never release a stale shot after stun ends.
+  a.state='recover';a.until=a.hurtUntil+.65;a.hit=false;a.activeAt=undefined;
+  move.setCurrentSpeed(0);e.setColor('255;255;255');animate(e,'Hurt');continue;
+ }
+ if(a.state==='aim'){
   move.setCurrentSpeed(0);animate(e,'Idle');e.setColor('255;205;155');
-  if(now>=a.until){a.state=a.state==='aim'?'shoot':'melee';a.activeAt=now;a.hit=false;a.until=now+.72;}
- }else if(a.state==='shoot'||a.state==='melee'){
-  move.setCurrentSpeed(0);e.setColor('255;255;255');animate(e,a.state==='shoot'?'Shoot':'Melee');
+  if(!sees||Math.abs(dx)>fireRange||Math.sign(dx)!==a.direction){a.state='recover';a.until=now+.45;}
+  else if(now>=a.until){a.state='shoot';a.activeAt=now;a.hit=false;a.until=now+.72;}
+ }else if(a.state==='shoot'){
+  move.setCurrentSpeed(0);e.setColor('255;255;255');animate(e,'Shoot');
   // Release at the fourth pose, after the weapon actually swings/aims.
-  if(!a.hit&&now-(a.activeAt??now)>=.3){a.hit=true;if(a.state==='shoot'){bolt('Plasma',ex+a.direction*38,ey,a.aimX,a.aimY,350);c.combat.shots++;}else if(overlap(ex+(a.direction<0?-110:0),feet(e)-105,110,100,p))queueDamage(1);}
-  if(now>=a.until){a.state='recover';a.until=now+.65;}
+  if(!a.hit&&now-(a.activeAt??now)>=.3){a.hit=true;if(Math.abs(dx)<=fireRange&&Math.sign(dx)===a.direction&&!solids().some(o=>crosses(ex,ey,px,ey,o))){bolt('Plasma',ex+a.direction*38,ey,ex+a.direction*1000,ey,350,fireRange);c.combat.shots++;}}
+  if(now>=a.until){a.state='recover';a.until=now+.85;}
  }else if(a.state==='recover'){
   move.setCurrentSpeed(0);animate(e,'Idle');if(now>=a.until)a.state='patrol';
  }else{
   e.setColor('255;255;255');let direction=a.direction;
   if(sees){a.direction=dx<0?-1:1;direction=a.direction;
-   if(Math.abs(dx)<105){a.state='melee-windup';a.until=now+.65;move.setCurrentSpeed(0);}
-   else if(Math.abs(dx)<430){a.state='aim';a.until=now+.7;a.aimX=px;a.aimY=py;move.setCurrentSpeed(0);}
+   if(Math.abs(dx)<=fireRange){a.state='aim';a.until=now+.7;move.setCurrentSpeed(0);}
    else a.state='pursue';
   }else{a.state='patrol';if(e.getX()<=a.left)a.direction=1;if(e.getX()>=a.right)a.direction=-1;direction=a.direction;}
   // Refuse unsupported steps: native Platformer still owns gravity and contacts.
   const ahead=ex+direction*(e.getWidth()*.4+20),floor=feet(e)+e.getHeight()*(120/128-.875);
-  const safe=[...O('Ground'),...O('Ledge'),...O('RepairLift')].some(o=>ahead>=o.getX()&&ahead<=o.getX()+o.getWidth()&&o.getY()>=floor-20&&o.getY()<=floor+60);
+  const safe=[...O('Ground'),...O('Ledge')].some(o=>o.isVisible()&&ahead>=o.getX()&&ahead<=o.getX()+o.getWidth()&&o.getY()>=floor-20&&o.getY()<=floor+60);
   if(['patrol','pursue'].includes(a.state)&&safe){if(direction<0)move.simulateLeftKey();else move.simulateRightKey();animate(e,'Walk');}else{move.setCurrentSpeed(0);animate(e,'Idle');if(a.state==='patrol')a.direction=-direction;}
  }
  e.flipX(a.direction<0);
@@ -106,13 +112,21 @@ if(boss&&b&&!boss.dead){
    animate(b,'Exposed');if(now>=boss.until)enter('pursue',.65);
   }
   b.flipX(boss.direction>0);
-  if(!['active','windup','stagger'].includes(boss.state)&&gdjs.RuntimeObject.collisionTest(p,b,false))queueDamage(1);
+  if(boss.state==='pursue'&&gdjs.RuntimeObject.collisionTest(p,b,false))queueDamage(1);
  }
 }
 // Always drain projectiles, even after a boss dies. Solid cover and room walls block shots.
 for(const shot of O('EnemyBolt')){
- shot.__ttl=(shot.__ttl??0)-dt;shot.setPosition(shot.getX()+(shot.__vx??0)*dt,shot.getY()+(shot.__vy??0)*dt);
- const blocked=solids().some(o=>gdjs.RuntimeObject.collisionTest(shot,o,false))||O('ArenaCover').some(o=>o.__charged&&gdjs.RuntimeObject.collisionTest(shot,o,false));
- if(blocked||shot.__ttl<=0||shot.getX()<-200||shot.getX()>worldWidth+200)shot.deleteFromScene(runtimeScene);
- else if(gdjs.RuntimeObject.collisionTest(p,shot,false)){queueDamage(1);shot.deleteFromScene(runtimeScene);}
+ shot.__ttl=(shot.__ttl??0)-dt;
+ const distance=Math.hypot(shot.__vx??0,shot.__vy??0)*dt,travel=Math.min(distance,shot.__distanceLeft??Infinity),scale=distance?travel/distance:0;
+ const dx=(shot.__vx??0)*dt*scale,dy=(shot.__vy??0)*dt*scale,steps=Math.max(1,Math.ceil(travel/6)),x=shot.getX(),y=shot.getY();
+ let destroyed=shot.__ttl<=0;
+ const blockers=[...solids(),...O('ArenaCover').filter(o=>o.__charged)];
+ for(let step=0;step<=steps&&!destroyed;step++){
+  shot.setPosition(x+dx*step/steps,y+dy*step/steps);
+  if(blockers.some(o=>gdjs.RuntimeObject.collisionTest(shot,o,false)))destroyed=true;
+  else if(gdjs.RuntimeObject.collisionTest(p,shot,false)){queueDamage(1);destroyed=true;}
+ }
+ shot.__distanceLeft=(shot.__distanceLeft??Infinity)-travel;shot.__travelled=(shot.__travelled??0)+Math.hypot(shot.getX()-x,shot.getY()-y);
+ if(destroyed||shot.__distanceLeft<=0||shot.getX()<-200||shot.getX()>worldWidth+200)shot.deleteFromScene(runtimeScene);
 }

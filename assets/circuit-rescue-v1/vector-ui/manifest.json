@@ -1,0 +1,416 @@
+{
+  "version": 1,
+  "viewBox": [
+    0,
+    0,
+    128,
+    128
+  ],
+  "palette": {
+    "surface": "#2b2b2b",
+    "edge": "#383838",
+    "foreground": "#ffffff",
+    "accent": "#1a88f8",
+    "secondary": "#333333",
+    "raised": "#383838",
+    "hover": "#404040",
+    "active": "#4d4d4d",
+    "muted": "#b8b8b8",
+    "border": "#4d4d4d",
+    "inset": "#222222",
+    "success": "#7ff0bb",
+    "warning": "#ffd77d"
+  },
+  "brand": {
+    "name": "Circuit Rescue",
+    "file": "circuit-rescue-mark.svg",
+    "animation": "lottie/logo.json",
+    "meaning": "The generated reactor emblem, isolated from the full wordmark. A mechanical quarter-turn precedes modal expansion.",
+    "source": "assets/circuit-rescue-v1/branding-v2/circuit-rescue-emblem.svg",
+    "width": 700,
+    "height": 724
+  },
+  "motion": {
+    "enterMs": 600,
+    "exitMs": 600,
+    "feedbackMs": 100,
+    "reducedMotionMs": 0,
+    "library": "animejs",
+    "version": "4.5.0",
+    "iconLibrary": "lottie-web",
+    "iconVersion": "5.13.0",
+    "iconDirectory": "lottie/",
+    "iconLoop": false,
+    "swapMs": 180
+  },
+  "icons": {
+    "play": {
+      "resources": [
+        "CR_ui_play_png",
+        "CR_ui_resume_png"
+      ],
+      "originals": {
+        "CR_ui_play_png": "assets/circuit-rescue-v1/ui/play.png",
+        "CR_ui_resume_png": "assets/circuit-rescue-v1/ui/resume.png"
+      },
+      "body": "<path d=\"M49 36L91 64 49 92Z\" stroke=\"none\"/>",
+      "pickup": false,
+      "label": "Play",
+      "minTouchTarget": 48
+    },
+    "pause": {
+      "resources": [
+        "CR_ui_pause_png"
+      ],
+      "originals": {
+        "CR_ui_pause_png": "assets/circuit-rescue-v1/ui/pause.png"
+      },
+      "body": "<path d=\"M45 36V92M83 36V92\" stroke-width=\"14\"/>",
+      "pickup": false,
+      "label": "Pause",
+      "minTouchTarget": 48
+    },
+    "replay": {
+      "resources": [
+        "CR_ui_replay_png"
+      ],
+      "originals": {
+        "CR_ui_replay_png": "assets/circuit-rescue-v1/ui/replay.png"
+      },
+      "body": "<path d=\"M35 51A36 36 0 1 1 31 79\" fill=\"none\"/><path d=\"M28 28V56H56\" fill=\"none\"/>",
+      "pickup": false,
+      "label": "Replay",
+      "minTouchTarget": 48
+    },
+    "home": {
+      "resources": [
+        "CR_ui_home_png"
+      ],
+      "originals": {
+        "CR_ui_home_png": "assets/circuit-rescue-v1/ui/home.png"
+      },
+      "body": "<path d=\"M29 60L64 28 99 60M38 54V99H90V54M56 99V73H74V99\" fill=\"none\"/>",
+      "pickup": false,
+      "label": "Home",
+      "minTouchTarget": 48
+    },
+    "close": {
+      "resources": [
+        "CR_ui_exit_png",
+        "CR_ui_close_png"
+      ],
+      "originals": {
+        "CR_ui_exit_png": "assets/circuit-rescue-v1/ui/exit.png",
+        "CR_ui_close_png": "assets/circuit-rescue-v1/ui/close.png"
+      },
+      "body": "<path d=\"M38 38L90 90M90 38L38 90\"/>",
+      "pickup": false,
+      "label": "Close",
+      "minTouchTarget": 48,
+      "color": "#ff8b7a"
+    },
+    "next": {
+      "resources": [
+        "CR_ui_next_png"
+      ],
+      "originals": {
+        "CR_ui_next_png": "assets/circuit-rescue-v1/ui/next.png"
+      },
+      "body": "<path d=\"M50 34L80 64 50 94\" fill=\"none\"/>",
+      "pickup": false,
+      "label": "Next",
+      "minTouchTarget": 48
+    },
+    "back": {
+      "resources": [
+        "CR_ui_back_png"
+      ],
+      "originals": {
+        "CR_ui_back_png": "assets/circuit-rescue-v1/ui/back.png"
+      },
+      "body": "<path d=\"M78 34L48 64 78 94\" fill=\"none\"/>",
+      "pickup": false,
+      "label": "Back",
+      "minTouchTarget": 48
+    },
+    "help": {
+      "resources": [
+        "CR_ui_help_png"
+      ],
+      "originals": {
+        "CR_ui_help_png": "assets/circuit-rescue-v1/ui/help.png"
+      },
+      "body": "<path d=\"M45 45C45 20 91 24 85 49C83 61 64 61 64 77M64 92V98\" fill=\"none\"/>",
+      "pickup": false,
+      "label": "Help",
+      "minTouchTarget": 48
+    },
+    "credits": {
+      "resources": [
+        "CR_ui_credits_png"
+      ],
+      "originals": {
+        "CR_ui_credits_png": "assets/circuit-rescue-v1/ui/credits.png"
+      },
+      "body": "<circle cx=\"64\" cy=\"43\" r=\"14\" fill=\"none\"/><path d=\"M33 99V89C33 62 95 62 95 89V99\" fill=\"none\"/>",
+      "pickup": false,
+      "label": "Credits",
+      "minTouchTarget": 48
+    },
+    "settings": {
+      "resources": [
+        "CR_ui_settings_png"
+      ],
+      "originals": {
+        "CR_ui_settings_png": "assets/circuit-rescue-v1/ui/settings.png"
+      },
+      "body": "<path d=\"M31 40H97M31 64H97M31 88H97\"/><path d=\"M49 29V51M80 53V75M55 77V99\" stroke=\"#ffc66e\" stroke-width=\"12\"/>",
+      "pickup": false,
+      "label": "Settings",
+      "minTouchTarget": 48
+    },
+    "shield": {
+      "resources": [
+        "CR_ui_shield_png"
+      ],
+      "originals": {
+        "CR_ui_shield_png": "assets/circuit-rescue-v1/ui/shield.png"
+      },
+      "body": "<path d=\"M64 25L98 38V65C97 86 79 99 64 107C49 99 31 86 30 65V38Z\" fill=\"none\"/><path d=\"M64 45V81M48 63H80\"/>",
+      "pickup": false,
+      "label": "Shield",
+      "minTouchTarget": 48
+    },
+    "jump": {
+      "resources": [
+        "CR_mobile_jump_png"
+      ],
+      "originals": {
+        "CR_mobile_jump_png": "assets/circuit-rescue-v1/mobile/jump.png"
+      },
+      "body": "<path d=\"M64 99V31M36 59L64 31 92 59\" fill=\"none\"/>",
+      "pickup": false,
+      "label": "Jump",
+      "minTouchTarget": 48
+    },
+    "fire": {
+      "resources": [
+        "CR_mobile_fire_png"
+      ],
+      "originals": {
+        "CR_mobile_fire_png": "assets/circuit-rescue-v1/mobile/fire.png"
+      },
+      "body": "<circle cx=\"64\" cy=\"64\" r=\"24\" fill=\"none\"/><path d=\"M64 22V43M64 85V106M22 64H43M85 64H106\"/>",
+      "pickup": false,
+      "label": "Fire",
+      "minTouchTarget": 48,
+      "color": "#ffcc79"
+    },
+    "interact": {
+      "resources": [
+        "CR_mobile_interact_png"
+      ],
+      "originals": {
+        "CR_mobile_interact_png": "assets/circuit-rescue-v1/mobile/interact.png"
+      },
+      "body": "<path d=\"M39 84V52L49 48 57 68V30C57 20 71 20 71 30V59L87 55 100 63V86L84 104H59Z\" fill=\"none\"/>",
+      "pickup": false,
+      "label": "Interact",
+      "minTouchTarget": 48
+    },
+    "fullscreen": {
+      "resources": [
+        "CR_mobile_fullscreen_png"
+      ],
+      "originals": {
+        "CR_mobile_fullscreen_png": "assets/circuit-rescue-v1/mobile/fullscreen.png"
+      },
+      "body": "<path d=\"M28 52V28H52M76 28H100V52M100 76V100H76M52 100H28V76\" fill=\"none\"/>",
+      "pickup": false,
+      "label": "Fullscreen",
+      "minTouchTarget": 48
+    },
+    "exit-fullscreen": {
+      "resources": [
+        "CR_mobile_exit_fullscreen_png"
+      ],
+      "originals": {
+        "CR_mobile_exit_fullscreen_png": "assets/circuit-rescue-v1/mobile/exit-fullscreen.png"
+      },
+      "body": "<path d=\"M52 28V52H28M100 52H76V28M76 100V76H100M28 76H52V100\" fill=\"none\"/>",
+      "pickup": false,
+      "label": "Exit Fullscreen",
+      "minTouchTarget": 48
+    },
+    "language": {
+      "resources": [
+        "CR_navigation_language_png"
+      ],
+      "originals": {
+        "CR_navigation_language_png": "assets/circuit-rescue-v1/navigation/language.png"
+      },
+      "body": "<circle cx=\"64\" cy=\"64\" r=\"37\" fill=\"none\"/><ellipse cx=\"64\" cy=\"64\" rx=\"17\" ry=\"37\" fill=\"none\"/><path d=\"M28 64H100M35 44H93M35 84H93\" fill=\"none\"/>",
+      "pickup": false,
+      "label": "Language",
+      "minTouchTarget": 48
+    },
+    "levels": {
+      "resources": [
+        "CR_navigation_level_list_png"
+      ],
+      "originals": {
+        "CR_navigation_level_list_png": "assets/circuit-rescue-v1/navigation/level-list.png"
+      },
+      "body": "<path d=\"M51 35H99M51 64H99M51 93H99\"/><path d=\"M28 35H32M28 64H32M28 93H32\" stroke=\"#ffc66e\" stroke-width=\"13\"/>",
+      "pickup": false,
+      "label": "Levels",
+      "minTouchTarget": 48
+    },
+    "complete": {
+      "resources": [
+        "CR_ui_trophy_png",
+        "CR_ui_correct_png",
+        "CR_ui_module_complete_png",
+        "CR_navigation_level_complete_png"
+      ],
+      "originals": {
+        "CR_ui_trophy_png": "assets/circuit-rescue-v1/ui/trophy.png",
+        "CR_ui_correct_png": "assets/circuit-rescue-v1/ui/correct.png",
+        "CR_ui_module_complete_png": "assets/circuit-rescue-v1/ui/module-complete.png",
+        "CR_navigation_level_complete_png": "assets/circuit-rescue-v1/navigation/level-complete.png"
+      },
+      "body": "<path d=\"M43 28H85V57C85 83 43 83 43 57ZM64 78V99M45 102H83M42 37H25V48C25 64 36 67 44 67M86 37H103V48C103 64 92 67 84 67\" fill=\"none\"/>",
+      "pickup": false,
+      "label": "Complete",
+      "minTouchTarget": 48,
+      "color": "#ffc66e"
+    },
+    "chip": {
+      "resources": [
+        "CR_ui_scrap_png",
+        "CR_ui_chip_png"
+      ],
+      "originals": {
+        "CR_ui_scrap_png": "assets/circuit-rescue-v1/ui/scrap.png",
+        "CR_ui_chip_png": "assets/circuit-rescue-v1/ui/chip.png"
+      },
+      "body": "<rect x=\"37\" y=\"37\" width=\"54\" height=\"54\" fill=\"none\"/><rect x=\"51\" y=\"51\" width=\"26\" height=\"26\" stroke=\"none\"/><path d=\"M49 24V37M79 24V37M49 91V104M79 91V104M24 49H37M24 79H37M91 49H104M91 79H104\"/>",
+      "pickup": false,
+      "label": "Chip",
+      "minTouchTarget": 48
+    },
+    "battery": {
+      "resources": [
+        "CR_ui_battery_png"
+      ],
+      "originals": {
+        "CR_ui_battery_png": "assets/circuit-rescue-v1/ui/battery.png"
+      },
+      "body": "<path d=\"M37 31H91V104H37ZM52 22H76\" fill=\"none\"/><path d=\"M48 84H80M48 67H80M48 50H80\" stroke=\"#ffc66e\"/>",
+      "pickup": false,
+      "label": "Battery",
+      "minTouchTarget": 48
+    },
+    "keycard": {
+      "resources": [
+        "CR_ui_keycard_png"
+      ],
+      "originals": {
+        "CR_ui_keycard_png": "assets/circuit-rescue-v1/ui/keycard.png"
+      },
+      "body": "<rect x=\"25\" y=\"37\" width=\"78\" height=\"57\" rx=\"4\" fill=\"none\"/><circle cx=\"48\" cy=\"64\" r=\"9\" fill=\"none\"/><path d=\"M57 64H86M76 64V76M86 64V72\"/>",
+      "pickup": false,
+      "label": "Keycard",
+      "minTouchTarget": 48,
+      "color": "#ffc66e"
+    },
+    "health": {
+      "resources": [
+        "CR_ui_heart_full_png"
+      ],
+      "originals": {
+        "CR_ui_heart_full_png": "assets/circuit-rescue-v1/ui/heart-full.png"
+      },
+      "body": "<path d=\"M64 103L29 71C-1 36 44 16 64 43C84 16 129 36 99 71Z\" stroke=\"none\"/>",
+      "pickup": false,
+      "label": "Health",
+      "minTouchTarget": 48,
+      "color": "#ff827d"
+    },
+    "heart-empty": {
+      "resources": [
+        "CR_ui_heart_empty_png"
+      ],
+      "originals": {
+        "CR_ui_heart_empty_png": "assets/circuit-rescue-v1/ui/heart-empty.png"
+      },
+      "body": "<path d=\"M64 103L29 71C-1 36 44 16 64 43C84 16 129 36 99 71Z\" fill=\"none\"/>",
+      "pickup": false,
+      "label": "Heart Empty",
+      "minTouchTarget": 48,
+      "color": "#71889a"
+    },
+    "star": {
+      "resources": [
+        "CR_ui_star_png"
+      ],
+      "originals": {
+        "CR_ui_star_png": "assets/circuit-rescue-v1/ui/star.png"
+      },
+      "body": "<path d=\"M64 22L77 48 106 53 85 75 90 105 64 91 38 105 43 75 22 53 51 48Z\" fill=\"none\"/>",
+      "pickup": false,
+      "label": "Star",
+      "minTouchTarget": 48,
+      "color": "#ffc66e"
+    },
+    "part-pickup": {
+      "resources": [
+        "CR_pickups_processor_png"
+      ],
+      "originals": {
+        "CR_pickups_processor_png": "assets/circuit-rescue-v1/pickups/processor.png"
+      },
+      "body": "<rect x=\"37\" y=\"37\" width=\"54\" height=\"54\" fill=\"none\"/><rect x=\"51\" y=\"51\" width=\"26\" height=\"26\" stroke=\"none\"/><path d=\"M49 24V37M79 24V37M49 91V104M79 91V104M24 49H37M24 79H37M91 49H104M91 79H104\"/>",
+      "pickup": true,
+      "label": "Part Pickup",
+      "minTouchTarget": 48
+    },
+    "ammo-pickup": {
+      "resources": [
+        "CR_pickups_battery_png"
+      ],
+      "originals": {
+        "CR_pickups_battery_png": "assets/circuit-rescue-v1/pickups/battery.png"
+      },
+      "body": "<path d=\"M37 31H91V104H37ZM52 22H76\" fill=\"none\"/><path d=\"M48 84H80M48 67H80M48 50H80\" stroke=\"#ffc66e\"/>",
+      "pickup": true,
+      "label": "Ammo Pickup",
+      "minTouchTarget": 48
+    },
+    "key-pickup": {
+      "resources": [
+        "CR_pickups_keycard_png"
+      ],
+      "originals": {
+        "CR_pickups_keycard_png": "assets/circuit-rescue-v1/pickups/keycard.png"
+      },
+      "body": "<rect x=\"25\" y=\"37\" width=\"78\" height=\"57\" rx=\"4\" fill=\"none\"/><circle cx=\"48\" cy=\"64\" r=\"9\" fill=\"none\"/><path d=\"M57 64H86M76 64V76M86 64V72\"/>",
+      "pickup": true,
+      "label": "Key Pickup",
+      "minTouchTarget": 48,
+      "color": "#ffc66e"
+    },
+    "health-pickup": {
+      "resources": [
+        "CR_pickups_medkit_png"
+      ],
+      "originals": {
+        "CR_pickups_medkit_png": "assets/circuit-rescue-v1/pickups/medkit.png"
+      },
+      "body": "<rect x=\"25\" y=\"25\" width=\"78\" height=\"78\" rx=\"12\" fill=\"#123e38\" stroke=\"#8fe3b0\"/><path d=\"M64 44V84M44 64H84\" stroke=\"#a8ffd0\" stroke-width=\"13\"/>",
+      "pickup": true,
+      "label": "Health Pickup",
+      "minTouchTarget": 48
+    }
+  }
+}

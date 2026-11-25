@@ -33,10 +33,22 @@ jobs:
         timeout-minutes: 5
       - run: npm run test:mobile
         timeout-minutes: 5
+      - run: npm run test:modals
+        timeout-minutes: 5
       - run: npm run test:readability
         timeout-minutes: 5
       - run: npm run test:combat-browser
         timeout-minutes: 7
+      - run: npm run test:highlights
+        timeout-minutes: 5
+      - run: npm run test:world
+        timeout-minutes: 5
+      - run: npm run test:ports
+        timeout-minutes: 5
+      - run: npm run test:gameplay
+        timeout-minutes: 5
+      - run: npm run test:routes
+        timeout-minutes: 12
       - run: npm run test:browser
         timeout-minutes: 12
       - name: Save test reports
