@@ -7,6 +7,7 @@ Credits are always available from the opening, pause, winner and game-over menus
 | Syahruzzahid | Programmer | 2405336104 |
 | Nazwa Hilmia Zida | Artist | 24053360454 |
 | Syarifatus Sholihah | Level Design | 240533602750 |
+| Harist Ar Rosyid | Dosen Pembimbing | ? |
 
 The supplied portraits remain in `assets/developer-portraits-v1`. Names, roles and NIMs are editable text objects in each scene's interface folder. Closing credits returns to the pause menu when opened there; otherwise it returns to the current menu. Gameplay remains paused while credits are open.
 

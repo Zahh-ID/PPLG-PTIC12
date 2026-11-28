@@ -3,87 +3,87 @@ const journeyGame=runtimeScene.getGame(),L=journeyGame.__crLocale;if(!L||typeof 
 const ui=runtimeScene.__animalUI;if(!ui)return;
 const level=runtimeScene.getVariables().get('CampaignLevel').getAsNumber(),game=runtimeScene.__islandGame;
 const titles=['','Emergency Station','Cargo Warehouse','Transit Network','Security Tower','Underground Reactor','Mecha Hangar','Industrial Battlefield','Guardian Core'];
-const concepts=['','NOT','AND','OR','XOR','NAND and NOR','NAND then NOT','NOR','XOR, AND, NOR'];
+const concepts=['','NOT, AND','AND, OR, NAND','OR, NOR, XOR','XOR, NOT, AND, OR','AND, OR, NOT, NAND','OR, NOT, NAND','XOR, NOT, NOR','XOR, NOT, AND'];
 const introductions=[
  null,
  {
   "concept": [
-   "NOT gives the opposite result. An active input turns the output off.",
-   "NOT memberikan hasil yang berlawanan. Masukan yang aktif membuat keluaran mati."
+   "NOT reverses an input. AND gives 1 only when both inputs are 1. Two NOT gates reverse a signal twice.",
+   "NOT membalik nilai masukan. AND menghasilkan 1 hanya jika kedua masukan bernilai 1. Dua gerbang NOT membalik sinyal dua kali."
   ],
   "example": [
-   "When the switch is off, the lamp is on. Turn the switch on and the lamp goes off.",
-   "Saat sakelar mati, lampu menyala. Saat sakelar dinyalakan, lampu mati."
+   "When the switch is off, the lamp is on. For AND, both switches must be on. Two NOT gates return the original value.",
+   "Saat sakelar mati, lampu menyala. Pada AND, kedua sakelar harus aktif. Dua NOT mengembalikan nilai semula."
   ],
   "mission": [
-   "Collect a fuse, wire coil and battery. Restore the relay, ventilation and airlock controls.",
-   "Kumpulkan sekering, gulungan kabel, dan baterai. Pulihkan relai, ventilasi, dan kontrol pintu udara."
+   "Collect components and repair the relay, ventilation and airlock. Each terminal has a different challenge.",
+   "Kumpulkan komponen lalu perbaiki relai, ventilasi, dan pintu udara. Setiap terminal memiliki soal berbeda."
   ]
  },
  {
   "concept": [
-   "AND turns the output on only when both inputs are on.",
-   "AND menyalakan keluaran hanya saat kedua masukan aktif."
+   "AND needs both inputs on. OR needs at least one input on. NAND reverses the AND result.",
+   "AND membutuhkan kedua masukan aktif. OR cukup membutuhkan satu masukan aktif. NAND membalik hasil AND."
   ],
   "example": [
-   "The lift runs when power is available and the safety switch is on. If either condition is missing, it stops.",
-   "Lift bergerak saat daya tersedia dan sakelar pengaman aktif. Jika salah satu syarat belum terpenuhi, lift berhenti."
+   "For inputs 1 and 1, AND gives 1 and NAND gives 0. For inputs 0 and 1, OR gives 1.",
+   "Jika masukannya 1 dan 1, AND menghasilkan 1 dan NAND menghasilkan 0. Jika masukannya 0 dan 1, OR menghasilkan 1."
   ],
   "mission": [
-   "Repair the scanner, hoist and exit. Each circuit needs power from both inputs.",
-   "Perbaiki pemindai, katrol, dan pintu keluar. Setiap rangkaian memerlukan daya dari kedua masukan."
+   "Collect components and repair the scanner, hoist and exit. Read the rule at each terminal.",
+   "Kumpulkan komponen dan perbaiki pemindai, katrol, serta pintu keluar. Baca aturan di setiap terminal."
   ]
  },
  {
   "concept": [
-   "OR turns the output on when at least one input is on.",
-   "OR menyalakan keluaran saat setidaknya satu masukan aktif."
+   "OR gives 1 if at least one input is 1. NOR reverses OR. XOR gives 1 when the inputs differ.",
+   "OR menghasilkan 1 jika sedikitnya satu masukan bernilai 1. NOR membalik hasil OR. XOR menghasilkan 1 jika kedua masukan berbeda."
   ],
   "example": [
-   "Either generator can power the station. The lights stay on while at least one generator is running.",
-   "Salah satu generator sudah cukup untuk memasok daya stasiun. Lampu tetap menyala selama ada generator yang bekerja."
+   "With inputs 0 and 0, NOR gives 1. With 0 and 1, both OR and XOR give 1. With 1 and 1, XOR gives 0.",
+   "Untuk masukan 0 dan 0, NOR menghasilkan 1. Untuk 0 dan 1, OR dan XOR menghasilkan 1. Untuk 1 dan 1, XOR menghasilkan 0."
   ],
   "mission": [
-   "Restore the signals, switching panel and junction using either power source.",
-   "Pulihkan sinyal, panel pengalih, dan persimpangan menggunakan salah satu sumber daya."
+   "Collect components and restore the signals, switching panel and junction.",
+   "Kumpulkan komponen dan pulihkan sinyal, panel pengalih, serta persimpangan."
   ]
  },
  {
   "concept": [
-   "XOR turns the output on when the two inputs are different.",
-   "XOR menyalakan keluaran saat keadaan kedua masukan berbeda."
+   "XOR checks whether inputs differ. For the security lock, reverse B with NOT before combining it with A using AND. The last terminal uses OR.",
+   "XOR memeriksa apakah kedua masukan berbeda. Pada kunci keamanan, balik B dengan NOT, lalu gabungkan dengan A memakai AND. Terminal terakhir menggunakan OR."
   ],
   "example": [
-   "The lock opens when only one switch is on. Turning both switches on keeps it closed.",
-   "Kunci terbuka saat hanya satu sakelar aktif. Menyalakan kedua sakelar membuat kunci tetap tertutup."
+   "XOR gives 1 for A 0 and B 1. The security lock gives 1 only for A 1 and B 0. OR gives 1 if at least one input is 1.",
+   "XOR menghasilkan 1 saat A 0 dan B 1. Kunci keamanan menghasilkan 1 hanya saat A 1 dan B 0. OR menghasilkan 1 jika sedikitnya satu masukan bernilai 1."
   ],
   "mission": [
-   "Climb the tower. Repair its sensors, security lock and uplink.",
-   "Panjat menara. Perbaiki sensor, kunci keamanan, dan sambungan menara."
+   "Climb the tower, collect components and repair its three systems.",
+   "Panjat menara, kumpulkan komponen, lalu perbaiki ketiga sistemnya."
   ]
  },
  {
   "concept": [
-   "NAND turns off when both inputs are on. NOR turns on only when both inputs are off.",
-   "NAND mematikan keluaran saat kedua masukan aktif. NOR menyalakan keluaran hanya saat kedua masukan mati."
+   "Cooling requires A and B on while C is off. The alarm uses OR with B reversed by NOT. The final circuit makes AND using two NAND gates.",
+   "Pendingin membutuhkan A dan B aktif serta C mati. Alarm menggunakan OR dengan B yang dibalik oleh NOT. Rangkaian terakhir membentuk AND dari dua gerbang NAND."
   ],
   "example": [
-   "Cooling runs while power and safety are on and no fault is detected. The alarm interlock activates only when both alarms are off.",
-   "Pendingin bekerja saat daya dan pengaman aktif serta tidak ada gangguan. Pengaman alarm hanya aktif saat kedua alarm mati."
+   "Cooling gives 1 for A 1, B 1, C 0. The alarm gives 0 only for A 0, B 1. Two NAND gates can give the same result as AND.",
+   "Pendingin menghasilkan 1 saat A 1, B 1, C 0. Alarm menghasilkan 0 hanya saat A 0, B 1. Dua gerbang NAND dapat menghasilkan keluaran seperti AND."
   ],
   "mission": [
-   "Repair the cooling system and alarm. Then build an AND circuit using only NAND gates.",
-   "Perbaiki pendingin dan alarm. Lalu rakit rangkaian AND hanya dengan gerbang NAND."
+   "Collect components, restore cooling and the alarm, then build the NAND circuit.",
+   "Kumpulkan komponen, pulihkan pendingin dan alarm, lalu rakit rangkaian NAND."
   ]
  },
  {
   "concept": [
-   "NAND followed by NOT works like AND. Both inputs must be on.",
-   "NAND yang diikuti NOT bekerja seperti AND. Kedua masukan harus aktif."
+   "The first system needs A or B on while C is off. NAND gives 0 only when both inputs are 1. The last system uses OR after reversing B with NOT.",
+   "Sistem pertama membutuhkan A atau B aktif saat C mati. NAND menghasilkan 0 hanya jika kedua masukan bernilai 1. Sistem terakhir menggunakan OR setelah B dibalik dengan NOT."
   ],
   "example": [
-   "Both power cells must be on to start the mecha. A NAND gate followed by NOT checks that condition.",
-   "Kedua sel daya harus aktif untuk menyalakan mecha. Gerbang NAND yang diikuti NOT memeriksa syarat tersebut."
+   "The first system gives 1 for A 0, B 1, C 0. NAND gives 0 for A 1, B 1. The last system gives 0 only for A 0, B 1.",
+   "Sistem pertama menghasilkan 1 saat A 0, B 1, C 0. NAND menghasilkan 0 saat A 1, B 1. Sistem terakhir menghasilkan 0 hanya saat A 0, B 1."
   ],
   "mission": [
    "Repair all three hangar systems, then approach the mecha to board it.",
@@ -92,12 +92,12 @@ const introductions=[
  },
  {
   "concept": [
-   "NOR turns the output on only when both inputs are off.",
-   "NOR menyalakan keluaran hanya saat kedua masukan mati."
+   "The first system needs different A and B values while C is off. For the second, reverse B before XOR; the result is 1 when A and B match. The last uses NOR.",
+   "Sistem pertama membutuhkan nilai A dan B berbeda saat C mati. Pada sistem kedua, balik B sebelum XOR; hasilnya 1 jika A dan B sama. Sistem terakhir menggunakan NOR."
   ],
   "example": [
-   "The siege weapon is ready when both safety alarms are off. Either alarm disables it.",
-   "Senjata pengepungan siap saat kedua alarm pengaman mati. Jika salah satu alarm aktif, senjata berhenti."
+   "The first system gives 1 for A 1, B 0, C 0. The second gives 1 for A 1, B 1. NOR gives 1 only for A 0, B 0.",
+   "Sistem pertama menghasilkan 1 saat A 1, B 0, C 0. Sistem kedua menghasilkan 1 saat A 1, B 1. NOR menghasilkan 1 hanya saat A 0, B 0."
   ],
   "mission": [
    "Repair three siege systems. Use the mecha to defeat Bastion and reach the exit.",
@@ -116,25 +116,25 @@ const introductions=[
  },
  {
   "concept": [
-   "Each shield uses a different gate rule. Repair a new circuit whenever the shield returns.",
-   "Setiap perisai memakai aturan gerbang yang berbeda. Perbaiki rangkaian baru setiap kali perisai pulih."
+   "The first circuit reverses XOR, so it detects matching inputs. The second reverses A before AND; the third reverses B before AND.",
+   "Rangkaian pertama membalik hasil XOR untuk mendeteksi masukan yang sama. Rangkaian kedua membalik A sebelum AND; rangkaian ketiga membalik B sebelum AND."
   ],
   "example": [
-   "The first shield opens when the switches differ. The next needs both switches on, and the last needs both off.",
-   "Perisai pertama terbuka saat posisi sakelar berbeda. Perisai berikutnya memerlukan kedua sakelar aktif, sedangkan perisai terakhir memerlukan keduanya mati."
+   "The first gives 1 when A and B match. The second gives 1 only for A 0, B 1. The third gives 1 only for A 1, B 0.",
+   "Rangkaian pertama menghasilkan 1 saat A dan B sama. Rangkaian kedua menghasilkan 1 hanya saat A 0, B 1. Rangkaian ketiga menghasilkan 1 hanya saat A 1, B 0."
   ],
   "mission": [
-   "Disable the Crimson Warden’s shields, defeat it with the mecha and reach the exit.",
-   "Nonaktifkan perisai Crimson Warden, kalahkan dengan mecha, lalu capai pintu keluar."
+   "Complete all three challenges to disable the guardian shield, defeat the guardian, then reach the exit.",
+   "Selesaikan ketiga soal untuk menonaktifkan perisai penjaga, kalahkan penjaga, lalu capai pintu keluar."
   ],
   "tips": [
    [
-    "Leave marked sword and slam zones. Counterattack during recovery for double damage.",
-    "Keluar dari area sapuan pedang dan hantaman yang ditandai. Balas saat bos memulihkan posisi untuk menghasilkan kerusakan ganda."
+    "Leave marked sword and slam zones. Counterattack during recovery when the guardian is vulnerable.",
+    "Keluar dari area sapuan pedang dan hantaman yang ditandai. Serang saat penjaga memulihkan posisi dan lengah."
    ],
    [
-    "The first repair powers cover. Interact nearby to clear enemy shots, recharge your shield and stagger the boss.",
-    "Perbaikan pertama mengaktifkan pelindung. Gunakan interaksi di dekatnya untuk menghapus tembakan musuh, mengisi perisai, dan membuat bos terhuyung."
+    "The first repair powers cover. Interact nearby to clear enemy shots and stagger the boss. Tap or hold shield whenever needed.",
+    "Perbaikan pertama mengaktifkan pelindung. Gunakan interaksi untuk menghapus tembakan musuh dan membuat bos terhuyung. Ketuk atau tahan tombol perisai kapan saja."
    ]
   ]
  }
@@ -163,7 +163,7 @@ function render(){const wasOpen=!!j.root?.isConnected,focusKey=document.activeEl
  const languageButton=button(head,'Language','navigation/language.png',()=>j.open('language'),'language');languageButton.querySelector('span').textContent=L.language.toUpperCase();languageButton.title=t('Language');
  const columns=document.createElement('div');columns.className='cr-concept';content.append(columns);
  const lesson=document.createElement('div'),example=document.createElement('div');example.className='cr-example';columns.append(lesson,example);
- const h=document.createElement('h3');h.textContent=t('Concept')+' '+t(concepts[level]);lesson.append(h);paragraph(lesson,pick(intro.concept));
+ const h=document.createElement('h3');h.textContent=t('Concept')+' '+t(concepts[level]);lesson.append(h);paragraph(lesson,L.language==='id'?'Pada setiap soal, 0 berarti mati dan 1 berarti aktif. A, B, dan C adalah masukan; Y adalah hasil keluaran.':'In every challenge, 0 means off and 1 means on. A, B and C are inputs; Y is the output.');paragraph(lesson,pick(intro.concept));
  const label=document.createElement('h3');label.textContent=t('Your mission');lesson.append(label);paragraph(lesson,pick(intro.mission));
  if(level===1){const steps=document.createElement('ol');steps.setAttribute('aria-label',t('How to play'));for(const line of [t('Move with A/D or left/right. Jump with Space.'),t('Climb ladders with W/S or up/down. On touch screens, use the climb buttons near a ladder.'),t('Find a glowing material, then approach a machine and press E or the interact button.'),t('In the challenge, connect the blue output to a gold input. Test the circuit, then confirm the repair.'),t('Repair all three machines, then reach the airlock.')]){const item=document.createElement('li');item.textContent=line;steps.append(item);}lesson.append(steps);}else paragraph(lesson,t('Climb the marked rails with W/S or up/down. Space jumps off.'));
  if(intro.tips){const tips=document.createElement('details');tips.className='cr-intro-tips';const summary=document.createElement('summary');summary.textContent=t('Combat tips');tips.append(summary);for(const tip of intro.tips)paragraph(tips,pick(tip));lesson.append(tips);}
@@ -178,6 +178,6 @@ j.open=kind=>{if(!j.stack.length){j.savedModal=ui.modal;j.returnFocus=document.a
 if(!j.nav){const nav=document.createElement('div');nav.id='cr-navigation';nav.innerHTML='<style>#cr-navigation{position:fixed;z-index:9500;left:max(12px,env(safe-area-inset-left));top:max(12px,env(safe-area-inset-top));display:flex;align-items:center;gap:8px;pointer-events:none}#cr-navigation[hidden]{display:none}#cr-navigation[data-paused=true]{top:auto;left:50%;transform:translateX(-50%);bottom:max(12px,env(safe-area-inset-bottom))}#cr-navigation button{pointer-events:auto;touch-action:manipulation;width:52px;height:52px;padding:0;border:0;background:transparent;cursor:pointer}#cr-navigation img{width:100%;height:100%;object-fit:contain;image-rendering:pixelated}#cr-navigation span{font:13px system-ui;color:#e5f7ff;text-shadow:1px 1px #000;background:#071d2dcc;padding:4px}#cr-navigation button:focus-visible{outline:2px solid #ffd47a}</style>';for(const[kind,file,label]of [['language','navigation/language.png','Language'],['levels','navigation/level-list.png','Level List']]){const b=document.createElement('button');b.type='button';b.dataset.nav=kind;b.title=label;b.setAttribute('aria-label',label);b.append(image(file));b.onclick=()=>j.open(kind);nav.append(b);}const languageStatus=document.createElement('span');languageStatus.dataset.languageStatus='';nav.append(languageStatus);document.body.append(nav);j.nav=nav;L.watch(nav);}
 j.nav.hidden=!!j.stack.length||ui.transitioning||level>0&&ui.modal!=='pause';j.nav.dataset.paused=String(level>0);j.nav.querySelector('[data-language-status]').textContent=L.language.toUpperCase();
 if(level>0&&!j.introShown&&game&&game.state==='playing'&&!ui.modal){j.introShown=true;j.open('intro');}
-if(level>0&&game?.state==='won'&&!j.completionShown){j.completionShown=true;j.completed.add(level);journeyGame.getVariables().get('CRResumeLevel').setNumber(level<8?level+1:1);try{localStorage.setItem('cr-completed-levels',JSON.stringify([...j.completed]));}catch{}j.stack=[];j.savedModal='';j.open('complete');}
+if(level>0&&game?.state==='won'&&!j.completionShown){j.completionShown=true;journeyGame.__crSetMusic('CR_music_winner',true);j.completed.add(level);journeyGame.getVariables().get('CRResumeLevel').setNumber(level<8?level+1:1);try{localStorage.setItem('cr-completed-levels',JSON.stringify([...j.completed]));}catch{}j.stack=[];j.savedModal='';j.open('complete');}
 if(j.request){const route=j.request;j.request=null;j.root?.remove();j.root=null;j.stack=[];j.nav.hidden=true;ui.modal='';ui.transitioning=true;journeyGame.__crTouch?.clear();journeyGame.getInputManager().releaseAllPressedKeys();runtimeScene.getTimeManager().setTimeScale(1);if(route.reset)journeyGame.getVariables().get('CRScore').setNumber(0);const selected=route.scene==='permainan'?1:Number(route.scene.replace('sector',''));if(selected>=1&&selected<=8)journeyGame.getVariables().get('CRResumeLevel').setNumber(selected);if(route.scene==='winner')journeyGame.getVariables().get('CRResumeLevel').setNumber(1);gdjs.evtTools.runtimeScene.replaceScene(runtimeScene,route.scene,false);}
 L.frame(runtimeScene);

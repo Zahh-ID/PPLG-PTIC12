@@ -36,7 +36,8 @@
     "test:world": "node tests/world-mechanics.browser.mjs",
     "test:ports": "node tests/circuit-ports.browser.mjs",
     "world:rebuild": "node scripts/rework-worlds.mjs --apply",
-    "test:highlights": "node tests/highlights.browser.mjs"
+    "test:highlights": "node tests/highlights.browser.mjs",
+    "test:audio": "node tests/audio.browser.mjs"
   },
   "devDependencies": {
     "gdcore-tools": "2.0.0-gd-v5.6.269-autobuild",

@@ -80,7 +80,7 @@ try {
   for(let frame=0;frame<8;frame++){p.setAnimationFrame(frame);const vertices=p.getHitBoxes().flatMap(box=>box.vertices);frames.push({frame,body:[Math.min(...vertices.map(v=>v[0]))-p.getX(),Math.min(...vertices.map(v=>v[1]))-p.getY(),Math.max(...vertices.map(v=>v[0]))-p.getX(),Math.max(...vertices.map(v=>v[1]))-p.getY()],artFoot:p.getPointY('ArtFoot')-p.getY()});}
   p.setAnimationName(old);return frames;
  });
- for(const frame of landing){for(const[n,value]of frame.body.entries())assert.ok(Math.abs(value-[36,30,156,168][n])<.001,JSON.stringify(frame));assert.ok(Math.abs(frame.artFoot-168)<.001,JSON.stringify(frame));}
+ for(const frame of landing){for(const[n,value]of frame.body.entries())assert.ok(Math.abs(value-[60,30,132,168][n])<.001,JSON.stringify(frame));assert.ok(Math.abs(frame.artFoot-168)<.001,JSON.stringify(frame));}
  pass('All eight mecha landing poses share a visible ground anchor and an unchanged native collision body');
  const cleared=await page.evaluate(()=>{
   const s=window.__testGame.getSceneStack().getCurrentScene(),g=s.__islandGame;

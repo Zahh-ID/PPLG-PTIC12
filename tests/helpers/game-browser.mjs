@@ -10,7 +10,7 @@ export async function gameBrowser(firstLayout='permainan',viewport={width:1280,h
   const pathname=decodeURIComponent(new URL(req.url,'http://local').pathname);
   const file=path.resolve(root,'.'+(pathname==='/'?'/index.html':pathname));
   if(!file.startsWith(root+path.sep)||!fs.existsSync(file)){res.writeHead(404).end();return;}
-  res.setHeader('Content-Type',({'.html':'text/html','.js':'text/javascript','.png':'image/png','.svg':'image/svg+xml','.css':'text/css','.json':'application/json'})[path.extname(file)]||'application/octet-stream');
+  res.setHeader('Content-Type',({'.html':'text/html','.js':'text/javascript','.png':'image/png','.svg':'image/svg+xml','.css':'text/css','.json':'application/json','.mp3':'audio/mpeg','.wav':'audio/wav'})[path.extname(file)]||'application/octet-stream');
   let data=fs.readFileSync(file);
   if(file.endsWith('.html'))data=data.toString().replace('var game = new gdjs.RuntimeGame(gdjs.projectData, {});',`gdjs.projectData.firstLayout=${JSON.stringify(firstLayout)};localStorage.setItem('cr-language','en');var game=window.__testGame=new gdjs.RuntimeGame(gdjs.projectData, {});`);
   res.end(data);

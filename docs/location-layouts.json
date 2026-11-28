@@ -733,7 +733,7 @@
     "routes": [
       {
         "type": "native-rail",
-        "x": 1039,
+        "x": 1064.0,
         "top": 1480,
         "bottom": 2200,
         "from": 0,
@@ -904,7 +904,7 @@
       ],
       "shafts": [
         {
-          "x": 1039,
+          "x": 1064.0,
           "top": 1480,
           "bottom": 2200,
           "from": 0,
@@ -1849,14 +1849,6 @@
       },
       {
         "type": "native-rail",
-        "x": 290,
-        "top": 1590,
-        "bottom": 1750,
-        "service": true,
-        "poweredShortcut": false
-      },
-      {
-        "type": "native-rail",
         "x": 2040,
         "top": 870,
         "bottom": 1030,
@@ -2171,12 +2163,6 @@
             "x": 4300,
             "width": 1200
           }
-        },
-        {
-          "x": 290,
-          "top": 1590,
-          "bottom": 1750,
-          "service": true
         },
         {
           "x": 2040,

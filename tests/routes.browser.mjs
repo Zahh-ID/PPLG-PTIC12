@@ -65,7 +65,7 @@ try {
      else if(g.state!=='playing'){state.error='lost life during traversal';}
      else if(g.time-state.started>260){state.error='route timeout';}
      else {
-      const goal=goals[state.goal],support=surfaces.find(surface=>surface.members.some(o=>move.isOnFloorObject(o)))??(move.isOnFloor()?surfaces.find(o=>Math.abs(o.getY()-feet())<1&&center()+(c.mecha?60:19)>o.getX()&&center()-(c.mecha?60:19)<o.getX()+o.getWidth()):null);
+      const goal=goals[state.goal],support=surfaces.find(surface=>surface.members.some(o=>move.isOnFloorObject(o)))??(move.isOnFloor()?surfaces.find(o=>Math.abs(o.getY()-feet())<1&&center()+(c.mecha?36:19)>o.getX()&&center()-(c.mecha?36:19)<o.getX()+o.getWidth()):null);
       if(support&&Math.abs(feet()-goal.y)<2&&Math.abs(center()-goal.x)<15&&goal.name==='boarding'&&!c.boarded){key(69,true);key(37,false);key(39,false);}
       else if(support&&Math.abs(feet()-goal.y)<2&&Math.abs(center()-goal.x)<15){
        state.visited.push(goal.name);state.goal++;state.hop=null;key(32,false);
@@ -90,7 +90,7 @@ try {
           key(32,false);const up=hop.to.getY()<hop.from.getY(),x=hop.rail.getX()+hop.rail.getWidth()/2;
           if(!hop.climbing&&!move.isOnLadder()){steer(x);if(Math.abs(center()-x)<12){hop.climbing=true;key(87,up);key(83,!up);}}
           else if(!hop.exiting){key(37,false);key(39,false);key(87,up);key(83,!up);if(up?feet()<=hop.to.getY()-6:feet()>=hop.to.getY()-6){hop.exiting=true;key(87,false);key(83,false);}}
-          else {key(87,false);key(83,false);steer(x+(goal.x>=x?1:-1)*(hop.rail.getWidth()/2+(c.mecha?60:19)+30));}
+          else {key(87,false);key(83,false);steer(x+(goal.x>=x?1:-1)*(hop.rail.getWidth()/2+(c.mecha?36:19)+30));}
          }
          else if(hop.jumpAt!==null){key(32,g.time-hop.jumpAt<.13);steer(hop.landing);if(support&&g.time-hop.jumpAt>1.4){state.hop=null;key(32,false);}}
          else if(hop.to.getY()>hop.from.getY()+2){

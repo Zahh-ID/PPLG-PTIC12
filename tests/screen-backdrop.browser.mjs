@@ -1,0 +1,8 @@
+import assert from 'node:assert/strict';import {gameBrowser} from './helpers/game-browser.mjs';
+const f=await gameBrowser('opening',{width:1908,height:916});try{
+ await f.page.waitForFunction(()=>window.__testGame?.__crMobileBrowser?.backdropResource==='CR_background_station_png');
+ const state=await f.page.evaluate(()=>{const bg=document.getElementById('cr-screen-backdrop'),rect=document.querySelector('canvas').getBoundingClientRect();return{background:getComputedStyle(bg).backgroundImage,pointer:getComputedStyle(bg).pointerEvents,canvas:{left:rect.left,right:rect.right,top:rect.top,bottom:rect.bottom}};});
+ assert.match(state.background,/station/);assert.equal(state.pointer,'none');assert.ok(state.canvas.left>=0&&state.canvas.right<=1908&&state.canvas.top>=0&&state.canvas.bottom<=916);console.log('PASS wide viewport has matching scenery and an uncropped game canvas');
+ await f.level(3);await f.page.waitForFunction(()=>window.__testGame.__crMobileBrowser.backdropResource==='CR_location_3_png');assert.notEqual(await f.page.$eval('#cr-screen-backdrop',e=>getComputedStyle(e).backgroundImage),state.background);console.log('PASS margin scenery follows the current level');
+ await f.page.setViewport({width:390,height:844});await f.page.waitForFunction(()=>document.querySelector('canvas').getBoundingClientRect().width<=391);const small=await f.page.evaluate(()=>{const r=document.querySelector('canvas').getBoundingClientRect();return{left:r.left,right:r.right,top:r.top,bottom:r.bottom}});assert.ok(small.left>=-1&&small.right<=391&&small.top>=-1&&small.bottom<=845);assert.deepEqual(f.errors,[]);assert.deepEqual(f.missing,[]);console.log('PASS narrow viewport remains uncropped with no runtime errors');
+}finally{await f.close()}

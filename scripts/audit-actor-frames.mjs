@@ -5,13 +5,16 @@ import crypto from 'node:crypto';
 
 // Decode PNG pixels without a Python/Pillow dependency. No image rewriting or screenshots.
 function rgba(file){
- const bytes=fs.readFileSync(file);assert.equal(bytes.subarray(0,8).toString('hex'),'89504e470d0a1a0a');
+ const input=fs.readFileSync(file);let bytes=input,viewport=null;
+ if(file.endsWith('.svg')){const svg=input.toString('utf8'),box=svg.match(/viewBox="([\d.]+) ([\d.]+) ([\d.]+) ([\d.]+)"/),embedded=svg.match(/data:image\/png;base64,([^"]+)/);assert.ok(box&&embedded,'Unsupported SVG actor frame: '+file);viewport=box.slice(1).map(Number);bytes=Buffer.from(embedded[1],'base64');}
+ assert.equal(bytes.subarray(0,8).toString('hex'),'89504e470d0a1a0a');
  const w=bytes.readUInt32BE(16),h=bytes.readUInt32BE(20),depth=bytes[24],type=bytes[25],bpp=type===6?4:type===2?3:0;
  assert.equal(depth,8,file+' needs an 8-bit source');assert.ok(bpp,file+' uses an unsupported actor PNG encoding');assert.equal(bytes[28],0,'Interlaced actor source');
  const chunks=[];for(let i=8;i<bytes.length;){const length=bytes.readUInt32BE(i);if(bytes.toString('ascii',i+4,i+8)==='IDAT')chunks.push(bytes.subarray(i+8,i+8+length));i+=length+12;}
  const packed=zlib.inflateSync(Buffer.concat(chunks)),stride=w*bpp,data=Buffer.alloc(stride*h),paeth=(a,b,c)=>{const p=a+b-c,pa=Math.abs(p-a),pb=Math.abs(p-b),pc=Math.abs(p-c);return pa<=pb&&pa<=pc?a:pb<=pc?b:c;};
  let offset=0;for(let y=0;y<h;y++){const filter=packed[offset++];for(let x=0;x<stride;x++){const i=y*stride+x,a=x>=bpp?data[i-bpp]:0,b=y?data[i-stride]:0,c=y&&x>=bpp?data[i-stride-bpp]:0;data[i]=(packed[offset++]+(filter===0?0:filter===1?a:filter===2?b:filter===3?Math.floor((a+b)/2):paeth(a,b,c)))&255;}}
- return{w,h,data,bpp,hash:crypto.createHash('sha256').update(bytes).digest('hex')};
+ if(viewport){const [vx,vy,vw,vh]=viewport,out=Buffer.alloc(256*256*bpp);for(let y=0;y<256;y++)for(let x=0;x<256;x++){const sx=Math.min(w-1,Math.floor(vx+(x+.5)*vw/256)),sy=Math.min(h-1,Math.floor(vy+(y+.5)*vh/256));data.copy(out,(y*256+x)*bpp,(sy*w+sx)*bpp,(sy*w+sx+1)*bpp);}return{w:256,h:256,data:out,bpp,hash:crypto.createHash('sha256').update(input).digest('hex')};}
+ return{w,h,data,bpp,hash:crypto.createHash('sha256').update(input).digest('hex')};
 }
 const p=JSON.parse(fs.readFileSync('Animal Hunter.json')),resources=new Map(p.resources.resources.map(r=>[r.name,r.file])),pixels=new Map(),silhouettes=new Map(),clips=new Map(),actors=new Set(['Player','Crab','CoreBoss','MenuHero','HangarMecha']);
 function inspect(file){if(pixels.has(file))return pixels.get(file);const image=rgba(file),{w,h,data,bpp}=image,visible=new Uint8Array(w*h),seen=new Uint8Array(w*h);let count=0,sx=0,sy=0,minX=w,minY=h,maxX=-1,maxY=-1,edge=0;
