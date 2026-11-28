@@ -37,6 +37,8 @@ for(let level=1;level<=8;level++){
  // Distinct shafts and a return loop replace the diagonal staircase chains.
  const shafts=[];
  for(let id=0;id<2;id++){const a=modules[id],b=modules[id+1],x=clamp(Math.round((a.center+b.center)/2),200,W-240);shafts.push({x,top:Math.min(a.floor,b.floor),bottom:Math.max(a.floor,b.floor),from:id,to:id+1});}
+ // Align the two tower shafts so their shared landing forms one clean ladder.
+ if(level===4)shafts[0].x=shafts[1].x;
  if(level!==3&&level!==6&&modules[0].floor!==modules[2].floor){const a=modules[0],b=modules[2];shafts.push({x:clamp(a.x+100,160,W-240),top:Math.min(a.floor,b.floor),bottom:Math.max(a.floor,b.floor),from:0,to:2,shortcut:true});}
  if(level===7)shafts.push({x:2900,top:1010,bottom:1250,arena:true,balcony:{x:2780,width:650}});
  if(level===8)shafts.push({x:2440,top:1030,bottom:1750,arena:true,return:true},{x:3100,top:1390,bottom:1750,arena:true,balcony:{x:2960,width:1240}},{x:5100,top:1150,bottom:1750,arena:true,balcony:{x:4300,width:1200}});
@@ -44,17 +46,16 @@ for(let level=1;level<=8;level++){
  const floor=(x,y,w,role='deck')=>floors.push({x,y,width:w,height:40,role});
  for(const room of modules){
   floor(room.x,room.floor,room.width,'room');
-  add('RoomHull',room.x,room.floor-roomHeight,room.width,roomHeight,[], -3);
   ceilings.push({x:room.x,y:room.floor-roomHeight,width:room.width,height:16});
   // Door lintels frame open, body-height passages instead of floating platforms.
   for(const x of [room.x,room.x+room.width-16])add('Bulkhead',x,room.floor-roomHeight,16,roomHeight-(level>=6?300:224),[],5);
-  const label=old.find(i=>i.name==='RoomLabel'&&+i.initialVariables.find(v=>v.name==='RoomId')?.value===room.id);if(label){const copy=structuredClone(label);copy.x=room.x+32;copy.y=room.floor-roomHeight+44;copy.persistentUuid=crypto.randomUUID();s.instances.push(copy);}
   const term=s.instances.find(i=>i.name==='MissionTerminal'&&+i.initialVariables.find(v=>v.name==='TerminalId')?.value===room.id);term.x=meta.rooms[room.id][0];term.y=room.floor-128;
   const size=room.id===1?104:96;add('MissionDevice',term.x+64-size/2,room.floor-size*122/128,size,size,[number('TerminalId',room.id),string('Kind',deviceKinds[level][room.id]),number('FloorY',room.floor)],8);
   // Materials occupy side lofts/bays, with a different physical asset in each room.
   const loft=room.id!==1,partFloor=room.floor-(loft?(level>=6?160:120):0),partX=clamp(room.id===1?term.x+260:term.x-150,room.x+70,room.x+room.width-70);
   if(loft)add('Ledge',partX-90,partFloor,200,24,[string('Role','service-loft')],4);
-  if(loft&&level>=6)shafts.push({x:partX,top:partFloor,bottom:room.floor,service:true});
+  // Reuse an existing shaft when it already covers the service loft.
+  if(loft&&level>=6&&!shafts.some(rail=>Math.abs(rail.x-partX)<48&&rail.top<=partFloor&&rail.bottom>=room.floor))shafts.push({x:partX,top:partFloor,bottom:room.floor,service:true});
   const material=materials[level][room.id],partSize=44;
   add('Coin',partX-partSize/2,partFloor-bottoms[material]/128*partSize,partSize,partSize,[number('PartId',room.id),string('Material',material),number('FloorY',partFloor)],9);
   // Floor props use visible-image baselines; wall props are mounted to the lintel band.
@@ -64,8 +65,8 @@ for(let level=1;level<=8;level++){
   add('LocationProp1',room.x+room.width-140,room.floor-roomHeight+100,72,72,[string('Anchor','wall')],2);
  }
  for(const shaft of shafts){
-  add('ClimbRail',shaft.x-48,shaft.top-(level>=6?200:144),96,shaft.bottom-shaft.top+(level>=6?212:156),[number('UpperFloor',shaft.top),number('LowerFloor',shaft.bottom)],1);
-  add('RoomHull',shaft.x-128,shaft.top-roomHeight,256,shaft.bottom-shaft.top+roomHeight,[],-4);
+  const railPadding=level===4&&shaft===shafts[0]?0:level>=6?200:144;
+  add('ClimbRail',shaft.x-48,shaft.top-railPadding,96,shaft.bottom-shaft.top+railPadding+12,[number('UpperFloor',shaft.top),number('LowerFloor',shaft.bottom)],1);
   if(shaft.arena||shaft.service){if(shaft.balcony)floor(shaft.balcony.x,shaft.top,shaft.balcony.width,'arena-gantry');}
   else for(const id of [shaft.from,shaft.to]){const r=modules[id],left=Math.min(shaft.x,r.center),right=Math.max(shaft.x,r.center);floor(left-96,r.floor,right-left+192,'corridor');}
 
@@ -75,8 +76,7 @@ for(let level=1;level<=8;level++){
  const exit=s.instances.find(i=>i.name==='ExitDoor'),exitFloor=meta.exit[1];floor(Math.min(modules[2].x,exit.x),exitFloor,Math.min(W,exit.x+160)-Math.min(modules[2].x,exit.x),'exit');exit.initialVariables=exit.initialVariables.filter(v=>v.name!=='FloorY');exit.initialVariables.push(number('FloorY',exitFloor));exit.y=exitFloor-122;
  // Carve rail hatches through floor and ceiling solids. Only hatch caps are one-way.
  function carve(rect,cap){let chunks=[rect];for(const shaft of shafts){if(rect.y+rect.height<shaft.top-(cap?1:level>=6?146:88)||rect.y>shaft.bottom+1)continue;const cutL=shaft.x-104,cutR=shaft.x+104,next=[];for(const r of chunks){const l=Math.max(r.x,cutL),right=Math.min(r.x+r.width,cutR);if(l>=right){next.push(r);continue;}if(l>r.x)next.push({...r,width:l-r.x});if(right<r.x+r.width)next.push({...r,x:right,width:r.x+r.width-right});if(cap){const below=shafts.some(s=>right>s.x-48&&l<s.x+48&&s.bottom>r.y+1),atBottom=shafts.some(s=>right>s.x-48&&l<s.x+48&&Math.abs(s.bottom-r.y)<1);add(atBottom&&!below?'Ground':'Ledge',l,r.y,right-l,24,[string('Role',atBottom&&!below?'rail-stop':'rail-hatch')],4);}}chunks=next;}return chunks;}
- const uniqueFloors=new Set();for(const deck of floors)for(const r of carve(deck,true)){const key=[r.x,r.y,r.width].join(':');if(uniqueFloors.has(key))continue;uniqueFloors.add(key);add('Ground',r.x,r.y,r.width,r.height,[string('Role',deck.role)],3);add('Soil',r.x,r.y+r.height,r.width,56,[],0);}
- for(const ceiling of ceilings)for(const r of carve(ceiling,false))add('Bulkhead',r.x,r.y,r.width,r.height,[],4);
+ const uniqueFloors=new Set();for(const deck of floors)for(const r of carve(deck,true)){const key=[r.x,r.y,r.width].join(':');if(uniqueFloors.has(key))continue;uniqueFloors.add(key);add('Ground',r.x,r.y,r.width,r.height,[string('Role',deck.role)],3);}
  // Door lintels must respect the same shaft clearance as deck/ceiling pieces.
  const bulkheads=s.instances.filter(i=>i.name==='Bulkhead');s.instances=s.instances.filter(i=>i.name!=='Bulkhead');
  for(const beam of bulkheads){let chunks=carve(beam,false);for(const deck of floors){if(beam.y>=deck.y||beam.y+beam.height<=deck.y-(level>=6?146:88))continue;const next=[];for(const r of chunks){const left=Math.max(r.x,deck.x),right=Math.min(r.x+r.width,deck.x+deck.width);if(left>=right){next.push(r);continue;}if(left>r.x)next.push({...r,width:left-r.x});if(right<r.x+r.width)next.push({...r,x:right,width:r.x+r.width-right});}chunks=next;}for(const r of chunks)add('Bulkhead',r.x,r.y,r.width,r.height,[],4);}

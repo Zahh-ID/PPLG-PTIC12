@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';import {gameBrowser} from './helpers/game-browser.mjs';const f=await gameBrowser();try{
+ await f.ready(1);await f.page.evaluate(()=>{const sm=window.__testGame.getSoundManager(),old=sm.playSound.bind(sm);window.__pickupCount=0;sm.playSound=(name,...args)=>{if(name==='CR_component_pickup')window.__pickupCount++;return old(name,...args)}});
+ for(const n of [1,7,8]){if(n!==1)await f.level(n);const before=await f.page.evaluate(()=>{const s=window.__testGame.getSceneStack().getCurrentScene(),p=s.getObjects('Player')[0],coin=s.getObjects('Coin')[0];s.__islandGame.invincibleUntil=1e6;coin.setPosition(p.getX()+p.getWidth()/2-coin.getWidth()/2,p.getY()+p.getHeight()*.55-coin.getHeight()/2);return window.__pickupCount});await f.page.waitForFunction(n=>window.__pickupCount===n+1,{},before);assert.equal(await f.page.evaluate(()=>window.__testGame.getSceneStack().getCurrentScene().__islandGame.coins),1);console.log('PASS level '+n+' collected component and played one pickup sound');}
+ assert.deepEqual(f.errors,[]);assert.deepEqual(f.missing,[]);
+}finally{await f.close()}
+const supplies=await gameBrowser();try{
+ await supplies.ready(1);await supplies.page.evaluate(()=>{const sm=window.__testGame.getSoundManager(),old=sm.playSound.bind(sm);window.__supplySounds=0;sm.playSound=(name,...args)=>{if(name==='CR_component_pickup')window.__supplySounds++;return old(name,...args)}});
+ for(const name of ['Ammo','HealthPickup']){
+  const before=await supplies.page.evaluate(name=>{const s=window.__testGame.getSceneStack().getCurrentScene(),p=s.getObjects('Player')[0],item=s.getObjects(name)[0];s.__islandGame.invincibleUntil=1e6;s.__islandGame.ammo=0;s.__islandGame.health=1;item.setPosition(p.getX()+p.getWidth()/2-item.getWidth()/2,p.getY()+p.getHeight()*.55-item.getHeight()/2);return window.__supplySounds},name);
+  await supplies.page.waitForFunction(n=>window.__supplySounds===n+1,{},before);console.log('PASS '+name+' plays pickup sound when collected');
+ }
+ await supplies.level(6);const before=await supplies.page.evaluate(()=>{const s=window.__testGame.getSceneStack().getCurrentScene(),p=s.getObjects('Player')[0],item=s.getObjects('Ammo')[0];s.__campaign.mecha=true;s.__islandGame.invincibleUntil=1e6;s.__islandGame.shield=1;item.setPosition(p.getX()+p.getWidth()/2-item.getWidth()/2,p.getY()+p.getHeight()*.55-item.getHeight()/2);return window.__supplySounds});await supplies.page.waitForFunction(n=>window.__supplySounds===n+1,{},before);console.log('PASS mecha shield battery plays pickup sound');assert.deepEqual(supplies.errors,[]);assert.deepEqual(supplies.missing,[]);
+}finally{await supplies.close()}

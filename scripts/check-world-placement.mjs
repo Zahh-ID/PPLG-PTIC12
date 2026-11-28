@@ -12,7 +12,8 @@ for(const s of p.layouts.filter(s=>s.variables.some(v=>v.name==='CampaignLevel'&
  for(const [name,bottom]of [['LocationProp0',119],['HealthPickup',103],['Ammo',122],['Checkpoint',122],['ExitDoor',122],['ArenaCover',122]])for(const i of O(name))baseline(i,bottom);
  for(const i of O('Crab')){assert.equal(i.width,96);assert.equal(i.height,96);}
  for(const name of ['FireRange','DetectionRange'])assert.ok(defs('Crab').variables.find(v=>v.name===name)?.value>0);
- const mecha=Number(s.variables.find(v=>v.name==='CampaignLevel').value)>=6,half=mecha?60:19,body=mecha?138:80;
+ const mecha=Number(s.variables.find(v=>v.name==='CampaignLevel').value)>=6,half=mecha?36:19,body=mecha?138:80;
+ const rails=O('ClimbRail');for(let a=0;a<rails.length;a++)for(let b=a+1;b<rails.length;b++){const x=Math.min(rails[a].x+rails[a].width,rails[b].x+rails[b].width)-Math.max(rails[a].x,rails[b].x),y=Math.min(rails[a].y+rails[a].height,rails[b].y+rails[b].height)-Math.max(rails[a].y,rails[b].y);assert.ok(x<=0||y<=16,'Overlapping ladders in '+s.name);}
  for(const rail of O('ClimbRail')){const x=rail.x+rail.width/2,top=Number(value(rail,'UpperFloor'))-body-8,bottom=Number(value(rail,'LowerFloor'));for(const beam of O('Bulkhead'))assert.ok(!(beam.x<x+half+4&&beam.x+beam.width>x-half-4&&beam.y<bottom&&beam.y+beam.height>top),'Shaft blocked by a lintel in '+s.name);}
  assert.equal(O('RepairLift').length,0);
  rows.push({scene:s.name,devices:O('MissionDevice').map(i=>value(i,'Kind')),materials:O('Coin').map(i=>value(i,'Material')),rails:O('ClimbRail').length,bulkheads:O('Bulkhead').length});

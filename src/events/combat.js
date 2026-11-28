@@ -13,7 +13,8 @@ const overlap=(x,y,w,h,o)=>{const left=c.mecha ? .1875:45/128,right=c.mecha ? .8
 const solids=()=>[...O('Ground'),...O('Bulkhead'),...['RouteGate','ShortcutGate'].flatMap(name=>O(name).filter(o=>o.isVisible()))];
 // Segment/box test keeps guards from firing through solid room walls.
 function crosses(x,y,tx,ty,o){let lo=0,hi=1;for(const[v,d,a,b]of [[x,tx-x,o.getX(),o.getX()+o.getWidth()],[y,ty-y,o.getY(),o.getY()+o.getHeight()]]){if(Math.abs(d)<.001){if(v<a||v>b)return false;}else{let t0=(a-v)/d,t1=(b-v)/d;if(t0>t1)[t0,t1]=[t1,t0];lo=Math.max(lo,t0);hi=Math.min(hi,t1);if(lo>hi)return false;}}return hi>=0&&lo<=1;}
-function bolt(kind,x,y,tx,ty,speed=360,range=Infinity){const o=runtimeScene.createObject('EnemyBolt');if(!o)return;const sizes={Plasma:[44,36],Missile:[90,58],Wave:[110,148]};const[w,h]=sizes[kind];o.setAnimationName(kind);o.setWidth(w);o.setHeight(h);o.setPosition(x-w/2,y-h/2);o.setZOrder(14);const a=Math.atan2(ty-y,tx-x);o.__vx=Math.cos(a)*speed;o.__vy=Math.sin(a)*speed;o.__ttl=7;o.__kind=kind;o.__distanceLeft=range;o.__travelled=0;o.setAngle(a*180/Math.PI);return o;}
+function enemyAudio(name,x,y){c.enemySoundTimes??={};if(c.enemySoundTimes[name]===now)return;c.enemySoundTimes[name]=now;runtimeScene.getGame().getSoundManager().playSound(name,false,100,1);}
+function bolt(kind,x,y,tx,ty,speed=360,range=Infinity){const o=runtimeScene.createObject('EnemyBolt');if(!o)return;enemyAudio('CR_combat_enemy_shot',x,y);const sizes={Plasma:[44,36],Missile:[90,58],Wave:[110,148]};const[w,h]=sizes[kind];o.setAnimationName(kind);o.setWidth(w);o.setHeight(h);o.setPosition(x-w/2,y-h/2);o.setZOrder(14);const a=Math.atan2(ty-y,tx-x);o.__vx=Math.cos(a)*speed;o.__vy=Math.sin(a)*speed;o.__ttl=7;o.__kind=kind;o.__distanceLeft=range;o.__travelled=0;o.setAngle(a*180/Math.PI);return o;}
 function message(text){g.message=text;g.messageUntil=now+1.1;}
 c.combat??={shots:0,attacks:[],coverUses:0};
 // Damage is one readable impact, never the sum of overlapping guards/projectiles.
@@ -56,7 +57,7 @@ for(const e of O('Crab')){
  }
  e.flipX(a.direction<0);
  if(gdjs.RuntimeObject.collisionTest(p,e,false)){
-  const playerMove=p.getBehavior('Platformer');if(playerMove.isFalling()&&feet(p)<e.getY()+e.getHeight()*.3+24){a.hp=0;a.deadAt=now;e.activateBehavior('Platformer',false);animate(e,'Death');g.score+=50;playerMove.setCurrentFallSpeed(-380);}else if(['patrol','pursue'].includes(a.state))queueDamage(1);
+  const playerMove=p.getBehavior('Platformer');if(playerMove.isFalling()&&feet(p)<e.getY()+e.getHeight()*.3+24){runtimeScene.getGame().getSoundManager().playSound('CR_combat_impact',false,100,1);a.hp=0;a.deadAt=now;e.activateBehavior('Platformer',false);animate(e,'Death');g.score+=50;playerMove.setCurrentFallSpeed(-380);}else if(['patrol','pursue'].includes(a.state))queueDamage(1);
  }
 }
 const boss=c.boss,b=O('CoreBoss')[0];
@@ -64,7 +65,7 @@ const boss=c.boss,b=O('CoreBoss')[0];
 for(const cover of O('ArenaCover')){
  cover.__readyAt??=0;const ready=c.completed[0]&&now>=cover.__readyAt;cover.__charged=ready;animate(cover,ready?'On':'Off');cover.setColor(ready?'130;235;255':'95;100;125');
  if(Math.abs(px-center(cover))<135&&Math.abs(feet(p)-feet(cover))<160){
-  if(ready){if(now>=g.messageUntil)message('Cover charged • E: EMP / restore shield');if(c.interactEdge){cover.__readyAt=now+16;c.combat.coverUses++;g.shield=3;for(const shot of O('EnemyBolt'))if(Math.hypot(center(shot)-center(cover),shot.getY()-cover.getY())<700)shot.deleteFromScene(runtimeScene);if(boss&&!boss.dead&&!boss.shield&&Math.abs(center(b)-center(cover))<1100){boss.state='stagger';boss.until=now+1.1;boss.staggerUntil=now+1.1;boss.windupUntil=0;}const fx=runtimeScene.createObject('Spark');fx.setPosition(cover.getX()-130,cover.getY()-80);fx.setWidth(320);fx.setHeight(320);fx.__ttl=.5;fx.setZOrder(18);}}
+  if(ready){if(now>=g.messageUntil)message('Cover charged • E: EMP / stagger boss');if(c.interactEdge){cover.__readyAt=now+16;c.combat.coverUses++;g.shield=3;for(const shot of O('EnemyBolt'))if(Math.hypot(center(shot)-center(cover),shot.getY()-cover.getY())<700)shot.deleteFromScene(runtimeScene);if(boss&&!boss.dead&&!boss.shield&&Math.abs(center(b)-center(cover))<1100){boss.state='stagger';boss.until=now+1.1;boss.staggerUntil=now+1.1;boss.windupUntil=0;}const fx=runtimeScene.createObject('Spark');fx.setPosition(cover.getX()-130,cover.getY()-80);fx.setWidth(320);fx.setHeight(320);fx.__ttl=.5;fx.setZOrder(18);}}
   else if(now>=g.messageUntil)message(c.completed[0]?'Cover recharging':'Repair the first terminal to power cover');
  }
 }
@@ -72,10 +73,11 @@ if(boss&&b&&!boss.dead){
  const final=c.level===8,size=final?640:384;
  boss.homeY??=b.getY();boss.floor??=boss.homeY+size*.875;boss.state??='pursue';boss.until??=now+1;boss.sequence??=0;boss.direction??=-1;
  b.setWidth(size);b.setHeight(size);
+ b.setColor(now<(boss.flashUntil??0)?'255;140;140':'255;255;255');
  const bx=center(b),distance=Math.abs(px-bx),phase=c.bossPhase;
  const bounds=final?[2800,worldWidth-size-180]:[2900,worldWidth-size-80];
  const enter=(state,duration)=>{boss.state=state;boss.until=now+duration;};
- if(boss.hp<=0){boss.dead=true;g.score+=600;animate(b,'Defeated');c.combat.marker?.hide();for(const shot of O('EnemyBolt'))shot.deleteFromScene(runtimeScene);message('GUARDIAN DEFEATED • Reach the airlock');g.messageUntil=now+10;}
+ if(boss.hp<=0){boss.dead=true;g.score+=600;b.deleteFromScene(runtimeScene);c.combat.marker?.hide();for(const shot of O('EnemyBolt'))shot.deleteFromScene(runtimeScene);message('GUARDIAN DEFEATED • Reach the airlock');g.messageUntil=now+10;}
  else if(boss.shield){for(const shot of O('EnemyBolt'))if(shot.__kind!=='Plasma')shot.deleteFromScene(runtimeScene);enter('pursue',.9);boss.windupUntil=0;boss.actionUntil=0;b.setY(boss.homeY);animate(b,'Shield');c.combat.marker?.hide();}
  else{
   if(boss.state==='stagger'){animate(b,'Hurt');b.setY(boss.homeY);c.combat.marker?.hide();if(now>=boss.until)enter('recover',.9);}
@@ -92,7 +94,7 @@ if(boss&&b&&!boss.dead){
    const range=boss.attack==='leap'?360:boss.attack==='slash'?360:boss.attack==='slam'?520:700;
    const mx=boss.attack==='slam'?bx-range/2:boss.attack==='leap'?boss.targetX-range/2:boss.direction<0?bx-range:bx;
    marker.setPosition(mx,boss.floor-16);marker.setWidth(range);marker.hide(false);marker.setOpacity(180);
-   if(now>=boss.until){boss.windupUntil=0;boss.activeAt=now;boss.actionUntil=now+(boss.attack==='leap'?1.5:.78);enter('active',boss.actionUntil-now);marker.hide();}
+   if(now>=boss.until){boss.windupUntil=0;boss.activeAt=now;boss.actionUntil=now+(boss.attack==='leap'?1.5:.78);if(!['missile','wave'].includes(boss.attack))enemyAudio('CR_combat_enemy_attack',bx,boss.floor-size*.35);enter('active',boss.actionUntil-now);marker.hide();}
   }else if(boss.state==='active'){
    const t=now-boss.activeAt,attack=boss.attack;
    animate(b,attack==='slash'?'Slash':attack==='dash'?'Dash':attack==='leap'&&t<.8?'Jump':attack==='leap'||attack==='slam'?'Slam':attack==='ram'?'Walk':'Shoot');

@@ -21,6 +21,7 @@ let restartPlayerAnimation=false;
 const animate = (object,name) => {if(object.getAnimationName()!==name)object.setAnimationName(name);};
 let game = runtimeScene.__islandGame;
 if (!game || runtimeScene.getTimeManager().isFirstFrame()) {
+  const audio=runtimeScene.getGame().getSoundManager();for(const name of ['CR_answer_wrong','CR_answer_correct','CR_ui_click','CR_component_pickup','CR_combat_shot','CR_combat_cannon','CR_combat_impact','CR_combat_enemy_shot','CR_combat_enemy_attack','CR_combat_player_hit'])audio.loadAudio(name,false);
   game = runtimeScene.__islandGame = {
     time:0,health:campaign?.mecha?6:3,maxHealth:campaign?.mecha?6:3,shield:3,lives:3,ammo:40,coins:0,score:runtimeScene.getGame().getVariables().get('CRScore').getAsNumber(),
     state:'playing',facing:1,shotAt:-10,hurtUntil:0,invincibleUntil:0,
@@ -36,10 +37,17 @@ if (!game || runtimeScene.getTimeManager().isFirstFrame()) {
   player.activateBehavior('Platformer',true);player.setOpacity(255);
 }
 game.time += dt;
+// In combat sectors each key press or quick tap grants a brief shield; holding keeps it active.
+const freeShield=!!campaign?.mecha&&(campaign?.level??0)>=7;
+const shieldDown=!!campaign?.mecha&&pressed(75,'shield');
+if(freeShield&&((shieldDown&&!game.shieldWasPressed)||touchInput?.shieldRequested))game.shieldUntil=game.time+.6;
+game.shieldWasPressed=shieldDown;
+const shieldActive=!!campaign?.mecha&&(freeShield?(shieldDown||game.time<(game.shieldUntil??0)):(shieldDown&&game.shield>.05));
+if(touchInput)touchInput.shieldRequested=false;
 const notice=(text,seconds=3)=>{game.message=text;game.messageUntil=game.time+seconds;};
 function effect(name,x,y,w=48,h=48,life=.15){
   const o=runtimeScene.createObject(name);if(!o)return;
-  o.setPosition(x,y);o.setWidth(w);o.setHeight(h);o.setZOrder(20);o.__ttl=life;
+  o.setPosition(x,y);o.setWidth(w);o.setHeight(h);o.setZOrder(20);o.__ttl=life;return o;
 }
 function killCrab(crab){if(crab.__patrol.deadAt!==undefined)return;effect('Impact',crab.getX(),crab.getY(),80,80,.18);crab.__patrol.deadAt=game.time;crab.activateBehavior('Platformer',false);animate(crab,'Death');game.score+=50;}
 function die(){
@@ -51,7 +59,8 @@ function die(){
 }
 function damage(amount){
   if(game.state!=='playing'||game.time<game.invincibleUntil)return;
-  if(campaign?.mecha&&pressed(75,'shield')&&game.shield>.05)return;
+  if(shieldActive)return;
+  runtimeScene.getGame().getSoundManager().playSound('CR_combat_player_hit',false,100,1);
   game.health=Math.max(0,game.health-Math.min(2,amount));game.invincibleUntil=game.time+1.3;
   game.hurtUntil=game.time+(campaign?.mecha ? .8 : .42);
   move.setCurrentSpeed(-game.facing*180);
@@ -61,7 +70,7 @@ if(campaign?.pendingDamage){damage(campaign.pendingDamage);campaign.pendingDamag
 if(game.state==='playing'){
   if(campaign?.mecha){
     game.maxHealth=6;player.setWidth(192);player.setHeight(192);
-    game.shield=Math.max(0,Math.min(3,game.shield+(pressed(75,'shield')?-dt:dt*.4)));
+    game.shield=freeShield?3:Math.max(0,Math.min(3,game.shield+(shieldDown?-dt:dt*.4)));
   }
   const speed=move.getCurrentSpeed();
   const manualSteering=[37,39,65,68].some(code=>input.isKeyPressed(code))||touchInput?.held.left||touchInput?.held.right;
@@ -76,16 +85,22 @@ if(game.state==='playing'){
   // Hold J or X to shoot. A cooldown and finite ammunition prevent unlimited fire.
   if((pressed(74,'fire')||input.isKeyPressed(88))&&game.time-game.shotAt>=(campaign?.mecha ? .85 : .52)&&(campaign?.mecha||game.ammo>0)&&game.time>=game.hurtUntil){
     game.shotAt=game.time;if(!campaign?.mecha)game.ammo--;restartPlayerAnimation=true;
+    runtimeScene.getGame().getSoundManager().playSound(campaign?.mecha?'CR_combat_cannon':'CR_combat_shot',false,100,1);
     const bullet=runtimeScene.createObject('Bullet');
-    const scale=campaign?.mecha?1.5:1;
-    const handX=player.getX()+(game.facing>0?92:22)*scale;
-    bullet.setPosition(handX,player.getY()+62*scale);bullet.setWidth(campaign?.mecha?80:30);bullet.setHeight(campaign?.mecha?48:12);if(campaign?.mecha)bullet.setAnimationName('Cannon');
-    bullet.setZOrder(12);bullet.flipX(game.facing<0);bullet.__velocity=game.facing*780;bullet.__ttl=1.5;
-    effect('Muzzle',handX-10,player.getY()+46,40,36,.09);
+    const mecha=!!campaign?.mecha,powerShot=mecha&&(campaign?.level??0)>=7,bulletW=powerShot?120:mecha?80:30,bulletH=powerShot?72:mecha?48:12;
+    // Anchor the cannon flash at the muzzle, not the unscaled small-player height.
+    const muzzleX=player.getX()+(mecha?(game.facing>0?150:42):(game.facing>0?92:22));
+    const muzzleY=player.getY()+(mecha?112:52);
+    const shotX=mecha&&game.facing<0?muzzleX-bulletW:muzzleX;
+    bullet.setPosition(shotX,muzzleY-bulletH/2);bullet.setWidth(bulletW);bullet.setHeight(bulletH);if(mecha)bullet.setAnimationName('Cannon');
+    bullet.setZOrder(12);bullet.flipX(game.facing<0);bullet.__velocity=game.facing*780;bullet.__ttl=1.5;bullet.__spawnedAt=game.time;
+    const flash=effect('Muzzle',muzzleX-20,muzzleY-18,40,36,.09);if(flash)flash.flipX(game.facing<0);
   }
   // Guards and hostile projectiles run in the combat event after these player decisions.
   const bulletSolids=[...objects('Ground'),...objects('Bulkhead'),...objects('Ledge').filter(o=>o.isVisible()),...['RouteGate','ShortcutGate'].flatMap(name=>objects(name).filter(o=>o.isVisible()))];
   for(const bullet of objects('Bullet')){
+    // Let a freshly fired projectile appear for a frame before it can hit anything.
+    if(bullet.__spawnedAt===game.time)continue;
     bullet.__ttl=(bullet.__ttl??0)-dt;
     let destroyed=bullet.__ttl<=0;
     // Sample the native collision masks along the whole movement, including the muzzle.
@@ -95,29 +110,30 @@ if(game.state==='playing'){
     bullet.setX(startX+dx*step/steps);
     destroyed=bulletSolids.some(terrain=>hit(bullet,terrain));
     for(const crab of objects('Crab'))if(!destroyed&&crab.__patrol.deadAt===undefined&&hit(bullet,crab)){
-      crab.__patrol.hp--;crab.__patrol.hurtUntil=game.time+.7;effect('Impact',bullet.getX(),bullet.getY()-12,36,36,.12);
+      runtimeScene.getGame().getSoundManager().playSound('CR_combat_impact',false,100,1);
+      crab.__patrol.hp-=campaign?.mecha&&(campaign?.level??0)>=7?2:1;crab.__patrol.hurtUntil=game.time+.7;effect('Impact',bullet.getX(),bullet.getY()-12,36,36,.12);
       if(crab.__patrol.hp<=0)killCrab(crab);destroyed=true;
     }
     const boss=objects('CoreBoss')[0];
     if(!destroyed&&boss&&campaign?.boss&&!campaign.boss.dead&&hit(bullet,boss)){
       destroyed=true;
-      if(!campaign.boss.shield){campaign.boss.hp=Math.max(0,campaign.boss.hp-(['recover','stagger'].includes(campaign.boss.state)?2:1));campaign.boss.flashUntil=game.time+.2;
-        if(campaign.level===8&&campaign.boss.hp>0&&campaign.boss.hp<=(campaign.bossPhase<2?campaign.boss.max*(2-campaign.bossPhase)/3:-1)){
-          campaign.bossPhase++;campaign.boss.shield=true;campaign.solved=false;campaign.activeTerminalId=campaign.bossPhase;campaign.board=campaign.boards[campaign.bossPhase]??null;
-          objects('MissionTerminal').find(o=>o.getVariables().get('TerminalId').getAsNumber()===campaign.bossPhase)?.setAnimationName('Off');notice('SHIELD RESTORED • Find '+campaign.tasks[campaign.bossPhase].title+' [E]',6);
-        }
-      }else notice('Shield active! Repair the terminal first.',2);
+      runtimeScene.getGame().getSoundManager().playSound('CR_combat_impact',false,100,1);
+      if(!campaign.boss.shield){const hitPower=campaign?.mecha&&campaign?.level===8?20:campaign?.mecha&&(campaign?.level??0)>=7?12:1,bonus=campaign.level===8?1:['recover','stagger'].includes(campaign.boss.state)?2:1;campaign.boss.hp=Math.max(0,campaign.boss.hp-hitPower*bonus);campaign.boss.flashUntil=game.time+.28;effect('Impact',bullet.getX()-8,bullet.getY()-8,88,88,.22);
+      }else notice(campaign.level===8?'Complete all 3 challenges before attacking.':'Shield active! Repair the terminal first.',2);
     }
     }
     if(destroyed)bullet.deleteFromScene(runtimeScene);
   }
   for(const coin of objects('Coin'))if(hit(player,coin)){
+    runtimeScene.getGame().getSoundManager().playSound('CR_component_pickup',false,85,1);
     game.coins++;game.score+=10;effect('Spark',coin.getX(),coin.getY(),36,36,.16);coin.deleteFromScene(runtimeScene);notice('Component recovered: '+game.coins+'/3');
   }
   for(const supply of objects('Ammo'))if(hit(player,supply)&&(campaign?.mecha?game.shield<3:game.ammo<40)){
+    runtimeScene.getGame().getSoundManager().playSound('CR_component_pickup',false,85,1);
     if(campaign?.mecha){game.shield=Math.min(3,game.shield+1.5);notice('Shield energy restored');}else {game.ammo=Math.min(40,game.ammo+8);notice('+8 ammunition');}supply.deleteFromScene(runtimeScene);
   }
   for(const heart of objects('HealthPickup'))if(game.health<game.maxHealth&&hit(player,heart)){
+    runtimeScene.getGame().getSoundManager().playSound('CR_component_pickup',false,85,1);
     game.health=Math.min(game.maxHealth,game.health+1);heart.deleteFromScene(runtimeScene);notice('Health restored');
   }
   const flag=objects('Checkpoint')[0];
@@ -165,15 +181,30 @@ const targetY=Math.max(halfH,Math.min(worldHeight-halfH,player.getY()+player.get
 const grounded=move.isOnFloor(),moving=Math.abs(move.getCurrentSpeed())>5;
 const onRail=move.isOnLadder(),climbing=onRail&&(input.isKeyPressed(38)||input.isKeyPressed(40)||input.isKeyPressed(87)||input.isKeyPressed(83)||touchInput?.held.climbUp||touchInput?.held.climbDown);
 let playerAction=game.state==='dying'||game.state==='gameover'?'Death':
- game.state==='won'?'Idle':game.time<game.hurtUntil?'Hurt':
- campaign?.mecha&&pressed(75,'shield')&&game.shield>.05?'Shield':
- onRail?(campaign?.mecha?'Idle':'Climb'):
+ game.state==='won'?'Idle':shieldActive?'Shield':
+ game.time<game.hurtUntil?'Hurt':
+ onRail?'Climb':
  !grounded?(move.isFalling()?'Fall':'Jump'):
  moving?'Run':game.time-game.shotAt<(campaign?.mecha ? .85 : .52)?'Shoot':
  game.time<game.landUntil?'Land':'Idle';
 if(campaign?.mecha)playerAction='Mecha'+playerAction;
 if(player.getAnimationName()!==playerAction)player.setAnimationName(playerAction);
-if(onRail&&(campaign?.mecha||!climbing))player.pauseAnimation();else player.playAnimation();
+// Several original mecha frames contain detached pixels from a neighboring sprite.
+// Clip only their transparent/contaminated top strip in the renderer; physics remains unchanged.
+if(typeof PIXI!=='undefined'&&player.getRendererObject){
+ const sprite=player.getRendererObject();
+ const needsClip=campaign?.mecha&&['MechaRun','MechaJump','MechaShoot','MechaShield'].includes(playerAction);
+ if(needsClip){
+  let clip=player.__mechaArtClip;
+  if(!clip){clip=new PIXI.Graphics();sprite.addChild(clip);player.__mechaArtClip=clip;}
+  clip.visible=true;
+  const tw=sprite.texture.orig.width,th=sprite.texture.orig.height,ax=sprite.anchor.x*tw,ay=sprite.anchor.y*th;
+  clip.clear();clip.beginFill(0xffffff);clip.drawRect(-ax,48-ay,tw,th-48);clip.endFill();
+  if(sprite.mask!==clip)sprite.mask=clip;
+ }else if(player.__mechaArtClip){sprite.mask=null;player.__mechaArtClip.visible=false;}
+}
+
+if(onRail&&!climbing)player.pauseAnimation();else player.playAnimation();
 if(restartPlayerAnimation&&playerAction.endsWith('Shoot'))player.setAnimationFrame(0);
 const playerSize=campaign?.mecha?192:128;
 if(player.getWidth()!==playerSize)player.setWidth(playerSize);

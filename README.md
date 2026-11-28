@@ -1,5 +1,8 @@
 # Circuit Rescue
 
+> Asset cleanup: obsolete, unregistered media were removed from the project; the current GDevelop resource catalog and assets needed by the game are retained. Historical asset notes below describe earlier revisions.
+
+
 <img src="assets/circuit-rescue-v1/branding-v2/circuit-rescue-full.svg" alt="Circuit Rescue" width="520">
 
 A pixel-art logic-gate adventure built in **GDevelop 5**. Explore eight space-station sectors, collect varied materials, and repair machinery through circuit dialogs with direct port connections. Activate a rideable mecha in sector 6, then defeat the guardians in sectors 7–8. Developer credits are available from the menus.
@@ -36,7 +39,7 @@ The project was last saved with GDevelop **5.6.283**. Use GDevelop to edit and p
 | Jump | Space or W; briefly hold for a higher jump |
 | Shoot | J or X; hold to repeat |
 | Use terminal / board mecha | E, while near the object |
-| Mecha shield | Hold K; release to recharge |
+| Mecha shield | Tap or hold K; level 6 recharges, levels 7-8 can reuse freely |
 | Pause / continue | P or Escape; pause/play icon |
 | Help | H or question-mark icon |
 | Replay | R or circular-arrow icon |
@@ -57,15 +60,15 @@ Phones and touch tablets automatically show generated movement, jump, fire, inte
 - **Checkpoints:** the flag restores health and saves a respawn position. Falling or losing all health costs one life.
 - **Dialog missions:** predict outputs with draggable 0/1 tokens, repair a wrong chip and broken wire, then build a circuit. Later quizzes include three inputs and a NAND-only interlock. Circuit cables automatically connect in four directions; testing rejects short circuits, feedback and disconnected ports. Incorrect answers consume no components.
 - **Progression:** terminals need one, two and three recovered components. Complete all three systems before leaving. All three repairs power the airlock.
-- **Mecha:** repair and board it in sector 6. Six hull points, unlimited cannon shots and a rechargeable shield support combat in sectors 7–8.
-- **Boss:** Bastion, a yellow siege walker in sector 7, and the three-phase Crimson Warden sword guardian in sector 8. Later shield phases require new circuit repairs. Combat pauses during dialogs.
+- **Mecha:** repair and board it in sector 6. Six hull points, unlimited cannon shots and a reusable shield support combat in sectors 7–8.
+- **Boss:** Bastion, a yellow siege walker in sector 7, and the Crimson Warden sword guardian in sector 8. Complete all three circuits before attacking. Combat pauses during dialogs.
 - **Results:** dedicated station-restored and mission-failed scenes show final score and component count, with replay/home controls.
 - **Developer credits:** available from the opening, pause and result menus. Gameplay contains no credits chest or keycard pickup.
 - **Icon HUD:** pause, continue, replay, home, help, and credits use the game's artwork instead of text labels on buttons.
 
 Maps have individual dimensions from 2000–6000 units wide and 1400–2400 units tall. The final arena widens the camera view and frames the player with the nearby active boss. The camera follows both axes; background and HUD remain fixed. Native one-way platforms support climbing and return routes. See [location layouts](docs/location-layouts.json) for dimensions, room positions and route measurements. The current combat pack has **36 actor actions and four projectile animations, eight frames each (320 frames)**. The older combat pack is retained as source history. Mecha/boss runtime frames are 256×256; the regenerated Warden uses 128px source cells expanded with nearest-neighbor sampling. Original detailed sheets are retained. Normal robot frames remain 128×128. The small robot has 64 recreated source frames, including its own eight-frame Land action; live Idle uses the stable ready pose.
 
-Play continues the current sector during the running session, or the next sector after a completion. The opening replay icon begins a new campaign; gameplay replay restarts the current sector. Active-run progress resets when closing the game; language and completion badges remain in browser storage. Audio, persistent run saves and a full crafting inventory are not implemented yet.
+Play continues the current sector during the running session, or the next sector after a completion. The opening replay icon begins a new campaign; gameplay replay restarts the current sector. Active-run progress resets when closing the game; language and completion badges remain in browser storage. The original game music loops from the opening menu through all eight levels; the original victory and game-over tracks play on the result screens. Browsers may require a click or tap before audio starts. Persistent run saves and a full crafting inventory are not implemented yet.
 
 ## Repository layout
 
@@ -163,7 +166,7 @@ After `npm run build:web`, run `npm run test:modals` for animation lifecycle, pa
 | `sector2`–`sector5` | AND, OR, XOR and NAND modules |
 | `sector6` | Combined circuit and rideable mecha activation |
 | `sector7` | NOR module and siege guardian |
-| `sector8` | Three-phase Core Guardian and final repairs |
+| `sector8` | Core Guardian: three repairs before combat |
 | `winner` | Ending, final run data, replay/home/credits |
 | `game over` | Loss result, final run data, replay/home/credits |
 
@@ -204,11 +207,11 @@ Play the deployed game at [Circuit Rescue on GitHub Pages](https://zahh-id.githu
 
 The mecha and sentries use new articulated animations. Every action has eight generated frames, with a common scale and anchor across actions and fixed body collision masks. The current replacement mecha/guard/Warden frames, source atlases, prompts and hashes are in `assets/circuit-rescue-v1/combat-v3/`; Bastion and projectiles remain in `combat-v2/`. Low-alpha matte residue is removed during extraction; original generated atlases are preserved.
 
-Level 7 uses Bastion, a yellow siege walker with orange missile salvos, ramming and stomps. Level 8 uses the much larger Crimson Warden with sword sweeps, lunges, targeted leaps/slams and violet sword waves. Distance and elevated targets affect attack choices. Marked windups precede damage; exposed recovery and EMP stagger windows take double cannon damage. Boss facing locks during committed attacks. The three XOR/AND/NOR shield phases remain part of the fight.
+Level 7 uses Bastion, a yellow siege walker with orange missile salvos, ramming and stomps. Level 8 uses the much larger Crimson Warden with sword sweeps, lunges, targeted leaps/slams and violet sword waves. Distance and elevated targets affect attack choices. Marked windups precede damage; the cannon deals 12 damage in level 7 and 20 in level 8, doubled during exposed recovery or EMP stagger. Boss facing locks during committed attacks. Complete the three XOR/AND/NOR repairs before fighting the final boss.
 
-The final arena is 6000 × 2200 with elevated routes, a checkpoint, supplies and three cover pylons. Completing the first repair powers cover. Charged cover blocks hostile projectiles; press E or mobile Interact nearby to clear shots, restore shield energy and stagger a nearby vulnerable boss. Each pylon recharges for 16 seconds of active game time. Sentries detect line of sight within 560 units, approach targets, aim and fire horizontal red plasma within 440 units, and refuse unsupported steps. Their shots expire at the configured range. Boss melee remains separate.
+The final arena is 6000 × 2200 with elevated routes, a checkpoint, supplies and three cover pylons. Completing the first repair powers cover. Charged cover blocks hostile projectiles; press E or mobile Interact nearby to clear shots and stagger a nearby vulnerable boss. Each pylon recharges for 16 seconds of active game time. Sentries detect line of sight within 560 units, approach targets, aim and fire horizontal red plasma within 440 units, and refuse unsupported steps. Their shots expire at the configured range. Boss melee remains separate.
 
-`src/events/combat.js` owns hostile AI and projectiles. Run `npm run test:combat-browser` after a web export; CI and Pages require it. Tests use native GDevelop physics and real rendered animation frames, with controlled positions/HP to exercise attacks and shield phases. Physical mobile testing is still needed.
+`src/events/combat.js` owns hostile AI and projectiles. Run `npm run test:combat-browser` after a web export; CI and Pages require it. Tests use native GDevelop physics and real rendered animation frames, with controlled positions/HP to exercise attacks and guardian shields. Physical mobile testing is still needed.
 
 ### Animation and gameplay quality review
 
@@ -216,7 +219,7 @@ See the [25 November gameplay report](docs/gameplay-audit-2026-11-25.md) for the
 
 ### Rooms, materials and animation audit
 
-The eight sectors now use machinery rooms, door lintels, solid decks, service lofts, native climbing rails instead of diagonal platform chains. Routes remain open; W/S or up/down climbs rails, Space jumps off, and contextual touch controls support climbing. Guardian arenas include gantries and the final arena has a return shaft for later shield phases.
+The eight sectors now use machinery rooms, door lintels, solid decks, service lofts, native climbing rails instead of diagonal platform chains. Routes remain open; W/S or up/down climbs rails, Space jumps off, and contextual touch controls support climbing. Guardian arenas include gantries and the final arena has a return shaft to reach the final terminals.
 
 The 24 targets use relay, fan, winch, scanner, valve, pump, coupler and shield artwork. Materials mix fuses, wire coils, batteries, gears and energy cells. Generated pixel-art devices, props and supplies use explicit visible floor anchors and consistent scales. `npm run world:rebuild` intentionally regenerates authored geometry/placements and creates a recovery copy first; see the campaign guide before using it after manual editor changes.
 
@@ -226,4 +229,4 @@ The [world and circuit rework report](docs/world-and-circuit-rework-2026-11-25.m
 
 Generated ladder art is in `assets/circuit-rescue-v1/climb-v1/`; rear-facing robot frames derived from the original player reference are in `assets/circuit-rescue-v1/climb-v2/`. The climbing pose pauses while stationary; mecha holds its idle pose on rails. Elevators have been removed from all levels.
 
-Collectible materials use the generated pixel-art sprites in `assets/circuit-rescue-v1/materials-v2/`. Cyan rings mark parts; amber outlines mark machines needing repair, green outlines indicate repaired machines, and muted outlines identify later guardian phases. Highlights are steady and remain behind the sprites. Run `npm run test:highlights` after a web build to verify collection and status changes.
+Collectible materials use the generated pixel-art sprites in `assets/circuit-rescue-v1/materials-v2/`. Cyan rings mark parts; amber outlines mark machines needing repair and green outlines indicate repaired machines. Highlights are steady and remain behind the sprites. Run `npm run test:highlights` after a web build to verify collection and status changes.

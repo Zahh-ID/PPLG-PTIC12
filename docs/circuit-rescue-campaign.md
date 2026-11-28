@@ -6,7 +6,7 @@ The game is now an eight-sector pixel-art station adventure. Open **Animal Hunte
 
 The default language is Indonesian. Choose English or Bahasa Indonesia through the language icon on opening/result screens, the pause menu, or an introduction. The browser remembers this preference. `localization.js` contains an explicit English-to-Indonesian catalog and dynamic-message rules. Native text and DOM challenge labels are translated without changing circuit values, object names, gate symbols, developer names or NIMs. New text should be added to this catalog. Locale initialization is the first event in every scene; `journey.js` runs last so translated text is ready before rendering.
 
-Every sector starts with a paused introduction explaining its gate rule, what binary 0/1 mean, a worked example and the mission. NOT, AND, OR, XOR, NAND/NOR, NAND→NOT composition, NOR safety logic and the three final shield phases have distinct content.
+Every sector starts with a paused introduction explaining its gate rule, what binary 0/1 mean, a worked example and the mission. The introduction covers all three terminal rules and examples for that sector, including combined gates and three-input problems.
 
 All eight sectors can be selected from the route/level-list icon; there are no locks. Choosing a sector starts a fresh run at that sector. Finishing one records a local completion badge and opens a dialog with Next Level, Level List and Main Menu. The last sector uses View Ending. Browsing the list and choosing Back returns to the completion dialog. Main-menu Play resumes at the next sector after a completion. Run state is not persisted; language and completion badges are separate browser preferences. Blocked browser storage falls back to in-memory state.
 
@@ -14,24 +14,24 @@ All eight sectors can be selected from the route/level-list icon; there are no l
 
 | Scene | Sector | Repair lesson | Unlock |
 | --- | --- | --- | --- |
-| `permainan` | 1 — Emergency Station | NOT prediction, repair, build | Upper emergency airlock |
-| `sector2` | 2 — Cargo Warehouse | AND prediction, repair, build | Warehouse exit across stacked rooms |
-| `sector3` | 3 — Transit Network | OR prediction, repair, build | Transit junction across gaps |
-| `sector4` | 4 — Security Tower | XOR prediction, repair, build | Uplink reached by climbing |
-| `sector5` | 5 — Underground Reactor | Three-input prediction; NOR repair; NAND-only AND build | Descending reactor interlock |
-| `sector6` | 6 — Mecha Hangar | Three-input prediction; AND repair; NAND → NOT build | Rideable mecha |
-| `sector7` | 7 — Industrial Battlefield | Three-input prediction; NOR repair/build | Siege weapon, then guardian fight |
-| `sector8` | 8 — Guardian Core | XOR build, AND repair, NOR build in separate rooms | Three-phase guardian and ending |
+| `permainan` | 1 — Emergency Station | NOT prediction; AND repair; double-NOT build | Upper emergency airlock |
+| `sector2` | 2 — Cargo Warehouse | AND prediction; OR repair; NAND build | Warehouse exit across stacked rooms |
+| `sector3` | 3 — Transit Network | OR prediction; NOR repair; XOR build | Transit junction across gaps |
+| `sector4` | 4 — Security Tower | XOR prediction; NOR repair; XOR build | Uplink reached by climbing |
+| `sector5` | 5 — Underground Reactor | Three-input prediction; OR with inverted B repair; NAND-only AND build | Descending reactor interlock |
+| `sector6` | 6 — Mecha Hangar | Three-input prediction; NAND repair; OR with inverted B build | Rideable mecha |
+| `sector7` | 7 — Industrial Battlefield | Three-input prediction; XOR with inverted B repair; NOR build | Siege weapon, then guardian fight |
+| `sector8` | 8 — Guardian Core | XOR followed by NOT build; inverted A AND B repair; A AND inverted B build | Three repairs, guardian and ending |
 
 Each map contains three components and three separately named terminals, supplies, a checkpoint and an exit. Terminal 1 needs one component, terminal 2 needs two, and terminal 3 needs three. Each completion awards 150 score once. Components and repairs survive life loss and reset on sector replay. All three repairs are needed to open the airlock. Routes have no blocking gates. Climb marked rails with W/S or up/down; Space jumps off. Touch climb controls appear near rails. Rail hatches open during descent and close after the body clears. Boss and boarding conditions also apply. Parts use a count rather than a separate crafting inventory. The three materials in a sector use different artwork (fuses, wire coils, batteries, gears or energy cells) and occupy side lofts/bays. Mission targets are relays, fans, winches, scanners, valves, pumps, couplers and shield equipment rather than repeated computer terminals. Generated pixel-art PNGs share a visible floor baseline; unrepaired machines are dimmed until repaired. Crates, wall racks, supplies and checkpoint/exit artwork use explicit placement anchors.
 
-Each location has its own generated background and world dimensions. Rooms have solid decks, door lintels, service lofts, native climbing rails. Primary shafts connect the three machinery rooms. Repair-powered return loops and separate material bays provide backtracking and alternate routes. The reactor descends through its rooms; the battlefield/core open into broad arenas with elevated gantries. The core has an explicit return shaft to its phase rooms. The camera follows X and Y while HUD/background remain fixed. [Layout data](location-layouts.json) records room positions and route measurements. Run `npm run check:maps` for supported spawns, terminal IDs and conservative platform-route reachability; this structural check supplements runtime playtesting. `npm run test:routes` walks and jumps through every sector with native controls, checks all three parts and terminals, boards the level-6 mecha and returns to the final phase terminals. Combat is removed and puzzle results are supplied in this route-only test. Native jump speed is 850: held jumps rise approximately 168–174px at 20–60fps, leaving clearance above the 120px steps. All authored spawns start 12px above their floor so collision platforms register before landing.
+Each location has its own generated background and world dimensions. Rooms have solid decks, door lintels, service lofts, native climbing rails. Primary shafts connect the three machinery rooms. Repair-powered return loops and separate material bays provide backtracking and alternate routes. The reactor descends through its rooms; the battlefield/core open into broad arenas with elevated gantries. The core has an explicit return shaft to its terminal rooms. The camera follows X and Y while HUD/background remain fixed. [Layout data](location-layouts.json) records room positions and route measurements. Run `npm run check:maps` for supported spawns, terminal IDs and conservative platform-route reachability; this structural check supplements runtime playtesting. `npm run test:routes` walks and jumps through every sector with native controls, checks all three parts and terminals, boards the level-6 mecha and reaches the final terminals. Combat is removed and puzzle results are supplied in this route-only test. Native jump speed is 850: held jumps rise approximately 168–174px at 20–60fps, leaving clearance above the 120px steps. All authored spawns start 12px above their floor so collision platforms register before landing.
 
 ## Dialog missions
 
 Press **E** near a terminal after collecting its required components. Interaction checks vertical as well as horizontal distance. Logic challenges happen in a paused dialog; the map provides exploration, movement, combat and collection. Gates/cables are placed inside the dialog.
 
-Levels 1–7 combine three challenge modes at different places: **predict** outputs by dragging 0/1 tokens into answer sockets; **repair** a prewired circuit with a wrong chip and missing connection; **build** a complete circuit. Levels 5–7 prediction quizzes test all eight combinations of `Y = A AND B AND NOT C`. Reactor construction allows only NAND chips and requires both sockets; tying the second NAND's inputs together produces AND. The hangar uses NAND followed by NOT. Guardian Core instead has three phase-specific circuit challenges in separate rooms.
+Levels 1–7 combine three challenge modes at different places: **predict** outputs by dragging 0/1 tokens into answer sockets; **repair** a prewired circuit with a wrong chip and missing connection; **build** a complete circuit. Levels 5–7 prediction quizzes each test all eight three-input combinations: `(A AND B) AND NOT C`, `(A OR B) AND NOT C`, and `(A XOR B) AND NOT C` respectively. Reactor construction allows only NAND chips and requires both sockets; tying the second NAND's inputs together produces AND. Guardian Core has three distinct circuit challenges in separate rooms, all completed before the guardian can be damaged.
 
 The challenge dialog has three stages:
 
@@ -39,7 +39,7 @@ The challenge dialog has three stages:
 2. **Predict/build & test:** output cards or the circuit grid appear for the selected challenge. Hint provides progressive guidance. Tests, hints, answers, boards and undo histories are tracked separately per terminal. Mission Brief and closing/reopening preserve progress in the current scene.
 3. **Repair complete:** after all input cases pass, Complete Repair grants 150 score once, activates the terminal and displays the unlocked objective with test/hint totals. The adventure remains paused until Return to Adventure or Escape.
 
-Escape closes any stage. Tab/Shift+Tab stay within visible dialog buttons. Boss-phase briefs and explanations follow the current XOR/AND/NOR target. No new artwork is required; the shell reuses the existing chip and trophy icons.
+Escape closes any stage. Tab/Shift+Tab stay within visible dialog buttons. Final guardian briefs and explanations follow each terminal's distinct combined-gate target. No new artwork is required; the shell reuses the existing chip and trophy icons.
 
 The workbench uses explicit component ports. Place gates in the marked sockets, then drag from one port to another or tap the two ports. A connection can start at either end. Both gate inputs are on the left; the output is on the right. NOT and buffer expose one input. Cables route automatically; painting grid cells is no longer part of the interaction.
 
@@ -64,11 +64,11 @@ Player animation is selected once per frame in `gameplay.js` from the native Pla
 In sector 6, repair all three hangar systems, approach the mecha and press **E** to board. The mecha replaces the player's visible animations and body collision mask while retaining native platformer movement. Boarding is required before leaving. Sectors 7–8 start mounted.
 
 - **J / X:** cannon, unlimited mecha energy shots; normal robot ammunition remains finite.
-- **K:** shield with a three-second reserve; releasing K regenerates it at 0.4 seconds per second.
+- **K or the shield button:** in levels 7 and 8, tap for a brief shield or hold it to keep shielding; it can be activated repeatedly without waiting for energy. In level 6 the mecha retains its rechargeable three-second reserve.
 - Mecha hull is 6 health. Each HUD heart represents two hull points. The normal robot has 3 health; each heart represents one.
 - Three lives and checkpoints still apply. Boarding restores hull and supplies; checkpoints restore health. Checkpoints retain the floor height so returning in the larger mecha preserves body clearance.
-- Bastion uses aimed missile salvos, physical rams and stomps. The Crimson Warden chooses sword sweeps, lunges, targeted leaps/slams and violet waves based on distance and elevated targets. Marked windups precede damage; attacks lock facing and target positions. Exposed recovery and EMP stagger windows take double cannon damage. Exposed recovery does not inflict incidental contact damage.
-- Sector 7 Bastion: 24 hull; complete all three systems to disable its shield. Sector 8 Crimson Warden: 60 hull, three phases. Its shield returns at 40 and 20 hull. Visit the separate Core Stabilizer and Final Shield terminals for the AND repair and NOR build. Future phase terminals stay locked until needed. Combat freezes while solving.
+- Bastion uses aimed missile salvos, physical rams and stomps. The Crimson Warden chooses sword sweeps, lunges, targeted leaps/slams and violet waves based on distance and elevated targets. Marked windups precede damage; attacks lock facing and target positions. The larger cannon deals 12 damage per hit in level 7, doubled during exposed recovery or EMP stagger. In level 8 each cannon hit deals 20 damage consistently, so the guardian is defeated by three confirmed hits. Exposed recovery does not inflict incidental contact damage.
+- Sector 7 Bastion: 24 hull; complete all three systems to disable its shield. Sector 8 Crimson Warden: 60 hull. Complete all three terminals first to remove its shield; three ordinary cannon hits then defeat it. Combat freezes while solving.
 - Defeat the guardian and reach the airlock. The final sector leads to `winner`.
 
 ## Detailed giant-robot art
@@ -96,7 +96,7 @@ This is a playable first campaign pass. Audio, persistent saves, a full inventor
 
 ## Final arena interactions
 
-Sector 8 is 6000 × 2200. Its boss is 640 world units tall, compared with the 192-unit mecha. Elevated routes, a checkpoint and supplies support a longer fight. The camera widens in the arena and frames both combatants when close. Three cover pylons power up after the first repair. Charged pylons block hostile shots; E/mobile Interact discharges an EMP, clears nearby shots, refills shield energy and staggers a nearby vulnerable boss. A pylon recharges over 16 seconds of unpaused game time. Boss missiles/waves clear when its shield returns, and combat pauses inside learning dialogs.
+Sector 8 is 6000 × 2200. Its boss is 640 world units tall, compared with the 192-unit mecha. Elevated routes, a checkpoint and supplies support a longer fight. The camera widens in the arena and frames both combatants when close. Three cover pylons power up after the first repair. Charged pylons block hostile shots; E/mobile Interact discharges an EMP, clears nearby shots and staggers a nearby vulnerable boss. A pylon recharges over 16 seconds of unpaused game time. Combat pauses inside learning dialogs.
 
 ## Normal sentries and world authoring
 
